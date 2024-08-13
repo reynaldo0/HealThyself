@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Home from './Home';
 
 const Team = () => {
   return (
-    <div>Team</div>
-  )
-}
+    <Home 
+      teamText="Kembali ke Home"
+      startText="Mulai Sekarang!"
+      teamLink="/" // Link ke halaman home
+    />
+  );
+};
 
-export default Team
+export default Team;
