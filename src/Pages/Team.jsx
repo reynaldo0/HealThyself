@@ -1,17 +1,12 @@
-import React, { useEffect } from 'react';
-import Navbar from '../Components/HomeNav';
+import React from "react";
+import Navbar from "../Components/HomeNav";
 
 const Team = () => {
-
-    return (
-        <section className='bg-slate-600'>
-            <Navbar
-                teamText="Kembali ke Home"
-                startText="Mulai Sekarang!"
-                teamLink="/" // Link ke halaman home
-            />
-        </section>
-    );
+  return (
+    <section className="page-container bg-slate-600">
+      <Navbar teamText="Kembali ke Home" teamLink="/" direction="right" />
+    </section>
+  );
 };
 
 export default Team;
