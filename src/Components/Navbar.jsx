@@ -88,7 +88,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  class="block rounded rounded-l-full rounded-r-full bg-red-300 px-5 py-2 text-white transition-colors hover:bg-primary-200"
+                  class="block rounded rounded-l-full rounded-r-full bg-yellow-800 px-5 py-2 text-white transition-colors hover:bg-primary-200"
                 >
                   Kembali
                 </Link>
