@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Components/Navbar';
-import Swiper from 'swiper';
-
-import { IonIcon } from '@ionic/react';
 
 const Team = () => {
 
