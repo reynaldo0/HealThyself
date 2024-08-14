@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header>
-      <nav className="fixed left-0 top-0 z-[99999] w-full border-gray-200 bg-yellow-200 bg-opacity-70">
+      <nav className="fixed left-0 top-0 z-[99999] w-full border-gray-200 bg-white shadow-lg bg-opacity-70">
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img
-              src="/logo.png"
-              className="h-auto w-40"
-              alt="gambar logo"
-            />
+          <a
+            href="#"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="/logo.png" className="h-auto w-40" alt="gambar logo" />
           </a>
           <button
             data-collapse-toggle="navbar-dropdown"
@@ -36,7 +35,10 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <div
+            className="hidden w-full md:block md:w-auto"
+            id="navbar-dropdown"
+          >
             <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-white p-4 font-medium md:mt-0 md:flex-row md:items-center md:space-x-8 md:border-0 md:bg-transparent md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
               <li>
                 <a
@@ -87,7 +89,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="block rounded rounded-l-full rounded-r-full bg-yellow-800 px-5 py-2 text-white transition-colors hover:bg-primary-200"
+                  className="block rounded rounded-l-full rounded-r-full bg-primary px-5 py-2 text-white transition-colors hover:bg-primary-200"
                 >
                   Kembali
                 </Link>

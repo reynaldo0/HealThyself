@@ -1,4 +1,4 @@
-  import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Navbar from "../Components/Navbar";
 
@@ -14,7 +14,7 @@ const Baby = () => {
       startDelay: 500,
       showCursor: false,
       loop: true,
-      loopCount: Infinity, 
+      loopCount: Infinity,
     };
 
     typedRef.current = new Typed(".indonesia", options);
@@ -28,7 +28,7 @@ const Baby = () => {
   return (
     <section className="pt-24">
       <Navbar />
-      <div className="container">
+      <div className="container max-w-screen-2xl mx-auto">
         <div className="flex w-full flex-col-reverse flex-wrap items-center justify-between gap-10 md:flex-row md:gap-0">
           <div className="w-full px-4 md:w-1/2">
             <h1 className="font-poppins text-2xl font-bold md:text-4xl">
@@ -61,9 +61,7 @@ const Baby = () => {
             <canvas
               id="canvas"
               className="h-[350px] w-screen md:h-[300px] md:w-[500px]"
-            >
-              <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
-            </canvas>
+            ></canvas>
             <div
               id="loading"
               className="absolute flex h-56 w-56 items-center justify-center rounded-lg"
