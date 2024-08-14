@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+  import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Navbar from "../Components/Navbar";
 
@@ -54,14 +54,16 @@ const Baby = () => {
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>
               </span>
-              <span className="button-text translate-x-2">Selengkapnya</span>
+              <span className="learn-more translate-x-2">Selengkapnya</span>
             </button>
           </div>
           <div className="relative flex w-1/2 items-center justify-center px-4">
             <canvas
               id="canvas"
               className="h-[350px] w-screen md:h-[300px] md:w-[500px]"
-            ></canvas>
+            >
+              <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
+            </canvas>
             <div
               id="loading"
               className="absolute flex h-56 w-56 items-center justify-center rounded-lg"
