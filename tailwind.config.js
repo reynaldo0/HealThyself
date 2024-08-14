@@ -8,9 +8,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#FF682C',
-        'secondary': '#0D9B86'
-      }
+        'primary': '#0D9B86',
+        'secondary': '#FF682C',
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'radioCanada': ['RadioCanada', 'sans-serif'],
+      },
     },
   },
   plugins: [
