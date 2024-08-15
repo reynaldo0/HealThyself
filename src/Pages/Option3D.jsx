@@ -41,8 +41,8 @@ const Option3d = () => {
             <ModelCanvas
               model={<Box />}
               title="Bayi"
-              description="Deskripsi model 1."
-              gradientColors={["#09409A", "#26A5C4"]}
+              description="3-12 Bulan"
+              gradientColors={["#36D1DC", "#5B86E5"]}
               width="289px"
               height="241px"
               titleColor="#A3ECFF"
@@ -55,8 +55,8 @@ const Option3d = () => {
             <ModelCanvas
               model={<Box />}
               title="Anak - Anak"
-              description="Deskripsi model 2."
-              gradientColors={["#FFB145", "#9F5D00"]}
+              description="3-12 Bulan"
+              gradientColors={["#F2C94C", "#F2994A"]}
               width="289px"
               height="320px"
               titleColor="#A3ECFF"
@@ -69,7 +69,7 @@ const Option3d = () => {
             <ModelCanvas
               model={<Box />}
               title="Dewasa"
-              description="Deskripsi model 3."
+              description="3-12 Bulan"
               gradientColors={["#1BB05C", "#004B2C"]}
               width="289px"
               height="288px"
@@ -83,7 +83,7 @@ const Option3d = () => {
             <ModelCanvas
               model={<Box />}
               title="Lansia"
-              description="Deskripsi model 4."
+              description="3-12 Bulan"
               gradientColors={["#760635", "#E21C34"]}
               width="289px"
               height="300px"
