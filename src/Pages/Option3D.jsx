@@ -32,10 +32,11 @@ const Option3d = () => {
 
       <div className="relative z-10 px-16 bg-transparent mx-auto max-w-screen-xl flex">
         <Swiper
+          effect="coverflow"
           spaceBetween={16}
           slidesPerView={isMobile ? 1 : 3.4}
           centeredSlides={false}
-          className="w-full flex items-end py-10"
+          className="w-full flex items-end py-10 h-[600px]"
         >
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
@@ -70,7 +71,7 @@ const Option3d = () => {
               model={<Box />}
               title="Dewasa"
               description="3-12 Bulan"
-              gradientColors={["#1BB05C", "#004B2C"]}
+              gradientColors={["#4568DC", "#B06AB3"]}
               width="289px"
               height="288px"
               titleColor="#6FDB9F"
@@ -84,7 +85,7 @@ const Option3d = () => {
               model={<Box />}
               title="Lansia"
               description="3-12 Bulan"
-              gradientColors={["#760635", "#E21C34"]}
+              gradientColors={["#2C3E50", "#4CA1AF"]}
               width="289px"
               height="300px"
               titleColor="#FFC0CC"
