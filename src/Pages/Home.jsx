@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import Navbar from "../Components/HomeNav";
 import { Link } from "react-router-dom";
+import { useStateContext } from "../context/stateContext.jsx";
 
 const Home = ({ teamText = "Tim Kami" }) => {
+  const { setOpen } = useStateContext()
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -23,8 +26,8 @@ const Home = ({ teamText = "Tim Kami" }) => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit...
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-          <Link
-            to="/home"
+          <button
+            onClick={() => setOpen(true)}
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900 mt-5"
           >
             Mulai
@@ -43,7 +46,7 @@ const Home = ({ teamText = "Tim Kami" }) => {
                 d="M1 5h12m0 0L9 1m4 4L9 9"
               />
             </svg>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

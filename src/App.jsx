@@ -3,12 +3,16 @@ import Home from './Pages/Home';
 import Team from './Pages/Team';
 import Baby from './Pages/Baby';
 import Option3d from './Pages/Option3D';
+import HomeLayout from './layout/home.layout.jsx';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomeLayout />}>
+          <Route index element={<Home />} />
+          <Route index element={<Option3d />} />
+        </Route>
         <Route path="/team" element={<Team />} />
         <Route path="/baby" element={<Baby />} />
         <Route path="/home" element={<Option3d />} />

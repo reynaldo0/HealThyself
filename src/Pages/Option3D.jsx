@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box } from "@react-three/drei";
 import ModelCanvas from "../Components/ModelCanvas";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,6 +6,12 @@ import "swiper/css";
 
 const Option3d = () => {
   const isMobile = window.innerWidth <= 768;
+
+  useEffect(() => {
+    const audio1 = new Audio('/audio/welcome.mp3')
+
+    audio1.play()
+  }, [])
 
   return (
     <section className="relative min-h-screen">
