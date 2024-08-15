@@ -2,7 +2,6 @@ import React from "react";
 import { Box } from "@react-three/drei";
 import ModelCanvas from "../Components/ModelCanvas";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 const Option3d = () => {
   const isMobile = window.innerWidth <= 768;
@@ -21,16 +20,16 @@ const Option3d = () => {
       </div>
 
       <div className="relative z-10 text-center bg-transparent">
-        <h1 className="text-4xl font-bold text-secondary mb-2 py-10 md:py-0">Golongan</h1>
+        <h1 className="text-4xl font-bold text-secondary mb-2 pt-10 md:py-0">Golongan</h1>
         <h2 className="text-xl text-primary">Pilihlah Kategory Usia Anda!</h2>
       </div>
 
-      <div className="relative z-10 py-10 px-16 bg-transparent mx-auto max-w-screen-xl flex">
+      <div className="relative z-10 px-16 bg-transparent mx-auto max-w-screen-xl flex">
         <Swiper
           spaceBetween={16}
           slidesPerView={isMobile ? 1 : 3.4}
           centeredSlides={false}
-          className="w-full flex items-end"
+          className="w-full flex items-end py-10"
         >
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
