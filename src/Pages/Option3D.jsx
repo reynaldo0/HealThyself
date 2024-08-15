@@ -20,54 +20,72 @@ const Option3d = () => {
         </a>
       </div>
 
-      <div className="relative z-10 text-center px-4 bg-transparent">
-        <h1 className="text-4xl font-bold text-secondary mb-2">Golongan</h1>
-        <h2 className="text-2xl text-black">Subtitle or Description Here</h2>
+      <div className="relative z-10 text-center bg-transparent">
+        <h1 className="text-4xl font-bold text-secondary mb-2 py-10 md:py-0">Golongan</h1>
+        <h2 className="text-xl text-primary">Pilihlah Kategory Usia Anda!</h2>
       </div>
 
-      <div className="relative z-10 py-16 px-8 bg-transparent mx-auto max-w-screen-xl flex">
+      <div className="relative z-10 py-10 px-16 bg-transparent mx-auto max-w-screen-xl flex">
         <Swiper
           spaceBetween={16}
-          slidesPerView={isMobile ? 1 : 3}
+          slidesPerView={isMobile ? 1 : 3.4}
           centeredSlides={false}
           className="w-full flex items-end"
         >
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
-              title="Model 1"
+              title="Bayi"
               description="Deskripsi model 1."
               gradientColors={["#09409A", "#26A5C4"]}
               width="289px"
-              height="341px"
+              height="241px"
+              titleColor="#A3ECFF"
+              descriptionColor="#FFF"
+              canvasWidth="180px"
+              canvasHeight="180px"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
-              title="Model 2"
+              title="Anak - Anak"
               description="Deskripsi model 2."
               gradientColors={["#FFB145", "#9F5D00"]}
-              width="332px"
-              height="415px"
+              width="289px"
+              height="320px"
+              titleColor="#A3ECFF"
+              descriptionColor="#FFF"
+              canvasWidth="200px"
+              canvasHeight="200px"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
-              title="Model 3"
+              title="Dewasa"
               description="Deskripsi model 3."
               gradientColors={["#1BB05C", "#004B2C"]}
-              width="332px"
-              height="376px"
+              width="289px"
+              height="288px"
+              titleColor="#6FDB9F"
+              descriptionColor="#FFF"
+              canvasWidth="220px"
+              canvasHeight="220px"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
-              title="Model 4"
+              title="Lansia"
               description="Deskripsi model 4."
               gradientColors={["#760635", "#E21C34"]}
+              width="289px"
+              height="300px"
+              titleColor="#FFC0CC"
+              descriptionColor="#FFF"
+              canvasWidth="240px"
+              canvasHeight="240px"
             />
           </SwiperSlide>
         </Swiper>
