@@ -14,49 +14,55 @@ const Option3d = () => {
         style={{ backgroundImage: `url('/background/golongan.png')` }}
       ></div>
 
-      <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 bg-transparent">
+      <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-transparent">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/logo.png" className="h-auto w-40" alt="Logo" />
         </a>
       </div>
 
-      <div className="relative z-10 text-center py-6 px-4 bg-transparent">
+      <div className="relative z-10 text-center px-4 bg-transparent">
         <h1 className="text-4xl font-bold text-secondary mb-2">Golongan</h1>
         <h2 className="text-2xl text-black">Subtitle or Description Here</h2>
       </div>
 
-      <div className="relative z-10 flex justify-center items-center py-16 px-20 bg-transparent mx-auto max-w-screen-xl">
+      <div className="relative z-10 py-16 px-8 bg-transparent mx-auto max-w-screen-xl flex">
         <Swiper
           spaceBetween={16}
           slidesPerView={isMobile ? 1 : 3}
           centeredSlides={false}
-          className="w-full mx-auto"
+          className="w-full flex items-end"
         >
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
               title="Model 1"
               description="Deskripsi model 1."
               gradientColors={["#09409A", "#26A5C4"]}
+              width="289px"
+              height="341px"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
               title="Model 2"
               description="Deskripsi model 2."
               gradientColors={["#FFB145", "#9F5D00"]}
+              width="332px"
+              height="415px"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
               title="Model 3"
               description="Deskripsi model 3."
               gradientColors={["#1BB05C", "#004B2C"]}
+              width="332px"
+              height="376px"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
               model={<Box />}
               title="Model 4"

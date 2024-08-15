@@ -2,16 +2,18 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
-const ModelCanvas = ({ model, title, description, gradientColors }) => {
+const ModelCanvas = ({ model, title, description, gradientColors, width = "300px", height = "300px" }) => {
   return (
     <div
-      className="relative flex flex-col items-center p-16 shadow-lg rounded-lg overflow-visible"
+      className="relative flex flex-col items-center shadow-lg justify-end pb-5 rounded-lg overflow-visible"
       style={{
         background: `linear-gradient(${gradientColors[0]}, ${gradientColors[1]})`,
+        width: width, 
+        height: height,
       }}
     >
-      <div className="absolute -top-20 z-10 py-16">
-        <Canvas className="bg-transparent h-40 w-40">
+      <div className="absolute -top-20 z-10">
+        <Canvas className="bg-transparent" style={{ width: "200px", height: "250px" }}>
           <OrbitControls enableZoom={true} />
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} />
