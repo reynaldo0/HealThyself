@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Option3d from "../Pages/Option3D";
-import Home from "../Pages/Home.jsx";
+import Home from "../Pages/Home";
 import { useStateContext } from "../context/stateContext";
 
 const HomeLayout = () => {
