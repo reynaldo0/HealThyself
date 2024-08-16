@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import Home from '../Pages/Home';
-import Option3d from '../Pages/Option3D';
-import { useStateContext } from '../context/stateContext';
-import WelcomeScreen from './WelcomeScreen';
+import React, { useState, useEffect } from "react";
+import Option3d from "../Pages/Option3D";
+import Home from "../Pages/Home.jsx";
+import { useStateContext } from "../context/stateContext";
 
 const HomeLayout = () => {
   const { open, setOpen } = useStateContext();

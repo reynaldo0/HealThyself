@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import ModelCanvas from "../Components/ModelCanvas";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Dialog from "../Components/Dialog";
 import { Bayi } from "../Components/Models/Bayi";
 import { Anak } from "../Components/Models/Anak";
 import { Dewasa } from "../Components/Models/Dewasa";
@@ -27,6 +28,8 @@ const Option3d = ({ onBack }) => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/background/golongan.png')` }}
       ></div>
+
+      <Dialog />
 
       <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-transparent">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
