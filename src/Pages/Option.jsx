@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ModelCanvas from "../Components/ModelCanvas";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Dialog from "../Components/Dialog";
@@ -8,9 +8,9 @@ import { Dewasa } from "../Components/Models/Dewasa";
 import { Kakek } from "../Components/Models/Kakek";
 import { Remaja } from "../Components/Models/Remaja";
 import 'swiper/css';
-import { Link } from "react-router-dom";
 
 const Option3d = ({ onBack }) => {
+  const [showDialog, setShowDialog] = useState(false);
   const isMobile = window.innerWidth <= 768;
   const swiperRef = useRef(null);
 
@@ -22,14 +22,17 @@ const Option3d = ({ onBack }) => {
     if (swiperRef.current) swiperRef.current.swiper.slideNext();
   };
 
-  return (
-    <section className="relative min-h-screen ">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/background/golongan.png')` }}
-      ></div>
 
-      <Dialog />
+  useEffect(() => {
+    setTimeout(() => {
+      setShowDialog(true);
+    }, 1000);
+  }, [])
+
+  return (
+    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)]">
+
+      {showDialog && <Dialog />}
 
       <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-transparent">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">

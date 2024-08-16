@@ -1,20 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Dialog = () => {
     const dialogs = [
         {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            audio: 'audio/welcome.mp3'
         },
         {
             text: "cukimaiiiiiiiiii",
+            audio: 'audio/welcome.mp3'
         },
         {
             text: "hitammmmmmmmmmmmmm",
+            audio: 'audio/welcome.mp3'
         }
     ];
 
     const [currentDialogIndex, setCurrentDialogIndex] = useState(0);
     const [isDialogVisible, setIsDialogVisible] = useState(true);
+
+    useEffect(() => {
+        const audio = new Audio(dialogs[currentDialogIndex].audio);
+        audio.play();
+        return () => {
+            audio.pause();
+            audio.currentTime = 0; // Reset the audio when component unmounts or the dialog changes
+        };
+    }, [currentDialogIndex]);
 
     const handleNext = () => {
         if (currentDialogIndex < dialogs.length - 1) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Home from '../Pages/Home';
-import Option3d from '../Pages/Option3D';
+import Option from '../Pages/Option';
 import { useStateContext } from '../context/stateContext';
 
 const HomeLayout = () => {
@@ -16,11 +16,13 @@ const HomeLayout = () => {
     }, 500); 
   };
 
+  
+
   return (
     <>
       {open ? (
         <div className={`${transition} ${showWelcome ? 'blur' : ''}`}>
-          <Option3d onBack={handleBackToHome} />
+          <Option onBack={handleBackToHome} />
         </div>
       ) : (
         <div className={transition}>
