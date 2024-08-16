@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/HomeNav";
 import { useStateContext } from "../context/stateContext";
 
 const Home = ({ onStart }) => {
   const { setOpen } = useStateContext();
+  const [transition, setTransition] = useState('fade-in');
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -35,8 +36,16 @@ const Home = ({ onStart }) => {
     };
   }, []);
 
+  const handleClick = () => {
+    setTransition('fade-out');
+    setTimeout(() => {
+      setOpen(true);
+
+    }, 500)
+  }
+
   return (
-    <section className="fixed inset-0 overflow-hidden">
+    <section className={`fixed inset-0 overflow-hidden transition ${transition}`}>
       <Navbar />
 
       <div className="page-container absolute inset-0 transition-all duration-500">
@@ -61,7 +70,7 @@ const Home = ({ onStart }) => {
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <button
-              onClick={onStart}
+              onClick={handleClick}
               className="inline-flex justify-center items-center py-3 px-10 text-base font-medium text-center text-white rounded-lg bg-secondary hover:bg-secondary/90 mt- xl:mt-20"
             >
               Mulai

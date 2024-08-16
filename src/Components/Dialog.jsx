@@ -29,12 +29,12 @@ const Dialog = () => {
     };
 
     return isDialogVisible && (
-        <div className="absolute inset-0 bg-black/60 z-20 backdrop-blur-md flex items-center">
-            <div className="flex items-center justify-center gap-10">
+        <div className="absolute inset-0 bg-black/60 z-20 backdrop-blur-md w-full flex items-center">
+            <div className="flex items-center justify-center gap-10 w-full">
                 <img src='/maskot.png' alt="maskot" />
 
-                <div className="flex flex-col items-end gap-4">
-                    <div className="bg-white w-[800px] h-[125px] rounded-md p-4 text-base font-semibold">
+                <div className="flex flex-col w-full gap-4">
+                    <div className="bg-white w-[90%] max-w-[800px] min-h-[125px] rounded-md p-4 text-base font-semibold">
                         {dialogs[currentDialogIndex].text}
                     </div>
                     <div className="flex gap-4">
