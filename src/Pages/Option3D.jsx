@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Box } from "@react-three/drei";
 import ModelCanvas from "../Components/ModelCanvas";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Dialog from "../Components/Dialog.jsx";
 
 const Option3d = () => {
   const isMobile = window.innerWidth <= 768;
@@ -14,10 +15,7 @@ const Option3d = () => {
 
   return (
     <section className="relative min-h-screen">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/background/golongan.png')` }}
-      ></div>
+      <Dialog />
 
       <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-transparent">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
