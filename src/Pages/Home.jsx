@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import Navbar from "../Components/HomeNav";
-import { Link } from "react-router-dom";
-import { useStateContext } from "../context/stateContext.jsx";
+import { useStateContext } from "../context/stateContext";
 
-const Home = ({ teamText = "Tim Kami" }) => {
+const Home = ({ onStart }) => {
   const { setOpen } = useStateContext();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -16,9 +14,9 @@ const Home = ({ teamText = "Tim Kami" }) => {
 
   return (
     <section className="fixed inset-0 overflow-hidden">
-      <Navbar />  {/* Navbar stays static without transition */}
+      <Navbar />
 
-      <div className="page-container absolute inset-0 transition-all duration-500">  {/* Apply transition effect here */}
+      <div className="page-container absolute inset-0 transition-all duration-500">
         <div className="absolute -z-10 inset-0 bg-black/60 w-screen h-screen"></div>
 
         <video
@@ -40,7 +38,7 @@ const Home = ({ teamText = "Tim Kami" }) => {
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <button
-              onClick={() => setOpen(true)}
+              onClick={onStart}
               className="inline-flex justify-center items-center py-3 px-24 text-base font-medium text-center text-white rounded-lg bg-secondary hover:bg-secondary/90 mt-5 xl:mt-20"
             >
               Mulai

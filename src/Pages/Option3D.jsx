@@ -49,7 +49,7 @@ const Option3d = ({ onBack }) => { // Add onBack prop
           ref={swiperRef}
           effect="coverflow"
           spaceBetween={16}
-          slidesPerView={isMobile ? 1 : 3.4}
+          slidesPerView={isMobile ? 1 : 3.5}
           centeredSlides={false}
           className="w-full flex items-end pt-10 pb-4 px-2"
         >
