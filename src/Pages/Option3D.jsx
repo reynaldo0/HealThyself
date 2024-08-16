@@ -131,7 +131,7 @@ const Option3d = ({ onBack }) => { // Add onBack prop
             <path d="M2.26659 6.64864L1.91956 7L2.2666 7.35136L7.29723 12.4447L6.46383 13.2885L0.673872 7.42635C0.673854 7.42633 0.673836 7.42632 0.673819 7.4263C0.563221 7.31426 0.5 7.16104 0.5 7C0.5 6.83896 0.563221 6.68574 0.673819 6.5737C0.673836 6.57368 0.673854 6.57367 0.673872 6.57365L6.46383 0.711526L7.29723 1.55531L2.26659 6.64864Z" fill="#909090" stroke="black" />
           </svg>
 
-          <button 
+          <button
             onClick={onBack} // Use the onBack function here
             className="text-black font-semibold opacity-50 hover:opacity-100"
           >
