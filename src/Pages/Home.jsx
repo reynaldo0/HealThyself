@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Navbar from "../Components/HomeNav";
 import { useStateContext } from "../context/stateContext";
 
 const Home = ({ onStart }) => {
   const { setOpen } = useStateContext();
+  const videoRef = useRef(null);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -12,34 +13,56 @@ const Home = ({ onStart }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    const handleTimeUpdate = () => {
+      if (videoElement.currentTime >= 60) {
+        console.log('Video reached 60 seconds');
+        videoElement.pause();
+        videoElement.currentTime = 60;
+      }
+    };
+
+    if (videoElement) {
+      videoElement.addEventListener('timeupdate', handleTimeUpdate);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('timeupdate', handleTimeUpdate);
+      }
+    };
+  }, []);
+
   return (
     <section className="fixed inset-0 overflow-hidden">
       <Navbar />
 
       <div className="page-container absolute inset-0 transition-all duration-500">
-        <div className="absolute -z-10 inset-0 bg-black/60 w-screen h-screen"></div>
+        <div className="absolute -z-10 inset-0 bg-black/75 w-screen h-screen"></div>
 
         <video
+          ref={videoRef}
           autoPlay
-          loop
           muted
           className="absolute -z-20 inset-0 w-full h-full object-cover"
         >
-          <source src="/background/video.mp4" type="video/mp4" />
+          <source src="/background/vid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <div className="px-4 mx-auto max-w-screen-xl text-center py-40 md:py-24 lg:py-40">
-          <h1 className="mb-4 text-4xl text-secondary font-extrabold tracking-tight font-poppins leading-none md:text-5xl lg:text-6xl">
-            Bagaimana Cara <span className="text-primary">Hidup Sehat?</span>
+          <h1 className="mb-4 text-3xl text-primary font-extrabold tracking-tight font-poppins leading-none md:text-5xl lg:text-6xl">
+            Gaya Hidup Sehat <span className="text-secondary">Sulit Dicapai?</span>
           </h1>
-          <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit...
+          <p className="mb-8 text-sm font-normal text-gray-300 lg:text-base sm:px-16 lg:px-48 pt-2">
+            "Menjaga gaya hidup sehat bisa menjadi tantangan karena rutinitas sibuk, perubahan kebutuhan kesehatan seiring usia, dan kebiasaan yang sulit diubah. Kami menyediakan panduan praktis dan tips untuk setiap tahap kehidupan dari bayi hingga lansia untuk membantu Anda mengatasi hambatan dan mencapai kesejahteraan yang optimal."
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <button
               onClick={onStart}
-              className="inline-flex justify-center items-center py-3 px-24 text-base font-medium text-center text-white rounded-lg bg-secondary hover:bg-secondary/90 mt-5 xl:mt-20"
+              className="inline-flex justify-center items-center py-3 px-10 text-base font-medium text-center text-white rounded-lg bg-secondary hover:bg-secondary/90 mt- xl:mt-20"
             >
               Mulai
               <svg

@@ -9,14 +9,9 @@ import { Remaja } from "../Components/Models/Remaja";
 import 'swiper/css';
 import { Link } from "react-router-dom";
 
-const Option3d = ({ onBack }) => { // Add onBack prop
+const Option3d = ({ onBack }) => {
   const isMobile = window.innerWidth <= 768;
   const swiperRef = useRef(null);
-
-  useEffect(() => {
-    const audio1 = new Audio('/audio/welcome.mp3');
-    audio1.play();
-  }, []);
 
   const handlePrev = () => {
     if (swiperRef.current) swiperRef.current.swiper.slidePrev();

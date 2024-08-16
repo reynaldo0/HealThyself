@@ -1,32 +1,41 @@
-import React, { useState, useEffect } from "react";
-import Option3d from "../Pages/Option3D";
-import Home from "../Pages/Home.jsx";
-import { useStateContext } from "../context/stateContext";
+import React, { useState } from 'react';
+import Home from '../Pages/Home';
+import Option3d from '../Pages/Option3D';
+import { useStateContext } from '../context/stateContext';
+import WelcomeScreen from './WelcomeScreen';
 
 const HomeLayout = () => {
   const { open, setOpen } = useStateContext();
-  const [transition, setTransition] = useState("fade-in");
+  const [transition, setTransition] = useState('fade-in');
+  const [showWelcome, setShowWelcome] = useState(false);
 
   const handleBackToHome = () => {
-    setTransition("fade-out");
+    setTransition('fade-out');
     setTimeout(() => {
       setOpen(false);
-      setTransition("fade-in");
-    }, 500); // Durasi sama dengan animasi fade-out
+      setTransition('fade-in');
+    }, 500); // Duration matches fade-out animation
   };
 
   const handleOpenOption3d = () => {
-    setTransition("fade-out");
+    setTransition('fade-out');
     setTimeout(() => {
-      setOpen(true);
-      setTransition("fade-in");
+      setShowWelcome(true); // Show the welcome screen
     }, 500);
+  };
+
+  const handleProceedToOption3d = () => {
+    setShowWelcome(false);
+    setOpen(true);
+    setTransition('fade-in');
   };
 
   return (
     <>
-      {open ? (
-        <div className={transition}>
+      {showWelcome ? (
+        <WelcomeScreen onProceed={handleProceedToOption3d} />
+      ) : open ? (
+        <div className={`${transition} ${showWelcome ? 'blur' : ''}`}>
           <Option3d onBack={handleBackToHome} />
         </div>
       ) : (
