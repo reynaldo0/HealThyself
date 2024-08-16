@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ teamText = "Team", teamLink = "/", direction = "left" }) => {
+const Navbar = ({ teamText = "Team", teamLink = "/team", direction = "left" }) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    const container = document.querySelector('.page-container');
+    const container = document.querySelector('.page-container');  // Only apply transition to content
     if (direction === 'left') {
       container.classList.add('slide-out-left');
     } else {
