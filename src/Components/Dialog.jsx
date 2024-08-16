@@ -42,14 +42,15 @@ const Dialog = () => {
 
     return isDialogVisible && (
         <div className="absolute inset-0 bg-black/60 z-20 backdrop-blur-md w-full flex items-center">
-            <div className="flex items-center justify-center gap-10 w-full">
-                <img src='/maskot.png' alt="maskot" />
+            <div className="container">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full">
+                <img src='/maskot.png' alt="maskot" className='w-[150px] md:w-[300px] h-auto' />
 
                 <div className="flex flex-col w-full gap-4">
-                    <div className="bg-white w-[90%] max-w-[800px] min-h-[125px] rounded-md p-4 text-base font-semibold">
+                    <div className="bg-white w-full md:w-[90%] max-w-[800px] min-h-[125px] rounded-md p-4 text-base font-semibold">
                         {dialogs[currentDialogIndex].text}
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex justify-end md:justify-start gap-4">
                         <button
                             onClick={handleSkip}
                             className="text-white bg-secondary/50 hover:bg-secondary/90 font-medium rounded-lg text-sm px-8 py-2 text-center"
@@ -64,6 +65,7 @@ const Dialog = () => {
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );
