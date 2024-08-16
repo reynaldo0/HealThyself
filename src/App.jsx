@@ -3,7 +3,7 @@ import Home from './Pages/Home';
 import Team from './Pages/Team';
 import Baby from './Pages/Baby';
 import Option3d from './Pages/Option3D';
-import HomeLayout from './layout/home.layout.jsx';
+import HomeLayout from './layout/home.layout';
 
 function App() {
   return (
