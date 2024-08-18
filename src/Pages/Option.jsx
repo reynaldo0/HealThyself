@@ -13,7 +13,7 @@ const Option3d = ({ onBack }) => {
   const [showDialog, setShowDialog] = useState(false);
   const isMobile = window.innerWidth <= 768;
   const swiperRef = useRef(null);
-
+  
   const handlePrev = () => {
     if (swiperRef.current) swiperRef.current.swiper.slidePrev();
   };
@@ -50,9 +50,9 @@ const Option3d = ({ onBack }) => {
           ref={swiperRef}
           effect="coverflow"
           spaceBetween={16}
-          slidesPerView={isMobile ? 1 : 3.5}
+          slidesPerView={isMobile ? 1 : 3}
           centeredSlides={false}
-          className="w-full flex items-end pt-10 pb-4 px-2"
+          className="w-full flex items-end pt-10 pb-4 px-2 h-[70vh] "
         >
           {/* Swiper slides */}
           <SwiperSlide className="flex justify-center items-end">
@@ -60,13 +60,12 @@ const Option3d = ({ onBack }) => {
               model={<Bayi />}
               title="Bayi"
               description="0-2 Tahun"
-              gradientColors={["#26A5C4", "#09409A"]}
+              bgColor={'#0D46A4'}
               width="289px"
               height="211px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              canvasWidth="180px"
-              canvasHeight="220px"
+              href="/baby"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
@@ -74,13 +73,12 @@ const Option3d = ({ onBack }) => {
               model={<Anak />}
               title="Anak - Anak"
               description="3-12 Bulan"
-              gradientColors={["#FFB145", "#9F5D00"]}
+              bgColor={'#EA9117'}
               width="289px"
               height="300px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              canvasWidth="200px"
-              canvasHeight="220px"
+              href="/anak"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
@@ -88,13 +86,12 @@ const Option3d = ({ onBack }) => {
               model={<Remaja />}
               title="Remaja"
               description="3-12 Bulan"
-              gradientColors={["#1BB05C", "#004B2C"]}
+              bgColor={'#EA9117'}
               width="289px"
               height="300px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              canvasWidth="200px"
-              canvasHeight="220px"
+              href="/remaja"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
@@ -102,13 +99,12 @@ const Option3d = ({ onBack }) => {
               model={<Dewasa />}
               title="Dewasa"
               description="3-12 Bulan"
-              gradientColors={["#E21C34", "#760635"]}
+              bgColor={'#179C51'}
               width="289px"
               height="268px"
               titleColor="#6FDB9F"
               descriptionColor="#FFF"
-              canvasWidth="220px"
-              canvasHeight="240px"
+              href="/dewasa"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
@@ -116,13 +112,12 @@ const Option3d = ({ onBack }) => {
               model={<Kakek />}
               title="Lansia"
               description="3-12 Bulan"
-              gradientColors={["#F2C94C", "#F2994A"]}
+              bgColor={'#B11414'}
               width="289px"
               height="300px"
               titleColor="#FFC0CC"
               descriptionColor="#FFF"
-              canvasWidth="240px"
-              canvasHeight="240px"
+              href="/kakek"
             />
           </SwiperSlide>
         </Swiper>

@@ -6,13 +6,12 @@ const ModelCanvas = ({
   model,
   title,
   description,
-  gradientColors,
+  bgColor,
   titleColor = "black",
   descriptionColor = "gray",
   width = "300px",
   height = "300px",
-  canvasWidth = "200px",
-  canvasHeight = "250px",
+  href = '#',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -21,27 +20,23 @@ const ModelCanvas = ({
     setIsMounted(true);
   }, []);
 
-  const dynamicCanvasWidth = isHovered ? "220px" : canvasWidth;
-  const dynamicCanvasHeight = isHovered ? "250px" : canvasHeight;
-
   return (
     <div
-      className={`relative flex flex-col items-center shadow-lg justify-end pb-5 rounded-3xl overflow-visible transform transition-transform duration-1000 ease-in-out 
+      className={`relative flex flex-col items-center shadow-lg justify-end pb-5 rounded-3xl overflow-visible transform transition-transform duration-1000 ease-in-out
         ${isHovered ? "scale-105" : "scale-100"} 
         ${isMounted ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} 
         transition-all duration-700 ease-in-out`}
       style={{
-        background: `linear-gradient(${gradientColors[0]}, ${gradientColors[1]})`,
         width: width,
         height: height,
+        backgroundColor: bgColor,
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`absolute bottom-16 z-50 pb-20 transition-all duration-700 ease-in-out transform 
+        className={`absolute bottom-16 z-50 pb-20 transition-all duration-700 ease-in-out transform w-[300px] h-[400px] 
         ${isMounted ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
-        style={{ width: dynamicCanvasWidth, height: dynamicCanvasHeight }}
       >
         <Canvas className="bg-transparent">
           <OrbitControls
@@ -66,13 +61,13 @@ const ModelCanvas = ({
           >
             {title}
           </h2>
-          <p className="text-gray-600" style={{ color: descriptionColor }}>
-            Usia <span className="font-bold">{description}</span>
+          <p className="text-white/80" style={{ color: descriptionColor }}>
+            Usia <span className="font-semibold">{description}</span>
           </p>
         </div>
-        <button className="mt-4 px-4 md:right-20 bg-white/20 w-full border border-white/25 hover:bg-white/30 backdrop-blur-md text-white py-2 rounded">
+        <a href={href} className="mt-4 px-4 md:right-20 inline-block text-center bg-white/20 w-full border border-white/25 hover:bg-white/30 backdrop-blur-md text-white py-2 rounded">
           Tombol
-        </button>
+        </a>
       </div>
     </div>
   );

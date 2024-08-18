@@ -9,7 +9,7 @@ export function Remaja(props) {
 
   useFrame(() => {
     if (meshRef.current) {
-      const targetScale = isHovered ? 7 : 6;
+      const targetScale = isHovered ? 5.5 : 5;
       meshRef.current.scale.x += (targetScale - meshRef.current.scale.x) * 0.1;
       meshRef.current.scale.y += (targetScale - meshRef.current.scale.y) * 0.1;
       meshRef.current.scale.z += (targetScale - meshRef.current.scale.z) * 0.1;
