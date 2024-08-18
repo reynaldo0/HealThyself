@@ -27,7 +27,11 @@ const CustomVideo = ({ src, cloudOverlay }) => {
                 onClick={togglePlay}
                 className="absolute inset-0 flex items-center justify-center text-white text-4xl"
             >
-                {!isPlaying && <span>&#9658;</span>}
+                {!isPlaying && (
+                    <span className='text-4xl bg-white/15 rounded-full flex justify-center items-center p-4'>
+                        <span className='ml-1'>&#9658;</span>
+                    </span>
+                )}
             </button>
         </div>
     );
