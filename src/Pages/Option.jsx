@@ -66,7 +66,7 @@ const Option3d = ({ onBack }) => {
               description="0-2 Tahun"
               bgColor={'#0D46A4'}
               width="289px"
-              height="211px"
+              height="225px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
               href="/baby"
@@ -92,7 +92,7 @@ const Option3d = ({ onBack }) => {
               description="3-12 Bulan"
               bgColor={'#EA9117'}
               width="289px"
-              height="300px"
+              height="320px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
               href="/remaja"
@@ -105,7 +105,7 @@ const Option3d = ({ onBack }) => {
               description="3-12 Bulan"
               bgColor={'#179C51'}
               width="289px"
-              height="268px"
+              height="270px"
               titleColor="#6FDB9F"
               descriptionColor="#FFF"
               href="/dewasa"
@@ -118,7 +118,7 @@ const Option3d = ({ onBack }) => {
               description="3-12 Bulan"
               bgColor={'#B11414'}
               width="289px"
-              height="300px"
+              height="220px"
               titleColor="#FFC0CC"
               descriptionColor="#FFF"
               href="/kakek"
