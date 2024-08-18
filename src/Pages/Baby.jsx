@@ -4,6 +4,7 @@ import { Canvas } from "react-three-fiber";
 import Bayi from "../Components/Models/landingPage/Bayi";
 import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
+import CustomVideo from "../Components/CustomVideo";
 
 const Baby = () => {
 
@@ -56,12 +57,18 @@ const Baby = () => {
 
 
       {/* grafik perkembangan bayi start */}
+      <section id="grafik" className="min-h-[70vh]">
 
+      </section>
       {/* grafik perkembangan bayi end */}
 
 
       {/* video bayi start */}
-
+      <section id="video" className="relative">
+        <img src="/background/awan.svg" alt="awan" className="absolute w-full top-0 z-10" />
+        <CustomVideo src={'/background/background.mp4'} />
+        <img src="/background/awan-biru.svg" alt="awan" className="absolute w-full bottom-0 z-10" />
+      </section>
       {/* video bayi end */}
 
 
