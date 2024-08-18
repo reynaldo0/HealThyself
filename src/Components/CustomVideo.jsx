@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-const CustomVideo = ({ src }) => {
+const CustomVideo = ({ src, cloudOverlay }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 

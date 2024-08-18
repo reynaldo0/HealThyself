@@ -65,16 +65,21 @@ const Baby = () => {
 
       {/* video bayi start */}
       <section id="video" className="relative">
-        <img src="/background/awan.svg" alt="awan" className="absolute w-full top-0 z-10" />
+        <img src="/background/awan-putih.webp" alt="awan putih" className="absolute w-full top-0 z-10" />
         <CustomVideo src={'/background/background.mp4'} />
-        <img src="/background/awan-biru.svg" alt="awan" className="absolute w-full bottom-0 z-10" />
+        <img src="/background/awan-biru.webp" alt="awan biru" className="absolute w-full bottom-0 z-10" />
       </section>
       {/* video bayi end */}
 
 
-      {/* kecukupan gizi bayi start */}
+      {/* rencana asi bayi start */}
+    
+      {/* rencana asi bayi end */}
 
-      {/* kecukupan gizi bayi end */}
+
+      {/* rencana gizi bayi start */}
+
+      {/* rencana gizi bayi end */}
     </section>
   );
 };
