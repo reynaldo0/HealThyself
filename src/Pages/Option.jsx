@@ -30,9 +30,13 @@ const Option3d = ({ onBack }) => {
   }, [])
 
   return (
-    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)]">
+    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)] overflow-hidden">
 
       {showDialog && <Dialog />}
+
+      {/* awan awan */}
+      <img src="/background/awan-opsi-1.webp" alt="awan biruu" className="absolute top-0 -right-28" />
+      <img src="/background/awan-opsi-2.webp" alt="awan biruu lagi" className="absolute top-0 -left-28"/>
 
       <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-transparent">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
