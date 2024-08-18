@@ -11,6 +11,9 @@ export default {
       padding: '1rem',
     },
     extend: {
+      screens: {
+        '2xl': '1320px'
+      },
       colors: {
         'primary': '#0D9B86',
         'secondary': '#FF682C',
