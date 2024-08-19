@@ -79,27 +79,52 @@ const ImageCarousel = () => {
     ],
   };
 
-  const images = [
-    '/assets/carousel/baby/piramis.jpg',
-    '/assets/carousel/baby/another-image.jpg',
-    '/assets/carousel/baby/yet-another-image.jpg',
-    '/assets/carousel/baby/final-image.jpg',
-    // Tambahkan lebih banyak gambar sesuai kebutuhan
+  const slides = [
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+    // Add more slides as needed
   ];
 
   return (
     <div className="relative container mx-auto py-8 overflow-hidden px-4 md:px-0">
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {slides.map((slide, index) => (
           <div
             key={index}
             className={`slide ${currentSlide === index ? 'active-slide' : ''}`}
+            style={{
+              padding: '10px',
+              transform: currentSlide === index ? 'scale(1)' : 'scale(0.9)',
+              transition: 'transform 0.5s ease',
+              position: 'relative', // Ensure positioning context for text
+            }}
           >
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="carousel-image"
-            />
+            <div
+              style={{
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                borderRadius: '10px',
+                overflow: 'hidden',
+                position: 'relative', // Ensure relative positioning for the text container
+              }}
+            >
+              <img
+                src={slide.src}
+                alt={`Slide ${index + 1}`}
+                className="carousel-image"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+              <div style={{ position: 'absolute', bottom: '10px', left: '10px', zIndex: 10, color: '#fff', padding: '10px' }}>
+                <h3 style={{ margin: '0', fontSize: '16px', fontWeight: 'bold' }}>{slide.title}</h3>
+                <p style={{ margin: '0', fontSize: '14px' }}>
+                  {slide.description}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>
