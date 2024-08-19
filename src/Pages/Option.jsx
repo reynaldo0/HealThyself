@@ -174,7 +174,7 @@ const Option3d = ({ onBack }) => {
           </svg>
 
           <button
-            onClick={onBack} // Use the onBack function here
+            onClick={onBack}
             className="text-black font-semibold opacity-50 hover:opacity-100"
           >
             Kembali

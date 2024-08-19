@@ -343,12 +343,6 @@ const Baby = () => {
           </Swiper>
         </div>
         {/* jenis vaksinasi end */}
-
-
-
-        {/* usia efektif start */}
-        
-        {/* usia efektif end */}
       </section>
     </section>
   );
