@@ -202,7 +202,7 @@ const Baby = () => {
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-base text-tertiary text-center max-w-[600px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
 
