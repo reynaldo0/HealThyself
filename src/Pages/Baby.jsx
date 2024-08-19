@@ -65,6 +65,8 @@ const Accordion = ({ items, initialOpenIndex }) => {
 const Baby = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
+  const containerRef = useRef();
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
   const isMobile = window.innerWidth <= 768;
   const containerRef = useRef();
 
@@ -106,12 +108,20 @@ const Baby = () => {
         },
       });
     }
-  }, []);
+  }, [labels]);
 
   useEffect(() => {
-    const container = document.querySelector('.page-container');
-    container.classList.add('fade-in');
+    const container = containerRef.current;
+    if (container) {
+      container.classList.add('fade-in');
+    }
   }, []);
+
+  const handleNavigation = (path) => {
+    // Implement the navigation logic here
+    // For example, using React Router:
+    // history.push(path);
+  };
 
   return (
     <section ref={containerRef} className="pt-24">
@@ -127,6 +137,7 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
+                  {/* Add heading text */}
                   Apakah Anda Tahu Tahapan Perkembangan Bayi Anda?
                 </h1>
                 <p className="text-xl text-tertiary">
@@ -179,20 +190,20 @@ const Baby = () => {
 
               {/* bola bola ayam */}
               <Ball
-                classList="absolute -right-8 top-10 animation-delay-1000"
+                className="absolute -right-8 top-10 animation-delay-1000"
                 size={100}
               />
               <Ball
-                classList="absolute right-40 top-64 animation-delay-1500"
+                className="absolute right-40 top-64 animation-delay-1500"
                 size={70}
               />
               <Ball
-                classList="absolute right-24 bottom-12 animation-delay-1500"
+                className="absolute right-24 bottom-12 animation-delay-1500"
                 size={110}
               />
-              <Ball classList="absolute -right-14 top-1/2" />
+              <Ball className="absolute -right-14 top-1/2" />
               <Ball
-                classList="absolute right-1/3 top-10 -z-10"
+                className="absolute right-1/3 top-10 -z-10"
                 color="#253B70"
                 size={70}
               />
@@ -248,12 +259,16 @@ const Baby = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
+            <div className="p-4 rounded-xl bg-baby-soft w-full max-w-[800px]">
+              <canvas ref={canvasRef}></canvas>
             </div>
           </div>
         </div>
       </section>
       {/* grafik perkembangan bayi end */}
 
+      {/* jenis vaksinasi start */}
+      <section id="Vaksinasi" className="min-h-[70vh] pt-28">
       {/* video bayi start */}
       <section id="video" className="relative">
         <img
@@ -303,22 +318,46 @@ const Baby = () => {
       <section id="gizi" className="min-h-[70vh] items-center justify-center pt-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+            <h1 className="text-baby-normal font-bold text-4xl text-center">
+              <span className="text-baby-dark">Jenis</span> Vaksinasi
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]">
+            <p className="text-base text-tertiary text-center max-w-[600px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
+            <div className="relative w-full">
+              <Swiper
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 5000 }}
+                navigation={true}
+                modules={[Pagination, Autoplay, Navigation]}
+                spaceBetween={50}
+                slidesPerView={1}
+                className="w-full max-w-[800px] rounded-xl"
+              >
+                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
+                  <img src="/path/to/image1.jpg" alt="Image 1" className="rounded-xl" />
+                  <p className="mt-4 text-white">Description for Image 1</p>
+                </SwiperSlide>
+                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
+                  <img src="/path/to/image2.jpg" alt="Image 2" className="rounded-xl" />
+                  <p className="mt-4 text-white">Description for Image 2</p>
+                </SwiperSlide>
+                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
+                  <img src="/path/to/image3.jpg" alt="Image 3" className="rounded-xl" />
+                  <p className="mt-4 text-white">Description for Image 3</p>
+                </SwiperSlide>
+              </Swiper>
+              <SwiperButton />
+            </div>
           </div>
         </div>
       </section>
-      {/* rencana gizi bayi end */}
+      {/* jenis vaksinasi end */}
 
-      {/* jenis vaksinasi start */}
-      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
+      <section className="pt-28 min-h-[70vh]">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
@@ -359,10 +398,14 @@ const Baby = () => {
               </Swiper>
             </div>
           </div>
+          <h1 className="text-baby-dark font-bold text-4xl text-center">
+            Jenis Makanan
+          </h1>
+          <Accordion items={accordionItems} initialOpenIndex={0} />
         </div>
       </section>
-      <Footer backgroundColor="#253B70" />
-      {/* jenis vaksinasi end */}
+
+      <Footer />
     </section>
   );
 };
