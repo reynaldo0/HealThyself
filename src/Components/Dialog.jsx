@@ -15,12 +15,6 @@ const Dialog = () => {
             mascot: '/maskot/pilih.gif',
             fallbackMascot: '/maskot/diam.png'
         },
-        {
-            text: "hitammmmmmmmmmmmmm",
-            audio: '/audio/welcome.mp3',
-            mascot: '/maskot3.gif',
-            fallbackMascot: '/maskot3-static.png'
-        }
     ];
 
     const [currentDialogIndex, setCurrentDialogIndex] = useState(0);
