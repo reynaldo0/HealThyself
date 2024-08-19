@@ -240,7 +240,7 @@ const Baby = () => {
           alt="White Clouds"
           className="absolute w-full top-0 -z-10"
         />
-        <CustomVideo src={"/background/background.mp4"} />
+        <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
           src="/background/awan-biru.png"
           alt="Blue Clouds"
