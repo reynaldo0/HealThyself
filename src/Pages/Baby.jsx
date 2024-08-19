@@ -139,10 +139,10 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
-                  Apakah Anda Tahu Tahapan Perkembangan Bayi Anda?
+                Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
                 <p className="text-xl text-tertiary">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
                   className="bg-baby-normal text-white p-4 rounded-lg w-fit"
@@ -202,7 +202,7 @@ const Baby = () => {
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-base text-tertiary text-center max-w-[600px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
 
@@ -240,7 +240,7 @@ const Baby = () => {
           alt="White Clouds"
           className="absolute w-full top-0 -z-10"
         />
-        <CustomVideo src={"/background/background.mp4"} />
+        <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
           src="/background/awan-biru.png"
           alt="Blue Clouds"
