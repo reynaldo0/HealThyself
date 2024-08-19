@@ -12,14 +12,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-import { BarController, BarElement, CategoryScale, Chart, LinearScale } from "chart.js";
+import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
 
-Chart.register(BarController, BarElement, LinearScale, CategoryScale);
+Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
 const Accordion = React.memo(({ items, initialOpenIndex }) => {
   const [openIndex, setOpenIndex] = useState(initialOpenIndex);
@@ -84,6 +84,14 @@ const Baby = () => {
               backgroundColor: 'rgba(66, 90, 148, 0.25)',
               borderColor: '#004BFF'
             },
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+              borderRadius: Number.MAX_VALUE,
+              backgroundColor: 'rgba(255, 104, 44, 0.25)',
+              borderColor: '#FF682C '
+            },
           ],
         },
         options: {
@@ -92,6 +100,12 @@ const Baby = () => {
             intersect: false
           },
           responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom'
+            },
+          },
           scales: {
             y: {
               beginAtZero: true,
@@ -242,7 +256,7 @@ const Baby = () => {
             <div className="flex-1">
               <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8">
-              Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
 
 
               </p>
@@ -272,7 +286,7 @@ const Baby = () => {
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
             <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]">
-            Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
+              Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
             <ImageCarousel />
           </div>
