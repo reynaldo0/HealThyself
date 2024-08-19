@@ -276,7 +276,7 @@ const Baby = () => {
     <div className="flex flex-col md:flex-row gap-10">
       <div className="flex flex-col flex-1 gap-5">
         <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
-        <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className="text-[#575757]">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
       </div>
       <div className="w-full md:w-2/3">
         <Swiper 
@@ -292,7 +292,7 @@ const Baby = () => {
             <SwiperSlide>
               <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                 <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="Immunization" />
+                  <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
                 </div>
                 <div className="flex-[2]">
                   <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HEPATITIS <span className="text-baby-light">dan Vaksinasi</span></h1>
@@ -304,7 +304,7 @@ const Baby = () => {
             <SwiperSlide>
               <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                 <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="Immunization" />
+                  <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
                 </div>
                 <div className="flex-[2]">
                   <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light">dan Vaksinasi</span></h1>
@@ -316,7 +316,7 @@ const Baby = () => {
             <SwiperSlide>
               <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                 <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="Immunization" />
+                  <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
                 </div>
                 <div className="flex-[2]">
                   <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">dan Vaksinasi</span></h1>
@@ -328,7 +328,7 @@ const Baby = () => {
             <SwiperSlide>
               <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                 <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="Immunization" />
+                  <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
                 </div>
                 <div className="flex-[2]">
                   <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">dan Vaksinasi</span></h1>
@@ -340,7 +340,7 @@ const Baby = () => {
             <SwiperSlide>
               <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                 <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="Immunization" />
+                  <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
                 </div>
                 <div className="flex-[2]">
                   <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-baby-light">dan Vaksinasi</span></h1>
@@ -352,7 +352,7 @@ const Baby = () => {
             <SwiperSlide>
               <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                 <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="Immunization" />
+                  <img src="/assets/carousel/baby/mmr.jpg" alt="Immunization" />
                 </div>
                 <div className="flex-[2]">
                   <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-baby-light">dan Vaksinasi</span></h1>
