@@ -299,7 +299,7 @@ const Baby = () => {
 
 
       {/* jenis vaksinasi start */}
-      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen ">
+      <section id="vaksinasi" className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen ">
         {/* jenis vaksinasi start */}
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
@@ -330,6 +330,12 @@ const Baby = () => {
 
         <Footer backgroundColor="#253B70"/>
       </section>
+
+      {/* panduan perawatan jiwa bayi start */}
+      <section id="panduanPerawatan">
+
+      </section>
+      {/* panduan perawatan jiwa bayi end */}
     </section>
   );
 };
