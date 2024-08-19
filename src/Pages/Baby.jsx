@@ -239,15 +239,15 @@ const Baby = () => {
       {/* video bayi start */}
       <section id="video" className="relative">
         <img
-          src="/background/awan-putih.webp"
+          src="/background/awan-putih.png"
           alt="awan putih"
-          className="absolute w-full top-0 z-10"
+          className="absolute w-full top-0 -z-10"
         />
-        <CustomVideo src={"/background/background.mp4"} />
+        <CustomVideo src={"/background/background.mp4"}  />
         <img
-          src="/background/awan-biru.webp"
+          src="/background/awan-biru.png"
           alt="awan biru"
-          className="absolute w-full bottom-0 z-10"
+          className="absolute w-full bottom-0 -z-10"
         />
       </section>
       {/* video bayi end */}
