@@ -65,8 +65,6 @@ const Accordion = ({ items, initialOpenIndex }) => {
 const Baby = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
-  const containerRef = useRef();
-  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
   const isMobile = window.innerWidth <= 768;
   const containerRef = useRef();
 
@@ -137,7 +135,6 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
-                  {/* Add heading text */}
                   Apakah Anda Tahu Tahapan Perkembangan Bayi Anda?
                 </h1>
                 <p className="text-xl text-tertiary">
@@ -259,16 +256,12 @@ const Baby = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            <div className="p-4 rounded-xl bg-baby-soft w-full max-w-[800px]">
-              <canvas ref={canvasRef}></canvas>
             </div>
           </div>
         </div>
       </section>
       {/* grafik perkembangan bayi end */}
 
-      {/* jenis vaksinasi start */}
-      <section id="Vaksinasi" className="min-h-[70vh] pt-28">
       {/* video bayi start */}
       <section id="video" className="relative">
         <img
@@ -327,37 +320,13 @@ const Baby = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <div className="relative w-full">
-              <Swiper
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 5000 }}
-                navigation={true}
-                modules={[Pagination, Autoplay, Navigation]}
-                spaceBetween={50}
-                slidesPerView={1}
-                className="w-full max-w-[800px] rounded-xl"
-              >
-                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
-                  <img src="/path/to/image1.jpg" alt="Image 1" className="rounded-xl" />
-                  <p className="mt-4 text-white">Description for Image 1</p>
-                </SwiperSlide>
-                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
-                  <img src="/path/to/image2.jpg" alt="Image 2" className="rounded-xl" />
-                  <p className="mt-4 text-white">Description for Image 2</p>
-                </SwiperSlide>
-                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
-                  <img src="/path/to/image3.jpg" alt="Image 3" className="rounded-xl" />
-                  <p className="mt-4 text-white">Description for Image 3</p>
-                </SwiperSlide>
-              </Swiper>
-              <SwiperButton />
-            </div>
           </div>
         </div>
       </section>
-      {/* jenis vaksinasi end */}
+      {/* rencana gizi bayi end */}
 
-      <section className="pt-28 min-h-[70vh]">
+      {/* jenis vaksinasi start */}
+      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
@@ -396,16 +365,13 @@ const Baby = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
+              <SwiperButton />
             </div>
           </div>
-          <h1 className="text-baby-dark font-bold text-4xl text-center">
-            Jenis Makanan
-          </h1>
-          <Accordion items={accordionItems} initialOpenIndex={0} />
         </div>
       </section>
-
-      <Footer />
+      <Footer backgroundColor="#253B70" />
+      {/* jenis vaksinasi end */}
     </section>
   );
 };
