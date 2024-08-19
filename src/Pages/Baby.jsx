@@ -242,7 +242,9 @@ const Baby = () => {
             <div className="flex-1">
               <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8">
-                Ini adalah contoh paragraf teks. Anda dapat menambahkan lebih banyak konten teks di sini untuk menjelaskan atau memberikan informasi lebih lanjut. Tailwind CSS memudahkan dalam mengatur layout dan desain.
+              Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+
+
               </p>
               {/* Accordion Section */}
               <Accordion items={accordionItems} initialOpenIndex={0} />
@@ -270,7 +272,7 @@ const Baby = () => {
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
             <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
             <ImageCarousel />
           </div>

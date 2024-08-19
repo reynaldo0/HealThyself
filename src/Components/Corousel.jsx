@@ -79,16 +79,24 @@ const ImageCarousel = () => {
     ],
   };
 
+  const images = [
+    '/assets/carousel/baby/piramis.jpg',
+    '/assets/carousel/baby/another-image.jpg',
+    '/assets/carousel/baby/yet-another-image.jpg',
+    '/assets/carousel/baby/final-image.jpg',
+    // Tambahkan lebih banyak gambar sesuai kebutuhan
+  ];
+
   return (
     <div className="relative container mx-auto py-8 overflow-hidden px-4 md:px-0">
       <Slider {...settings}>
-        {[...Array(6).keys()].map((index) => (
+        {images.map((image, index) => (
           <div
             key={index}
             className={`slide ${currentSlide === index ? 'active-slide' : ''}`}
           >
             <img
-              src={`https://via.placeholder.com/600x300?text=Slide+${index + 1}`}
+              src={image}
               alt={`Slide ${index + 1}`}
               className="carousel-image"
             />
