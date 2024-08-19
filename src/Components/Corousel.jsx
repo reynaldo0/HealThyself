@@ -81,10 +81,10 @@ const ImageCarousel = () => {
 
   const images = [
     '/assets/carousel/baby/piramis.jpg',
-    '/assets/carousel/baby/another-image.jpg',
-    '/assets/carousel/baby/yet-another-image.jpg',
-    '/assets/carousel/baby/final-image.jpg',
-    // Tambahkan lebih banyak gambar sesuai kebutuhan
+    '/assets/carousel/baby/piramis.jpg',
+    '/assets/carousel/baby/piramis.jpg',
+    '/assets/carousel/baby/piramis.jpg',
+    // Add more images as needed
   ];
 
   return (
@@ -94,12 +94,38 @@ const ImageCarousel = () => {
           <div
             key={index}
             className={`slide ${currentSlide === index ? 'active-slide' : ''}`}
+            style={{
+              padding: '10px',
+              transform: currentSlide === index ? 'scale(1)' : 'scale(0.9)',
+              transition: 'transform 0.5s ease',
+              position: 'relative', // Ensure positioning context for text
+            }}
           >
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="carousel-image"
-            />
+            <div
+              style={{
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                borderRadius: '10px',
+                overflow: 'hidden',
+                position: 'relative', // Ensure relative positioning for the text container
+              }}
+            >
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="carousel-image"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+              <div style={{ position: 'absolute', bottom: '10px', left: '10px', zIndex: 10, color: '#fff', padding: '10px', borderRadius: '5px' }}>
+                <h3 style={{ margin: '0', fontSize: '16px', fontWeight: 'bold' }}>Lorem Ipsum</h3>
+                <p style={{ margin: '0', fontSize: '14px' }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                  lacinia odio vitae vestibulum vestibulum.
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>
