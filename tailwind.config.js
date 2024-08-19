@@ -20,8 +20,12 @@ export default {
         'secondary': '#FF682C',
         'tertiary': '#808080',
         'baby': {
+          'vlight': '#ABCAFF',
           'light': '#3465B7',
           'normal': '#0D46A4',
+          'vsoft': '#6B8AB6',
+          'soft': '#4560A0',
+          'ldark': '#3B5186',
           'dark': '#253B70'
         }
       },
