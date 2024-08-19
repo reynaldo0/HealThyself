@@ -62,6 +62,8 @@ const Baby = () => {
 
   const labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 
+  const as = [1,2,3,4,5,6,7,8,9,10,11,12]
+
   useEffect(() => {
     if (canvasRef.current) {
       if (chartRef.current) {
@@ -319,14 +321,19 @@ const Baby = () => {
 
         {/* usia efektif start */}
         <div className="container">
-            <div className="flex">
+            <div className="flex gap-20 items-center">
               <div className="flex flex-col w-1/3">
-                <h1>Usia Efektif Imunisasi Bayi</h1>
+                <h1 className="te">Usia Efektif Imunisasi Bayi</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
               <div className="w-2/3">
-              <div className="grid grid-cols-4 grid-rows-3 gap-5">
-                
+              <div className="grid grid-cols-4 grid-rows-3 gap-5 w-full h-[500px] p-10 border-l-2 border-b-2 border-baby-dark border-dashed">
+                  {as.map(() => (
+                    <div className="w-full rounded-[35px] h-full flex flex-col justify-center items-center bg-baby-dark text-white font-bold">
+                    <p className="text-4xl">1</p>
+                    <p className="text-2xl">Bulan</p>
+                  </div>
+                  ))}
               </div>
               </div>
             </div>
