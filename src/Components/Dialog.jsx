@@ -10,7 +10,7 @@ const Dialog = () => {
             duration: 10000
         },
         {
-            text: "cukimaiiiiiiiiii",
+            text: "Silahkan pilih kategori usia yang kamu butuhkan",
             audio: '/audio/pilih.mp3',
             mascot: '/maskot/pilih.gif',
             fallbackMascot: '/maskot/diam.png'
