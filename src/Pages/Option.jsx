@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ModelCanvas from "../Components/ModelCanvas";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Dialog from "../Components/Dialog";
 import { Bayi } from "../Components/Models/Bayi";
@@ -14,6 +15,7 @@ const Option3d = ({ onBack }) => {
   const [cloudOffset, setCloudOffset] = useState(0);
   const isMobile = window.innerWidth <= 768;
   const swiperRef = useRef(null);
+  const navigate = useNavigate();
 
   const handlePrev = () => {
     if (swiperRef.current) swiperRef.current.swiper.slidePrev();
@@ -61,8 +63,17 @@ const Option3d = ({ onBack }) => {
     transition: 'transform 1s ease-out'
   };
 
+  const handleModelCanvasClick = (href) => {
+    const container = document.querySelector('.page-container');
+    container.classList.add('fade-out');
+    setTimeout(() => {
+      navigate(href);
+    }, 500);
+  };
+
+
   return (
-    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)] overflow-hidden">
+    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)] overflow-hidden page-container">
       {showDialog && <Dialog />}
 
       {/* Awan-awan */}
@@ -96,13 +107,14 @@ const Option3d = ({ onBack }) => {
           ref={swiperRef}
           effect="coverflow"
           spaceBetween={16}
-          slidesPerView={isMobile ? 1 : 3}
+          slidesPerView={isMobile ? 1 : 3.3}
           centeredSlides={false}
           className="w-full flex items-end pt-10 pb-4 px-2 h-[70vh]"
         >
           {/* Swiper slides */}
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
+              onClick={() => handleModelCanvasClick('/baby')}
               model={<Bayi />}
               title="Bayi"
               description="0-2 Tahun"
@@ -111,7 +123,6 @@ const Option3d = ({ onBack }) => {
               height="225px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              href="/baby"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">

@@ -64,6 +64,7 @@ const Accordion = ({ items, initialOpenIndex }) => {
 const Baby = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
+  const containerRef = useRef(); // Ref for container element
 
   const labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 
@@ -106,14 +107,19 @@ const Baby = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const container = document.querySelector('.page-container');
+    container.classList.add('fade-in');
+  }, []);
+
   return (
-    <section className="pt-24">
+    <section ref={containerRef} className="pt-24">
       <Navbar />
 
       {/* hero section start */}
       <section
         id="Home"
-        className="md:pt-28 lg:pt-0 relative min-h-[689px] overflow-x-hidden"
+        className="md:pt-28 lg:pt-0 relative min-h-[689px] overflow-x-hidden page-container"
       >
         <div className="container">
           <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
@@ -128,7 +134,10 @@ const Baby = () => {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <button className="bg-baby-normal text-white p-4 rounded-lg w-fit">
+                <button
+                  className="bg-baby-normal text-white p-4 rounded-lg w-fit"
+                  onClick={() => handleNavigation('/explore')}
+                >
                   Mulai Eksplorasi
                 </button>
               </div>
@@ -283,15 +292,15 @@ const Baby = () => {
               <Accordion items={accordionItems} initialOpenIndex={0} />
             </div>
             <div className="flex-shrink-0">
-              <img src="/assets/emak-anak.webp" alt="Contoh Gambar" className="w-96 h-auto rounded-lg" />
+              <img src="/assets/emak-anak.webp" className="w-96 h-auto" />
             </div>
           </div>
           {/* Ball components here */}
           <div className="absolute top-5 right-4 md:right-36">
-            <Ball classList="animation-delay-1000" size={60} />
+            <Ball classList="animation-delay-1000" size={60} color="#ffff" />
           </div>
           <div className="absolute bottom-0 md:bottom-10 right-0 md:right-10">
-            <Ball classList="animation-delay-1000 " size={80} />
+            <Ball classList="animation-delay-1000 " size={80} color="#ffff" />
           </div>
         </div>
       </section>
@@ -324,7 +333,7 @@ const Baby = () => {
               <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
             <div className="w-2/3">
-              <Swiper slidesPerView={1} spaceBetween={30} pagination={{clickable: true}} loop autoplay={{delay: 3000, pauseOnMouseEnter: true}} modules={[Pagination, Autoplay]} className="mb-20">
+              <Swiper slidesPerView={1} spaceBetween={30} pagination={{ clickable: true }} loop autoplay={{ delay: 3000, pauseOnMouseEnter: true }} modules={[Pagination, Autoplay]} className="mb-20">
                 {as.map(() => (
                   <SwiperSlide className="">
                     <div className="w-full h-full bg-white rounded-lg p-5 flex overflow-hidden gap-5 md:gap-10">
@@ -344,7 +353,7 @@ const Baby = () => {
         </div>
         {/* jenis vaksinasi end */}
 
-        <Footer backgroundColor="#253B70"/>
+        <Footer backgroundColor="#253B70" />
       </section>
     </section>
   );
