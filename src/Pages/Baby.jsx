@@ -397,7 +397,7 @@ const Baby = () => {
       </section>
 
       {/* panduan perawatan jiwa bayi start */}
-      <section id="perawatan" className="md:bg-[url('background/wave.png')] bg-cover md:h-[150vh]">
+      <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
             <div className="w-full md:w-1/2">
