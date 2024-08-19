@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
     <header>
       <nav className="fixed left-0 top-0 z-[99999] w-full border-gray-200 bg-white backdrop-blur-md shadow-sm bg-opacity-70">
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
-          <a
-            href="#"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
+          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/logo.png" className="h-auto w-40" alt="gambar logo" />
           </a>
           <button
@@ -93,13 +95,34 @@ const Navbar = () => {
                   Data
                 </a>
               </li>
-              <li>
-                <Link
-                  to="/"
+              <li className="relative">
+                <button
+                  onClick={handleDropdownToggle}
                   className="block rounded rounded-l-full rounded-r-full bg-primary px-5 py-2 text-white transition-colors hover:bg-primary-200"
                 >
-                  Kembali
-                </Link>
+                  Golongan
+                </button>
+                {isDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg md:w-56">
+                    <ul className="py-1 text-sm text-gray-700">
+                      <li>
+                        <a href="#option1" className="block px-4 py-2 hover:bg-gray-100">Bayi</a>
+                      </li>
+                      <li>
+                        <a href="#option2" className="block px-4 py-2 hover:bg-gray-100">Anak-Anak</a>
+                      </li>
+                      <li>
+                        <a href="#option3" className="block px-4 py-2 hover:bg-gray-100">Remaja</a>
+                      </li>
+                      <li>
+                        <a href="#option4" className="block px-4 py-2 hover:bg-gray-100">Dewasa</a>
+                      </li>
+                      <li>
+                        <a href="#option5" className="block px-4 py-2 hover:bg-gray-100">Lansia</a>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </li>
             </ul>
           </div>

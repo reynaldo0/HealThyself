@@ -1,23 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Dialog = () => {
     const dialogs = [
         {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            audio: 'audio/welcome.mp3'
+            text: "Halo Selamat datang di website Healtyself",
+            audio: '/audio/datang.mp3',
+            mascot: '/maskot/datang.gif',
+            fallbackMascot: '/maskot/diam.png',
+            duration: 10000
         },
         {
             text: "cukimaiiiiiiiiii",
-            audio: 'audio/welcome.mp3'
+            audio: '/audio/pilih.mp3',
+            mascot: '/maskot/pilih.gif',
+            fallbackMascot: '/maskot/diam.png'
         },
         {
             text: "hitammmmmmmmmmmmmm",
-            audio: 'audio/welcome.mp3'
+            audio: '/audio/welcome.mp3',
+            mascot: '/maskot3.gif',
+            fallbackMascot: '/maskot3-static.png'
         }
     ];
 
     const [currentDialogIndex, setCurrentDialogIndex] = useState(0);
     const [isDialogVisible, setIsDialogVisible] = useState(true);
+    const [isGIFLoaded, setIsGIFLoaded] = useState(true);
+    const [isFallbackImage, setIsFallbackImage] = useState(false);
+    const mediaRef = useRef(null);
 
     useEffect(() => {
         if (isDialogVisible) {
@@ -30,9 +40,17 @@ const Dialog = () => {
         }
     }, [currentDialogIndex, isDialogVisible]);
 
+    useEffect(() => {
+        if (mediaRef.current) {
+            mediaRef.current.addEventListener('load', handleImageLoad, { once: true });
+        }
+    }, [currentDialogIndex]);
+
     const handleNext = () => {
         if (currentDialogIndex < dialogs.length - 1) {
             setCurrentDialogIndex(currentDialogIndex + 1);
+            setIsGIFLoaded(true);
+            setIsFallbackImage(false);
         } else {
             setIsDialogVisible(false);
         }
@@ -42,12 +60,27 @@ const Dialog = () => {
         setIsDialogVisible(false);
     };
 
+    const handleImageLoad = () => {
+        setTimeout(() => {
+            setIsFallbackImage(true);
+        }, 2800); // Delay before switching to fallback image
+    };
+
+    const currentMedia = dialogs[currentDialogIndex].mascot;
+    const fallbackMedia = dialogs[currentDialogIndex].fallbackMascot;
+    const isGif = currentMedia.endsWith('.gif');
+
     return isDialogVisible && (
         <div className="absolute inset-0 bg-black/60 z-20 backdrop-blur-md w-full flex items-center">
             <div className="container">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full">
-                    <img src='/maskot.png' alt="maskot" className='w-[150px] md:w-[300px] h-auto' />
-
+                    <img 
+                        src={isFallbackImage ? fallbackMedia : currentMedia} 
+                        alt="maskot" 
+                        className='w-[150px] md:w-[300px] h-auto' 
+                        ref={mediaRef}
+                    />
+                    
                     <div className="flex flex-col w-full gap-4">
                         <div className="bg-white w-full md:w-[90%] max-w-[800px] min-h-[125px] rounded-md p-4 text-base font-semibold">
                             {dialogs[currentDialogIndex].text}
