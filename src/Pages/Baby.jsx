@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
 import Bayi from "../Components/Models/landingPage/Bayi";
