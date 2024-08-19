@@ -30,6 +30,43 @@
   animation: fadeOut 0.5s forwards;
 }
 
+/* Container untuk carousel */
+.relative.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+/* Styles for slides */
+.slide {
+  padding: 0 10px; /* Horizontal padding for spacing */
+}
+
+/* Styles for carousel images */
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Styles for arrows */
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+}
+
+
+/* Gaya untuk dot navigasi */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -89,3 +126,5 @@
     height: auto;
   }
 }
+
+

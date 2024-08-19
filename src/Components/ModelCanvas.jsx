@@ -12,6 +12,7 @@ const ModelCanvas = ({
   width = "300px",
   height = "300px",
   href = '#',
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -33,6 +34,7 @@ const ModelCanvas = ({
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
       <div
         className={`absolute bottom-16 z-50 pb-20 transition-all duration-700 ease-in-out transform w-[300px] h-[400px] 
