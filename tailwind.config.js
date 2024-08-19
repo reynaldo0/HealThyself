@@ -20,6 +20,7 @@ export default {
         'secondary': '#FF682C',
         'tertiary': '#808080',
         'baby': {
+          'vlight': '#ABCAFF',
           'light': '#3465B7',
           'normal': '#0D46A4',
           'dark': '#253B70'
