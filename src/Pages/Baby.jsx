@@ -271,7 +271,7 @@ const Baby = () => {
       {/* rencana gizi bayi end */}
 
 {/* jenis vaksinasi start */}
-<section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
+<section id="vaksinasi" className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
   <div className="container">
     <div className="flex flex-col md:flex-row gap-10">
       <div className="flex flex-col flex-1 gap-5">
@@ -368,6 +368,12 @@ const Baby = () => {
   </div>
   <Footer backgroundColor="#253B70" />
 </section>
+
+      {/* panduan perawatan jiwa bayi start */}
+      <section id="panduanPerawatan">
+
+      </section>
+      {/* panduan perawatan jiwa bayi end */}
     </section>
   );
 };
