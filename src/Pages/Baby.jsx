@@ -18,7 +18,7 @@ import {
   LinearScale,
 } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperButton from "../Components/SwiperButton";
@@ -64,6 +64,7 @@ const Accordion = ({ items, initialOpenIndex }) => {
 const Baby = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
+  const isMobile = window.innerWidth <= 768;
   const containerRef = useRef(); // Ref for container element
 
   const labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
@@ -202,7 +203,7 @@ const Baby = () => {
       {/* hero section end */}
 
       {/* grafik perkembangan bayi start */}
-      <section id="grafik" className="min-h-[70vh]">
+      <section id="grafik" className="min-h-[70vh] pt-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-4xl text-center">
@@ -219,45 +220,26 @@ const Baby = () => {
           <canvas ref={canvasRef} className="max-w-[80%] w-[600px] mx-auto"></canvas>
 
           <div className="flex items-center">
-            <Swiper slidesPerView={4} effect="coverflow" centeredSlides={false}
-              spaceBetween={16} className="max-w-screen-md pt-10">
-              <SwiperSlide className="">
-                <SwiperButton number={1} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={2} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={3} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={4} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={5} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={6} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={7} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={8} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={9} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={10} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={11} />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <SwiperButton number={12} />
-              </SwiperSlide>
-            </Swiper>
+            <div className="relative md:mx-auto pt-10">
+              <div className="absolute hidden md:block -left-14 transform z-10">
+                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
+              </div>
+              <div className="absolute hidden md:block -right-14 transform z-10">
+                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
+              </div>
+
+              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false}
+                spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{delay: 2000}} navigation={{
+                  nextEl: '.custom-next',
+                  prevEl: '.custom-prev'
+                }}>
+                {[...Array(12)].map((_, index) => (
+                  <SwiperSlide key={index}>
+                    <SwiperButton number={index + 1} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
       </section>
@@ -266,15 +248,15 @@ const Baby = () => {
       {/* video bayi start */}
       <section id="video" className="relative">
         <img
-          src="/background/awan-putih.webp"
+          src="/background/awan-putih.png"
           alt="awan putih"
-          className="absolute w-full top-0 z-10"
+          className="absolute w-full top-0 -z-10"
         />
-        <CustomVideo src={"/background/background.mp4"} />
+        <CustomVideo src={"/background/background.mp4"}  />
         <img
-          src="/background/awan-biru.webp"
+          src="/background/awan-biru.png"
           alt="awan biru"
-          className="absolute w-full bottom-0 z-10"
+          className="absolute w-full bottom-0 -z-10"
         />
       </section>
       {/* video bayi end */}
@@ -308,35 +290,39 @@ const Baby = () => {
 
       {/* rencana gizi bayi start */}
       <section id="gizi" className="min-h-[70vh] items-center justify-center pt-36">
-        <div className="flex flex-col justify-center items-center gap-5">
-          <h1 className="text-baby-normal font-bold text-4xl text-center">
-            <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
-          </h1>
-          <p className="text-base text-tertiary text-center max-w-[600px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
+        <div className="container">
+          <div className="flex flex-col justify-center items-center gap-5">
+            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center">
+              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+            </h1>
+            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
         </div>
       </section>
       {/* rencana gizi bayi end */}
 
 
       {/* jenis vaksinasi start */}
-      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] ">
+      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen ">
         {/* jenis vaksinasi start */}
         <div className="container">
-          <div className="flex gap-10">
+          <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
               <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
               <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
+            <div className="w-full md:w-2/3">
+              <Swiper slidesPerView={1} spaceBetween={30} pagination={{ clickable: true }} loop autoplay={{ delay: 3000, pauseOnMouseEnter: true }} modules={[Pagination, Autoplay]} className="mb-20">
             <div className="w-2/3">
               <Swiper slidesPerView={1} spaceBetween={30} pagination={{ clickable: true }} loop autoplay={{ delay: 3000, pauseOnMouseEnter: true }} modules={[Pagination, Autoplay]} className="mb-20">
                 {as.map(() => (
                   <SwiperSlide className="">
-                    <div className="w-full h-full bg-white rounded-lg p-5 flex overflow-hidden gap-5 md:gap-10">
+                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
                       <div className="flex-1">
                         <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
                       </div>
