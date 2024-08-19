@@ -322,14 +322,14 @@ const Baby = () => {
         {/* usia efektif start */}
         <div className="container">
             <div className="flex gap-20 items-center">
-              <div className="flex flex-col w-1/3">
-                <h1 className="te">Usia Efektif Imunisasi Bayi</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div className="flex flex-col w-1/3 gap-5">
+                <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+                <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
               <div className="w-2/3">
               <div className="grid grid-cols-4 grid-rows-3 gap-5 w-full h-[500px] p-10 border-l-2 border-b-2 border-baby-dark border-dashed">
                   {as.map(() => (
-                    <div className="w-full rounded-[35px] h-full flex flex-col justify-center items-center bg-baby-dark text-white font-bold">
+                    <div className="w-full rounded-[35px] h-full flex flex-col justify-center transition items-center bg-baby-dark text-white font-bold hover:bg-baby-vlight hover:text-baby-dark border border-baby-dark">
                     <p className="text-4xl">1</p>
                     <p className="text-2xl">Bulan</p>
                   </div>
