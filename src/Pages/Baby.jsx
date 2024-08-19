@@ -22,6 +22,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperButton from "../Components/SwiperButton";
+import Footer from "../Components/Footer";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale);
 
@@ -343,6 +344,8 @@ const Baby = () => {
           </Swiper>
         </div>
         {/* jenis vaksinasi end */}
+
+        <Footer backgroundColor="#253B70"/>
       </section>
     </section>
   );
