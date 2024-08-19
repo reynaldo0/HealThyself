@@ -64,12 +64,10 @@ const Accordion = ({ items, initialOpenIndex }) => {
 const Baby = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
-  const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef(); // Ref for container element
+  const containerRef = useRef();
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
 
   const labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
-
-  const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -106,12 +104,20 @@ const Baby = () => {
         },
       });
     }
-  }, []);
+  }, [labels]);
 
   useEffect(() => {
-    const container = document.querySelector('.page-container');
-    container.classList.add('fade-in');
+    const container = containerRef.current;
+    if (container) {
+      container.classList.add('fade-in');
+    }
   }, []);
+
+  const handleNavigation = (path) => {
+    // Implement the navigation logic here
+    // For example, using React Router:
+    // history.push(path);
+  };
 
   return (
     <section ref={containerRef} className="pt-24">
@@ -127,7 +133,7 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
-                  
+                  {/* Add heading text */}
                 </h1>
                 <p className="text-xl text-tertiary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -179,20 +185,20 @@ const Baby = () => {
 
               {/* bola bola ayam */}
               <Ball
-                classList="absolute -right-8 top-10 animation-delay-1000"
+                className="absolute -right-8 top-10 animation-delay-1000"
                 size={100}
               />
               <Ball
-                classList="absolute right-40 top-64 animation-delay-1500"
+                className="absolute right-40 top-64 animation-delay-1500"
                 size={70}
               />
               <Ball
-                classList="absolute right-24 bottom-12 animation-delay-1500"
+                className="absolute right-24 bottom-12 animation-delay-1500"
                 size={110}
               />
-              <Ball classList="absolute -right-14 top-1/2" />
+              <Ball className="absolute -right-14 top-1/2" />
               <Ball
-                classList="absolute right-1/3 top-10 -z-10"
+                className="absolute right-1/3 top-10 -z-10"
                 color="#253B70"
                 size={70}
               />
@@ -215,132 +221,67 @@ const Baby = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
-
-          <canvas ref={canvasRef} className="max-w-[80%] w-[600px] mx-auto"></canvas>
-
-          <div className="flex items-center">
-            <div className="relative md:mx-auto pt-10">
-              <div className="absolute hidden md:block -left-14 transform z-10">
-                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
-              </div>
-              <div className="absolute hidden md:block -right-14 transform z-10">
-                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
-              </div>
-
-              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false}
-                spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{delay: 2000}} navigation={{
-                  nextEl: '.custom-next',
-                  prevEl: '.custom-prev'
-                }}>
-                {[...Array(12)].map((_, index) => (
-                  <SwiperSlide key={index}>
-                    <SwiperButton number={index + 1} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className="p-4 rounded-xl bg-baby-soft w-full max-w-[800px]">
+              <canvas ref={canvasRef}></canvas>
             </div>
           </div>
         </div>
       </section>
       {/* grafik perkembangan bayi end */}
 
-      {/* video bayi start */}
-      <section id="video" className="relative">
-        <img
-          src="/background/awan-putih.png"
-          alt="awan putih"
-          className="absolute w-full top-0 -z-10"
-        />
-        <CustomVideo src={"/background/background.mp4"}  />
-        <img
-          src="/background/awan-biru.png"
-          alt="awan biru"
-          className="absolute w-full bottom-0 -z-10"
-        />
-      </section>
-      {/* video bayi end */}
-
-      {/* rencana asi bayi start */}
-      <section id="rencana" className="bg-baby-dark py-12 relative">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-start gap-12">
-            <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8">
-                Ini adalah contoh paragraf teks. Anda dapat menambahkan lebih banyak konten teks di sini untuk menjelaskan atau memberikan informasi lebih lanjut. Tailwind CSS memudahkan dalam mengatur layout dan desain.
-              </p>
-              {/* Accordion Section */}
-              <Accordion items={accordionItems} initialOpenIndex={0} />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/assets/emak-anak.webp" className="w-96 h-auto" />
-            </div>
-          </div>
-          {/* Ball components here */}
-          <div className="absolute top-5 right-4 md:right-36">
-            <Ball classList="animation-delay-1000" size={60} color="#ffff" />
-          </div>
-          <div className="absolute bottom-0 md:bottom-10 right-0 md:right-10">
-            <Ball classList="animation-delay-1000 " size={80} color="#ffff" />
-          </div>
-        </div>
-      </section>
-      {/* rencana asi bayi end */}
-
-      {/* rencana gizi bayi start */}
-      <section id="gizi" className="min-h-[70vh] items-center justify-center pt-36">
+      {/* jenis vaksinasi start */}
+      <section id="Vaksinasi" className="min-h-[70vh] pt-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+            <h1 className="text-baby-normal font-bold text-4xl text-center">
+              <span className="text-baby-dark">Jenis</span> Vaksinasi
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]">
+            <p className="text-base text-tertiary text-center max-w-[600px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
-        </div>
-      </section>
-      {/* rencana gizi bayi end */}
-
-
-      {/* jenis vaksinasi start */}
-      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen ">
-        {/* jenis vaksinasi start */}
-        <div className="container">
-          <div className="flex flex-col md:flex-row gap-10">
-            <div className="flex flex-col flex-1 gap-5">
-              <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
-              <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div className="w-full md:w-2/3">
-              <Swiper slidesPerView={1} spaceBetween={30} pagination={{ clickable: true }} loop autoplay={{ delay: 3000, pauseOnMouseEnter: true }} modules={[Pagination, Autoplay]} className="mb-20">
-            <div className="w-2/3">
-              <Swiper slidesPerView={1} spaceBetween={30} pagination={{ clickable: true }} loop autoplay={{ delay: 3000, pauseOnMouseEnter: true }} modules={[Pagination, Autoplay]} className="mb-20">
-                {as.map(() => (
-                  <SwiperSlide className="">
-                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col md:flex-row overflow-hidden gap-5 md:gap-10">
-                      <div className="flex-1">
-                        <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
-                      </div>
-                      <div className="flex-[2]">
-                        <h1 className="text-baby-dark font-bold text-3xl mb-4">Jenis Vaksinasi <span className="text-baby-light">dan Vaksinasi</span></h1>
-                        <p className="text-tertiary text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
+            <div className="relative w-full">
+              <Swiper
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 5000 }}
+                navigation={true}
+                modules={[Pagination, Autoplay, Navigation]}
+                spaceBetween={50}
+                slidesPerView={1}
+                className="w-full max-w-[800px] rounded-xl"
+              >
+                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
+                  <img src="/path/to/image1.jpg" alt="Image 1" className="rounded-xl" />
+                  <p className="mt-4 text-white">Description for Image 1</p>
+                </SwiperSlide>
+                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
+                  <img src="/path/to/image2.jpg" alt="Image 2" className="rounded-xl" />
+                  <p className="mt-4 text-white">Description for Image 2</p>
+                </SwiperSlide>
+                <SwiperSlide className="p-4 bg-baby-soft rounded-xl">
+                  <img src="/path/to/image3.jpg" alt="Image 3" className="rounded-xl" />
+                  <p className="mt-4 text-white">Description for Image 3</p>
+                </SwiperSlide>
               </Swiper>
+              <SwiperButton />
             </div>
           </div>
         </div>
-        {/* jenis vaksinasi end */}
-
-        <Footer backgroundColor="#253B70" />
       </section>
+      {/* jenis vaksinasi end */}
+
+      <section className="pt-28 min-h-[70vh]">
+        <div className="container">
+          <h1 className="text-baby-dark font-bold text-4xl text-center">
+            Jenis Makanan
+          </h1>
+          <Accordion items={accordionItems} initialOpenIndex={0} />
+        </div>
+      </section>
+
+      <Footer />
     </section>
   );
 };
