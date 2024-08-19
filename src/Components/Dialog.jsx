@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 const Dialog = () => {
     const dialogs = [
         {
-<<<<<<< HEAD
             text: "Halo Selamat datang di website Healtyself",
             audio: '/audio/datang.mp3',
             mascot: '/maskot/datang.gif',
@@ -22,15 +21,6 @@ const Dialog = () => {
             mascot: '/maskot3.gif',
             fallbackMascot: '/maskot3-static.png'
         }
-=======
-            text: "Halo, selamat datang di website healthyself.",
-            audio: 'audio/welcome.mp3'
-        },
-        {
-            text: "Silahkan pilih kategori usia yang kamu butuhkan.",
-            audio: 'audio/welcome.mp3'
-        },
->>>>>>> 3d8c36c6d42cbcbdbfdf90d0f347684bd681f575
     ];
 
     const [currentDialogIndex, setCurrentDialogIndex] = useState(0);
