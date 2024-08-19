@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
 import Bayi from "../Components/Models/landingPage/Bayi";
-import { OrbitControls, useFBO } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -276,7 +276,7 @@ const Baby = () => {
               <Accordion items={accordionItems} initialOpenIndex={0} />
             </div>
             <div className="flex-shrink-0">
-              <img src="/assets/emak-anak.webp" alt="Contoh Gambar" className="w-96 h-auto rounded-lg shadow-md" />
+              <img src="/assets/emak-anak.webp" alt="Contoh Gambar" className="w-96 h-auto rounded-lg" />
             </div>
           </div>
           {/* Ball components here */}
@@ -292,9 +292,37 @@ const Baby = () => {
 
       {/* rencana gizi bayi start */}
       <section id="gizi" className="min-h-[70vh]">
-        {/* Rencana Gizi content */}
+        
       </section>
       {/* rencana gizi bayi end */}
+
+
+      {/* jenis vaksinasi start */}
+      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-[100vh]">
+        {/* jenis vaksinasi start */}
+        <div className="container">
+
+        </div>
+        {/* jenis vaksinasi end */}
+
+
+
+        {/* usia efektif start */}
+        <div className="container">
+            <div className="flex">
+              <div className="flex flex-col w-1/3">
+                <h1>Usia Efektif Imunisasi Bayi</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+              <div className="w-2/3">
+              <div className="grid grid-cols-4 grid-rows-3 gap-5">
+                
+              </div>
+              </div>
+            </div>
+        </div>
+        {/* usia efektif end */}
+      </section>
     </section>
   );
 };
