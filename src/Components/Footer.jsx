@@ -15,10 +15,10 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                         </a>
 
                         <div className="mb-5 mt-5 md:mb-0">
-                            <h2 className="mb-6 text-base font-semibold uppercase text-gray-400">
+                            <h2 className="mb-6 text-base font-semibold uppercase text-white">
                                 Hubungi Kami
                             </h2>
-                            <ul className="font-medium text-gray-500">
+                            <ul className="font-medium text-slate-300">
                                 <li className="mb-4 flex items-center gap-3 text-base">
                                     <ion-icon name="location"></ion-icon>
                                     <a href="#" className="hover:underline">SMK Negeri 46 Jakarta</a>
@@ -32,10 +32,10 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                     </div>
                     <div className="grid grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-28">
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold uppercase text-gray-400">
+                            <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                                 Akses Konten
                             </h2>
-                            <ul className="font-medium text-gray-500">
+                            <ul className="font-medium text-slate-300">
                                 <li className="mb-4">
                                     <a href="#home" className="hover:underline">Beranda</a>
                                 </li>
@@ -58,10 +58,10 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                         </div>
 
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold uppercase text-gray-400">
+                            <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                                 Sumber Data
                             </h2>
-                            <ul className="font-medium text-gray-500">
+                            <ul className="font-medium text-slate-300">
                                 <li className="mb-4">
                                     <a href="https://Detik.com" className="lowercase hover:underline">Detik.com</a>
                                 </li>
@@ -84,10 +84,10 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                         </div>
 
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold uppercase text-gray-400">
+                            <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                                 Credit
                             </h2>
-                            <ul className="font-medium text-gray-500">
+                            <ul className="font-medium text-slate-300">
                                 <li className="mb-4">
                                     <a href="https://www.freepik.com/" className="hover:underline">Freepik</a>
                                 </li>
@@ -97,7 +97,7 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                 </div>
                 <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-center text-sm text-gray-500">Dibuat oleh tim HealThyself</span>
+                    <span className="text-center text-sm text-white">Dibuat oleh tim HealThyself</span>
                 </div>
             </div>
         </footer>

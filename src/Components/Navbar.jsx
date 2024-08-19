@@ -1,6 +1,13 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
       <nav className="fixed left-0 top-0 z-[99999] w-full border-gray-200 bg-white backdrop-blur-md shadow-sm bg-opacity-70">
@@ -12,11 +19,11 @@ const Navbar = () => {
             <img src="/logo.png" className="h-auto w-40" alt="gambar logo" />
           </a>
           <button
-            data-collapse-toggle="navbar-dropdown"
+            onClick={handleMenuToggle}
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-dropdown"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -36,7 +43,7 @@ const Navbar = () => {
             </svg>
           </button>
           <div
-            className="hidden w-full md:block md:w-auto"
+            className={`w-full md:block md:w-auto ${isMenuOpen ? "block" : "hidden"}`}
             id="navbar-dropdown"
           >
             <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-white p-4 font-medium md:mt-0 md:flex-row md:items-center md:space-x-8 md:border-0 md:bg-transparent md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">

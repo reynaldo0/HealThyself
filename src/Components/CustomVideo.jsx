@@ -15,7 +15,7 @@ const CustomVideo = ({ src, cloudOverlay }) => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative -z-20">
             <video
                 ref={videoRef}
                 className="w-full h-auto"

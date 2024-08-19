@@ -17,7 +17,7 @@ const Team = () => {
         <div className="overflow-x-scroll">
           <div className="flex space-x-12 w-max ">
             {/* Team Member 1 */}
-            <div className="bg-white p-8 bg-slate-300 rounded-full border text-center testing">
+            <div className="bg-white p-8 rounded-full border text-center testing">
               <img
                 className="w-45 h-45 mx-auto rounded-full object-cover border-4 border-gray-200"
                 src="/team/salman.jpg"
