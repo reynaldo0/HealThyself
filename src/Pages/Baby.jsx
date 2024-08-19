@@ -62,7 +62,7 @@ const Baby = () => {
   const isMobile = window.innerWidth <= 768;
   const containerRef = useRef(); // Ref for container element
 
-  const labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
+  const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan", "6 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {

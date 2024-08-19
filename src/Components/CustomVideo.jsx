@@ -21,7 +21,7 @@ const CustomVideo = ({ src, cloudOverlay }) => {
                 className="w-full h-auto"
                 src={src}
                 onClick={togglePlay}
-                controls={false} // Disable default controls
+                controls={false} 
             />
             <button
                 onClick={togglePlay}
