@@ -1,13 +1,50 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
 import Bayi from "../Components/Models/landingPage/Bayi";
 import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
+import accordionItems from "../docs/Accordion";
+
+const Accordion = ({ items, initialOpenIndex }) => {
+  const [openIndex, setOpenIndex] = useState(initialOpenIndex);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div className="rounded-xl shadow-md">
+      {items.map((item, index) => (
+        <div key={index} className="pt-5">
+          <button
+            className="w-full px-4 py-5 text-left bg-baby-soft hover:bg-baby-vsoft text-white rounded-xl focus:outline-none flex items-center justify-between"
+            onClick={() => toggleAccordion(index)}
+          >
+            <span>{item.title}</span>
+            <FontAwesomeIcon
+              icon={openIndex === index ? faMinus : faChevronDown}
+              className={`transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}
+            />
+          </button>
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
+            style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
+          >
+            <div className="p-4 bg-baby-ldark text-white">
+              {item.content}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const Baby = () => {
-
   return (
     <section className="pt-24">
       <Navbar />
@@ -55,13 +92,11 @@ const Baby = () => {
       </section>
       {/* hero section end */}
 
-
       {/* grafik perkembangan bayi start */}
       <section id="grafik" className="min-h-[70vh]">
-
+        {/* Grafik content */}
       </section>
       {/* grafik perkembangan bayi end */}
-
 
       {/* video bayi start */}
       <section id="video" className="relative">
@@ -71,14 +106,37 @@ const Baby = () => {
       </section>
       {/* video bayi end */}
 
-
       {/* rencana asi bayi start */}
-    
+      <section id="rencana" className="bg-baby-dark py-12 relative">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-start gap-12">
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+              <p className="text-lg text-white mb-8">
+                Ini adalah contoh paragraf teks. Anda dapat menambahkan lebih banyak konten teks di sini untuk menjelaskan atau memberikan informasi lebih lanjut. Tailwind CSS memudahkan dalam mengatur layout dan desain.
+              </p>
+              {/* Accordion Section */}
+              <Accordion items={accordionItems} initialOpenIndex={0} />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/assets/emak-anak.webp" alt="Contoh Gambar" className="w-96 h-auto rounded-lg shadow-md" />
+            </div>
+          </div>
+          {/* Ball components here */}
+          <div className="absolute top-5 right-4 md:right-36">
+            <Ball classList="animation-delay-1000" size={60} />
+          </div>
+          <div className="absolute bottom-0 md:bottom-10 right-0 md:right-10">
+            <Ball classList="animation-delay-1000 " size={80} />
+          </div>
+        </div>
+      </section>
       {/* rencana asi bayi end */}
 
-
       {/* rencana gizi bayi start */}
-
+      <section id="gizi" className="min-h-[70vh]">
+        {/* Rencana Gizi content */}
+      </section>
       {/* rencana gizi bayi end */}
     </section>
   );
