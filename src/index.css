@@ -1,72 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Apply Poppins font globally */
 * {
   @apply font-poppins;
 }
 
-.page-container {
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide-out-left {
-  transform: translateX(-100%);
-}
-
-.slide-in-right {
-  transform: translateX(100%);
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
-
-.fade-out {
-  opacity: 1;
-  animation: fadeOut 0.5s forwards;
-}
-
-/* Container untuk carousel */
+/* Container styles for carousel */
 .relative.container {
-  width: 100%;
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto;
+  @apply w-full max-w-screen-lg mx-auto;
 }
 
 /* Styles for slides */
 .slide {
-  padding: 0 10px; /* Horizontal padding for spacing */
+  @apply relative px-2.5;
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transform: scale(0.8); /* Scale down for non-active slides */
+  transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+.active-slide {
+  transform: scale(1); /* Scale up for active slide */
 }
 
 /* Styles for carousel images */
 .carousel-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  @apply w-full h-auto block;
+  transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
 }
 
-/* Styles for arrows */
-.slick-prev,
-.slick-next {
-  width: 50px;
-  height: 50px;
-  border: none;
-  color: white;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.3s;
+.carousel-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
+/* Custom styles for arrows */
+.slick-prev, .slick-next {
+  @apply w-12 h-12 flex items-center justify-center cursor-pointer z-10;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  border-radius: 50%; /* Circular background */
+  transition: background-color 0.3s, transform 0.3s;
+}
 
-/* Gaya untuk dot navigasi */
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Custom styles for dot indicators */
+.slick-dots li button:before {
+  color: #fff; /* White dots */
+  font-size: 12px; /* Adjust dot size */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff; /* Highlight active dot */
+}
+
+/* Animation keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -77,17 +72,6 @@
   to {
     opacity: 0;
   }
-}
-
-.blur {
-
-    filter: blur(8px);
-    transition: filter 0.5s ease;
-  }
-
-.testing{
-  height: 450px;
-  width: 300px;
 }
 
 @keyframes slideInLeft {
@@ -108,8 +92,37 @@
   }
 }
 
+/* Transition and animation utilities */
+.page-container {
+  @apply transition-transform ease-in-out duration-500;
+}
+
+.slide-out-left {
+  transform: translateX(-100%);
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards;
+}
+
+.blur {
+  filter: blur(8px);
+  @apply transition ease-in-out duration-500;
+}
+
+/* Cloud animation classes */
 .cloud {
-  transition: transform 0.5s ease-out;
+  @apply transition-transform ease-out duration-500;
 }
 
 .cloud-slide-left {
@@ -120,11 +133,9 @@
   animation: slideInRight 1s ease-out;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .cloud-slide-left, .cloud-slide-right {
-    width: 300px;
-    height: auto;
+    @apply w-72 h-auto;
   }
 }
-
-
