@@ -124,12 +124,12 @@ const Baby = () => {
   return (
     <section ref={containerRef} className="pt-24">
       <Navbar>
-        <Navbar.Item href={'#'} title={'Beranda'} />
-        <Navbar.Item href={'#panduan'} title={'Panduan'} />
-        <Navbar.Item href={'#gizi'} title={'Gizi'} />
-        <Navbar.Item href={'#imunisasi'} title={'Imunisasi'} />
-        <Navbar.Item href={'#perawatan'} title={'Perawatan'} />
-        <Navbar.Item href={'#lingkungan'} title={'Lingkungan'} />
+        <Navbar.Item to={'#'} title={'Beranda'} />
+        <Navbar.Item to={'#panduan'} title={'Panduan'} />
+        <Navbar.Item to={'#gizi'} title={'Gizi'} />
+        <Navbar.Item to={'#imunisasi'} title={'Imunisasi'} />
+        <Navbar.Item to={'#perawatan'} title={'Perawatan'} />
+        <Navbar.Item to={'#lingkungan'} title={'Lingkungan'} />
       </Navbar>
 
       {/* hero section start */}
@@ -139,10 +139,10 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
-                Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
+                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
                 <p className="text-xl text-tertiary">
-                Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
+                  Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
                   className="bg-baby-normal text-white p-4 rounded-lg w-fit"
@@ -202,7 +202,7 @@ const Baby = () => {
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-base text-tertiary text-center max-w-[600px]">
-            Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
 

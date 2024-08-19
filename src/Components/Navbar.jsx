@@ -87,16 +87,16 @@ const Navbar = ({children}) => {
   );
 };
 
-Navbar.Item = ({ href, title }) => {
+Navbar.Item = ({ to, title }) => {
   return (
     <li>
-      <Link
-        to={href}
+      <a
+        href={to}
         className="active relative block rounded px-3 py-2 text-gray-800 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:before:scale-x-100 md:p-0 md:before:opacity-100"
         aria-current="page"
       >
         {title}
-      </Link>
+      </a>
     </li>
   )
 }
