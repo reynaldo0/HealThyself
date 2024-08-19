@@ -18,7 +18,7 @@ import {
   LinearScale,
 } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperButton from "../Components/SwiperButton";
@@ -323,10 +323,10 @@ const Baby = () => {
               <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
             <div className="w-2/3">
-              <Swiper slidesPerView={1} spaceBetween={30} pagination modules={[Pagination]} className="mb-20">
+              <Swiper slidesPerView={1} spaceBetween={30} pagination={{clickable: true}} loop autoplay={{delay: 3000, pauseOnMouseEnter: true}} modules={[Pagination, Autoplay]} className="mb-20">
                 {as.map(() => (
-                  <SwiperSlide>
-                    <div className="w-full h-full bg-white rounded-lg p-4 flex overflow-hidden gap-5 md:gap-10">
+                  <SwiperSlide className="">
+                    <div className="w-full h-full bg-white rounded-lg p-5 flex overflow-hidden gap-5 md:gap-10">
                       <div className="flex-1">
                         <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
                       </div>
