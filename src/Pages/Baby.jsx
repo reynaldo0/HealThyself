@@ -319,17 +319,17 @@ const Baby = () => {
 
         {/* usia efektif start */}
         <div className="container">
-            <div className="flex">
-              <div className="flex flex-col w-1/3">
-                <h1>Usia Efektif Imunisasi Bayi</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-              <div className="w-2/3">
+          <div className="flex">
+            <div className="flex flex-col w-1/3">
+              <h1 className="text-baby-normal font-bold text-4xl">Usia <span className="text-baby-dark">Efektif Imunisasi</span> Bayi</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div className="w-2/3">
               <div className="grid grid-cols-4 grid-rows-3 gap-5">
-                
-              </div>
+
               </div>
             </div>
+          </div>
         </div>
         {/* usia efektif end */}
       </section>

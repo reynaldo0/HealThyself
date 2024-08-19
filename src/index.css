@@ -53,4 +53,39 @@
   width: 300px;
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cloud {
+  transition: transform 0.5s ease-out;
+}
+
+.cloud-slide-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+.cloud-slide-right {
+  animation: slideInRight 1s ease-out;
+}
+
+@media (max-width: 768px) {
+  .cloud-slide-left, .cloud-slide-right {
+    width: 300px;
+    height: auto;
+  }
+}
