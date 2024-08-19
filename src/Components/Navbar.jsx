@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({children}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -49,76 +49,31 @@ const Navbar = () => {
             id="navbar-dropdown"
           >
             <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-white p-4 font-medium md:mt-0 md:flex-row md:items-center md:space-x-8 md:border-0 md:bg-transparent md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
-              <li>
-                <a
-                  id="homenav"
-                  href="#home"
-                  className="active relative block rounded px-3 py-2 text-gray-800 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:before:scale-x-100 md:p-0 md:before:opacity-100"
-                  aria-current="page"
-                >
-                  Beranda
-                </a>
-              </li>
-              <li>
-                <a
-                  id="nav-about"
-                  href="#about"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-                >
-                  Tentang
-                </a>
-              </li>
-              <li>
-                <a
-                  id="nav-kasus"
-                  href="#kasus"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-                >
-                  Kasus
-                </a>
-              </li>
-              <li>
-                <a
-                  id="nav-pengaruh"
-                  href="#pengaruh"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-                >
-                  Pengaruh
-                </a>
-              </li>
-              <li>
-                <a
-                  id="nav-data"
-                  href="#data"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-                >
-                  Data
-                </a>
-              </li>
+              {children}
               <li className="relative">
                 <button
                   onClick={handleDropdownToggle}
-                  className="block rounded rounded-l-full rounded-r-full bg-primary px-5 py-2 text-white transition-colors hover:bg-primary-200"
+                  className="block rounded bg-baby-normal px-5 py-2 text-white transition-colors hover:bg-primary-200"
                 >
                   Golongan
                 </button>
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg md:w-56">
+                  <div className="static md:absolute w-full right-0 mt-2 bg-white border p-2 border-gray-200 rounded-lg shadow-lg md:w-max">
                     <ul className="py-1 text-sm text-gray-700">
                       <li>
-                        <a href="#option1" className="block px-4 py-2 hover:bg-gray-100">Bayi</a>
+                        <a href="/baby" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Bayi</a>
                       </li>
                       <li>
-                        <a href="#option2" className="block px-4 py-2 hover:bg-gray-100">Anak-Anak</a>
+                        <a href="#option2" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Anak-Anak</a>
                       </li>
                       <li>
-                        <a href="#option3" className="block px-4 py-2 hover:bg-gray-100">Remaja</a>
+                        <a href="#option3" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Remaja</a>
                       </li>
                       <li>
-                        <a href="#option4" className="block px-4 py-2 hover:bg-gray-100">Dewasa</a>
+                        <a href="#option4" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Dewasa</a>
                       </li>
                       <li>
-                        <a href="#option5" className="block px-4 py-2 hover:bg-gray-100">Lansia</a>
+                        <a href="#option5" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Lansia</a>
                       </li>
                     </ul>
                   </div>
@@ -131,5 +86,19 @@ const Navbar = () => {
     </header>
   );
 };
+
+Navbar.Item = ({ href, title }) => {
+  return (
+    <li>
+      <Link
+        to={href}
+        className="active relative block rounded px-3 py-2 text-gray-800 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:before:scale-x-100 md:p-0 md:before:opacity-100"
+        aria-current="page"
+      >
+        {title}
+      </Link>
+    </li>
+  )
+}
 
 export default Navbar;

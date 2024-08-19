@@ -37,22 +37,19 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                             </h2>
                             <ul className="font-medium text-slate-300">
                                 <li className="mb-4">
-                                    <a href="#home" className="hover:underline">Beranda</a>
+                                    <a href="/baby" className="hover:underline">Bayi</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#about" className="hover:underline">Tentang</a>
+                                    <a href="#about" className="hover:underline">Anak-Anak</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#kasus" className="hover:underline">Kasus</a>
+                                    <a href="#kasus" className="hover:underline">Remaja</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#pengaruh" className="hover:underline">Pengaruh</a>
+                                    <a href="#pengaruh" className="hover:underline">Dewasa</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#data" className="hover:underline">Data</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#dokumentasi" className="hover:underline">Dokumentasi</a>
+                                    <a href="#data" className="hover:underline">Lansia</a>
                                 </li>
                             </ul>
                         </div>
