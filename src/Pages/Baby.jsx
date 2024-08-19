@@ -234,7 +234,9 @@ const Baby = () => {
             <div className="flex-1">
               <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8">
-                Ini adalah contoh paragraf teks. Anda dapat menambahkan lebih banyak konten teks di sini untuk menjelaskan atau memberikan informasi lebih lanjut. Tailwind CSS memudahkan dalam mengatur layout dan desain.
+              Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+
+
               </p>
               {/* Accordion Section */}
               <Accordion items={accordionItems} initialOpenIndex={0} />
