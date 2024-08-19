@@ -8,12 +8,13 @@ import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
 import accordionItems from "../docs/Accordion";
+import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 import { BarController, BarElement, CategoryScale, Chart, LinearScale } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-import 'swiper/css';
+import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
@@ -195,7 +196,7 @@ const Baby = () => {
                 <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
               </div>
 
-              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false} spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{delay: 2000}} navigation={{
+              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false} spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{ delay: 2000 }} navigation={{
                 nextEl: '.custom-next',
                 prevEl: '.custom-prev'
               }}>
@@ -372,10 +373,58 @@ const Baby = () => {
 </section>
 
       {/* panduan perawatan jiwa bayi start */}
-      <section id="panduanPerawatan">
-
+      <section id="panduanPerawatan" className="bg-[url('background/wave.png')] bg-cover h-[150vh]">
+        <div className="container">
+          <div className="flex h-[100vh] items-center justify-center gap-10">
+            <div className="w-1/2">
+              <Swiper spaceBetween={16} direction="vertical" effect={'coverflow'} coverflowEffect={{
+                slideShadows: false,
+                rotate: 0,
+                stretch: -20,
+                depth: 100,
+                modifier: 2.5,
+              }} centeredSlides={false} slidesPerView={3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
+                {as.map(() => (
+                  <SwiperSlide>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                      <h1>Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman</h1>
+                      <p>Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className="w-1/2 flex items-center">
+              <div>
+                <h1 className="text-baby-dark font-bold text-4xl mb-4">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
+                <p>Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       {/* panduan perawatan jiwa bayi end */}
+
+      {/* panduan lingkungan start */}
+      <section id="panduanLingkungan">
+        <div className="w-full bg-white rounded-t-[150px] -mt-28 py-20">
+          <div className="container">
+            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4">Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span></h1>
+            <p className="text-center text-tertiary max-w-screen-md mx-auto">Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.</p>
+
+            <div className="grid grid-cols-2 grid-rows-3 gap-10 mt-10">
+              {[...Array(6)].map(() => (
+                <div className="group bg-baby-vlight/20 hover:bg-baby-dark px-10 py-5 h-[180px] transition flex-col flex items-center justify-center text-center">
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                  <p className="text-sm text-baby-light group-hover:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* panduan lingkungan end */}
+      <Footer backgroundColor="#253B70" />
     </section>
   );
 };
