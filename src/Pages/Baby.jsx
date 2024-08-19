@@ -8,6 +8,22 @@ import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
 import accordionItems from "../docs/Accordion";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import {
+  BarController,
+  BarElement,
+  CategoryScale,
+  Chart,
+  LinearScale,
+} from "chart.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import SwiperButton from "../Components/SwiperButton";
+
+Chart.register(BarController, BarElement, LinearScale, CategoryScale);
 
 const Accordion = ({ items, initialOpenIndex }) => {
   const [openIndex, setOpenIndex] = useState(initialOpenIndex);
@@ -43,18 +59,6 @@ const Accordion = ({ items, initialOpenIndex }) => {
     </div>
   );
 };
-import {
-  BarController,
-  BarElement,
-  CategoryScale,
-  Chart,
-  LinearScale,
-} from "chart.js";
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import SwiperButton from "../Components/SwiperButton";
-
-Chart.register(BarController, BarElement, LinearScale, CategoryScale);
 
 const Baby = () => {
   const canvasRef = useRef();
@@ -62,7 +66,7 @@ const Baby = () => {
 
   const labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 
-  const as = [1,2,3,4,5,6,7,8,9,10,11,12]
+  const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -313,31 +317,37 @@ const Baby = () => {
       <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-[100vh]">
         {/* jenis vaksinasi start */}
         <div className="container">
-
+          <Swiper slidesPerView={1} spaceBetween={30} pagination modules={[Pagination]} className="mb-20">
+            <SwiperSlide>
+              <div className="w-full h-full bg-white rounded-lg p-4 flex overflow-hidden gap-5 md:gap-10">
+                <div className="flex-1">
+                  <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
+                </div>
+                <div className="flex-[2]">
+                  <h1 className="text-baby-dark font-bold text-4xl my-10">Jenis Vaksinasi <span className="text-baby-light">dan Vaksinasi</span></h1>
+                  <p className="text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full bg-white rounded-lg p-4 flex overflow-hidden gap-5 md:gap-10">
+                <div className="flex-1">
+                  <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
+                </div>
+                <div className="flex-[2]">
+                  <h1 className="text-baby-dark font-bold text-4xl my-10">Jenis Vaksinasi <span className="text-baby-light">dan Vaksinasi</span></h1>
+                  <p className="text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
         {/* jenis vaksinasi end */}
 
 
 
         {/* usia efektif start */}
-        <div className="container">
-            <div className="flex gap-20 items-center">
-              <div className="flex flex-col w-1/3 gap-5">
-                <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
-                <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-              <div className="w-2/3">
-              <div className="grid grid-cols-4 grid-rows-3 gap-5 w-full h-[500px] p-10 border-l-2 border-b-2 border-baby-dark border-dashed">
-                  {as.map(() => (
-                    <div className="w-full rounded-[35px] h-full flex flex-col justify-center transition items-center bg-baby-dark text-white font-bold hover:bg-baby-vlight hover:text-baby-dark border border-baby-dark">
-                    <p className="text-4xl">1</p>
-                    <p className="text-2xl">Bulan</p>
-                  </div>
-                  ))}
-              </div>
-              </div>
-            </div>
-        </div>
+        
         {/* usia efektif end */}
       </section>
     </section>
