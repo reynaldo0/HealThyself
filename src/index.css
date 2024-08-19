@@ -43,6 +43,14 @@
 }
 
 .blur {
-  filter: blur(8px);
-  transition: filter 0.5s ease;
+
+    filter: blur(8px);
+    transition: filter 0.5s ease;
+  }
+
+.testing{
+  height: 450px;
+  width: 300px;
 }
+
+
