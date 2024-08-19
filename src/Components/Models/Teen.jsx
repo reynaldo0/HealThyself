@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
-export function Remaja(props) {
+export function Teen(props) {
   const { nodes, materials } = useGLTF('/Model/Remaja.glb');
   const meshRef = useRef();
   const { isHovered } = props;
