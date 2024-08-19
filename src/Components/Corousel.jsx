@@ -79,18 +79,18 @@ const ImageCarousel = () => {
     ],
   };
 
-  const images = [
-    '/assets/carousel/baby/piramis.jpg',
-    '/assets/carousel/baby/piramis.jpg',
-    '/assets/carousel/baby/piramis.jpg',
-    '/assets/carousel/baby/piramis.jpg',
-    // Add more images as needed
+  const slides = [
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+    { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+    // Add more slides as needed
   ];
 
   return (
     <div className="relative container mx-auto py-8 overflow-hidden px-4 md:px-0">
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {slides.map((slide, index) => (
           <div
             key={index}
             className={`slide ${currentSlide === index ? 'active-slide' : ''}`}
@@ -110,7 +110,7 @@ const ImageCarousel = () => {
               }}
             >
               <img
-                src={image}
+                src={slide.src}
                 alt={`Slide ${index + 1}`}
                 className="carousel-image"
                 style={{
@@ -118,11 +118,10 @@ const ImageCarousel = () => {
                   height: 'auto',
                 }}
               />
-              <div style={{ position: 'absolute', bottom: '10px', left: '10px', zIndex: 10, color: '#fff', padding: '10px', borderRadius: '5px' }}>
-                <h3 style={{ margin: '0', fontSize: '16px', fontWeight: 'bold' }}>Lorem Ipsum</h3>
+              <div style={{ position: 'absolute', bottom: '10px', left: '10px', zIndex: 10, color: '#fff', padding: '10px' }}>
+                <h3 style={{ margin: '0', fontSize: '16px', fontWeight: 'bold' }}>{slide.title}</h3>
                 <p style={{ margin: '0', fontSize: '14px' }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                  lacinia odio vitae vestibulum vestibulum.
+                  {slide.description}
                 </p>
               </div>
             </div>
