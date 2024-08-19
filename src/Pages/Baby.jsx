@@ -314,33 +314,32 @@ const Baby = () => {
 
 
       {/* jenis vaksinasi start */}
-      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-[100vh]">
+      <section className="pt-20 bg-[url('/background/bg-imunisasi.png')] ">
         {/* jenis vaksinasi start */}
         <div className="container">
-          <Swiper slidesPerView={1} spaceBetween={30} pagination modules={[Pagination]} className="mb-20">
-            <SwiperSlide>
-              <div className="w-full h-full bg-white rounded-lg p-4 flex overflow-hidden gap-5 md:gap-10">
-                <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
-                </div>
-                <div className="flex-[2]">
-                  <h1 className="text-baby-dark font-bold text-4xl my-10">Jenis Vaksinasi <span className="text-baby-light">dan Vaksinasi</span></h1>
-                  <p className="text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full bg-white rounded-lg p-4 flex overflow-hidden gap-5 md:gap-10">
-                <div className="flex-1">
-                  <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
-                </div>
-                <div className="flex-[2]">
-                  <h1 className="text-baby-dark font-bold text-4xl my-10">Jenis Vaksinasi <span className="text-baby-light">dan Vaksinasi</span></h1>
-                  <p className="text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+          <div className="flex gap-10">
+            <div className="flex flex-col flex-1 gap-5">
+              <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+              <p className="text-[#575757]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div className="w-2/3">
+              <Swiper slidesPerView={1} spaceBetween={30} pagination modules={[Pagination]} className="mb-20">
+                {as.map(() => (
+                  <SwiperSlide>
+                    <div className="w-full h-full bg-white rounded-lg p-4 flex overflow-hidden gap-5 md:gap-10">
+                      <div className="flex-1">
+                        <img src="/assets/carousel/baby/1.png" alt="gatau ini apaan" />
+                      </div>
+                      <div className="flex-[2]">
+                        <h1 className="text-baby-dark font-bold text-3xl mb-4">Jenis Vaksinasi <span className="text-baby-light">dan Vaksinasi</span></h1>
+                        <p className="text-tertiary text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
         </div>
         {/* jenis vaksinasi end */}
       </section>
