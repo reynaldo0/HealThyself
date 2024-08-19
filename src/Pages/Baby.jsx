@@ -113,7 +113,7 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
-                  Lorem ipsum dolor sit amet consectur?
+                  Apakah Anda Tahu Tahapan Perkembangan Bayi Anda?
                 </h1>
                 <p className="text-xl text-tertiary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -204,42 +204,42 @@ const Baby = () => {
 
           <div className="flex items-center">
             <Swiper slidesPerView={4} effect="coverflow" centeredSlides={false}
-          spaceBetween={16} className="max-w-screen-md pt-10">
+              spaceBetween={16} className="max-w-screen-md pt-10">
               <SwiperSlide className="">
-                <SwiperButton number={1}/>
+                <SwiperButton number={1} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={2}/>
+                <SwiperButton number={2} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={3}/>
+                <SwiperButton number={3} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={4}/>
+                <SwiperButton number={4} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={5}/>
+                <SwiperButton number={5} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={6}/>
+                <SwiperButton number={6} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={7}/>
+                <SwiperButton number={7} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={8}/>
+                <SwiperButton number={8} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={9}/>
+                <SwiperButton number={9} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={10}/>
+                <SwiperButton number={10} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={11}/>
+                <SwiperButton number={11} />
               </SwiperSlide>
               <SwiperSlide className="">
-                <SwiperButton number={12}/>
+                <SwiperButton number={12} />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -291,8 +291,18 @@ const Baby = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi" className="min-h-[70vh]">
-        {/* Rencana Gizi content */}
+      <section id="gizi" className="min-h-[70vh] items-center justify-center pt-36">
+        <div className="flex flex-col justify-center items-center gap-5">
+          <h1 className="text-baby-normal font-bold text-4xl text-center">
+            <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+          </h1>
+          <p className="text-base text-tertiary text-center max-w-[600px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
       </section>
       {/* rencana gizi bayi end */}
     </section>
