@@ -11,9 +11,10 @@ import 'swiper/css';
 
 const Option3d = ({ onBack }) => {
   const [showDialog, setShowDialog] = useState(false);
+  const [cloudOffset, setCloudOffset] = useState(0);
   const isMobile = window.innerWidth <= 768;
   const swiperRef = useRef(null);
-  
+
   const handlePrev = () => {
     if (swiperRef.current) swiperRef.current.swiper.slidePrev();
   };
@@ -22,21 +23,62 @@ const Option3d = ({ onBack }) => {
     if (swiperRef.current) swiperRef.current.swiper.slideNext();
   };
 
-
   useEffect(() => {
     setTimeout(() => {
       setShowDialog(true);
     }, 1000);
-  }, [])
+
+    const handleMouseMove = (e) => {
+      const screenWidth = window.innerWidth;
+      const mouseX = e.clientX;
+      const offset = (mouseX / screenWidth - 0.5) * 100;
+      console.log('Mouse X:', mouseX, 'Offset:', offset);
+      setCloudOffset(offset);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const cloud1Style = {
+    transform: `translateX(${cloudOffset * 0.8}px)`,
+    position: 'absolute',
+    top: '0',
+    right: '-28px',
+    zIndex: 1,
+    transition: 'transform 0.5s ease-out'
+  };
+
+  const cloud2Style = {
+    transform: `translateX(${cloudOffset * 1.2}px)`,
+    position: 'absolute',
+    top: '0',
+    left: '-28px',
+    zIndex: 1,
+    transition: 'transform 1s ease-out'
+  };
 
   return (
     <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)] overflow-hidden">
-
       {showDialog && <Dialog />}
 
-      {/* awan awan */}
-      <img src="/background/awan-opsi-1.webp" alt="awan biruu" className="absolute top-0 -right-28" />
-      <img src="/background/awan-opsi-2.webp" alt="awan biruu lagi" className="absolute top-0 -left-28"/>
+      {/* Awan-awan */}
+      <img
+        src="/background/awan-opsi-1.webp"
+        alt="awan biruu"
+        className="cloud cloud-slide-left"
+        style={cloud1Style}
+      />
+
+      <img
+        src="/background/awan-opsi-2.webp"
+        alt="awan biruu lagi"
+        className="cloud cloud-slide-right"
+        style={cloud2Style}
+      />
 
       <div className="relative z-10 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 bg-transparent">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -56,7 +98,7 @@ const Option3d = ({ onBack }) => {
           spaceBetween={16}
           slidesPerView={isMobile ? 1 : 3}
           centeredSlides={false}
-          className="w-full flex items-end pt-10 pb-4 px-2 h-[70vh] "
+          className="w-full flex items-end pt-10 pb-4 px-2 h-[70vh]"
         >
           {/* Swiper slides */}
           <SwiperSlide className="flex justify-center items-end">
