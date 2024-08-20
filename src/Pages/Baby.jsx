@@ -275,25 +275,70 @@ const Baby = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px] mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out">
               Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
-            <ImageCarousel />
+            {/* <ImageCarousel /> */}
+            <div className="relative">
+              <div className="absolute hidden md:block -left-14 top-1/2 -translate-y-1/2 transform z-10">
+                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
+              </div>
+              <div className="absolute hidden md:block -right-14 transform z-10 top-1/2 -translate-y-1/2">
+                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
+              </div>
+
+              <Swiper className="max-w-screen-sm w-screen h-[300px]" effect={'coverflow'} spaceBetween={16} coverflowEffect={{
+                slideShadows: false,
+                rotate: 0,
+                stretch: -20,
+                depth: 100,
+                modifier: 2.5,
+              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay, Navigation]} autoplay={{ delay: 2000 }} loop navigation={{
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev'
+              }}>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" className="w-full h-auto" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </div>
       </section>
       {/* rencana gizi bayi end */}
 
       {/* jenis vaksinasi start */}
-      <section id="imunisasi" className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
+      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi.png')]">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
@@ -443,7 +488,7 @@ const Baby = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">
+              data-aos-easing="ease-in-out" data-aos-duration="800">
               {[...Array(6)].map((_, index) => (
                 <div
                   key={index}
@@ -455,7 +500,7 @@ const Baby = () => {
               ))}
             </div>
           </div>
-          </div>
+        </div>
       </section>
 
 
