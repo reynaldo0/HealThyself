@@ -143,12 +143,19 @@ const Child = () => {
 
                 <h1 className="font-bold text-4xl text-child-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Gaya Hidup Tidak Sehat Pada Anak Ancaman Bagi Generasi Mendatang
+                  Menghadapi Ancaman Gaya Hidup Tidak Sehat: Masa Depan Anak-Anak Indonesia di Ujung Tanduk
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, gaya hidup tidak sehat menjadi salah satu faktor utama yang menghambat pertumbuhan dan perkembangan anak-anak. Kurangnya aktivitas fisik, konsumsi makanan tinggi gula dan lemak, serta rendahnya kesadaran akan pentingnya pola hidup sehat, telah menyebabkan peningkatan obesitas dan risiko penyakit kronis pada usia dini. Perbaikan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan sangat penting untuk memastikan generasi mendatang tumbuh menjadi individu yang sehat dan produktif.
+                  Gaya hidup tidak sehat semakin mengancam kesehatan anak-anak di Indonesia, meningkatkan risiko obesitas, diabetes, dan penyakit jantung sejak dini. Pola makan tinggi gula dan lemak, kurangnya aktivitas fisik, serta rendahnya kesadaran akan pentingnya kesehatan memperparah situasi ini. Untuk melindungi masa depan anak-anak, perubahan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan yang lebih efektif sangat diperlukan.
+
+
+
+
+
+
+
                 </p>
                 <button
                   className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
