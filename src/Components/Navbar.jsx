@@ -61,19 +61,19 @@ const Navbar = ({children}) => {
                   <div className="static md:absolute w-full right-0 mt-2 bg-white border p-2 border-gray-200 rounded-lg shadow-lg md:w-max">
                     <ul className="py-1 text-sm text-gray-700">
                       <li>
-                        <a href="/baby" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Bayi</a>
+                        <Link to="/baby" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Bayi</Link>
                       </li>
                       <li>
-                        <a href="#option2" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Anak-Anak</a>
+                        <Link to="/child" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Anak-Anak</Link>
                       </li>
                       <li>
-                        <a href="#option3" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Remaja</a>
+                        <Link to="/teen" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Remaja</Link>
                       </li>
                       <li>
-                        <a href="#option4" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Dewasa</a>
+                        <Link to="/adult" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Dewasa</Link>
                       </li>
                       <li>
-                        <a href="#option5" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Lansia</a>
+                        <Link to="/elderly" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Lansia</Link>
                       </li>
                     </ul>
                   </div>
