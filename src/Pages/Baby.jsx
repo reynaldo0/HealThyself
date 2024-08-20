@@ -63,7 +63,7 @@ const Baby = () => {
   const isMobile = window.innerWidth <= 768;
   const containerRef = useRef(); // Ref for container element
 
-  const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan", "6 bulan"];
+  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
@@ -75,19 +75,19 @@ const Baby = () => {
       chartRef.current = new Chart(canvasRef.current, {
         type: "bar",
         data: {
-          labels: labels,
+          labels: as.map(a => a + ' bulan'),
           datasets: [
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: "Tinggi",
+              data: [53.8, 56.1, 56.2, 59.9, 62.2, 64, 65.7, 67.3, 68.8, 70, 71.6, 72.8],
               borderWidth: 1,
               borderRadius: Number.MAX_VALUE,
               backgroundColor: 'rgba(66, 90, 148, 0.25)',
               borderColor: '#004BFF'
             },
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: "Berat",
+              data: [4.3, 5.3, 5.3, 6, 6.6, 6.9, 7.3, 7.9, 8.2, 8.5, 8.8, 9],
               borderWidth: 1,
               borderRadius: Number.MAX_VALUE,
               backgroundColor: 'rgba(255, 104, 44, 0.25)',
@@ -106,6 +106,9 @@ const Baby = () => {
               display: true,
               position: 'bottom'
             },
+            tooltip: {
+              enabled: true
+            }
           },
           scales: {
             y: {
@@ -208,29 +211,8 @@ const Baby = () => {
             </p>
           </div>
 
-          <canvas ref={canvasRef} className="max-w-[80%] w-[600px] mx-auto"></canvas>
-
-          <div className="flex items-center">
-            <div className="relative md:mx-auto pt-10">
-              <div className="absolute hidden md:block -left-14 transform z-10">
-                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
-              </div>
-              <div className="absolute hidden md:block -right-14 transform z-10">
-                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
-              </div>
-
-              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false} spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{ delay: 2000 }} navigation={{
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-              }}>
-                {[...Array(12)].map((_, index) => (
-                  <SwiperSlide key={index}>
-                    <SwiperButton number={index + 1} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
+          <canvas ref={canvasRef} className="max-w-full w-[750px] mx-auto"></canvas>
+        
         </div>
       </section>
       {/* grafik perkembangan bayi end */}
