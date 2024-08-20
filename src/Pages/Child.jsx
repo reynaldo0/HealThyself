@@ -136,12 +136,12 @@ const Child = () => {
 
                 <h1 className="font-bold text-4xl text-child-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Menghadapi Ancaman Gaya Hidup Tidak Sehat: Masa Depan Anak-Anak Indonesia di Ujung Tanduk!!
+                  Gaya Hidup Anak Indonesia Terancam!
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Gaya hidup tidak sehat semakin mengancam kesehatan anak-anak di Indonesia, meningkatkan risiko obesitas, diabetes, dan penyakit jantung sejak dini. Pola makan tinggi gula dan lemak, kurangnya aktivitas fisik, serta rendahnya kesadaran akan pentingnya kesehatan memperparah situasi ini. Untuk melindungi masa depan anak-anak, perubahan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan yang lebih efektif sangat diperlukan.
+                  Gaya hidup tidak sehat meningkatkan risiko obesitas dan penyakit jantung pada anak-anak. Perubahan pola makan, aktivitas fisik, dan edukasi kesehatan diperlukan untuk melindungi masa depan mereka.
                 </p>
 
                 <HeroButton to="#panduan" circle="bg-child-normal" textColor="text-child-normal" />
@@ -201,11 +201,11 @@ const Child = () => {
 
             <h1 className="text-child-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-child-dark">Panduan</span> Perkembangan Anak
+              <span className="text-child-dark">Pantau</span> <span className="underline-box after:bg-child-normal/20">Perkembangan Anak-Anak</span>
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Telusuri panduan lengkap kami untuk memahami berbagai tahap perkembangan anak. Dari pertumbuhan fisik hingga perkembangan keterampilan motorik, sosial, dan bahasa, temukan informasi penting untuk mendukung anak Anda di setiap fase. Dapatkan wawasan mengenai apa yang diharapkan pada setiap usia, serta cara-cara terbaik untuk mendukung perkembangan optimal anak Anda menuju masa depan yang sehat dan sukses.
+              Telusuri panduan kami untuk memahami tahap perkembangan anak, dari pertumbuhan fisik hingga keterampilan motorik, sosial, dan bahasa. Temukan cara mendukung perkembangan optimal di setiap usia untuk masa depan sehat dan sukses.
             </p>
           </div>
 
@@ -238,24 +238,24 @@ const Child = () => {
         />
         <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
-          src="/background/awan-biru.png"
-          alt="Blue Clouds"
+          src="/background/awan-merah.png"
+          alt="Red Clouds"
           className="absolute w-full bottom-0 z-10"
         />
       </section>
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-child-dark py-12 relative">
+      <section id="gizi" className="bg-child-dark py-12 relative z-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Makanan Seimbang</span></h2>
-              <p className="text-lg text-white mb-8" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-child-vlight">Makanan Seimbang</span></h2>
+              <p className="text-base text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana makan seimbang sangat penting untuk memastikan anak mendapatkan nutrisi yang diperlukan untuk tumbuh kembang optimal. Temukan strategi dan tips untuk merancang menu yang bervariasi, mencakup semua kelompok makanan, dan mendukung kesehatan jangka panjang anak Anda. Dengan pendekatan yang tepat, Anda dapat mempromosikan pola makan yang sehat dan menyenangkan untuk seluruh keluarga.
+                Rencanakan makan seimbang untuk anak dengan menu bervariasi yang mencakup semua kelompok makanan. Temukan tips untuk pola makan sehat dan menyenangkan untuk keluarga.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
@@ -284,18 +284,18 @@ const Child = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1
-              className="text-baby-normal font-bold text-3xl md:text-4xl text-center"
+              className="text-child-normal font-bold text-3xl md:text-4xl text-center"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-baby-dark">Informasi </span> Gizi Anak
+              <span className="text-child-dark">Informasi </span> <span className="underline-box after:bg-child-normal/20">Gizi Anak-Anak</span>
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+              Nutrisi yang tepat mendukung pertumbuhan anak dengan memenuhi kebutuhan protein, karbohidrat, lemak sehat, vitamin, dan mineral. Memahami kebutuhan gizi memastikan perkembangan fisik dan mental yang optimal.
             </p>
             <ImageCarousel slides={slides} />
           </div>
@@ -304,14 +304,14 @@ const Child = () => {
       {/* rencana gizi bayi end */}
 
       {/* jenis vaksinasi start */}
-      <section id="imunisasi" className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
+      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi-merah.png')]">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
               <h1 className="text-5xl font-bold text-child-dark" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-child-normal">Efektif Imunisasi</span> Anak</h1>
+                data-aos-easing="ease-in-out" data-aos-duration="700"> <span className="text-child-normal"></span>Efektifitas Imunisasi</h1>
               <p className="text-[#575757]" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi anak dilakukan pada usia-usia kunci untuk melindungi dari penyakit serius dan infeksi. Vaksin DTP, Polio, dan Hib biasanya diberikan pada usia 18 bulan, diikuti dengan vaksin MMR dan Hepatitis B pada usia 2-3 tahun. Vaksin lanjutan seperti varicella dan flu juga dianjurkan pada usia 4-6 tahun. Jadwal ini membantu memastikan anak terlindungi dari berbagai penyakit menular dan mendukung kesehatan jangka panjang mereka.</p>
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi anak pada usia kunci melindungi dari penyakit serius. Vaksin DTP, Polio, dan Hib diberikan pada usia 18 bulan, diikuti MMR dan Hepatitis B pada usia 2-3 tahun. Vaksin varicella dan flu disarankan pada usia 4-6 tahun untuk perlindungan jangka panjang.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
@@ -328,14 +328,13 @@ const Child = () => {
 
 
                 <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                  <div className="w-full h-full min-h-[300px] bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
                       <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-child-dark font-bold text-3xl mb-4">Vaksin Varicella <span className="text-child-normal">(Cacar Air)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 1-2 tahun, dan dosis kedua pada usia 4-6 tahun.
-                        Permasalahan: Vaksin varicella melindungi anak dari cacar air, yang dapat menyebabkan komplikasi serius. Keterlambatan atau ketidakteraturan dalam menerima dosis kedua pada usia 4-6 tahun dapat meningkatkan risiko infeksi cacar air. Orang tua mungkin kurang menyadari pentingnya dosis kedua atau mengalami kesulitan akses ke fasilitas kesehatan.</p>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 1-2 tahun, kedua pada 4-6 tahun. Melindungi dari cacar air; dosis kedua penting untuk menghindari infeksi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -347,8 +346,7 @@ const Child = () => {
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-child-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-child-normal">(OPV/IPV)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis keempat diberikan pada usia 4-6 tahun.
-                        Permasalahan : Meskipun vaksin polio umumnya diberikan pada usia awal, beberapa anak mungkin melewatkan dosis booster pada usia 4-6 tahun, yang diperlukan untuk memastikan perlindungan jangka panjang. Kendala akses dan ketidakpahaman mengenai pentingnya dosis tambahan dapat menyebabkan peningkatan risiko infeksi polio.</p>
+                      <p className="text-tertiary text-sm">Dosis keempat pada usia 4-6 tahun. Penting untuk melindungi jangka panjang; dosis booster sering terlewat.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -360,8 +358,7 @@ const Child = () => {
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-child-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-child-normal">(Difteri, Tetanus, Pertusis)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Booster pertama pada usia 4-6 tahun, dan booster tambahan pada usia 11-12 tahun.
-                        Permasalahan: Anak-anak sering kali melewatkan booster vaksin DTP yang diperlukan untuk memastikan perlindungan berkelanjutan dari difteri, tetanus, dan pertusis. Keterlambatan dalam mendapatkan booster dapat meningkatkan risiko penyakit, terutama jika orang tua tidak mengikuti jadwal imunisasi secara ketat atau jika ada kekurangan informasi mengenai vaksinasi.</p>
+                      <p className="text-tertiary text-sm">Booster pertama pada usia 4-6 tahun, tambahan pada 11-12 tahun. Keterlambatan atau ketidaktahuan bisa meningkatkan risiko penyakit.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -373,8 +370,7 @@ const Child = () => {
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-child-dark font-bold text-3xl mb-4">Vaksin HPV <span className="text-child-normal">(Human Papillomavirus)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dengan dosis kedua 1-2 bulan setelah dosis pertama, dan dosis ketiga 6 bulan setelah dosis pertama.
-                        Permasalahan: Vaksin HPV melindungi dari infeksi virus HPV yang dapat menyebabkan kanker serviks dan jenis kanker lainnya. Beberapa anak mungkin tidak menerima dosis pertama pada usia 11-12 tahun atau melupakan jadwal dosis lanjutan, yang mengurangi efektivitas vaksin dalam mencegah kanker di kemudian hari.</p>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun, dosis kedua 1-2 bulan setelah, dan ketiga 6 bulan setelah dosis pertama. Melindungi dari kanker terkait HPV; dosis lanjutan harus diikuti.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -386,11 +382,11 @@ const Child = () => {
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-child-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-child-normal"> (Campak, Gondongan, Rubella)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis kedua pada usia 4-6 tahun.
-                        Permasalahan: Vaksin MMR melindungi anak dari campak, gondongan, dan rubella. Kasus campak dan gondongan kembali meningkat di beberapa area akibat cakupan vaksinasi yang tidak mencukupi dan misinformasi. Beberapa anak mungkin tidak mendapatkan dosis kedua pada usia 4-6 tahun, yang penting untuk perlindungan optimal.</p>
+                      <p className="text-tertiary text-sm">Dosis kedua pada usia 4-6 tahun. Penting untuk melindungi dari campak, gondongan, dan rubella; dosis kedua sering terlewatkan.</p>
                     </div>
                   </div>
                 </SwiperSlide>
+
 
 
               </Swiper>
@@ -399,7 +395,7 @@ const Child = () => {
         </div>
       </section>
 
-      <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
+      <section id="perawatan" className="md:bg-[url('/background/wave-merah.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
             <div className="w-full md:w-1/2" data-aos="fade-up"
@@ -413,48 +409,48 @@ const Child = () => {
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Membangun Kepercayaan Diri Melalui Dukungan Positif</h1>
-                    <p className="text-tertiary">Memberikan pujian dan dukungan positif terhadap pencapaian anak, sekecil apa pun, membantu membangun kepercayaan diri mereka. Dorong anak untuk mencoba hal-hal baru dan berikan apresiasi atas usaha mereka, bukan hanya hasilnya.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-child-normal">
+                    <h1 className="font-semibold mb-2">Kepercayaan Diri melalui Dukungan Positif</h1>
+                    <p className="text-tertiary">Berikan pujian untuk setiap pencapaian anak dan dorong mereka untuk mencoba hal baru, bukan hanya fokus pada hasil.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Mengembangkan Keterampilan Sosial Melalui Interaksi</h1>
-                    <p className="text-tertiary">Interaksi dengan teman sebaya dan anggota keluarga penting untuk perkembangan sosial anak. Dorong anak untuk bermain dengan teman-temannya, berbagi, dan bekerja sama, sehingga mereka belajar memahami dan menghargai perasaan orang lain.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-child-normal">
+                    <h1 className="font-semibold mb-2">Keterampilan Sosial melalui Interaksi</h1>
+                    <p className="text-tertiary">Ajak anak bermain dan berinteraksi dengan teman serta keluarga untuk mengembangkan pemahaman dan empati.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Menanamkan Kedisiplinan dengan Cinta</h1>
-                    <p className="text-tertiary">Disiplin yang diterapkan dengan penuh kasih sayang dan konsistensi membantu anak memahami batasan dan aturan dengan cara yang positif. Gunakan pendekatan yang jelas dan tenang, serta berikan alasan di balik aturan untuk mengajarkan tanggung jawab dan pengendalian diri.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-child-normal">
+                    <h1 className="font-semibold mb-2">Disiplin dengan Kasih Sayang</h1>
+                    <p className="text-tertiary">Terapkan disiplin secara konsisten dan penuh kasih, jelaskan aturan untuk membantu anak memahami tanggung jawab.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Mengatasi Stres dengan Aktivitas Relaksasi</h1>
-                    <p className="text-tertiary">Anak-anak juga dapat mengalami stres, baik dari sekolah maupun lingkungan sosial. Ajarkan mereka teknik relaksasi seperti pernapasan dalam, meditasi sederhana, atau kegiatan kreatif seperti menggambar, yang dapat membantu mereka mengelola emosi dengan lebih baik.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-child-normal">
+                    <h1 className="font-semibold mb-2">Mengatasi Stres dengan Relaksasi</h1>
+                    <p className="text-tertiary">Ajarkan teknik relaksasi seperti pernapasan dalam dan kegiatan kreatif untuk membantu anak mengelola stres.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Mendorong Ekspresi Emosional yang Sehat</h1>
-                    <p className="text-tertiary">Ajarkan anak untuk mengenali dan mengungkapkan perasaan mereka secara terbuka dan sehat. Berikan mereka ruang untuk berbicara tentang apa yang mereka rasakan dan bantu mereka menemukan cara-cara yang tepat untuk mengatasi emosi negatif.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-child-normal">
+                    <h1 className="font-semibold mb-2">Ekspresi Emosional yang Sehat</h1>
+                    <p className="text-tertiary">Ajak anak berbicara tentang perasaan mereka dan bantu mereka menemukan cara yang sehat untuk mengatasi emosi.</p>
                   </div>
                 </SwiperSlide>
 
               </Swiper>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
+            <div className="pt-20 w-full md:w-1/2 flex items-center">
               <div>
                 <h1 className="text-child-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Membangun Dasar Kekuatan Mental <span className="text-child-normal">Pada Jiwa Anak</span></h1>
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Membangun Dasar Kekuatan Mental <span className="text-child-normal underline-box after:bg-child-normal/20">Pada Jiwa Anak</span></h1>
                 <p data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="800">Kesehatan mental anak adalah kunci untuk perkembangan emosional yang sehat dan seimbang. Dengan memberikan perhatian, dukungan, dan lingkungan yang positif, Anda membantu anak tumbuh menjadi individu yang percaya diri, resilient, dan bahagia. Berikut adalah beberapa cara efektif untuk mendukung kesehatan mental anak Anda.</p>
+                  data-aos-easing="ease-in-out" data-aos-duration="800">Kesehatan mental anak vital untuk perkembangan emosional yang seimbang. Dukungan positif dan lingkungan yang baik membantu anak tumbuh percaya diri dan bahagia. Berikut cara efektif mendukungnya.</p>
               </div>
             </div>
           </div>
@@ -466,59 +462,48 @@ const Child = () => {
       <section id="lingkungan">
         <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
           <div className="container">
-            <h1 className="text-4xl font-bold text-child-dark text-center mb-4" data-aos="fade-up"
+            <h1 className="text-2xl md:text-4xl font-bold text-child-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Menciptakan Lingkungan Yang Ideal <span className="text-child-normal">Untuk Anak-anak</span>
+              Ciptakan Lingkungan Ideal <span className="text-child-normal underline-box after:bg-child-normal/20">Untuk Anak-anak</span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-             Menciptakan lingkungan yang bersih, aman, dan mendukung kesehatan anak-anak Anda adalah langkah krusial untuk perkembangan mereka. Dengan menghindari potensi bahaya dan menerapkan praktik terbaik, Anda dapat memastikan anak-anak tumbuh dalam kondisi yang optimal. Temukan panduan praktis untuk menciptakan lingkungan yang aman dan mendukung kesehatan anak-anak Anda setiap hari.
+              Ciptakan lingkungan bersih, aman, dan mendukung untuk perkembangan optimal anak. Hindari bahaya dan terapkan praktik terbaik untuk kesehatan mereka. Temukan panduan praktis untuk lingkungan yang sehat dan aman.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
 
-              <div
-                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Keamanan Utama: Pastikan Ruang Anak Bebas dari Bahaya</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white">Selalu periksa dan pastikan bahwa ruang bermain anak aman dari risiko cedera. Hindari penggunaan mainan dengan bagian kecil yang dapat tertelan dan pastikan sudut meja atau furniture dilindungi dengan pelindung. Periksa juga kabel listrik dan alat-alat berbahaya yang harus diletakkan di tempat yang tidak terjangkau oleh anak.</p>
+              <div className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="text-base md:text-xl font-semibold mb-2 text-child-normal group-hover/item:text-white">Keamanan Utama: Ruang Bebas Bahaya</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Pastikan ruang aman dari risiko cedera dan simpan alat berbahaya di tempat tak terjangkau.</p>
               </div>
 
-              <div
-                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Kebersihan dan Kesehatan: Ciptakan Lingkungan yang Bersih dan Sehat</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white">Jaga kebersihan area tempat anak bermain dan tidur dengan rutin membersihkan debu dan kotoran. Gunakan produk pembersih yang aman dan tidak beracun untuk menghindari paparan bahan kimia berbahaya. Pastikan ventilasi ruangan baik untuk mencegah timbulnya jamur dan menjaga kualitas udara yang sehat.</p>
+              <div className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="text-base md:text-xl font-semibold mb-2 text-child-normal group-hover/item:text-white">Kebersihan: Lingkungan Sehat</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Rutin bersihkan area bermain dan tidur. Gunakan pembersih aman dan pastikan ventilasi baik.</p>
               </div>
 
-              <div
-                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Stimulasi Positif: Sediakan Ruang untuk Eksplorasi dan Kreativitas</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat menjadi risiko bagi anak-anak yang lebih besar. Pastikan mainan sesuai dengan usia anak dan tidak memiliki bagian yang mudah lepas. Pilihlah mainan yang aman dan sesuai untuk menghindari potensi bahaya dan mendukung pertumbuhan yang sehat.</p>
+              <div className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="text-base md:text-xl font-semibold mb-2 text-child-normal group-hover/item:text-white">Stimulasi Positif: Mainan Aman</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Gunakan mainan sesuai usia tanpa bagian kecil yang dapat terlepas. Pilih yang mendukung pertumbuhan.</p>
               </div>
 
-              <div
-                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Rutin dan Struktur: Buat Rutinitas Harian yang Teratur</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white">Menetapkan rutinitas harian yang konsisten membantu anak merasa aman dan mengetahui apa yang diharapkan. Rencanakan waktu tidur yang teratur, waktu makan, dan aktivitas harian dengan struktur yang jelas. Rutinitas ini membantu anak merasa lebih teratur dan mengurangi kecemasan.</p>
+              <div className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="text-base md:text-xl font-semibold mb-2 text-child-normal group-hover/item:text-white">Rutin dan Struktur: Rutinitas Harian</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Tetapkan rutinitas harian yang konsisten untuk rasa aman dan teratur pada anak.</p>
               </div>
 
-              <div
-                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white"> Zona Tenang: Sediakan Area Khusus untuk Istirahat dan Relaksasi</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white">Buatlah zona tenang di rumah di mana anak dapat bersantai dan melakukan aktivitas yang menenangkan, seperti membaca atau menggambar. Area ini harus nyaman dan bebas dari gangguan. Memiliki ruang seperti ini membantu anak belajar mengelola stres dan menyediakan tempat yang tenang untuk beristirahat.</p>
+              <div className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="text-base md:text-xl font-semibold mb-2 text-child-normal group-hover/item:text-white">Zona Tenang: Area Relaksasi</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Sediakan area tenang untuk aktivitas menenangkan seperti membaca dan menggambar.</p>
               </div>
 
-              <div
-                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Dukungan Sosial: Fasilitasi Interaksi Positif dengan Teman dan Keluarga</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white"> Pastikan anak memiliki kesempatan untuk berinteraksi dengan teman sebaya dan anggota keluarga dalam lingkungan yang positif. Aktivitas bersama seperti bermain di luar rumah, berkumpul dengan keluarga, dan berpartisipasi dalam kegiatan sosial dapat membantu anak mengembangkan keterampilan sosial dan emosional. Interaksi yang sehat dan mendukung juga berkontribusi pada rasa percaya diri dan keterhubungan anak dengan orang lain.</p>
+              <div className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="text-base md:text-xl font-semibold mb-2 text-child-normal group-hover/item:text-white">Dukungan Sosial: Interaksi Positif</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Fasilitasi interaksi sosial anak dengan teman dan keluarga untuk mendukung keterampilan sosial.</p>
               </div>
+
 
 
 

@@ -33,7 +33,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
       {items.map((item, index) => (
         <div key={index} className="pt-5">
           <button
-            className="w-full px-4 py-5 text-left bg-teen-normal hover:bg-teen-normal/80 text-white rounded-xl focus:outline-none flex items-center justify-between"
+            className="w-full px-4 py-5 text-left bg-teen-dark hover:bg-teen-dark/80 text-white rounded-xl focus:outline-none flex items-center justify-between"
             onClick={() => toggleAccordion(index)}
           >
             <span>{item.title}</span>
@@ -46,7 +46,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-teen-normal/50 text-white/80 text-sm">
+            <div className="p-4 bg-teen-dark/50 text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -67,9 +67,8 @@ const Teen = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef(); // Ref for container element
+  const containerRef = useRef();
 
-  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
@@ -151,12 +150,12 @@ const Teen = () => {
 
                 <h1 className="font-bold text-4xl text-teen-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Krisis Kesehatan Remaja!! Mengatasi Tantangan Gaya Hidup dan Kesehatan Mental di Indonesia
+                  Krisis Kesehatan Remaja Di Indonesia
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, sekitar 25% remaja menghadapi obesitas akibat gaya hidup tidak sehat, dengan diet tinggi gula, lemak, dan kurangnya aktivitas fisik. Sekitar 15% remaja mengalami depresi dan 20% kecemasan, sementara hanya 30% mendapatkan dukungan mental yang memadai. Mengatasi masalah ini memerlukan edukasi kesehatan, promosi pola hidup sehat, dan dukungan psikologis untuk mendukung generasi muda tumbuh sehat dan seimbang.
+                  Di Indonesia, 25% remaja obesitas, 15% mengalami depresi, dan 20% kecemasan. Hanya 30% mendapatkan dukungan mental yang cukup. Diperlukan edukasi kesehatan, promosi gaya hidup sehat, dan dukungan psikologis.
                 </p>
                 <HeroButton circle="bg-teen-normal" textColor="text-teen-normal" />
 
@@ -189,8 +188,10 @@ const Teen = () => {
                 <p className="font-bold text-xl text-white text-center">Bahagia</p>
               </div>
 
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/baby/kura-kura.png" alt="Happiness" data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
                 <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
               </div>
 
@@ -213,11 +214,11 @@ const Teen = () => {
 
             <h1 className="text-teen-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-teen-dark">Panduan</span> Perkembangan Remaja
+              <span className="text-teen-dark">Pantau</span> <span className="underline-box after:bg-teen-normal/20">Perkembangan Remaja</span>
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Temukan panduan menyeluruh untuk memahami setiap fase perkembangan remaja, mulai dari perubahan fisik hingga perkembangan emosional dan sosial. Dapatkan wawasan mendalam tentang tantangan yang dihadapi remaja dan temukan strategi efektif untuk mendukung mereka agar tumbuh menjadi individu yang sehat dan percaya diri.
+              Perkembangan remaja melibatkan perubahan fisik, emosional, dan sosial yang penting, dan dukungan yang tepat membantu mereka tumbuh sehat dan percaya diri.
             </p>
           </div>
 
@@ -236,7 +237,7 @@ const Teen = () => {
         />
         <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
-          src="/background/awan-biru.png"
+          src="/background/awan-hijau.png"
           alt="Blue Clouds"
           className="absolute w-full bottom-0 z-10"
         />
@@ -244,16 +245,16 @@ const Teen = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-teen-dark py-12 relative">
+      <section id="gizi" className="bg-teen-light py-12 relative z-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-white">Makan Remaja Sehat</span></h2>
+              <p className="text-base text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun pola makan yang seimbang bagi remaja penting untuk mendukung pertumbuhan dan kesehatan jangka panjang. Pastikan diet mereka mencakup nutrisi esensial seperti protein, kalsium, dan zat besi untuk energi dan keseimbangan yang optimal.
+                Pola makan seimbang untuk remaja penting untuk mendukung pertumbuhan dan kesehatan jangka panjang, dengan fokus pada protein, kalsium, dan zat besi.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
@@ -282,18 +283,18 @@ const Teen = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1
-              className="text-baby-normal font-bold text-3xl md:text-4xl text-center"
+              className="text-teen-normal font-bold text-3xl md:text-4xl text-center"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-baby-dark">Informasi </span> Gizi Anak
+              <span className="text-teen-dark">Informasi </span> <span className="underline-box after:bg-teen-normal/20">Gizi Remaja</span>
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+              Nutrisi yang tepat mendukung pertumbuhan anak, meliputi protein, karbohidrat, lemak sehat, vitamin, dan mineral. Memahami kebutuhan gizi anak memastikan makanan seimbang untuk perkembangan fisik dan mental yang optimal.
             </p>
             <ImageCarousel slides={slides} />
           </div>
@@ -302,14 +303,14 @@ const Teen = () => {
       {/* rencana gizi bayi end */}
 
       {/* jenis vaksinasi start */}
-      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi.png')]">
+      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi-hijau.png')]">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
-              <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Remaja</h1>
+              <h1 className="text-5xl font-bold text-teen-dark" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700"> <span className="text-teen-normal"></span> Efektifitas Imunisasi</h1>
               <p className="text-[#575757]" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi remaja penting untuk melindungi dari berbagai penyakit menular dan memastikan kesehatan yang optimal. Vaksin HPV dan DTP biasanya diberikan pada usia 11-12 tahun untuk melindungi dari human papillomavirus dan penyakit difteri, tetanus, dan pertusis. Vaksin MMR juga sering diberikan pada usia ini untuk melindungi dari campak, gondongan, dan rubella. Menjaga jadwal imunisasi ini membantu remaja tetap terlindungi dari penyakit serius saat memasuki masa dewasa.</p>
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi remaja, seperti HPV, DTP, dan MMR, penting untuk melindungi dari penyakit menular. Vaksin-vaksin ini diberikan pada usia 11-12 tahun untuk menjaga kesehatan remaja saat memasuki masa dewasa.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
@@ -330,9 +331,8 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/Vaksin-Meningokokus.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Meningokokus <span className="text-baby-light"></span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dosis kedua pada usia 16 tahun.
-                        Permasalahan: Vaksin meningokokus melindungi dari infeksi meningitis yang berpotensi fatal. Beberapa remaja mungkin melewatkan dosis kedua pada usia 16 tahun, yang penting untuk perlindungan berkelanjutan.</p>
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Meningokokus</h1>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun dan dosis kedua pada usia 16 tahun. Mencegah infeksi meningitis fatal. Dosis kedua sering terlewat.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -343,10 +343,8 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/Vaksin-Tetanus-diphtheria-pertussis.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria-pertussis <span className="text-baby-light">(DTap)
-                      </span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis booster pada usia 11-12 tahun.
-                        Permasalahan: Vaksin Tdap melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dalam menerima booster pada usia 11-12 tahun dapat meningkatkan risiko infeksi.</p>
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Tdap</h1>
+                      <p className="text-tertiary text-sm">Booster pada usia 11-12 tahun. Melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dapat meningkatkan risiko infeksi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -357,9 +355,8 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/Vaksin-HPV.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin HPV <span className="text-baby-light">(Human Papillomavirus)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dengan dosis kedua 1-2 bulan setelah dosis pertama, dan dosis ketiga 6 bulan setelah dosis pertama.
-                        Permasalahan: Keterlambatan atau ketidaklengkapan dosis vaksin HPV dapat mengurangi efektivitas dalam mencegah kanker di masa depan. Banyak remaja mungkin tidak menyelesaikan seluruh rangkaian dosis.</p>
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin HPV</h1>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun, dosis kedua 1-2 bulan setelah, dan dosis ketiga 6 bulan setelah dosis pertama. Keterlambatan mengurangi efektivitas.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -370,12 +367,12 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/Vaksin-Varicella-CACAR.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Varicella <span className="text-baby-light">(Cacar Air)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Jika belum menerima dosis lengkap sebelumnya, dosis pertama pada usia 13-18 tahun, dengan dosis kedua 4-8 minggu kemudian.
-                        Permasalahan: Remaja yang belum mendapatkan vaksin cacar air sebelumnya mungkin melewatkan kesempatan untuk mendapatkan perlindungan penuh, meningkatkan risiko infeksi di usia dewasa muda.</p>
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Varicella</h1>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 13-18 tahun, dengan dosis kedua 4-8 minggu kemudian jika belum lengkap sebelumnya. Mencegah cacar air di usia dewasa muda.</p>
                     </div>
                   </div>
                 </SwiperSlide>
+
 
 
               </Swiper>
@@ -384,7 +381,7 @@ const Teen = () => {
         </div>
       </section>
 
-      <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
+      <section id="perawatan" className="md:bg-[url('/background/wave-hijau.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
             <div className="w-full md:w-1/2" data-aos="fade-up"
@@ -398,46 +395,47 @@ const Teen = () => {
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-                    <h1 className="font-semibold mb-2">Dukung Kesehatan Mental Remaja dengan Komunikasi Terbuka</h1>
-                    <p className="text-tertiary">Mengajak remaja berbicara secara terbuka tentang perasaan dan tantangan mereka dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental. Diskusi rutin dan dukungan emosional sangat penting.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Komunikasi Terbuka untuk Kesehatan Mental</h1>
+                    <p className="text-tertiary">Berbicara terbuka dengan remaja tentang perasaan mereka membantu mengurangi stres dan meningkatkan kesejahteraan.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-                    <h1 className="font-semibold mb-2">Pentingnya Aktivitas Fisik untuk Remaja</h1>
-                    <p className="text-tertiary">Aktivitas fisik yang teratur tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga untuk kesehatan mental. Dorong remaja untuk berpartisipasi dalam olahraga atau kegiatan fisik yang mereka nikmati.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Aktivitas Fisik dan Kesehatan Remaja</h1>
+                    <p className="text-tertiary">Aktivitas fisik rutin bermanfaat untuk tubuh dan mental. Ajak remaja berolahraga atau aktivitas fisik yang mereka suka.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-                    <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
-                    <p className="text-tertiary">Teknik relaksasi seperti meditasi dan latihan pernapasan dapat membantu remaja mengelola stres dan kecemasan. Ajarkan mereka teknik-teknik ini sebagai bagian dari rutinitas harian mereka.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Kelola Stres dengan Relaksasi</h1>
+                    <p className="text-tertiary">Meditasi dan latihan pernapasan membantu mengelola stres. Ajarkan teknik-teknik ini sebagai rutinitas harian.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-                    <h1 className="font-semibold mb-2">Dukung Keseimbangan Kegiatan Akademis dan Sosial</h1>
-                    <p className="text-tertiary">Membantu remaja menyeimbangkan waktu antara kegiatan akademis dan sosial dapat mengurangi tekanan dan meningkatkan kesejahteraan mereka. Pastikan mereka memiliki waktu untuk bersantai dan bersosialisasi.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Keseimbangan Akademis dan Sosial</h1>
+                    <p className="text-tertiary">Bantu remaja menyeimbangkan waktu antara akademis dan sosial untuk mengurangi tekanan dan meningkatkan kesejahteraan.</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-                    <h1 className="font-semibold mb-2">Bantu Remaja Mengembangkan Keterampilan Coping</h1>
-                    <p className="text-tertiary">Mengajarkan keterampilan coping yang sehat dapat membantu remaja menghadapi tantangan dan stres. Keterampilan ini termasuk memecahkan masalah, mengatur waktu, dan mencari dukungan ketika diperlukan.</p>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Keterampilan Coping untuk Remaja</h1>
+                    <p className="text-tertiary">Ajarkan keterampilan coping seperti memecahkan masalah dan mengatur waktu untuk membantu remaja menghadapi stres.</p>
                   </div>
                 </SwiperSlide>
+
 
               </Swiper>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
+            <div className="w-full md:w-1/2 flex items-center mt-20">
               <div>
-                <h1 className="text-blue-800 font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-blue-500">Kesehatan Remaja</span></h1>
+                <h1 className="text-teen-normal font-bold text-4xl mb-4" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-teen-dark">Kesehatan Remaja</span></h1>
                 <p data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">Perawatan kesehatan mental remaja adalah aspek penting dalam mendukung mereka selama masa-masa penuh perubahan ini. Dengan memberikan dukungan yang tepat dan mengajarkan keterampilan hidup yang sehat, Anda dapat membantu remaja tumbuh menjadi individu yang seimbang dan percaya diri.</p>
               </div>
@@ -451,63 +449,47 @@ const Teen = () => {
       <section id="lingkungan">
         <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
           <div className="container">
-            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
+            <h1 className="text-2xl md:text-4xl font-bold text-teen-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Remaja Juga Butuh <span className="text-baby-light">Lingkungan Sehat & Aman </span>
+              Remaja Juga Butuh <span className="text-teen-light underline-box after:bg-teen-normal/20">Lingkungan Sehat & Aman </span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Menjaga lingkungan yang mendukung dan aman untuk remaja adalah kunci untuk membantu mereka berkembang dengan sehat dan bahagia. Lingkungan yang positif tidak hanya melindungi remaja dari berbagai risiko kesehatan, tetapi juga mendukung pertumbuhan emosional dan sosial mereka. Berikut adalah beberapa hal yang perlu diperhatikan untuk menciptakan lingkungan yang ideal bagi remaja.
+              Lingkungan yang aman dan positif sangat penting untuk kesejahteraan remaja. Pastikan lingkungan melindungi kesehatan mereka dan mendukung perkembangan emosional serta sosial.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
-              data-aos-easing="ease-in-out" data-aos-duration="800">
-
-              <div
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Ruang Belajar yang Nyaman</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja memiliki area belajar yang bebas dari gangguan dan nyaman. Lingkungan belajar yang tenang dengan pencahayaan yang baik, kursi yang ergonomis, dan perlengkapan yang memadai dapat meningkatkan konsentrasi dan efektivitas belajar mereka.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Ruang Belajar Nyaman</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Ciptakan area belajar yang tenang dan nyaman untuk meningkatkan konsentrasi.</p>
               </div>
 
-              <div
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Fasilitasi Kegiatan Fisik dan Olahraga</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white"> Ajak remaja untuk berpartisipasi dalam aktivitas fisik secara rutin, seperti olahraga atau permainan luar ruangan. Kegiatan fisik tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental.</p>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Aktivitas Fisik Rutin</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Dorong remaja berolahraga secara teratur untuk kesehatan tubuh dan mental.</p>
               </div>
 
-              <div
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Dukungan Kesehatan Mental yang Kuat</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Berikan dukungan emosional dan mental dengan menjaga komunikasi terbuka. Buat lingkungan yang aman bagi remaja untuk berbicara tentang perasaan mereka dan pertimbangkan untuk menyediakan akses ke konseling atau dukungan psikologis jika diperlukan.</p>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Dukungan Kesehatan Mental</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Berikan dukungan emosional dan akses ke konseling jika diperlukan.</p>
               </div>
 
-              <div
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Sediakan Pola Makan Sehat</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja mendapatkan nutrisi yang cukup dengan menyediakan makanan sehat dan bergizi di rumah. Mengatur jadwal makan yang teratur dan menghindari makanan cepat saji dapat membantu menjaga kesehatan fisik dan mental mereka.</p>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Pola Makan Sehat</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Sediakan makanan bergizi dan teratur untuk mendukung kesehatan.</p>
               </div>
 
-              <div
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Atur Waktu Layar dengan Bijak</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Batasi waktu yang dihabiskan remaja di depan layar gadget untuk mencegah gangguan tidur dan masalah kesehatan lainnya. Dorong mereka untuk mengambil istirahat teratur dan menghabiskan waktu di luar ruangan.</p>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Atur Waktu Layar</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Batasi waktu layar untuk mencegah gangguan tidur dan dorong aktivitas luar ruangan.</p>
               </div>
 
-              <div
-
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Lingkungan Sosial yang Positif</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Ajak remaja untuk bergaul dengan teman-teman yang mendukung dan positif. Lingkungan sosial yang sehat dapat memperkuat rasa percaya diri dan mengurangi risiko masalah sosial atau emosional.</p>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Lingkungan Sosial Positif</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Ajak remaja bergaul dengan teman yang mendukung untuk meningkatkan kesejahteraan.</p>
               </div>
-
-
             </div>
+
           </div>
         </div>
       </section>

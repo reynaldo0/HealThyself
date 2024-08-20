@@ -17,7 +17,7 @@ const Navbar = ({ children, buttonColor = 'bg-baby-dark' }) => {
     <header>
       <nav className="fixed left-0 top-0 z-[99999] w-full border-gray-200 bg-white backdrop-blur-md shadow-sm bg-opacity-70">
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/logo.png" className="h-auto w-40" alt="gambar logo" />
           </a>
           <button
