@@ -36,11 +36,11 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
     };
 
     return (
-        <div className="rounded-xl shadow-md">
+        <div className="rounded-xl">
             {items.map((item, index) => (
                 <div key={index} className="pt-5">
                     <button
-                        className="w-full px-4 py-5 text-left bg-elderly-dark hover:bg-elderly-normal text-white rounded-xl focus:outline-none flex items-center justify-between"
+                        className="w-full px-4 py-5 text-left bg-elderly-normal/50 hover:bg-elderly-normal/60 text-white rounded-xl focus:outline-none flex items-center justify-between"
                         onClick={() => toggleAccordion(index)}
                     >
                         <span>{item.title}</span>
@@ -53,7 +53,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
                         className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
                         style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
                     >
-                        <div className="p-4 bg-elderly-normal text-white/80 text-sm">
+                        <div className="p-4 bg-elderly-normal/80 text-white/80 text-sm">
                             {item.content}
                         </div>
                     </div>
@@ -328,7 +328,7 @@ const Elderly = () => {
                                             <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
                                         </div>
                                         <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-elderly-light"></span></h1>
+                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-elderly-normal"></span></h1>
                                             <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
                                                 Permasalahan: Lansia memiliki risiko tinggi terkena komplikasi flu. Vaksin tahunan penting untuk melindungi dari flu musiman, tetapi cakupannya sering kali tidak optimal.
 
@@ -343,7 +343,7 @@ const Elderly = () => {
                                             <img src="/assets/carousel/baby/Vaksin-Pneumokokus.jpg" alt="Immunization" />
                                         </div>
                                         <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-elderly-light">dan Vaksinasi</span></h1>
+                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-elderly-normal">dan Vaksinasi</span></h1>
                                             <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 65 tahun, dengan dosis kedua 5 tahun kemudian (jika sesuai indikasi medis).
                                                 Permasalahan: Lansia rentan terhadap infeksi paru-paru. Keterlambatan atau ketidakteraturan dalam vaksinasi pneumokokus dapat meningkatkan risiko infeksi pneumonia dan komplikasi serius.</p>
                                         </div>
@@ -356,7 +356,7 @@ const Elderly = () => {
                                             <img src="/assets/carousel/baby/Vaksin-Shingles.jpg" alt="Immunization" />
                                         </div>
                                         <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Shingles <span className="text-elderly-light">(Herpes Zoster)</span></h1>
+                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Shingles <span className="text-elderly-normal">(Herpes Zoster)</span></h1>
                                             <p className="text-tertiary text-sm">Vaksin polio melindungi bayi dari poliomielitis, penyakit virus yang dapat menyebabkan kelumpuhan permanen. Vaksin polio diberikan dalam beberapa dosis pada usia 2, 3, dan 4 bulan untuk memastikan perlindungan penuh terhadap virus polio.</p>
                                         </div>
                                     </div>
@@ -368,7 +368,7 @@ const Elderly = () => {
                                             <img src="/assets/carousel/baby/Vaksin-DT.jpg" alt="Immunization" />
                                         </div>
                                         <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-elderly-light">(Td)</span></h1>
+                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-elderly-normal">(Td)</span></h1>
                                             <p className="text-tertiary text-sm">Vaksin DTP melindungi bayi dari tiga penyakit serius: difteri, tetanus, dan pertusis (batuk rejan). Difteri dapat menyebabkan masalah pernapasan, tetanus menyerang sistem saraf dan bisa berakibat fatal, sementara pertusis adalah penyakit pernapasan yang sangat menular. Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.</p>
                                         </div>
                                     </div>
@@ -380,7 +380,7 @@ const Elderly = () => {
                                             <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
                                         </div>
                                         <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-elderly-light">dan Vaksinasi</span></h1>
+                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-elderly-normal">dan Vaksinasi</span></h1>
                                             <p className="text-tertiary text-sm">Vaksin Hib melindungi bayi dari infeksi bakteri Haemophilus influenzae tipe B, yang dapat menyebabkan penyakit serius seperti meningitis (radang selaput otak), pneumonia, dan epiglotitis. Vaksin Hib diberikan pada usia 2, 3, dan 4 bulan.</p>
                                         </div>
                                     </div>
@@ -392,7 +392,7 @@ const Elderly = () => {
                                             <img src="/assets/carousel/baby/mmr.jpg" alt="Immunization" />
                                         </div>
                                         <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-elderly-light">dan Vaksinasi</span></h1>
+                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-elderly-normal">dan Vaksinasi</span></h1>
                                             <p className="text-tertiary text-sm">Vaksin MMR melindungi bayi dari tiga penyakit virus: campak (measles), gondongan (mumps), dan rubella. Ketiganya dapat menyebabkan komplikasi serius, terutama pada bayi dan anak kecil. Vaksin MMR diberikan pada usia 12 bulan.</p>
                                         </div>
                                     </div>
@@ -430,7 +430,7 @@ const Elderly = () => {
                         <div className="w-full md:w-1/2 flex items-center">
                             <div>
                                 <h1 className="text-elderly-nor font-bold text-4xl mb-4" data-aos="fade-up"
-                                    data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-elderly-light">Jiwa Bayi</span></h1>
+                                    data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-elderly-normal">Jiwa Bayi</span></h1>
                                 <p data-aos="fade-up"
                                     data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
                             </div>
@@ -446,7 +446,7 @@ const Elderly = () => {
                     <div className="container">
                         <h1 className="text-4xl font-bold text-elderly-dark text-center mb-4" data-aos="fade-up"
                             data-aos-easing="ease-in-out" data-aos-duration="700">
-                            Panduan Lingkungan <span className="text-elderly-light">Sehat untuk Bayi</span>
+                            Panduan Lingkungan <span className="text-elderly-normal">Sehat untuk Bayi</span>
                         </h1>
                         <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
                             data-aos-easing="ease-in-out" data-aos-duration="800">
