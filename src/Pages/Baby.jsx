@@ -480,7 +480,7 @@ const Baby = () => {
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Jaga kebersihan, keamanan, dan kenyamanan untuk mendukung pertumbuhan bayi. Ikuti langkah-langkah penting setiap hari untuk kesehatan optimal bayi Anda.
+             Jaga kebersihan, keamanan, serta kenyamanan untuk mendukung pertumbuhan bayi. Ikuti langkah-langkah penting setiap hari untuk kesehatan optimal bayi Anda.
             </p>
 
 
