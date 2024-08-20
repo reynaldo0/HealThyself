@@ -143,12 +143,12 @@ const Baby = () => {
 
                 <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
+                  Gaya Hidup Tidak Sehat Pada Anak Ancaman Bagi Generasi Mendatang
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
+                  Di Indonesia, gaya hidup tidak sehat menjadi salah satu faktor utama yang menghambat pertumbuhan dan perkembangan anak-anak. Kurangnya aktivitas fisik, konsumsi makanan tinggi gula dan lemak, serta rendahnya kesadaran akan pentingnya pola hidup sehat, telah menyebabkan peningkatan obesitas dan risiko penyakit kronis pada usia dini. Perbaikan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan sangat penting untuk memastikan generasi mendatang tumbuh menjadi individu yang sehat dan produktif.
                 </p>
                 <button
                   className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
