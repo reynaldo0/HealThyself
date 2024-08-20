@@ -130,7 +130,7 @@ const Option3d = ({ onBack }) => {
               model={<Anak />}
               title="Anak - Anak"
               description="3-12 Tahun"
-              bgColor={'#EA9117'}
+              bgColor={'#E33B3B'}
               width="289px"
               height="300px"
               titleColor="#A3ECFF"
@@ -143,7 +143,7 @@ const Option3d = ({ onBack }) => {
               model={<Teen />}
               title="Remaja"
               description="13-17 Tahun"
-              bgColor={'#EA9117'}
+              bgColor={'#0E9D75'}
               width="289px"
               height="320px"
               titleColor="#A3ECFF"
@@ -155,7 +155,7 @@ const Option3d = ({ onBack }) => {
               model={<Dewasa />}
               title="Dewasa"
               description="18-59 Tahun"
-              bgColor={'#179C51'}
+              bgColor={'#F36932'}
               width="289px"
               height="270px"
               titleColor="#6FDB9F"
@@ -168,7 +168,7 @@ const Option3d = ({ onBack }) => {
               model={<Kakek />}
               title="Lansia"
               description="60 tahun keatas"
-              bgColor={'#B11414'}
+              bgColor={'#16AE79'}
               width="289px"
               height="220px"
               titleColor="#FFC0CC"
