@@ -128,7 +128,7 @@ const Child = () => {
 
                 <h1 className="font-bold text-4xl text-child-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Menghadapi Ancaman Gaya Hidup Tidak Sehat: Masa Depan Anak-Anak Indonesia di Ujung Tanduk
+                  Menghadapi Ancaman Gaya Hidup Tidak Sehat: Masa Depan Anak-Anak Indonesia di Ujung Tanduk!!
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
@@ -466,24 +466,60 @@ const Child = () => {
           <div className="container">
             <h1 className="text-4xl font-bold text-child-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Panduan Lingkungan <span className="text-child-normal">Sehat untuk Bayi</span>
+              Menciptakan Lingkungan Yang Ideal <span className="text-child-normal">Untuk Anak-anak</span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
+              Menciptakan lingkungan yang bersih, aman, dan mendukung kesehatan bayi Anda adalah langkah krusial untuk perkembangan mereka. Dengan menghindari potensi bahaya dan menerapkan praktik terbaik, Anda dapat memastikan bayi tumbuh dalam kondisi yang optimal. Temukan panduan praktis untuk menciptakan lingkungan yang aman dan mendukung kesehatan bayi Anda setiap hari.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              {[...Array(6)].map((_, index) => (
+              
                 <div
-                  key={index}
                   className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
                 >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Keamanan Utama: Pastikan Ruang Anak Bebas dari Bahaya</h5>
+                  <p className="text-sm text-child-light group-hover/item:text-white">Selalu periksa dan pastikan bahwa ruang bermain anak aman dari risiko cedera. Hindari penggunaan mainan dengan bagian kecil yang dapat tertelan dan pastikan sudut meja atau furniture dilindungi dengan pelindung. Periksa juga kabel listrik dan alat-alat berbahaya yang harus diletakkan di tempat yang tidak terjangkau oleh anak.</p>
+                </div>
+
+                <div
+                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Kebersihan dan Kesehatan: Ciptakan Lingkungan yang Bersih dan Sehat</h5>
+                  <p className="text-sm text-child-light group-hover/item:text-white">Jaga kebersihan area tempat anak bermain dan tidur dengan rutin membersihkan debu dan kotoran. Gunakan produk pembersih yang aman dan tidak beracun untuk menghindari paparan bahan kimia berbahaya. Pastikan ventilasi ruangan baik untuk mencegah timbulnya jamur dan menjaga kualitas udara yang sehat.</p>
+                </div>
+
+                <div
+                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Stimulasi Positif: Sediakan Ruang untuk Eksplorasi dan Kreativitas</h5>
                   <p className="text-sm text-child-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
                 </div>
-              ))}
+
+                <div
+                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Rutin dan Struktur: Buat Rutinitas Harian yang Teratur</h5>
+                  <p className="text-sm text-child-light group-hover/item:text-white">Menetapkan rutinitas harian yang konsisten membantu anak merasa aman dan mengetahui apa yang diharapkan. Rencanakan waktu tidur yang teratur, waktu makan, dan aktivitas harian dengan struktur yang jelas. Rutinitas ini membantu anak merasa lebih teratur dan mengurangi kecemasan.</p>
+                </div>
+
+                <div
+                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white"> Zona Tenang: Sediakan Area Khusus untuk Istirahat dan Relaksasi</h5>
+                  <p className="text-sm text-child-light group-hover/item:text-white">Buatlah zona tenang di rumah di mana anak dapat bersantai dan melakukan aktivitas yang menenangkan, seperti membaca atau menggambar. Area ini harus nyaman dan bebas dari gangguan. Memiliki ruang seperti ini membantu anak belajar mengelola stres dan menyediakan tempat yang tenang untuk beristirahat.</p>
+                </div>
+
+                <div
+                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Dukungan Sosial: Fasilitasi Interaksi Positif dengan Teman dan Keluarga</h5>
+                  <p className="text-sm text-child-light group-hover/item:text-white"> Pastikan anak memiliki kesempatan untuk berinteraksi dengan teman sebaya dan anggota keluarga dalam lingkungan yang positif. Aktivitas bersama seperti bermain di luar rumah, berkumpul dengan keluarga, dan berpartisipasi dalam kegiatan sosial dapat membantu anak mengembangkan keterampilan sosial dan emosional. Interaksi yang sehat dan mendukung juga berkontribusi pada rasa percaya diri dan keterhubungan anak dengan orang lain.</p>
+                </div>
+
+  
+              
             </div>
           </div>
         </div>
