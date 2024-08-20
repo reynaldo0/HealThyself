@@ -16,7 +16,7 @@
 
 /* Styles for slides */
 .slide {
-  @apply relative px-2.5;
+  @apply relative;
   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Hide overflow for rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */

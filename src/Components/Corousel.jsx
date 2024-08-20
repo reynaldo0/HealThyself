@@ -98,10 +98,10 @@ const ImageCarousel = ({ slides }) => {
                   height: 'auto',
                 }}
               />
-              <h3 style={{ margin: '0', fontSize: '16px', fontWeight: 'bold' }}>{slide.title}</h3>
+              {/* <h3 style={{ margin: '0', fontSize: '16px', fontWeight: 'bold' }}>{slide.title}</h3>
               <p style={{ margin: '0', fontSize: '14px' }}>
                 {slide.description}
-              </p>
+              </p> */}
             </div>
           </div>
         ))}

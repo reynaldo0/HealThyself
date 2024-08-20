@@ -23,10 +23,10 @@ import HeroButton from "../Components/HeroButton";
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
 const slides = [
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+  { src: '/assets/carousel/child/1.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+  { src: '/assets/carousel/child/2.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+  { src: '/assets/carousel/child/3.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+  { src: '/assets/carousel/child/4.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
 ];
 
 const Accordion = React.memo(({ items, initialOpenIndex }) => {

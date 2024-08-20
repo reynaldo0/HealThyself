@@ -58,10 +58,10 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
 });
 
 const slides = [
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+  { src: '/assets/carousel/baby/1.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+  { src: '/assets/carousel/baby/2.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+  { src: '/assets/carousel/baby/3.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+  { src: '/assets/carousel/baby/4.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
 ];
 
 
@@ -480,7 +480,7 @@ const Baby = () => {
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-             Jaga kebersihan, keamanan, serta kenyamanan untuk mendukung pertumbuhan bayi. Ikuti langkah-langkah penting setiap hari untuk kesehatan optimal bayi Anda.
+              Jaga kebersihan, keamanan, serta kenyamanan untuk mendukung pertumbuhan bayi. Ikuti langkah-langkah penting setiap hari untuk kesehatan optimal bayi Anda.
             </p>
 
 

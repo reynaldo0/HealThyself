@@ -35,22 +35,22 @@ Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
 const slides = [
     {
-        src: "/assets/carousel/baby/piramis.jpg",
+        src: "/assets/carousel/elderly/1.jpg",
         title: "First Slide",
         description: "Description for the first slide.",
     },
     {
-        src: "/assets/carousel/baby/piramis.jpg",
+        src: "/assets/carousel/elderly/2.jpg",
         title: "Second Slide",
         description: "Description for the second slide.",
     },
     {
-        src: "/assets/carousel/baby/piramis.jpg",
+        src: "/assets/carousel/elderly/3.jpg",
         title: "Third Slide",
         description: "Description for the third slide.",
     },
     {
-        src: "/assets/carousel/baby/piramis.jpg",
+        src: "/assets/carousel/elderly/4.jpg",
         title: "Fourth Slide",
         description: "Description for the fourth slide.",
     },

@@ -57,10 +57,10 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
 });
 
 const slides = [
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
-  { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+  { src: '/assets/carousel/teen/1.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+  { src: '/assets/carousel/teen/2.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+  { src: '/assets/carousel/teen/3.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+  { src: '/assets/carousel/teen/4.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
 ];
 
 const Teen = () => {
