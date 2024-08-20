@@ -88,7 +88,8 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="relative container mx-auto py-8 overflow-hidden px-4 md:px-0">
+    <div className="relative container mx-auto py-8 overflow-hidden px-4 md:px-0"  data-aos="fade-up"
+    data-aos-easing="ease-in-out" data-aos-duration="800">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div

@@ -138,15 +138,18 @@ const Baby = () => {
           <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-4xl text-baby-dark">
+                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">
                   Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
-                <p className="text-lg text-tertiary">
+                <p className="text-lg text-tertiary" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
                   className="bg-baby-normal text-white p-4 rounded-lg w-fit"
-                  onClick={() => handleNavigation('/explore')}
+                  onClick={() => handleNavigation('/explore')} data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="900"
                 >
                   Mulai Eksplorasi
                 </button>
@@ -199,11 +202,11 @@ const Baby = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out" data-aos-duration="700">
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-base text-tertiary text-center max-w-[600px]" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out" data-aos-duration="800">
               Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
@@ -256,16 +259,22 @@ const Baby = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8">
+              <h2 className="text-2xl font-bold mb-4 text-white" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+              <p className="text-lg text-white mb-8" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800">
                 Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
 
 
               </p>
               {/* Accordion Section */}
-              <Accordion items={accordionItems} initialOpenIndex={0} />
+              <div data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="900">
+                <Accordion items={accordionItems} initialOpenIndex={0} />
+              </div>
             </div>
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="900">
               <img src="/assets/emak-anak.webp" alt="Mother and Child" className="w-96 h-auto" />
             </div>
           </div>
@@ -281,15 +290,15 @@ const Baby = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
             <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out">
               Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
             <ImageCarousel />
@@ -303,8 +312,10 @@ const Baby = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
-              <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
-              <p className="text-[#575757]">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+              <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+              <p className="text-[#575757]" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
@@ -315,6 +326,8 @@ const Baby = () => {
                 autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
                 modules={[Pagination, Autoplay]}
                 className="mb-20 w-full h-full min-h-[300px]"
+                data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800"
               >
 
                 <SwiperSlide>
@@ -399,7 +412,8 @@ const Baby = () => {
       <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="700">
               <Swiper spaceBetween={16} direction={isMobile ? 'horizontal' : 'vertical'} effect={'coverflow'} coverflowEffect={{
                 slideShadows: false,
                 rotate: 0,
@@ -419,8 +433,10 @@ const Baby = () => {
             </div>
             <div className="w-full md:w-1/2 flex items-center">
               <div>
-                <h1 className="text-baby-dark font-bold text-4xl mb-4">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
-                <p>Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
+                <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
+                <p data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
               </div>
             </div>
           </div>
@@ -430,29 +446,32 @@ const Baby = () => {
 
       {/* panduan lingkungan start */}
       <section id="lingkungan">
-    <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
-        <div className="container">
-            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4">
-                Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
+        <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
+          <div className="container">
+            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="700">
+              Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
             </h1>
-            <p className="text-center text-tertiary max-w-screen-md mx-auto">
-                Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
+            <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="800">
+              Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group">
-                {[...Array(6)].map((_, index) => (
-                    <div
-                        key={index}
-                        className="bg-baby-vlight/20 hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white"
-                    >
-                        <h5 className="font-semibold mb-2 text-baby-normal group-hover:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
-                        <p className="text-sm text-baby-light group-hover:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
-                    </div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="800">
+              {[...Array(6)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-baby-vlight/20 hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                  <p className="text-sm text-baby-light group-hover:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                </div>
+              ))}
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
 
       {/* panduan lingkungan end */}
