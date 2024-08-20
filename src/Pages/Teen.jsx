@@ -190,7 +190,7 @@ const Teen = () => {
 
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="700">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness"  data-aos="zoom-in"
+                <img src="/icons/baby/kura-kura.png" alt="Happiness" data-aos="zoom-in"
                   data-aos-easing="ease-in-out" data-aos-duration="1200" />
                 <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
               </div>
@@ -214,11 +214,11 @@ const Teen = () => {
 
             <h1 className="text-teen-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-teen-dark">Pantau</span> Perkembangan Remaja
+              <span className="text-teen-dark">Pantau</span> <span className="underline-box after:bg-teen-normal/20">Perkembangan Remaja</span>
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-             Perkembangan remaja melibatkan perubahan fisik, emosional, dan sosial yang penting, dan dukungan yang tepat membantu mereka tumbuh sehat dan percaya diri.
+              Perkembangan remaja melibatkan perubahan fisik, emosional, dan sosial yang penting, dan dukungan yang tepat membantu mereka tumbuh sehat dan percaya diri.
             </p>
           </div>
 
@@ -287,7 +287,7 @@ const Teen = () => {
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-teen-dark">Informasi </span> Gizi Remaja
+              <span className="text-teen-dark">Informasi </span> <span className="underline-box after:bg-teen-normal/20">Gizi Remaja</span>
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
@@ -325,53 +325,53 @@ const Teen = () => {
                 data-aos-easing="ease-in-out" data-aos-duration="800"
               >
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/Vaksin-Meningokokus.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Meningokokus</h1>
-      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun dan dosis kedua pada usia 16 tahun. Mencegah infeksi meningitis fatal. Dosis kedua sering terlewat.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/Vaksin-Meningokokus.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Meningokokus</h1>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun dan dosis kedua pada usia 16 tahun. Mencegah infeksi meningitis fatal. Dosis kedua sering terlewat.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/Vaksin-Tetanus-diphtheria-pertussis.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Tdap</h1>
-      <p className="text-tertiary text-sm">Booster pada usia 11-12 tahun. Melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dapat meningkatkan risiko infeksi.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/Vaksin-Tetanus-diphtheria-pertussis.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Tdap</h1>
+                      <p className="text-tertiary text-sm">Booster pada usia 11-12 tahun. Melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dapat meningkatkan risiko infeksi.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/Vaksin-HPV.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin HPV</h1>
-      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun, dosis kedua 1-2 bulan setelah, dan dosis ketiga 6 bulan setelah dosis pertama. Keterlambatan mengurangi efektivitas.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/Vaksin-HPV.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin HPV</h1>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 11-12 tahun, dosis kedua 1-2 bulan setelah, dan dosis ketiga 6 bulan setelah dosis pertama. Keterlambatan mengurangi efektivitas.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/Vaksin-Varicella-CACAR.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Varicella</h1>
-      <p className="text-tertiary text-sm">Dosis pertama pada usia 13-18 tahun, dengan dosis kedua 4-8 minggu kemudian jika belum lengkap sebelumnya. Mencegah cacar air di usia dewasa muda.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/Vaksin-Varicella-CACAR.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-teen-dark font-bold text-3xl mb-4">Vaksin Varicella</h1>
+                      <p className="text-tertiary text-sm">Dosis pertama pada usia 13-18 tahun, dengan dosis kedua 4-8 minggu kemudian jika belum lengkap sebelumnya. Mencegah cacar air di usia dewasa muda.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
 
 
@@ -394,40 +394,40 @@ const Teen = () => {
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
-    <h1 className="font-semibold mb-2">Komunikasi Terbuka untuk Kesehatan Mental</h1>
-    <p className="text-tertiary">Berbicara terbuka dengan remaja tentang perasaan mereka membantu mengurangi stres dan meningkatkan kesejahteraan.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Komunikasi Terbuka untuk Kesehatan Mental</h1>
+                    <p className="text-tertiary">Berbicara terbuka dengan remaja tentang perasaan mereka membantu mengurangi stres dan meningkatkan kesejahteraan.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
-    <h1 className="font-semibold mb-2">Aktivitas Fisik dan Kesehatan Remaja</h1>
-    <p className="text-tertiary">Aktivitas fisik rutin bermanfaat untuk tubuh dan mental. Ajak remaja berolahraga atau aktivitas fisik yang mereka suka.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Aktivitas Fisik dan Kesehatan Remaja</h1>
+                    <p className="text-tertiary">Aktivitas fisik rutin bermanfaat untuk tubuh dan mental. Ajak remaja berolahraga atau aktivitas fisik yang mereka suka.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
-    <h1 className="font-semibold mb-2">Kelola Stres dengan Relaksasi</h1>
-    <p className="text-tertiary">Meditasi dan latihan pernapasan membantu mengelola stres. Ajarkan teknik-teknik ini sebagai rutinitas harian.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Kelola Stres dengan Relaksasi</h1>
+                    <p className="text-tertiary">Meditasi dan latihan pernapasan membantu mengelola stres. Ajarkan teknik-teknik ini sebagai rutinitas harian.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
-    <h1 className="font-semibold mb-2">Keseimbangan Akademis dan Sosial</h1>
-    <p className="text-tertiary">Bantu remaja menyeimbangkan waktu antara akademis dan sosial untuk mengurangi tekanan dan meningkatkan kesejahteraan.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Keseimbangan Akademis dan Sosial</h1>
+                    <p className="text-tertiary">Bantu remaja menyeimbangkan waktu antara akademis dan sosial untuk mengurangi tekanan dan meningkatkan kesejahteraan.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
-    <h1 className="font-semibold mb-2">Keterampilan Coping untuk Remaja</h1>
-    <p className="text-tertiary">Ajarkan keterampilan coping seperti memecahkan masalah dan mengatur waktu untuk membantu remaja menghadapi stres.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-teen-normal">
+                    <h1 className="font-semibold mb-2">Keterampilan Coping untuk Remaja</h1>
+                    <p className="text-tertiary">Ajarkan keterampilan coping seperti memecahkan masalah dan mengatur waktu untuk membantu remaja menghadapi stres.</p>
+                  </div>
+                </SwiperSlide>
 
 
               </Swiper>
@@ -451,52 +451,45 @@ const Teen = () => {
           <div className="container">
             <h1 className="text-2xl md:text-4xl font-bold text-teen-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Remaja Juga Butuh <span className="text-teen-light">Lingkungan Sehat & Aman </span>
+              Remaja Juga Butuh <span className="text-teen-light underline-box after:bg-teen-normal/20">Lingkungan Sehat & Aman </span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
               Lingkungan yang aman dan positif sangat penting untuk kesejahteraan remaja. Pastikan lingkungan melindungi kesehatan mereka dan mendukung perkembangan emosional serta sosial.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
-              data-aos-easing="ease-in-out" data-aos-duration="800">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Ruang Belajar Nyaman</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Ciptakan area belajar yang tenang dan nyaman untuk meningkatkan konsentrasi.</p>
+              </div>
 
-<div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">
-  <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
-    <h5 className="font-semibold mb-2 text-teen-normal group-hover:item:text-white">Ruang Belajar Nyaman</h5>
-    <p className="text-sm text-teen-light group-hover:item:text-white">Ciptakan area belajar yang tenang dan nyaman untuk meningkatkan konsentrasi.</p>
-  </div>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Aktivitas Fisik Rutin</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Dorong remaja berolahraga secara teratur untuk kesehatan tubuh dan mental.</p>
+              </div>
 
-  <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
-    <h5 className="font-semibold mb-2 text-teen-normal group-hover:item:text-white">Aktivitas Fisik Rutin</h5>
-    <p className="text-sm text-teen-light group-hover:item:text-white">Dorong remaja berolahraga secara teratur untuk kesehatan tubuh dan mental.</p>
-  </div>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Dukungan Kesehatan Mental</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Berikan dukungan emosional dan akses ke konseling jika diperlukan.</p>
+              </div>
 
-  <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
-    <h5 className="font-semibold mb-2 text-teen-normal group-hover:item:text-white">Dukungan Kesehatan Mental</h5>
-    <p className="text-sm text-teen-light group-hover:item:text-white">Berikan dukungan emosional dan akses ke konseling jika diperlukan.</p>
-  </div>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Pola Makan Sehat</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Sediakan makanan bergizi dan teratur untuk mendukung kesehatan.</p>
+              </div>
 
-  <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
-    <h5 className="font-semibold mb-2 text-teen-normal group-hover:item:text-white">Pola Makan Sehat</h5>
-    <p className="text-sm text-teen-light group-hover:item:text-white">Sediakan makanan bergizi dan teratur untuk mendukung kesehatan.</p>
-  </div>
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Atur Waktu Layar</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Batasi waktu layar untuk mencegah gangguan tidur dan dorong aktivitas luar ruangan.</p>
+              </div>
 
-  <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
-    <h5 className="font-semibold mb-2 text-teen-normal group-hover:item:text-white">Atur Waktu Layar</h5>
-    <p className="text-sm text-teen-light group-hover:item:text-white">Batasi waktu layar untuk mencegah gangguan tidur dan dorong aktivitas luar ruangan.</p>
-  </div>
-
-  <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
-    <h5 className="font-semibold mb-2 text-teen-normal group-hover:item:text-white">Lingkungan Sosial Positif</h5>
-    <p className="text-sm text-teen-light group-hover:item:text-white">Ajak remaja bergaul dengan teman yang mendukung untuk meningkatkan kesejahteraan.</p>
-  </div>
-</div>
-
-
-
-
+              <div className="bg-teen-light/10 group/item hover:bg-teen-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105">
+                <h5 className="font-semibold mb-2 text-teen-normal group-hover/item:text-white">Lingkungan Sosial Positif</h5>
+                <p className="text-sm text-teen-light group-hover/item:text-white">Ajak remaja bergaul dengan teman yang mendukung untuk meningkatkan kesejahteraan.</p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
