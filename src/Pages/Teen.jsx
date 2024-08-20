@@ -16,6 +16,8 @@ import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
+import HeroButton from "../Components/HeroButton";
+import ImageCarousel from "../Components/Corousel";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -27,11 +29,11 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   };
 
   return (
-    <div className="rounded-xl shadow-md">
+    <div className="rounded-xl">
       {items.map((item, index) => (
         <div key={index} className="pt-5">
           <button
-            className="w-full px-4 py-5 text-left bg-baby-soft hover:bg-baby-vsoft text-white rounded-xl focus:outline-none flex items-center justify-between"
+            className="w-full px-4 py-5 text-left bg-teen-normal hover:bg-teen-normal/80 text-white rounded-xl focus:outline-none flex items-center justify-between"
             onClick={() => toggleAccordion(index)}
           >
             <span>{item.title}</span>
@@ -44,7 +46,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-baby-ldark text-white/80 text-sm">
+            <div className="p-4 bg-teen-normal/50 text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -53,6 +55,13 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
     </div>
   );
 });
+
+const slides = [
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+];
 
 const Teen = () => {
   const canvasRef = useRef();
@@ -124,7 +133,7 @@ const Teen = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      <Navbar>
+      <Navbar buttonColor="bg-teen-dark">
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />
         <Navbar.Item to={'#gizi'} title={'Gizi'} />
@@ -140,33 +149,23 @@ const Teen = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
 
-                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                <h1 className="font-bold text-4xl text-teen-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                 Krisis Kesehatan Remaja!! Mengatasi Tantangan Gaya Hidup dan Kesehatan Mental di Indonesia
+                  Krisis Kesehatan Remaja!! Mengatasi Tantangan Gaya Hidup dan Kesehatan Mental di Indonesia
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 25% remaja menghadapi obesitas akibat gaya hidup tidak sehat, dengan diet tinggi gula, lemak, dan kurangnya aktivitas fisik. Sekitar 15% remaja mengalami depresi dan 20% kecemasan, sementara hanya 30% mendapatkan dukungan mental yang memadai. Mengatasi masalah ini memerlukan edukasi kesehatan, promosi pola hidup sehat, dan dukungan psikologis untuk mendukung generasi muda tumbuh sehat dan seimbang.
                 </p>
-                <button
-                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
-                  onClick={() => window.location.href = '#panduan'}
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="900"
-                >
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text translate-x-2">Selengkapnya</span>
-                </button>
+                <HeroButton circle="bg-teen-normal" textColor="text-teen-normal" />
 
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
               {/* wave */}
               <img
-                src="/assets/wave.svg"
+                src="/assets/teen/wave.svg"
                 alt="Wave Decoration"
                 className="absolute right-0 top-0 -z-10"
                 draggable="false"
@@ -194,11 +193,11 @@ const Teen = () => {
               </div>
 
               {/* Animated Balls */}
-              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} />
-              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} />
-              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} />
-              <Ball classList="absolute -right-14 top-1/2" />
-              <Ball classList="absolute right-1/3 top-10 -z-10" color="#253B70" size={70} />
+              <Ball classList="absolute -right-8 top-10 animation-delay-1000" color="#29D3A3" size={100} />
+              <Ball classList="absolute right-40 top-64 animation-delay-1500" color="#29D3A3" size={70} />
+              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" color="#29D3A3" size={110} />
+              <Ball classList="absolute -right-14 top-1/2" color="#ffff" />
+              <Ball classList="absolute right-1/3 top-10 -z-10" color="#1B856D" size={70} />
             </div>
           </div>
         </div>
@@ -210,9 +209,9 @@ const Teen = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
-            <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
+            <h1 className="text-teen-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Remaja
+              <span className="text-teen-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
@@ -243,7 +242,7 @@ const Teen = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-baby-dark py-12 relative">
+      <section id="gizi" className="bg-teen-dark py-12 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
@@ -277,63 +276,24 @@ const Teen = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
-              <span className="text-baby-dark">Informasi </span> Gizi Bayi
+            <h1
+              className="text-baby-normal font-bold text-3xl md:text-4xl text-center"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              <span className="text-baby-dark">Informasi </span> Gizi Anak
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px] mb-4" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
-              Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
+            <p
+              className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
             </p>
-            {/* <ImageCarousel /> */}
-            <div className="relative">
-              <div className="absolute hidden md:block -left-14 top-1/2 -translate-y-1/2 transform z-10">
-                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
-              </div>
-              <div className="absolute hidden md:block -right-14 transform z-10 top-1/2 -translate-y-1/2">
-                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
-              </div>
-
-              <Swiper className="max-w-screen-sm w-screen h-[300px]" effect={'coverflow'} spaceBetween={16} coverflowEffect={{
-                slideShadows: false,
-                rotate: 0,
-                stretch: -20,
-                depth: 100,
-                modifier: 2.5,
-              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay, Navigation]} autoplay={{ delay: 2000 }} loop navigation={{
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-              }}>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" className="w-full h-auto" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
+            <ImageCarousel slides={slides} />
           </div>
         </div>
       </section>
@@ -370,7 +330,7 @@ const Teen = () => {
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Meningokokus <span className="text-baby-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dosis kedua pada usia 16 tahun.
-                      Permasalahan: Vaksin meningokokus melindungi dari infeksi meningitis yang berpotensi fatal. Beberapa remaja mungkin melewatkan dosis kedua pada usia 16 tahun, yang penting untuk perlindungan berkelanjutan.</p>
+                        Permasalahan: Vaksin meningokokus melindungi dari infeksi meningitis yang berpotensi fatal. Beberapa remaja mungkin melewatkan dosis kedua pada usia 16 tahun, yang penting untuk perlindungan berkelanjutan.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -384,7 +344,7 @@ const Teen = () => {
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria-pertussis <span className="text-baby-light">(DTap)
                       </span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis booster pada usia 11-12 tahun.
-                      Permasalahan: Vaksin Tdap melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dalam menerima booster pada usia 11-12 tahun dapat meningkatkan risiko infeksi.</p>
+                        Permasalahan: Vaksin Tdap melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dalam menerima booster pada usia 11-12 tahun dapat meningkatkan risiko infeksi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -397,7 +357,7 @@ const Teen = () => {
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin HPV <span className="text-baby-light">(Human Papillomavirus)</span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dengan dosis kedua 1-2 bulan setelah dosis pertama, dan dosis ketiga 6 bulan setelah dosis pertama.
-                      Permasalahan: Keterlambatan atau ketidaklengkapan dosis vaksin HPV dapat mengurangi efektivitas dalam mencegah kanker di masa depan. Banyak remaja mungkin tidak menyelesaikan seluruh rangkaian dosis.</p>
+                        Permasalahan: Keterlambatan atau ketidaklengkapan dosis vaksin HPV dapat mengurangi efektivitas dalam mencegah kanker di masa depan. Banyak remaja mungkin tidak menyelesaikan seluruh rangkaian dosis.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -410,10 +370,10 @@ const Teen = () => {
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Varicella <span className="text-baby-light">(Cacar Air)</span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Jika belum menerima dosis lengkap sebelumnya, dosis pertama pada usia 13-18 tahun, dengan dosis kedua 4-8 minggu kemudian.
-                      Permasalahan: Remaja yang belum mendapatkan vaksin cacar air sebelumnya mungkin melewatkan kesempatan untuk mendapatkan perlindungan penuh, meningkatkan risiko infeksi di usia dewasa muda.</p>
+                        Permasalahan: Remaja yang belum mendapatkan vaksin cacar air sebelumnya mungkin melewatkan kesempatan untuk mendapatkan perlindungan penuh, meningkatkan risiko infeksi di usia dewasa muda.</p>
                     </div>
                   </div>
-                </SwiperSlide>                                                                                                                                                                                                             
+                </SwiperSlide>
 
 
               </Swiper>
