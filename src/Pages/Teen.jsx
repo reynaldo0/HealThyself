@@ -16,6 +16,7 @@ import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
+import HeroButton from "../Components/HeroButton";
 import ImageCarousel from "../Components/Corousel";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
@@ -28,11 +29,11 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   };
 
   return (
-    <div className="rounded-xl shadow-md">
+    <div className="rounded-xl">
       {items.map((item, index) => (
         <div key={index} className="pt-5">
           <button
-            className="w-full px-4 py-5 text-left bg-baby-soft hover:bg-baby-vsoft text-white rounded-xl focus:outline-none flex items-center justify-between"
+            className="w-full px-4 py-5 text-left bg-teen-normal hover:bg-teen-normal/80 text-white rounded-xl focus:outline-none flex items-center justify-between"
             onClick={() => toggleAccordion(index)}
           >
             <span>{item.title}</span>
@@ -45,7 +46,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-baby-ldark text-white/80 text-sm">
+            <div className="p-4 bg-teen-normal/50 text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -132,7 +133,7 @@ const Teen = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      <Navbar>
+      <Navbar buttonColor="bg-teen-dark">
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />
         <Navbar.Item to={'#gizi'} title={'Gizi'} />
@@ -148,7 +149,7 @@ const Teen = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
 
-                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                <h1 className="font-bold text-4xl text-teen-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
                   Krisis Kesehatan Remaja!! Mengatasi Tantangan Gaya Hidup dan Kesehatan Mental di Indonesia
                 </h1>
@@ -157,24 +158,14 @@ const Teen = () => {
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 25% remaja menghadapi obesitas akibat gaya hidup tidak sehat, dengan diet tinggi gula, lemak, dan kurangnya aktivitas fisik. Sekitar 15% remaja mengalami depresi dan 20% kecemasan, sementara hanya 30% mendapatkan dukungan mental yang memadai. Mengatasi masalah ini memerlukan edukasi kesehatan, promosi pola hidup sehat, dan dukungan psikologis untuk mendukung generasi muda tumbuh sehat dan seimbang.
                 </p>
-                <button
-                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
-                  onClick={() => window.location.href = '#panduan'}
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="900"
-                >
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text translate-x-2">Selengkapnya</span>
-                </button>
+                <HeroButton circle="bg-teen-normal" textColor="text-teen-normal" />
 
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
               {/* wave */}
               <img
-                src="/assets/wave.svg"
+                src="/assets/teen/wave.svg"
                 alt="Wave Decoration"
                 className="absolute right-0 top-0 -z-10"
                 draggable="false"
@@ -202,11 +193,11 @@ const Teen = () => {
               </div>
 
               {/* Animated Balls */}
-              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} />
-              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} />
-              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} />
-              <Ball classList="absolute -right-14 top-1/2" />
-              <Ball classList="absolute right-1/3 top-10 -z-10" color="#253B70" size={70} />
+              <Ball classList="absolute -right-8 top-10 animation-delay-1000" color="#29D3A3" size={100} />
+              <Ball classList="absolute right-40 top-64 animation-delay-1500" color="#29D3A3" size={70} />
+              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" color="#29D3A3" size={110} />
+              <Ball classList="absolute -right-14 top-1/2" color="#ffff" />
+              <Ball classList="absolute right-1/3 top-10 -z-10" color="#1B856D" size={70} />
             </div>
           </div>
         </div>
@@ -218,9 +209,9 @@ const Teen = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
-            <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
+            <h1 className="text-teen-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Remaja
+              <span className="text-teen-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
@@ -251,7 +242,7 @@ const Teen = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-baby-dark py-12 relative">
+      <section id="gizi" className="bg-teen-dark py-12 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
@@ -392,39 +383,67 @@ const Teen = () => {
       </section>
 
       <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
-        <div className="container">
-          <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
-            <div className="w-full md:w-1/2" data-aos="fade-up"
-              data-aos-easing="ease-in-out" data-aos-duration="700">
-              <Swiper spaceBetween={16} direction={isMobile ? 'horizontal' : 'vertical'} effect={'coverflow'} coverflowEffect={{
-                slideShadows: false,
-                rotate: 0,
-                stretch: -20,
-                depth: 100,
-                modifier: 2.5,
-              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
-                {as.map(() => (
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                      <h1 className="font-semibold mb-2">Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman</h1>
-                      <p className="text-tertiary">Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+  <div className="container">
+    <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
+      <div className="w-full md:w-1/2" data-aos="fade-up"
+        data-aos-easing="ease-in-out" data-aos-duration="700">
+        <Swiper spaceBetween={16} direction={isMobile ? 'horizontal' : 'vertical'} effect={'coverflow'} coverflowEffect={{
+          slideShadows: false,
+          rotate: 0,
+          stretch: -20,
+          depth: 100,
+          modifier: 2.5,
+        }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
+        
+          <SwiperSlide>
+            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+              <h1 className="font-semibold mb-2">Dukung Kesehatan Mental Remaja dengan Komunikasi Terbuka</h1>
+              <p className="text-tertiary">Mengajak remaja berbicara secara terbuka tentang perasaan dan tantangan mereka dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental. Diskusi rutin dan dukungan emosional sangat penting.</p>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
-              <div>
-                <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
-                <p data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
-              </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+              <h1 className="font-semibold mb-2">Pentingnya Aktivitas Fisik untuk Remaja</h1>
+              <p className="text-tertiary">Aktivitas fisik yang teratur tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga untuk kesehatan mental. Dorong remaja untuk berpartisipasi dalam olahraga atau kegiatan fisik yang mereka nikmati.</p>
             </div>
-          </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+              <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
+              <p className="text-tertiary">Teknik relaksasi seperti meditasi dan latihan pernapasan dapat membantu remaja mengelola stres dan kecemasan. Ajarkan mereka teknik-teknik ini sebagai bagian dari rutinitas harian mereka.</p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+              <h1 className="font-semibold mb-2">Dukung Keseimbangan Kegiatan Akademis dan Sosial</h1>
+              <p className="text-tertiary">Membantu remaja menyeimbangkan waktu antara kegiatan akademis dan sosial dapat mengurangi tekanan dan meningkatkan kesejahteraan mereka. Pastikan mereka memiliki waktu untuk bersantai dan bersosialisasi.</p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+              <h1 className="font-semibold mb-2">Bantu Remaja Mengembangkan Keterampilan Coping</h1>
+              <p className="text-tertiary">Mengajarkan keterampilan coping yang sehat dapat membantu remaja menghadapi tantangan dan stres. Keterampilan ini termasuk memecahkan masalah, mengatur waktu, dan mencari dukungan ketika diperlukan.</p>
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
+      </div>
+      <div className="w-full md:w-1/2 flex items-center">
+        <div>
+          <h1 className="text-blue-800 font-bold text-4xl mb-4" data-aos="fade-up"
+            data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-blue-500">Kesehatan Remaja</span></h1>
+          <p data-aos="fade-up"
+            data-aos-easing="ease-in-out" data-aos-duration="800">Perawatan kesehatan mental remaja adalah aspek penting dalam mendukung mereka selama masa-masa penuh perubahan ini. Dengan memberikan dukungan yang tepat dan mengajarkan keterampilan hidup yang sehat, Anda dapat membantu remaja tumbuh menjadi individu yang seimbang dan percaya diri.</p>
         </div>
-      </section>
-      {/* panduan perawatan jiwa bayi end */}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* panduan lingkungan start */}
       <section id="lingkungan">
@@ -432,24 +451,59 @@ const Teen = () => {
           <div className="container">
             <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
+             Remaja Juga Butuh <span className="text-baby-light">Lingkungan Sehat & Aman </span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
+              Menjaga lingkungan yang mendukung dan aman untuk remaja adalah kunci untuk membantu mereka berkembang dengan sehat dan bahagia. Lingkungan yang positif tidak hanya melindungi remaja dari berbagai risiko kesehatan, tetapi juga mendukung pertumbuhan emosional dan sosial mereka. Berikut adalah beberapa hal yang perlu diperhatikan untuk menciptakan lingkungan yang ideal bagi remaja.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              {[...Array(6)].map((_, index) => (
+              
                 <div
-                  key={index}
                   className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
                 >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Ruang Belajar yang Nyaman</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja memiliki area belajar yang bebas dari gangguan dan nyaman. Lingkungan belajar yang tenang dengan pencahayaan yang baik, kursi yang ergonomis, dan perlengkapan yang memadai dapat meningkatkan konsentrasi dan efektivitas belajar mereka.</p>
                 </div>
-              ))}
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Fasilitasi Kegiatan Fisik dan Olahraga</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white"> Ajak remaja untuk berpartisipasi dalam aktivitas fisik secara rutin, seperti olahraga atau permainan luar ruangan. Kegiatan fisik tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Dukungan Kesehatan Mental yang Kuat</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Berikan dukungan emosional dan mental dengan menjaga komunikasi terbuka. Buat lingkungan yang aman bagi remaja untuk berbicara tentang perasaan mereka dan pertimbangkan untuk menyediakan akses ke konseling atau dukungan psikologis jika diperlukan.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Sediakan Pola Makan Sehat</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja mendapatkan nutrisi yang cukup dengan menyediakan makanan sehat dan bergizi di rumah. Mengatur jadwal makan yang teratur dan menghindari makanan cepat saji dapat membantu menjaga kesehatan fisik dan mental mereka.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Atur Waktu Layar dengan Bijak</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Batasi waktu yang dihabiskan remaja di depan layar gadget untuk mencegah gangguan tidur dan masalah kesehatan lainnya. Dorong mereka untuk mengambil istirahat teratur dan menghabiskan waktu di luar ruangan.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Lingkungan Sosial yang Positif</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Ajak remaja untuk bergaul dengan teman-teman yang mendukung dan positif. Lingkungan sosial yang sehat dapat memperkuat rasa percaya diri dan mengurangi risiko masalah sosial atau emosional.</p>
+                </div>
+
+            
             </div>
           </div>
         </div>

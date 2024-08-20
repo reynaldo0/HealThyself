@@ -149,12 +149,12 @@ const Adult = () => {
 
                 <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
+                  Tantangan Kesehatan Dewasa di Indonesia!! Menyikapi Masalah Gaya Hidup dan Penyakit Kronis
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
+                 Di Indonesia, banyak orang dewasa menghadapi masalah kesehatan serius, termasuk diabetes dan hipertensi, yang diperburuk oleh gaya hidup tidak aktif dan pola makan tidak sehat. Akses terbatas ke layanan kesehatan juga menjadi masalah. Mengatasi tantangan ini memerlukan fokus pada pencegahan, pengelolaan penyakit, dan promosi gaya hidup sehat untuk meningkatkan kualitas hidup.
                 </p>
                 <button
                   className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
@@ -219,11 +219,10 @@ const Adult = () => {
 
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
-            </h1>
+              <span className="text-baby-dark">Panduan Kesehatan </span> Perkembangan Orang Dewasa</h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+              Jelajahi panduan menyeluruh kami untuk memahami berbagai aspek kesehatan dewasa. Dari manajemen stres dan pencegahan penyakit hingga tips untuk gaya hidup aktif dan sehat, temukan informasi berharga untuk meningkatkan kualitas hidup Anda. Dapatkan wawasan tentang cara menjaga kesehatan tubuh dan pikiran, serta strategi efektif untuk menghadapi tantangan kesehatan di usia dewasa.
             </p>
           </div>
 
