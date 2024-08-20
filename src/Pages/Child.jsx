@@ -136,7 +136,7 @@ const Child = () => {
 
                 <h1 className="font-bold text-4xl text-child-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Gaya Hidup Tidak Sehat Anak Indonesia Terancam!
+                  Gaya Hidup Anak Indonesia Terancam!
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
