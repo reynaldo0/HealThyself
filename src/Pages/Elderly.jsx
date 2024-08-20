@@ -367,8 +367,11 @@ const Elderly = () => {
                       <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HEPATITIS <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hepatitis B diberikan untuk melindungi bayi dari infeksi virus hepatitis B, yang dapat menyebabkan kerusakan hati yang serius seperti sirosis atau kanker hati. Vaksin ini biasanya diberikan segera setelah bayi lahir, pada hari pertama kehidupannya, untuk mencegah penularan dari ibu yang mungkin terinfeksi virus tersebut.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-baby-light"></span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
+Permasalahan: Lansia memiliki risiko tinggi terkena komplikasi flu. Vaksin tahunan penting untuk melindungi dari flu musiman, tetapi cakupannya sering kali tidak optimal.
+
+</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -379,8 +382,9 @@ const Elderly = () => {
                       <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin BCG diberikan untuk melindungi bayi dari tuberkulosis (TBC), penyakit yang menyerang paru-paru dan organ lainnya. Vaksin ini diberikan pada usia 1 bulan dan sangat penting di negara-negara di mana TBC masih menjadi masalah kesehatan masyarakat.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-baby-light">dan Vaksinasi</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 65 tahun, dengan dosis kedua 5 tahun kemudian (jika sesuai indikasi medis).
+                      Permasalahan: Lansia rentan terhadap infeksi paru-paru. Keterlambatan atau ketidakteraturan dalam vaksinasi pneumokokus dapat meningkatkan risiko infeksi pneumonia dan komplikasi serius.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -391,7 +395,7 @@ const Elderly = () => {
                       <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">dan Vaksinasi</span></h1>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Shingles <span className="text-baby-light">(Herpes Zoster)</span></h1>
                       <p className="text-tertiary text-sm">Vaksin polio melindungi bayi dari poliomielitis, penyakit virus yang dapat menyebabkan kelumpuhan permanen. Vaksin polio diberikan dalam beberapa dosis pada usia 2, 3, dan 4 bulan untuk memastikan perlindungan penuh terhadap virus polio.</p>
                     </div>
                   </div>
@@ -403,7 +407,7 @@ const Elderly = () => {
                       <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">dan Vaksinasi</span></h1>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-baby-light">(Td)</span></h1>
                       <p className="text-tertiary text-sm">Vaksin DTP melindungi bayi dari tiga penyakit serius: difteri, tetanus, dan pertusis (batuk rejan). Difteri dapat menyebabkan masalah pernapasan, tetanus menyerang sistem saraf dan bisa berakibat fatal, sementara pertusis adalah penyakit pernapasan yang sangat menular. Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.</p>
                     </div>
                   </div>

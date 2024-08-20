@@ -368,8 +368,9 @@ const Baby = () => {
                       <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HEPATITIS <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hepatitis B diberikan untuk melindungi bayi dari infeksi virus hepatitis B, yang dapat menyebabkan kerusakan hati yang serius seperti sirosis atau kanker hati. Vaksin ini biasanya diberikan segera setelah bayi lahir, pada hari pertama kehidupannya, untuk mencegah penularan dari ibu yang mungkin terinfeksi virus tersebut.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B <span className="text-baby-light"></span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama segera setelah lahir, dosis kedua pada usia 1-2 bulan, dan dosis ketiga pada usia 6-18 bulan.
+                      Permasalahan: Vaksin Hepatitis B melindungi bayi dari infeksi hepatitis B yang dapat menyebabkan kerusakan hati serius. Terkadang, dosis pertama mungkin tidak diberikan segera setelah lahir karena keterlambatan di fasilitas kesehatan atau masalah administratif, yang meningkatkan risiko penularan dari ibu yang terinfeksi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -380,8 +381,11 @@ const Baby = () => {
                       <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin BCG diberikan untuk melindungi bayi dari tuberkulosis (TBC), penyakit yang menyerang paru-paru dan organ lainnya. Vaksin ini diberikan pada usia 1 bulan dan sangat penting di negara-negara di mana TBC masih menjadi masalah kesehatan masyarakat.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light"> (Tuberkulosis)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Diberikan segera setelah lahir.
+                      Permasalahan: BCG melindungi dari tuberkulosis (TB) yang dapat mempengaruhi paru-paru dan organ lain. Ada kemungkinan vaksin ini tidak diberikan tepat waktu di beberapa daerah dengan akses kesehatan terbatas atau kurangnya informasi kepada orang tua baru.
+
+</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -392,8 +396,9 @@ const Baby = () => {
                       <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin polio melindungi bayi dari poliomielitis, penyakit virus yang dapat menyebabkan kelumpuhan permanen. Vaksin polio diberikan dalam beberapa dosis pada usia 2, 3, dan 4 bulan untuk memastikan perlindungan penuh terhadap virus polio.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">(OPV/IPV)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 2 bulan, diikuti dosis kedua pada usia 4 bulan, dosis ketiga pada usia 6 bulan, dan dosis keempat pada usia 18 bulan.
+                      Permasalahan : Vaksin polio penting untuk mencegah poliomielitis. Keterlambatan dalam jadwal vaksinasi atau ketidaklengkapan dosis dapat menyebabkan risiko infeksi polio, terutama di daerah dengan cakupan vaksinasi rendah.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -404,8 +409,9 @@ const Baby = () => {
                       <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin DTP melindungi bayi dari tiga penyakit serius: difteri, tetanus, dan pertusis (batuk rejan). Difteri dapat menyebabkan masalah pernapasan, tetanus menyerang sistem saraf dan bisa berakibat fatal, sementara pertusis adalah penyakit pernapasan yang sangat menular. Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">(Difteri, Tetanus, Pertusis)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 2 bulan, dosis kedua pada usia 4 bulan, dosis ketiga pada usia 6 bulan, dan dosis keempat pada usia 18 bulan.
+                      Permasalahan: Kekurangan dosis DTP pada bayi dapat meningkatkan risiko terkena difteri, tetanus, dan pertusis. Beberapa orang tua mungkin kurang menyadari pentingnya dosis lanjutan, terutama dalam kasus kesehatan yang tidak optimal atau akses terbatas ke layanan kesehatan.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -416,20 +422,9 @@ const Baby = () => {
                       <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hib melindungi bayi dari infeksi bakteri Haemophilus influenzae tipe B, yang dapat menyebabkan penyakit serius seperti meningitis (radang selaput otak), pneumonia, dan epiglotitis. Vaksin Hib diberikan pada usia 2, 3, dan 4 bulan.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/mmr.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin MMR melindungi bayi dari tiga penyakit virus: campak (measles), gondongan (mumps), dan rubella. Ketiganya dapat menyebabkan komplikasi serius, terutama pada bayi dan anak kecil. Vaksin MMR diberikan pada usia 12 bulan.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-baby-light">(Haemophilus influenzae tipe B)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 2 bulan, dosis kedua pada usia 4 bulan, dosis ketiga pada usia 6 bulan, dan dosis keempat pada usia 12-15 bulan.
+                      Permasalahan: Vaksin Hib melindungi bayi dari infeksi bakteri yang dapat menyebabkan penyakit serius. Masalah akses atau keterlambatan dosis dapat meningkatkan risiko penyakit seperti meningitis.</p>
                     </div>
                   </div>
                 </SwiperSlide>

@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 
-const Accordion = ({ items }) => {
+const Accordion = ({
+  items,
+  titleColor = 'white',         // Default title text color
+  contentColor = 'slate-100',    // Default content text color
+  titleBgColorClosed = 'primary-200', // Background color when closed
+  titleBgColorOpen = 'primary-300',   // Background color when open
+  contentBgColor = 'primary-200'  // Content background color
+}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -12,9 +19,10 @@ const Accordion = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="accordion-item my-2">
           <button
-            className={`accordion-title flex w-full items-center justify-between rounded-t-lg px-4 py-4 text-white transition duration-300 focus:outline-none ${
-              activeIndex === index ? 'bg-primary-300' : 'bg-primary-200'
+            className={`accordion-title flex w-full items-center justify-between rounded-t-lg px-4 py-4 transition duration-300 focus:outline-none ${
+              activeIndex === index ? `bg-${titleBgColorOpen}` : `bg-${titleBgColorClosed}`
             }`}
+            style={{ color: titleColor }}
             onClick={() => toggleAccordion(index)}
           >
             <span className="text-base font-medium md:text-lg">{item.title}</span>
@@ -39,8 +47,12 @@ const Accordion = ({ items }) => {
           </button>
           <div
             className={`accordion-content rounded-b-lg px-4 py-2 text-base ${
-              activeIndex === index ? 'block bg-primary-200 text-slate-100' : 'hidden'
+              activeIndex === index ? 'block' : 'hidden'
             }`}
+            style={{
+              color: contentColor,
+              backgroundColor: activeIndex === index ? contentBgColor : 'transparent'
+            }}
           >
             {item.content}
           </div>

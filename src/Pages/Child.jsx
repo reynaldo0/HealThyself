@@ -141,7 +141,7 @@ const Child = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
 
-                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                <h1 className="font-bold text-4xl text-child-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
                   Gaya Hidup Tidak Sehat Pada Anak Ancaman Bagi Generasi Mendatang
                 </h1>
@@ -167,7 +167,7 @@ const Child = () => {
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
               {/* wave */}
               <img
-                src="/assets/wave.svg"
+                src="/assets/child/wave.svg"
                 alt="Wave Decoration"
                 className="absolute right-0 top-0 -z-10"
                 draggable="false"
@@ -191,15 +191,15 @@ const Child = () => {
 
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
                 <img src="/icons/baby/kura-kura.png" alt="Happiness" />
-                <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
+                <p className="font-bold text-xl text-child-dark text-center">Bahagia</p>
               </div>
 
               {/* Animated Balls */}
-              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} />
-              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} />
-              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} />
-              <Ball classList="absolute -right-14 top-1/2" />
-              <Ball classList="absolute right-1/3 top-10 -z-10" color="#253B70" size={70} />
+              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} color="#FF8E8E" />
+              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} color="#FF8E8E" />
+              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} color="#FF8E8E" />
+              <Ball classList="absolute -right-14 top-1/2" color="#FFF" />
+              <Ball classList="absolute right-1/3 top-10 -z-10" color="#B11414" size={70} />
             </div>
           </div>
         </div>
@@ -211,9 +211,9 @@ const Child = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
-            <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
+            <h1 className="text-child-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Anak
+              <span className="text-child-dark">Panduan</span> Perkembangan Anak
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
@@ -318,17 +318,6 @@ const Child = () => {
                 data-aos-easing="ease-in-out" data-aos-duration="800"
               >
 
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HEPATITIS <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hepatitis B diberikan untuk melindungi bayi dari infeksi virus hepatitis B, yang dapat menyebabkan kerusakan hati yang serius seperti sirosis atau kanker hati. Vaksin ini biasanya diberikan segera setelah bayi lahir, pada hari pertama kehidupannya, untuk mencegah penularan dari ibu yang mungkin terinfeksi virus tersebut.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
 
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
@@ -336,8 +325,9 @@ const Child = () => {
                       <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin BCG diberikan untuk melindungi bayi dari tuberkulosis (TBC), penyakit yang menyerang paru-paru dan organ lainnya. Vaksin ini diberikan pada usia 1 bulan dan sangat penting di negara-negara di mana TBC masih menjadi masalah kesehatan masyarakat.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Varicella <span className="text-baby-light">(Cacar Air)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 1-2 tahun, dan dosis kedua pada usia 4-6 tahun.
+                      Permasalahan: Vaksin varicella melindungi anak dari cacar air, yang dapat menyebabkan komplikasi serius. Keterlambatan atau ketidakteraturan dalam menerima dosis kedua pada usia 4-6 tahun dapat meningkatkan risiko infeksi cacar air. Orang tua mungkin kurang menyadari pentingnya dosis kedua atau mengalami kesulitan akses ke fasilitas kesehatan.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -348,8 +338,9 @@ const Child = () => {
                       <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin polio melindungi bayi dari poliomielitis, penyakit virus yang dapat menyebabkan kelumpuhan permanen. Vaksin polio diberikan dalam beberapa dosis pada usia 2, 3, dan 4 bulan untuk memastikan perlindungan penuh terhadap virus polio.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">(OPV/IPV)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis keempat diberikan pada usia 4-6 tahun.
+                      Permasalahan : Meskipun vaksin polio umumnya diberikan pada usia awal, beberapa anak mungkin melewatkan dosis booster pada usia 4-6 tahun, yang diperlukan untuk memastikan perlindungan jangka panjang. Kendala akses dan ketidakpahaman mengenai pentingnya dosis tambahan dapat menyebabkan peningkatan risiko infeksi polio.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -360,8 +351,9 @@ const Child = () => {
                       <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin DTP melindungi bayi dari tiga penyakit serius: difteri, tetanus, dan pertusis (batuk rejan). Difteri dapat menyebabkan masalah pernapasan, tetanus menyerang sistem saraf dan bisa berakibat fatal, sementara pertusis adalah penyakit pernapasan yang sangat menular. Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">(Difteri, Tetanus, Pertusis)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Booster pertama pada usia 4-6 tahun, dan booster tambahan pada usia 11-12 tahun.
+                      Permasalahan: Anak-anak sering kali melewatkan booster vaksin DTP yang diperlukan untuk memastikan perlindungan berkelanjutan dari difteri, tetanus, dan pertusis. Keterlambatan dalam mendapatkan booster dapat meningkatkan risiko penyakit, terutama jika orang tua tidak mengikuti jadwal imunisasi secara ketat atau jika ada kekurangan informasi mengenai vaksinasi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -372,8 +364,9 @@ const Child = () => {
                       <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hib melindungi bayi dari infeksi bakteri Haemophilus influenzae tipe B, yang dapat menyebabkan penyakit serius seperti meningitis (radang selaput otak), pneumonia, dan epiglotitis. Vaksin Hib diberikan pada usia 2, 3, dan 4 bulan.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin HPV <span className="text-baby-light">(Human Papillomavirus)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dengan dosis kedua 1-2 bulan setelah dosis pertama, dan dosis ketiga 6 bulan setelah dosis pertama.
+                      Permasalahan: Vaksin HPV melindungi dari infeksi virus HPV yang dapat menyebabkan kanker serviks dan jenis kanker lainnya. Beberapa anak mungkin tidak menerima dosis pertama pada usia 11-12 tahun atau melupakan jadwal dosis lanjutan, yang mengurangi efektivitas vaksin dalam mencegah kanker di kemudian hari.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -384,8 +377,9 @@ const Child = () => {
                       <img src="/assets/carousel/baby/mmr.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin MMR melindungi bayi dari tiga penyakit virus: campak (measles), gondongan (mumps), dan rubella. Ketiganya dapat menyebabkan komplikasi serius, terutama pada bayi dan anak kecil. Vaksin MMR diberikan pada usia 12 bulan.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-baby-light"> (Campak, Gondongan, Rubella)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis kedua pada usia 4-6 tahun.
+                      Permasalahan: Vaksin MMR melindungi anak dari campak, gondongan, dan rubella. Kasus campak dan gondongan kembali meningkat di beberapa area akibat cakupan vaksinasi yang tidak mencukupi dan misinformasi. Beberapa anak mungkin tidak mendapatkan dosis kedua pada usia 4-6 tahun, yang penting untuk perlindungan optimal.</p>
                     </div>
                   </div>
                 </SwiperSlide>
