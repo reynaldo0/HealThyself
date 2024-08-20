@@ -141,7 +141,7 @@ const Baby = () => {
                 <h1 className="font-bold text-4xl text-baby-dark">
                   Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
-                <p className="text-xl text-tertiary">
+                <p className="text-lg text-tertiary">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
@@ -240,13 +240,13 @@ const Baby = () => {
         <img
           src="/background/awan-putih.png"
           alt="White Clouds"
-          className="absolute w-full top-0 -z-10"
+          className="absolute w-full top-0 z-10"
         />
         <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
           src="/background/awan-biru.png"
           alt="Blue Clouds"
-          className="absolute w-full bottom-0 -z-10"
+          className="absolute w-full bottom-0 z-10"
         />
       </section>
       {/* video bayi end */}
