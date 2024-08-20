@@ -19,11 +19,10 @@ const Team = () => {
 
       <div className="px-10 md:px-40 py-12">
         <h1 className="text-center text-3xl font-poppins font-bold mb-8 text-primary">TIM <span className="text-secondary">KAMI</span></h1>
-        {/* Responsive Swiper with breakpoints */}
         <Swiper
           modules={[Autoplay]}
           loop
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
           spaceBetween={16}
           className="cursor-grab"
           breakpoints={{
@@ -41,116 +40,116 @@ const Team = () => {
             },
           }}
         >
-          {/* salman */}
+          {/* Salman */}
           <SwiperSlide>
-            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white">
+            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white flex flex-col items-center h-full">
               <img
-                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out"
+                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out group-hover:border-white"
                 src="/team/salman.jpg"
                 alt="Muhammad Salman Alfarisi"
               />
-              <h3 className="text-xl font-semibold mt-4 ease-in-out">Muhammad Salman Alfarisi</h3>
-              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Lorem ipsum dolor sit amet, consectetur.</p>
+              <h3 className="text-xl font-semibold mt-4 ease-in-out group-hover:text-lg">Muhammad Salman Alfarisi</h3>
+              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Leader, Data Analyst</p>
               <div className="flex justify-center space-x-4 mt-4">
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://github.com/avlfarizi" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.linkedin.com/in/muhammad-salman-al-farisi-14a517324/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.instagram.com/avlfarizi/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faInstagram}/>
                 </a>
               </div>
             </div>
           </SwiperSlide>
-          {/* aldo */}
+          {/* Aldo */}
           <SwiperSlide>
-            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white">
+            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white flex flex-col items-center h-full">
               <img
-                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out"
+                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out group-hover:border-white"
                 src="/team/aldo.jpg"
                 alt="Reynaldo Yusellino"
               />
-              <h3 className="text-xl font-semibold mt-4 ease-in-out">Reynaldo Yusellino</h3>
-              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Lorem ipsum dolor sit amet, consectetur.</p>
+              <h3 className="text-xl font-semibold mt-4 ease-in-out group-hover:text-lg">Reynaldo Yusellino</h3>
+              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Progammer</p>
               <div className="flex justify-center space-x-4 mt-4">
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://github.com/reynaldo0" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.linkedin.com/in/reynaldo-yusellino-564724270" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.instagram.com/rynldysllino/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faInstagram}/>
                 </a>
               </div>
             </div>
           </SwiperSlide>
-          {/* nazla */}
+          {/* Nazla */}
           <SwiperSlide>
-            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white">
+            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white flex flex-col items-center h-full">
               <img
-                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out"
+                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out group-hover:border-white"
                 src="/team/nazla.jpg"
                 alt="Nazla Rahma"
               />
-              <h3 className="text-xl font-semibold mt-4 ease-in-out">Nazla Rahma</h3>
-              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Lorem ipsum dolor sit amet, consectetur.</p>
+              <h3 className="text-xl font-semibold mt-4 ease-in-out group-hover:text-lg">Nazla Rahma</h3>
+              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">UI/UX Desainer</p>
               <div className="flex justify-center space-x-4 mt-4">
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://github.com/zlaraa" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.linkedin.com/in/nazla-rahma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.instagram.com/nazlarhm96/?hl=id" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faInstagram}/>
                 </a>
               </div>
             </div>
           </SwiperSlide>
-          {/* rama */}
+          {/* Rama */}
           <SwiperSlide>
-            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white">
+            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white flex flex-col items-center h-full">
               <img
-                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out"
+                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out group-hover:border-white"
                 src="/team/rama.jpg"
                 alt="Ramadina Almusthazam"
               />
-              <h3 className="text-xl font-semibold mt-4 ease-in-out">Ramadina Almusthazam</h3>
-              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Lorem ipsum dolor sit amet, consectetur.</p>
+              <h3 className="text-xl font-semibold mt-4 ease-in-out group-hover:text-lg">Ramadina Almusthazam</h3>
+              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Progammer</p>
               <div className="flex justify-center space-x-4 mt-4">
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="http://github.com/ramarfx" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://id.linkedin.com/in/ramadina-al-muzthazam-5028482a2" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="http://instagram.com/ramtxh" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faInstagram}/>
                 </a>
               </div>
             </div>
           </SwiperSlide>
-          {/* akmal */}
+          {/* Akmal */}
           <SwiperSlide>
-            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white">
+            <div className="group transition-all bg-white p-4 rounded-xl shadow border border-gray-200 text-center ease-in-out hover:border-2 hover:border-secondary hover:bg-secondary hover:text-white flex flex-col items-center h-full">
               <img
-                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out"
+                className="w-52 h-52 mx-auto rounded-full object-cover border-4 border-gray-200 ease-in-out group-hover:border-white"
                 src="/team/akmal.jpg"
                 alt="Muhammad Akmal Saban"
               />
-              <h3 className="text-xl font-semibold mt-4 ease-in-out">Muhammad Akmal Saban</h3>
-              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Lorem ipsum dolor sit amet, consectetur.</p>
+              <h3 className="text-xl font-semibold mt-4 ease-in-out group-hover:text-lg">Muhammad Akmal Saban</h3>
+              <p className="text-gray-600 text-sm ease-in-out group-hover:text-white">Progammer</p>
               <div className="flex justify-center space-x-4 mt-4">
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://github.com/AkmaldanKamu" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://id.linkedin.com/in/akmal-saban-246a87316?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.instagram.com/m.akmal.saban/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faInstagram}/>
                 </a>
               </div>

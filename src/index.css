@@ -201,3 +201,6 @@ button:hover .button-text {
   }
 }
 
+.underline-box {
+  @apply relative before:content-[''] after:absolute after:w-full after:h-6 after:-right-2 after:-bottom-1 after:-z-10;
+}
