@@ -116,7 +116,7 @@ const Option3d = ({ onBack }) => {
               onClick={() => handleModelCanvasClick('/baby')}
               model={<Bayi />}
               title="Bayi"
-              description="0-2 Tahun"
+              description="1-12 Bulan"
               bgColor={'#0D46A4'}
               width="289px"
               height="225px"
