@@ -151,14 +151,17 @@ const Baby = () => {
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
-                  class="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
-                  onclick="window.location.href = '#panduan'"
+                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
+                  onClick={() => window.location.href = '#panduan'}
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="900"
                 >
-                  <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
+                  <span className="circle" aria-hidden="true">
+                    <span className="icon arrow"></span>
                   </span>
-                  <span class="button-text translate-x-2">Selengkapnya</span>
+                  <span className="button-text translate-x-2">Selengkapnya</span>
                 </button>
+
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
