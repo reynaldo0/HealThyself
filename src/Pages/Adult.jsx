@@ -254,12 +254,12 @@ const Adult = () => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
-              </p>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
+    data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Kesehatan Dewasa</span></h2>
+<p className="text-lg text-white mb-8" data-aos="fade-up"
+    data-aos-easing="ease-in-out" data-aos-duration="800">
+    Menyusun rencana kesehatan yang efektif membantu memastikan kesejahteraan fisik dan mental dewasa secara optimal. Temukan strategi dan tips untuk menjaga gaya hidup sehat, mengelola stres, dan meningkatkan kualitas hidup Anda.
+</p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="900">
