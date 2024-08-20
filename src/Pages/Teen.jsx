@@ -520,7 +520,7 @@ const Teen = () => {
         <Footer.Source link={'http://who.int'} title={'who.int'} />
         <Footer.Source link={'http://rscarolus.or.id'} title={'rscarolus.or.id'} />
         <Footer.Source link={'http://klikdokter.com'} title={'klikdokter.com'} />
-        <Footer.Source link={'http://rsprespira.jogjaprov.go.id'} title={'rsprespira.jogjaprov.go.id'} />
+        <Footer.Source link={'http://rsprespira.jogjaprov.go.id'} title={'rsprespira.jogja'} />
       </Footer>
     </section>
   );

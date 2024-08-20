@@ -518,7 +518,7 @@ const Adult = () => {
         <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'kemkes.go.id'} />
         <Footer.Source link={'http://halodoc.com/'} title={'halodoc.com'} />
         <Footer.Source link={'http://who.int'} title={'who.int'} />
-        <Footer.Source link={'http://dinkes.kalbarprov.go.id'} title={'dinkes.kalbarprov.go.id'} />
+        <Footer.Source link={'http://dinkes.kalbarprov.go.id'} title={'dinkes.kalbar'} />
         <Footer.Source link={'http://telemed.ihc.id'} title={'telemed.ihc.id'} />
         <Footer.Source link={'http://biofarma.co.id'} title={'biofarma.co.id'} />
       </Footer>

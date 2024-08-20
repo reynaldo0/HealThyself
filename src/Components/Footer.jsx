@@ -77,9 +77,6 @@ const Footer = ({ backgroundColor = 'transparent', children }) => {
                                 <li className="mb-4">
                                     <a href="https://unsplash.com/" className="hover:underline">unsplash</a>
                                 </li>
-                                <li className="mb-4">
-                                    <a href="https://istockphoto.com/" className="hover:underline">istockphoto</a>
-                                </li>
 
                             </ul>
                         </div>
