@@ -13,7 +13,7 @@ const Team = () => {
 
   return (
     <section className="page-container"> {/* Keep the class for targeting */}
-      <Navbar teamText="Kembali ke Home" teamLink="/" direction="right" />
+      <Navbar teamText="Kembali ke Home" teamLink="/"/>
 
       <div className="px-10 md:px-40 py-12">
         <h1 className="text-center text-3xl font-poppins font-bold mb-8">TEAM KAMI</h1>
