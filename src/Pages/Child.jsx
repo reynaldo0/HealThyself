@@ -283,11 +283,11 @@ const Child = () => {
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              <span className="text-baby-dark">Informasi </span> Gizi Bayi
+              <span className="text-baby-dark">Informasi </span> Gizi Anak
             </h1>
             <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
+              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
             </p>
             <ImageCarousel />
           </div>
@@ -301,9 +301,9 @@ const Child = () => {
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
               <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Anak</h1>
               <p className="text-[#575757]" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi anak dilakukan pada usia-usia kunci untuk melindungi dari penyakit serius dan infeksi. Vaksin DTP, Polio, dan Hib biasanya diberikan pada usia 18 bulan, diikuti dengan vaksin MMR dan Hepatitis B pada usia 2-3 tahun. Vaksin lanjutan seperti varicella dan flu juga dianjurkan pada usia 4-6 tahun. Jadwal ini membantu memastikan anak terlindungi dari berbagai penyakit menular dan mendukung kesehatan jangka panjang mereka.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
