@@ -18,6 +18,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
+import { Link } from "react-router-dom";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -46,7 +47,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-baby-ldark text-white">
+            <div className="p-4 bg-baby-ldark text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -138,18 +139,17 @@ const Baby = () => {
           <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-4xl text-baby-dark">
+                <h1 className="font-bold text-2xl md:text-4xl text-baby-dark">
                   Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
-                <p className="text-xl text-tertiary">
+                <p className="text-sm md:text-base text-tertiary">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
-                <button
+                <a  href={'#panduan'}
                   className="bg-baby-normal text-white p-4 rounded-lg w-fit"
-                  onClick={() => handleNavigation('/explore')}
                 >
                   Mulai Eksplorasi
-                </button>
+                </a>
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
@@ -198,10 +198,10 @@ const Baby = () => {
       <section id="panduan" className="min-h-[70vh] pt-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-4xl text-center">
+            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center">
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
-            <p className="text-base text-tertiary text-center max-w-[600px]">
+            <p className="text-sm text-tertiary text-center max-w-[600px]">
               Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
@@ -254,8 +254,8 @@ const Baby = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+              <p className="text-sm md:text-base text-white mb-8">
                 Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
 
 
