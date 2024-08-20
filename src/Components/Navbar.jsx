@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({children}) => {
+const Navbar = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -87,7 +87,8 @@ const Navbar = ({children}) => {
   );
 };
 
-Navbar.Item = ({ to, title }) => {
+Navbar.Item = ({ to, title, type }) => {
+  
   return (
     <li>
       <a

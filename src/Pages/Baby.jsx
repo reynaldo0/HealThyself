@@ -29,7 +29,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   };
 
   return (
-    <div className="rounded-xl shadow-md">
+    <div className="rounded-xl">
       {items.map((item, index) => (
         <div key={index} className="pt-5">
           <button
