@@ -43,6 +43,11 @@ export default {
           ldark: "#3B5186",
           dark: "#B11414",
         },
+        teen: {
+          light: '#18D8AD',
+          normal: '#0E9D75',
+          dark: '#1B856D'
+        }
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

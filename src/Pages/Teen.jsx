@@ -7,7 +7,7 @@ import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
-import accordionItems from "../docs/Accordion";
+import accordionteen from "../docs/AccordionTeen";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -220,11 +220,11 @@ const Teen = () => {
 
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+              <span className="text-baby-dark">Panduan</span> Perkembangan Remaja
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+              Temukan panduan menyeluruh untuk memahami setiap fase perkembangan remaja, mulai dari perubahan fisik hingga perkembangan emosional dan sosial. Dapatkan wawasan mendalam tentang tantangan yang dihadapi remaja dan temukan strategi efektif untuk mendukung mereka agar tumbuh menjadi individu yang sehat dan percaya diri.
             </p>
           </div>
 
@@ -257,15 +257,15 @@ const Teen = () => {
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana Makanan Seimbang<span className="text-baby-vlight"> untuk Remaja</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+                Menyusun pola makan yang seimbang bagi remaja penting untuk mendukung pertumbuhan dan kesehatan jangka panjang. Pastikan diet mereka mencakup nutrisi esensial seperti protein, kalsium, dan zat besi untuk energi dan keseimbangan yang optimal.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="900">
-                <Accordion items={accordionItems} initialOpenIndex={0} />
+                <Accordion items={accordionteen} initialOpenIndex={0} />
               </div>
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"

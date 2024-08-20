@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = ({ backgroundColor = 'transparent', children }) => {
     return (
-        <footer style={{ backgroundColor }} className="p-4 py-6 lg:py-8">
+        <footer style={{ backgroundColor }} className="p-4 py-6 lg:py-8 bg-slate-800">
             <div className="container mx-auto w-full">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 flex flex-col justify-between md:mb-0">

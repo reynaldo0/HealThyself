@@ -169,12 +169,12 @@ const Baby = () => {
                 <Bayi />
               </Canvas>
               {/* card glassmorphism */}
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-3xl border border-white rounded-[34px] right-40 top-10 p-4">
                 <img src="/icons/baby/susu.png" alt="Health" />
                 <p className="font-bold text-xl text-white text-center">Kesehatan</p>
               </div>
 
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-3xl border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
                 <img src="/icons/baby/kura-kura.png" alt="Happiness" />
                 <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
               </div>
