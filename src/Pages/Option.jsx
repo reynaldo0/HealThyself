@@ -7,8 +7,8 @@ import { Bayi } from "../Components/Models/Bayi";
 import { Anak } from "../Components/Models/Anak";
 import { Dewasa } from "../Components/Models/Dewasa";
 import { Kakek } from "../Components/Models/Kakek";
-import { Teen } from "../Components/Models/Teen";
 import 'swiper/css';
+import { Teen } from "../Components/Models/Teen";
 
 const Option3d = ({ onBack }) => {
   const [showDialog, setShowDialog] = useState(false);
@@ -140,7 +140,6 @@ const Option3d = ({ onBack }) => {
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
-              onClick={() => handleModelCanvasClick('/Teen')}
               model={<Teen />}
               title="Remaja"
               description="3-12 Bulan"
@@ -149,6 +148,7 @@ const Option3d = ({ onBack }) => {
               height="320px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
+              href="/remaja"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
@@ -198,7 +198,7 @@ const Option3d = ({ onBack }) => {
           <div className="flex gap-3">
             <button
               onClick={handlePrev}
-              className=" transform bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg hover:border-primary"
+              className="transform bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg button-animate-prev"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.5001 12.9999H7.91406L12.4141 17.4999L11.0001 18.9139L4.08606 11.9999L11.0001 5.08594L12.4141 6.49994L7.91406 10.9999H19.5001V12.9999Z" fill="#FF682C" />
@@ -206,7 +206,7 @@ const Option3d = ({ onBack }) => {
             </button>
             <button
               onClick={handleNext}
-              className="transform bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg hover:border-primary"
+              className="transform bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg button-animate-next"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.49994 11.0001H16.0859L11.5859 6.50006L12.9999 5.08606L19.9139 12.0001L12.9999 18.9141L11.5859 17.5001L16.0859 13.0001H4.49994V11.0001Z" fill="#FF682C" />
