@@ -109,7 +109,7 @@ const Option3d = ({ onBack }) => {
           spaceBetween={16}
           slidesPerView={isMobile ? 1 : 3.3}
           centeredSlides={false}
-          className="w-full flex items-end pt-10 pb-4 px-2 h-[70vh]"
+          className="w-full flex items-end pt-10 pb-4 px-2 h-[65vh]"
         >
           {/* Swiper slides */}
           <SwiperSlide className="flex justify-center items-end">
@@ -161,7 +161,7 @@ const Option3d = ({ onBack }) => {
               height="270px"
               titleColor="#6FDB9F"
               descriptionColor="#FFF"
-              href="/dewasa"
+              onClick={() => handleModelCanvasClick('/adult')}
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
@@ -174,41 +174,45 @@ const Option3d = ({ onBack }) => {
               height="220px"
               titleColor="#FFC0CC"
               descriptionColor="#FFF"
-              href="/kakek"
+              onClick={() => handleModelCanvasClick('/elderly')}
             />
           </SwiperSlide>
         </Swiper>
+      </div>
 
-        <div className="absolute -bottom-11 xl:-bottom-20 left-20 transform -translate-y-1/2 flex items-center space-x-2">
-          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.26659 6.64864L1.91956 7L2.2666 7.35136L7.29723 12.4447L6.46383 13.2885L0.673872 7.42635C0.673854 7.42633 0.673836 7.42632 0.673819 7.4263C0.563221 7.31426 0.5 7.16104 0.5 7C0.5 6.83896 0.563221 6.68574 0.673819 6.5737C0.673836 6.57368 0.673854 6.57367 0.673872 6.57365L6.46383 0.711526L7.29723 1.55531L2.26659 6.64864Z" fill="#909090" stroke="black" />
-          </svg>
-
-          <button
-            onClick={onBack}
-            className="text-black font-semibold opacity-50 hover:opacity-100"
-          >
-            Kembali
-          </button>
-        </div>
-
-        <div className="relative gap-5">
-          <button
-            onClick={handlePrev}
-            className="absolute -bottom-16 xl:-bottom-24 right-20 transform -translate-y-1/2 bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg hover:border-primary"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.5001 12.9999H7.91406L12.4141 17.4999L11.0001 18.9139L4.08606 11.9999L11.0001 5.08594L12.4141 6.49994L7.91406 10.9999H19.5001V12.9999Z" fill="#FF682C" />
+      <div className="container">
+        <div className="flex justify-between w-full">
+          <div className="left-0 transform flex items-center space-x-2">
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.26659 6.64864L1.91956 7L2.2666 7.35136L7.29723 12.4447L6.46383 13.2885L0.673872 7.42635C0.673854 7.42633 0.673836 7.42632 0.673819 7.4263C0.563221 7.31426 0.5 7.16104 0.5 7C0.5 6.83896 0.563221 6.68574 0.673819 6.5737C0.673836 6.57368 0.673854 6.57367 0.673872 6.57365L6.46383 0.711526L7.29723 1.55531L2.26659 6.64864Z" fill="#909090" stroke="black" />
             </svg>
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute -bottom-16 xl:-bottom-24 right-4 transform -translate-y-1/2 bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg hover:border-primary"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.49994 11.0001H16.0859L11.5859 6.50006L12.9999 5.08606L19.9139 12.0001L12.9999 18.9141L11.5859 17.5001L16.0859 13.0001H4.49994V11.0001Z" fill="#FF682C" />
-            </svg>
-          </button>
+
+            <button
+              onClick={onBack}
+              className="text-black font-semibold opacity-50 hover:opacity-100"
+            >
+              Kembali
+            </button>
+          </div>
+
+          <div className="flex gap-3">
+            <button
+              onClick={handlePrev}
+              className=" transform bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg hover:border-primary"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.5001 12.9999H7.91406L12.4141 17.4999L11.0001 18.9139L4.08606 11.9999L11.0001 5.08594L12.4141 6.49994L7.91406 10.9999H19.5001V12.9999Z" fill="#FF682C" />
+              </svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className="transform bg-transparent border-secondary border-2 text-white p-2 rounded-full shadow-lg hover:border-primary"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.49994 11.0001H16.0859L11.5859 6.50006L12.9999 5.08606L19.9139 12.0001L12.9999 18.9141L11.5859 17.5001L16.0859 13.0001H4.49994V11.0001Z" fill="#FF682C" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>

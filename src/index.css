@@ -40,20 +40,22 @@
 
 /* Custom styles for arrows */
 .slick-prev, .slick-next {
-  @apply w-12 h-12 flex items-center justify-center cursor-pointer z-10;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  @apply size-12 flex items-center justify-center cursor-pointer z-10;
+  background: none;
+  border: 1px solid #0D46A4;
+  color: #0D46A4;
   border-radius: 50%; /* Circular background */
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .slick-prev:hover, .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  background-color: rgba(0, 0, 0, 0.8);
   transform: scale(1.1); /* Slightly larger on hover */
 }
 
 /* Custom styles for dot indicators */
 .slick-dots li button:before {
-  color: rgba(0, 0, 0, 0.8); /* White dots */
+  color: #0D46A4;
   font-size: 12px; /* Adjust dot size */
 }
 
