@@ -7,7 +7,7 @@ import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
-import accordionItems from "../docs/Accordion";
+import accordionteen from "../docs/AccordionTeen";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
 import HeroButton from "../Components/HeroButton";
+import ImageCarousel from "../Components/Corousel";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -54,6 +55,13 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
     </div>
   );
 });
+
+const slides = [
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+];
 
 const Teen = () => {
   const canvasRef = useRef();
@@ -207,7 +215,7 @@ const Teen = () => {
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+              Temukan panduan menyeluruh untuk memahami setiap fase perkembangan remaja, mulai dari perubahan fisik hingga perkembangan emosional dan sosial. Dapatkan wawasan mendalam tentang tantangan yang dihadapi remaja dan temukan strategi efektif untuk mendukung mereka agar tumbuh menjadi individu yang sehat dan percaya diri.
             </p>
           </div>
 
@@ -240,15 +248,15 @@ const Teen = () => {
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-teen-light">Asi Bayi</span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana Makanan Seimbang<span className="text-baby-vlight"> untuk Remaja</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+                Menyusun pola makan yang seimbang bagi remaja penting untuk mendukung pertumbuhan dan kesehatan jangka panjang. Pastikan diet mereka mencakup nutrisi esensial seperti protein, kalsium, dan zat besi untuk energi dan keseimbangan yang optimal.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="900">
-                <Accordion items={accordionItems} initialOpenIndex={0} />
+                <Accordion items={accordionteen} initialOpenIndex={0} />
               </div>
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
@@ -268,63 +276,24 @@ const Teen = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
-              <span className="text-baby-dark">Informasi </span> Gizi Bayi
+            <h1
+              className="text-baby-normal font-bold text-3xl md:text-4xl text-center"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              <span className="text-baby-dark">Informasi </span> Gizi Anak
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px] mb-4" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
-              Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
+            <p
+              className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
             </p>
-            {/* <ImageCarousel /> */}
-            <div className="relative">
-              <div className="absolute hidden md:block -left-14 top-1/2 -translate-y-1/2 transform z-10">
-                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
-              </div>
-              <div className="absolute hidden md:block -right-14 transform z-10 top-1/2 -translate-y-1/2">
-                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
-              </div>
-
-              <Swiper className="max-w-screen-sm w-screen h-[300px]" effect={'coverflow'} spaceBetween={16} coverflowEffect={{
-                slideShadows: false,
-                rotate: 0,
-                stretch: -20,
-                depth: 100,
-                modifier: 2.5,
-              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay, Navigation]} autoplay={{ delay: 2000 }} loop navigation={{
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-              }}>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" className="w-full h-auto" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
-                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
+            <ImageCarousel slides={slides} />
           </div>
         </div>
       </section>
