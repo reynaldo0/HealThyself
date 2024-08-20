@@ -7,7 +7,7 @@ import { Bayi } from "../Components/Models/Bayi";
 import { Anak } from "../Components/Models/Anak";
 import { Dewasa } from "../Components/Models/Dewasa";
 import { Kakek } from "../Components/Models/Kakek";
-import { Remaja } from "../Components/Models/Remaja";
+import { Teen } from "../Components/Models/Teen";
 import 'swiper/css';
 
 const Option3d = ({ onBack }) => {
@@ -127,6 +127,7 @@ const Option3d = ({ onBack }) => {
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
+              onClick={() => handleModelCanvasClick('/child')}
               model={<Anak />}
               title="Anak - Anak"
               description="3-12 Bulan"
@@ -135,12 +136,12 @@ const Option3d = ({ onBack }) => {
               height="300px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              href="/anak"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
-              model={<Remaja />}
+              onClick={() => handleModelCanvasClick('/Teen')}
+              model={<Teen />}
               title="Remaja"
               description="3-12 Bulan"
               bgColor={'#EA9117'}
@@ -148,7 +149,6 @@ const Option3d = ({ onBack }) => {
               height="320px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              href="/remaja"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">

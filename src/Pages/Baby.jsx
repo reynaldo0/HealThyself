@@ -198,10 +198,12 @@ const Baby = () => {
       <section id="panduan" className="min-h-[70vh] pt-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center">
+            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
-            <p className="text-sm text-tertiary text-center max-w-[600px]">
+            <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
@@ -238,13 +240,13 @@ const Baby = () => {
         <img
           src="/background/awan-putih.png"
           alt="White Clouds"
-          className="absolute w-full top-0 -z-10"
+          className="absolute w-full top-0 z-10"
         />
         <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
           src="/background/awan-biru.png"
           alt="Blue Clouds"
-          className="absolute w-full bottom-0 -z-10"
+          className="absolute w-full bottom-0 z-10"
         />
       </section>
       {/* video bayi end */}
@@ -282,10 +284,12 @@ const Baby = () => {
       <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center">
+            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]">
+            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
             <ImageCarousel />
@@ -393,7 +397,7 @@ const Baby = () => {
       </section>
 
       {/* panduan perawatan jiwa bayi start */}
-      <section id="perawatan" className="md:bg-[url('background/wave.png')] bg-cover md:h-[150vh]">
+      <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
             <div className="w-full md:w-1/2">
