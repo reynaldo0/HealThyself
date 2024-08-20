@@ -212,7 +212,7 @@ const Adult = () => {
       {/* hero section end */}
 
       {/* grafik perkembangan bayi start */}
-      <section id="panduan" className="min-h-[70vh] py-28">
+      {/* <section id="panduan" className="min-h-[70vh] py-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
@@ -228,7 +228,7 @@ const Adult = () => {
           <canvas ref={canvasRef} className="max-w-full w-[750px] mx-auto"></canvas>
 
         </div>
-      </section>
+      </section> */}
       {/* grafik perkembangan bayi end */}
 
       {/* video bayi start */}
@@ -238,7 +238,7 @@ const Adult = () => {
           alt="White Clouds"
           className="absolute w-full top-0 z-10"
         />
-        <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
+        <CustomVideo src={"/background/dewasa.mp4"} />
         <img
           src="/background/awan-orange.png"
           alt="Blue Clouds"

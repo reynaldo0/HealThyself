@@ -72,10 +72,29 @@ const Footer = ({ backgroundColor = 'transparent', children }) => {
                                     <a href="https://www.freepik.com/" className="hover:underline">Freepik</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="https://shutterstock.com/" className="hover:underline">shutterstock</a>
+                                    <a href="https://unsplash.com/" className="hover:underline">unsplash</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="https://unsplash.com/" className="hover:underline">unsplash</a>
+                                    <a href="https://youtu.be/Pwtgp-SpIvw?feature=shared" className="hover:underline">
+                                        IndonesiaBaikID
+                                    </a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="https://youtu.be/TqX7GacCV9E?feature=shared" className="hover:underline">
+                                        MERIDIO'S
+                                    </a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="https://youtu.be/KxzikPFUfUc?feature=shared" className="hover:underline">
+                                        belajar bersama
+                                    </a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="https://youtu.be/r5M1xFGRQHw?si=bHwmuQKm7KEVa4WQ" className="hover:underline">
+
+                                        Gue Sehat
+
+                                    </a>
                                 </li>
 
                             </ul>
