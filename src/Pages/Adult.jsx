@@ -36,7 +36,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   };
 
   return (
-    <div className="rounded-xl shadow-md">
+    <div className="rounded-xl">
       {items.map((item, index) => (
         <div key={index} className="pt-5">
           <button
@@ -53,7 +53,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-adult-dark text-white/80 text-sm">
+            <div className="p-4 bg-adult-dark/50 text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -67,7 +67,7 @@ const Adult = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef(); 
+  const containerRef = useRef();
 
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -155,10 +155,10 @@ const Adult = () => {
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                 Di Indonesia, banyak orang dewasa menghadapi masalah kesehatan serius, termasuk diabetes dan hipertensi, yang diperburuk oleh gaya hidup tidak aktif dan pola makan tidak sehat. Akses terbatas ke layanan kesehatan juga menjadi masalah. Mengatasi tantangan ini memerlukan fokus pada pencegahan, pengelolaan penyakit, dan promosi gaya hidup sehat untuk meningkatkan kualitas hidup.
+                  Di Indonesia, banyak orang dewasa menghadapi masalah kesehatan serius, termasuk diabetes dan hipertensi, yang diperburuk oleh gaya hidup tidak aktif dan pola makan tidak sehat. Akses terbatas ke layanan kesehatan juga menjadi masalah. Mengatasi tantangan ini memerlukan fokus pada pencegahan, pengelolaan penyakit, dan promosi gaya hidup sehat untuk meningkatkan kualitas hidup.
                 </p>
-                
-                <HeroButton  to="#panduan" circle="bg-adult-normal" textColor="text-adult-normal" />
+
+                <HeroButton to="#panduan" circle="bg-adult-normal" textColor="text-adult-normal" />
 
               </div>
             </div>
@@ -199,8 +199,8 @@ const Adult = () => {
               {/* Animated Balls */}
               <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} color="#FF8E8E" />
               <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} color="#FF8E8E" />
-              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110 } color="#FF8E8E" />
-              <Ball classList="absolute -right-14 top-1/2"  color="#fff" />
+              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} color="#FF8E8E" />
+              <Ball classList="absolute -right-14 top-1/2" color="#fff" />
               <Ball classList="absolute right-1/3 top-10 -z-10" color="#DF4B10" size={70} />
             </div>
           </div>
@@ -237,7 +237,7 @@ const Adult = () => {
         />
         <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
-          src="/background/awan-biru.png"
+          src="/background/awan-orange.png"
           alt="Blue Clouds"
           className="absolute w-full bottom-0 z-10"
         />
@@ -245,17 +245,17 @@ const Adult = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-adult-dark py-12 relative">
+      <section id="gizi" className="bg-adult-bg py-12 relative z-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-    data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-adult-light">Kesehatan Dewasa</span></h2>
-<p className="text-lg text-white mb-8" data-aos="fade-up"
-    data-aos-easing="ease-in-out" data-aos-duration="800">
-    Menyusun rencana kesehatan yang efektif membantu memastikan kesejahteraan fisik dan mental dewasa secara optimal. Temukan strategi dan tips untuk menjaga gaya hidup sehat, mengelola stres, dan meningkatkan kualitas hidup Anda.
-</p>
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-adult-light">Kesehatan Dewasa</span></h2>
+              <p className="text-lg text-white mb-8" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800">
+                Menyusun rencana kesehatan yang efektif membantu memastikan kesejahteraan fisik dan mental dewasa secara optimal. Temukan strategi dan tips untuk menjaga gaya hidup sehat, mengelola stres, dan meningkatkan kualitas hidup Anda.
+              </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="900">
@@ -303,7 +303,7 @@ const Adult = () => {
       {/* rencana gizi bayi end */}
 
       {/* jenis vaksinasi start */}
-      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi.png')]">
+      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi-orange.png')]">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
@@ -333,7 +333,7 @@ const Adult = () => {
                     <div className="flex-[2]">
                       <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-adult-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
-                      Permasalahan: Vaksin influenza tahunan penting untuk mencegah flu musiman. Banyak dewasa yang tidak mendapatkan vaksin tahunan secara konsisten, terutama pada musim flu, yang dapat menyebabkan peningkatan kasus flu dan komplikasi.</p>
+                        Permasalahan: Vaksin influenza tahunan penting untuk mencegah flu musiman. Banyak dewasa yang tidak mendapatkan vaksin tahunan secara konsisten, terutama pada musim flu, yang dapat menyebabkan peningkatan kasus flu dan komplikasi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -346,7 +346,7 @@ const Adult = () => {
                     <div className="flex-[2]">
                       <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-adult-light">(Td)</span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Booster setiap 10 tahun.
-                      Permasalahan: Keterlambatan dalam menerima booster Td setiap 10 tahun dapat menyebabkan penurunan kekebalan terhadap tetanus dan difteri, berpotensi meningkatkan risiko infeksi.</p>
+                        Permasalahan: Keterlambatan dalam menerima booster Td setiap 10 tahun dapat menyebabkan penurunan kekebalan terhadap tetanus dan difteri, berpotensi meningkatkan risiko infeksi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -359,7 +359,7 @@ const Adult = () => {
                     <div className="flex-[2]">
                       <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-adult-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 65 tahun, atau lebih awal jika memiliki kondisi kesehatan tertentu.
-                      Permasalahan: Vaksin pneumokokus melindungi dari infeksi paru-paru. Dewasa muda dengan risiko tinggi mungkin melewatkan vaksin ini, yang penting untuk mencegah pneumonia dan infeksi serius lainnya.</p>
+                        Permasalahan: Vaksin pneumokokus melindungi dari infeksi paru-paru. Dewasa muda dengan risiko tinggi mungkin melewatkan vaksin ini, yang penting untuk mencegah pneumonia dan infeksi serius lainnya.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -372,7 +372,7 @@ const Adult = () => {
                     <div className="flex-[2]">
                       <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Hepatitis B <span className="text-adult-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis lengkap jika belum pernah menerima sebelumnya atau pada risiko tinggi.
-                      Permasalahan: Vaksin Hepatitis B melindungi dari infeksi virus hepatitis B. Dewasa yang belum mendapatkan vaksinasi lengkap atau yang berisiko tinggi mungkin terpapar infeksi hepatitis B.</p>
+                        Permasalahan: Vaksin Hepatitis B melindungi dari infeksi virus hepatitis B. Dewasa yang belum mendapatkan vaksinasi lengkap atau yang berisiko tinggi mungkin terpapar infeksi hepatitis B.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -383,7 +383,7 @@ const Adult = () => {
         </div>
       </section>
 
-      <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
+      <section id="perawatan" className="md:bg-[url('/background/wave-orange.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
             <div className="w-full md:w-1/2" data-aos="fade-up"
@@ -395,58 +395,53 @@ const Adult = () => {
                 depth: 100,
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
-                
+
                 <SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
-    <p className="text-tertiary">Menggunakan teknik relaksasi seperti meditasi, pernapasan dalam, atau yoga dapat membantu mengurangi tingkat stres dan meningkatkan kesejahteraan mental. Luangkan waktu setiap hari untuk melakukan aktivitas ini dan rasakan manfaatnya bagi kesehatan mental Anda.</p>
-  </div>
-</SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
+                    <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
+                    <p className="text-tertiary">Menggunakan teknik relaksasi seperti meditasi, pernapasan dalam, atau yoga dapat membantu mengurangi tingkat stres dan meningkatkan kesejahteraan mental. Luangkan waktu setiap hari untuk melakukan aktivitas ini dan rasakan manfaatnya bagi kesehatan mental Anda.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Jaga Keseimbangan Kerja dan Kehidupan Pribadi</h1>
-    <p className="text-tertiary">Menyeimbangkan antara pekerjaan dan kehidupan pribadi penting untuk menjaga kesehatan mental. Tetapkan batas waktu kerja dan luangkan waktu untuk aktivitas yang Anda nikmati di luar pekerjaan untuk mengurangi kelelahan dan stres.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
+                    <h1 className="font-semibold mb-2">Jaga Keseimbangan Kerja dan Kehidupan Pribadi</h1>
+                    <p className="text-tertiary">Menyeimbangkan antara pekerjaan dan kehidupan pribadi penting untuk menjaga kesehatan mental. Tetapkan batas waktu kerja dan luangkan waktu untuk aktivitas yang Anda nikmati di luar pekerjaan untuk mengurangi kelelahan dan stres.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Bangun Hubungan Sosial yang Positif</h1>
-    <p className="text-tertiary">Memiliki hubungan sosial yang sehat dapat memberikan dukungan emosional dan meningkatkan rasa kebahagiaan. Berinvestasi dalam hubungan dengan keluarga dan teman, serta bergabung dalam komunitas sosial, dapat memperkuat kesejahteraan mental Anda.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
+                    <h1 className="font-semibold mb-2">Bangun Hubungan Sosial yang Positif</h1>
+                    <p className="text-tertiary">Memiliki hubungan sosial yang sehat dapat memberikan dukungan emosional dan meningkatkan rasa kebahagiaan. Berinvestasi dalam hubungan dengan keluarga dan teman, serta bergabung dalam komunitas sosial, dapat memperkuat kesejahteraan mental Anda.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Prioritaskan Waktu untuk Diri Sendiri</h1>
-    <p className="text-tertiary">Melakukan aktivitas yang Anda nikmati dan memberi diri Anda waktu untuk istirahat adalah kunci untuk menjaga kesehatan mental. Jadwalkan waktu untuk hobi, bersantai, atau refleksi diri untuk mendukung keseimbangan emosional.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
+                    <h1 className="font-semibold mb-2">Prioritaskan Waktu untuk Diri Sendiri</h1>
+                    <p className="text-tertiary">Melakukan aktivitas yang Anda nikmati dan memberi diri Anda waktu untuk istirahat adalah kunci untuk menjaga kesehatan mental. Jadwalkan waktu untuk hobi, bersantai, atau refleksi diri untuk mendukung keseimbangan emosional.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Praktikkan Keterampilan Mengelola Emosi</h1>
-    <p className="text-tertiary">Mengelola emosi secara efektif adalah bagian penting dari kesehatan mental. Teknik seperti menulis jurnal, berbicara dengan seorang profesional, atau menerapkan teknik pengelolaan emosi dapat membantu Anda menangani perasaan dengan lebih baik.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
+                    <h1 className="font-semibold mb-2">Praktikkan Keterampilan Mengelola Emosi</h1>
+                    <p className="text-tertiary">Mengelola emosi secara efektif adalah bagian penting dari kesehatan mental. Teknik seperti menulis jurnal, berbicara dengan seorang profesional, atau menerapkan teknik pengelolaan emosi dapat membantu Anda menangani perasaan dengan lebih baik.</p>
+                  </div>
+                </SwiperSlide>
 
-                
+
               </Swiper>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
+
+            <div className="w-full md:w-1/2 flex items-center mt-20">
               <div>
                 <h1 className="text-adult-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Menjaga <span className="text-adult-light">Jiwa Saat Dewasa</span></h1>
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Menjaga <span className="text-adult-normal">Jiwa Saat Dewasa</span></h1>
                 <p data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">Merawat kesehatan jiwa dewasa penting untuk kesejahteraan yang seimbang. Mengelola stres melalui teknik relaksasi, menjaga keseimbangan antara pekerjaan dan kehidupan pribadi, serta membangun hubungan sosial yang positif adalah kunci. Luangkan waktu untuk aktivitas yang menyenangkan, dan jangan ragu untuk mencari dukungan profesional bila diperlukan. Langkah-langkah ini membantu menjaga kesehatan mental dan meningkatkan kualitas hidup.
-
-
-
-
-
-
-                  </p>
+                </p>
               </div>
             </div>
           </div>
@@ -460,57 +455,57 @@ const Adult = () => {
           <div className="container">
             <h1 className="text-4xl font-bold text-adult-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Panduan Lingkungan <span className="text-adult-light">Sehat untuk Orang </span>
+              Panduan Lingkungan <span className="text-adult-normal">Sehat untuk Orang </span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-             Menjaga lingkungan yang sehat dan aman sangat penting untuk mendukung kesejahteraan orang dewasa. Lingkungan yang bersih, teratur, dan bebas dari stres dapat meningkatkan kualitas hidup dan kesehatan secara keseluruhan. Temukan cara untuk menciptakan ruang yang mendukung kesehatan mental dan fisik Anda dengan menghindari faktor-faktor risiko seperti polusi, kekacauan, dan stres berlebihan.
+              Menjaga lingkungan yang sehat dan aman sangat penting untuk mendukung kesejahteraan orang dewasa. Lingkungan yang bersih, teratur, dan bebas dari stres dapat meningkatkan kualitas hidup dan kesehatan secara keseluruhan. Temukan cara untuk menciptakan ruang yang mendukung kesehatan mental dan fisik Anda dengan menghindari faktor-faktor risiko seperti polusi, kekacauan, dan stres berlebihan.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Ruang Kerja yang Ergonomis</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Menyusun lingkungan kerja dengan prinsip ergonomi dapat mencegah masalah kesehatan seperti nyeri punggung dan gangguan postur. Pastikan kursi dan meja Anda berada pada ketinggian yang nyaman, dan gunakan peralatan yang mendukung postur tubuh yang baik. </p>
-                </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Jaga Kebersihan dan Ventilasi Ruangan</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">MKebersihan ruangan dan ventilasi yang baik adalah kunci untuk menghindari masalah pernapasan dan meningkatkan kenyamanan. Rutin membersihkan debu dan memastikan adanya sirkulasi udara yang baik dapat mengurangi risiko alergi dan meningkatkan kualitas udara di sekitar Anda.</p>
-                </div>
+              <div
+                className="bg-adult-normal/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Ciptakan Ruang Kerja yang Ergonomis</h5>
+                <p className="text-sm text-adult-normal group-hover/item:text-white">Menyusun lingkungan kerja dengan prinsip ergonomi dapat mencegah masalah kesehatan seperti nyeri punggung dan gangguan postur. Pastikan kursi dan meja Anda berada pada ketinggian yang nyaman, dan gunakan peralatan yang mendukung postur tubuh yang baik. </p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Kurangi Paparan Polusi dan Zat Berbahaya</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Hindari paparan polusi udara dan bahan kimia berbahaya dengan memilih produk yang ramah lingkungan dan mengurangi penggunaan bahan kimia rumah tangga. Jika memungkinkan, gunakan filter udara dan pastikan lingkungan sekitar bebas dari asap rokok dan polusi.</p>
-                </div>
+              <div
+                className="bg-adult-normal/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Jaga Kebersihan dan Ventilasi Ruangan</h5>
+                <p className="text-sm text-adult-normal group-hover/item:text-white">MKebersihan ruangan dan ventilasi yang baik adalah kunci untuk menghindari masalah pernapasan dan meningkatkan kenyamanan. Rutin membersihkan debu dan memastikan adanya sirkulasi udara yang baik dapat mengurangi risiko alergi dan meningkatkan kualitas udara di sekitar Anda.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Rencanakan Ruang Relaksasi yang Tenang</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Menciptakan ruang khusus untuk relaksasi membantu mengurangi stres dan meningkatkan kesejahteraan mental. Tempatkan elemen-elemen yang menenangkan seperti tanaman hias, pencahayaan lembut, dan perabot yang nyaman untuk menciptakan suasana yang damai.</p>
-                </div>
+              <div
+                className="bg-adult-normal/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Kurangi Paparan Polusi dan Zat Berbahaya</h5>
+                <p className="text-sm text-adult-normal group-hover/item:text-white">Hindari paparan polusi udara dan bahan kimia berbahaya dengan memilih produk yang ramah lingkungan dan mengurangi penggunaan bahan kimia rumah tangga. Jika memungkinkan, gunakan filter udara dan pastikan lingkungan sekitar bebas dari asap rokok dan polusi.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Implementasikan Pola Hidup Sehat di Rumah</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Mengadopsi gaya hidup sehat di rumah termasuk menyusun menu makanan seimbang dan menjaga kebiasaan olahraga rutin. Pertimbangkan untuk membuat area khusus untuk aktivitas fisik dan memastikan Anda memiliki akses ke makanan bergizi yang mendukung kesehatan.</p>
-                </div>
+              <div
+                className="bg-adult-normal/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Rencanakan Ruang Relaksasi yang Tenang</h5>
+                <p className="text-sm text-adult-normal group-hover/item:text-white">Menciptakan ruang khusus untuk relaksasi membantu mengurangi stres dan meningkatkan kesejahteraan mental. Tempatkan elemen-elemen yang menenangkan seperti tanaman hias, pencahayaan lembut, dan perabot yang nyaman untuk menciptakan suasana yang damai.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Prioritaskan Keamanan di Lingkungan Rumah</h5>
-                  <p className="text-sm text-adult-light group-hover/item:text-white">Pastikan lingkungan rumah Anda aman dengan mengatasi potensi bahaya seperti permukaan licin, kabel yang berserakan, dan peralatan listrik yang rusak. Pemasangan alat pemadam kebakaran dan detektor asap juga penting untuk menjaga keselamatan di rumah.</p>
-                </div>
+              <div
+                className="bg-adult-normal/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Implementasikan Pola Hidup Sehat di Rumah</h5>
+                <p className="text-sm text-adult-normal group-hover/item:text-white">Mengadopsi gaya hidup sehat di rumah termasuk menyusun menu makanan seimbang dan menjaga kebiasaan olahraga rutin. Pertimbangkan untuk membuat area khusus untuk aktivitas fisik dan memastikan Anda memiliki akses ke makanan bergizi yang mendukung kesehatan.</p>
+              </div>
+
+              <div
+                className="bg-adult-normal/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Prioritaskan Keamanan di Lingkungan Rumah</h5>
+                <p className="text-sm text-adult-normal group-hover/item:text-white">Pastikan lingkungan rumah Anda aman dengan mengatasi potensi bahaya seperti permukaan licin, kabel yang berserakan, dan peralatan listrik yang rusak. Pemasangan alat pemadam kebakaran dan detektor asap juga penting untuk menjaga keselamatan di rumah.</p>
+              </div>
             </div>
           </div>
         </div>
