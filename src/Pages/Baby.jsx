@@ -15,10 +15,8 @@ import 'swiper/css/effect-coverflow';
 import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
-import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
-import { Link } from "react-router-dom";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -152,13 +150,18 @@ const Baby = () => {
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
-                <a href={'#panduan'}
-                  className="bg-baby-normal text-white p-4 rounded-lg w-fit"
-                  onClick={() => handleNavigation('/explore')} data-aos="fade-up"
+                <button
+                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
+                  onClick={() => window.location.href = '#panduan'}
+                  data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="900"
                 >
-                  Mulai Eksplorasi
-                </a>
+                  <span className="circle" aria-hidden="true">
+                    <span className="icon arrow"></span>
+                  </span>
+                  <span className="button-text translate-x-2">Selengkapnya</span>
+                </button>
+
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
@@ -246,7 +249,7 @@ const Baby = () => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
-              <h2 className="text-2xl font-bold mb-4 text-white" data-aos="fade-up"
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">

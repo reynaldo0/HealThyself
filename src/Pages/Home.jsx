@@ -72,7 +72,7 @@ const Home = ({ onStart }) => {
             <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
               <button
                 onClick={handleClick}
-                className="inline-flex justify-center items-center py-3 px-10 text-base font-medium text-center text-white rounded-lg bg-secondary hover:bg-secondary/90 mt- xl:mt-20"
+                className="inline-flex justify-center items-center py-3 px-10 text-base font-medium text-center text-white rounded-lg bg-secondary hover:bg-transparent hover:border-secondary hover:border-2  mt- xl:mt-20"
               >
                 Mulai
                 <svg

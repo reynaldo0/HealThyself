@@ -84,13 +84,13 @@ const Dialog = () => {
                                 onClick={handleSkip}
                                 className="text-white bg-secondary/50 hover:bg-secondary/90 font-medium rounded-lg text-sm px-8 py-2 text-center"
                             >
-                                skip
+                                Lewati
                             </button>
                             <button
                                 onClick={handleNext}
                                 className="text-white bg-secondary hover:bg-secondary/90 font-medium rounded-lg text-sm px-8 py-2 text-center"
                             >
-                                next
+                                Selanjutnya
                             </button>
                         </div>
                     </div>
