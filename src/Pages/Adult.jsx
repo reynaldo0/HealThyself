@@ -149,7 +149,7 @@ const Adult = () => {
 
                 <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Tantangan Kesehatan Dewasa di Indonesia!! Menyikapi Masalah Gaya Hidup dan Penyakit Kronis
+                  Tantangan Kesehatan Dewasa di Indonesia!
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
