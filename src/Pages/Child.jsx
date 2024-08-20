@@ -6,7 +6,6 @@ import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
-import accordionItems from "../docs/Accordion";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -17,6 +16,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
 import { Anak } from "../Components/Models/Anak";
+import accordionchild from "../docs/AccordionChild";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -213,11 +213,11 @@ const Baby = () => {
 
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+              <span className="text-baby-dark">Panduan</span> Perkembangan Anak
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+             Telusuri panduan lengkap kami untuk memahami berbagai tahap perkembangan anak. Dari pertumbuhan fisik hingga perkembangan keterampilan motorik, sosial, dan bahasa, temukan informasi penting untuk mendukung anak Anda di setiap fase. Dapatkan wawasan mengenai apa yang diharapkan pada setiap usia, serta cara-cara terbaik untuk mendukung perkembangan optimal anak Anda menuju masa depan yang sehat dan sukses.
             </p>
           </div>
 
@@ -250,15 +250,15 @@ const Baby = () => {
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Makanan Seimbang</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+               Menyusun rencana makan seimbang sangat penting untuk memastikan anak mendapatkan nutrisi yang diperlukan untuk tumbuh kembang optimal. Temukan strategi dan tips untuk merancang menu yang bervariasi, mencakup semua kelompok makanan, dan mendukung kesehatan jangka panjang anak Anda. Dengan pendekatan yang tepat, Anda dapat mempromosikan pola makan yang sehat dan menyenangkan untuk seluruh keluarga.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="900">
-                <Accordion items={accordionItems} initialOpenIndex={0} />
+                <Accordion items={accordionchild} initialOpenIndex={0} />
               </div>
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
