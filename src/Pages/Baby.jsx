@@ -137,12 +137,12 @@ const Baby = () => {
 
                 <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
+                  Buruk Nya Gaya Hidup Bayi
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
+                 Permasalahan gaya hidup dan kesehatan bayi di Indonesia mencakup stunting pada 30% bayi, rendahnya cakupan ASI eksklusif, dan masih tingginya kasus ISPA yang berkontribusi pada kematian bayi. Kurangnya pola makan sehat, sanitasi yang buruk, dan cakupan imunisasi yang belum optimal menjadi tantangan utama.
                 </p>
 
                 <HeroButton />
@@ -202,11 +202,11 @@ const Baby = () => {
 
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+              <span className="text-baby-dark">Pantau Perkembangan</span> Bayi Ideal
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+              Pantau perkembangan bayi dengan panduan ini untuk memahami tahapan penting seperti fisik, motorik, dan bahasa. Dapatkan informasi dan tips untuk mendukung pertumbuhan bayi di setiap tahap usianya.
             </p>
           </div>
 
@@ -253,10 +253,10 @@ const Baby = () => {
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700"> Gizi Bayi <span className="text-baby-vlight">Tercukupi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
+               Pastikan bayi mendapat nutrisi optimal dengan rencana ASI yang tepat. Temukan tips untuk menjadikan proses menyusui lebih lancar dan nyaman.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
@@ -289,14 +289,21 @@ const Baby = () => {
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-baby-dark">Informasi </span> Gizi Anak
+              <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+              Nutrisi yang tepat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi mencakup kebutuhan utama seperti protein, karbohidrat, lemak sehat, vitamin, dan mineral untuk mendukung kesehatan dan energi mereka. Memahami kebutuhan ini memastikan makanan yang seimbang untuk perkembangan fisik dan mental optimal.
+
+
+
+
+
+
+
             </p>
             <ImageCarousel slides={slides} />
           </div>
@@ -310,9 +317,9 @@ const Baby = () => {
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
               <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+                data-aos-easing="ease-in-out" data-aos-duration="700"> <span className="text-baby-normal">Efektifitas Imunisasi</span> </h1>
               <p className="text-[#575757]" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai sejak lahir dengan vaksin Hepatitis B dan BCG, dilanjutkan dengan Polio, DTP, dan Hib pada usia 2-4 bulan, serta MMR pada usia 12 bulan untuk perlindungan optimal dari penyakit serius.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
@@ -328,73 +335,64 @@ const Baby = () => {
               >
 
                 <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B <span className="text-baby-light"></span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama segera setelah lahir, dosis kedua pada usia 1-2 bulan, dan dosis ketiga pada usia 6-18 bulan.
-                        Permasalahan: Vaksin Hepatitis B melindungi bayi dari infeksi hepatitis B yang dapat menyebabkan kerusakan hati serius. Terkadang, dosis pertama mungkin tidak diberikan segera setelah lahir karena keterlambatan di fasilitas kesehatan atau masalah administratif, yang meningkatkan risiko penularan dari ibu yang terinfeksi.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
+  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+    <div className="flex-1">
+      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
+    </div>
+    <div className="flex-[2]">
+      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B</h1>
+      <p className="text-tertiary text-sm">Jadwal: Dosis pertama setelah lahir, kedua pada 1-2 bulan, dan ketiga pada 6-18 bulan. Melindungi dari infeksi hepatitis B yang dapat merusak hati.</p>
+    </div>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light"> (Tuberkulosis)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Diberikan segera setelah lahir.
-                        Permasalahan: BCG melindungi dari tuberkulosis (TB) yang dapat mempengaruhi paru-paru dan organ lain. Ada kemungkinan vaksin ini tidak diberikan tepat waktu di beberapa daerah dengan akses kesehatan terbatas atau kurangnya informasi kepada orang tua baru.
+<SwiperSlide>
+  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+    <div className="flex-1">
+      <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
+    </div>
+    <div className="flex-[2]">
+      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin BCG</h1>
+      <p className="text-tertiary text-sm">Jadwal: Setelah lahir. Melindungi dari tuberkulosis (TB) yang dapat mempengaruhi paru-paru dan organ lain.</p>
+    </div>
+  </div>
+</SwiperSlide>
 
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+    <div className="flex-1">
+      <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
+    </div>
+    <div className="flex-[2]">
+      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Polio</h1>
+      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 18 bulan. Mencegah poliomielitis.</p>
+    </div>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">(OPV/IPV)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 2 bulan, diikuti dosis kedua pada usia 4 bulan, dosis ketiga pada usia 6 bulan, dan dosis keempat pada usia 18 bulan.
-                        Permasalahan : Vaksin polio penting untuk mencegah poliomielitis. Keterlambatan dalam jadwal vaksinasi atau ketidaklengkapan dosis dapat menyebabkan risiko infeksi polio, terutama di daerah dengan cakupan vaksinasi rendah.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+    <div className="flex-1">
+      <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
+    </div>
+    <div className="flex-[2]">
+      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin DTP</h1>
+      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 18 bulan. Mencegah difteri, tetanus, dan pertusis.</p>
+    </div>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">(Difteri, Tetanus, Pertusis)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 2 bulan, dosis kedua pada usia 4 bulan, dosis ketiga pada usia 6 bulan, dan dosis keempat pada usia 18 bulan.
-                        Permasalahan: Kekurangan dosis DTP pada bayi dapat meningkatkan risiko terkena difteri, tetanus, dan pertusis. Beberapa orang tua mungkin kurang menyadari pentingnya dosis lanjutan, terutama dalam kasus kesehatan yang tidak optimal atau akses terbatas ke layanan kesehatan.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-baby-light">(Haemophilus influenzae tipe B)</span></h1>
-                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 2 bulan, dosis kedua pada usia 4 bulan, dosis ketiga pada usia 6 bulan, dan dosis keempat pada usia 12-15 bulan.
-                        Permasalahan: Vaksin Hib melindungi bayi dari infeksi bakteri yang dapat menyebabkan penyakit serius. Masalah akses atau keterlambatan dosis dapat meningkatkan risiko penyakit seperti meningitis.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-
+<SwiperSlide>
+  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+    <div className="flex-1">
+      <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
+    </div>
+    <div className="flex-[2]">
+      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hib</h1>
+      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 12-15 bulan. Melindungi dari infeksi bakteri yang dapat menyebabkan penyakit serius.</p>
+    </div>
+  </div>
+</SwiperSlide>
               </Swiper>
             </div>
           </div>
@@ -414,47 +412,41 @@ const Baby = () => {
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
 
-                <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Pemberian Kasih Sayang yang Konsisten</h1>
-                    <p className="text-tertiary">Memberikan kasih sayang secara konsisten melalui pelukan, senyuman, dan kata-kata lembut membantu bayi merasa aman dan dicintai. Interaksi positif ini memperkuat ikatan emosional antara Anda dan bayi, serta menciptakan fondasi kepercayaan yang kuat.</p>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Kasih Sayang Konsisten</h1>
+    <p className="text-tertiary">Kasih sayang melalui pelukan dan kata-kata lembut membantu bayi merasa aman dan dicintai, memperkuat ikatan emosional dan kepercayaan.</p>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2"> Stimulasi Lingkungan yang Positif</h1>
-                    <p className="text-tertiary">Lingkungan yang penuh dengan stimulasi positif, seperti mainan edukatif dan kegiatan interaktif, merangsang perkembangan otak bayi. Pastikan bayi dikelilingi oleh warna-warna cerah, suara yang menenangkan, dan tekstur yang menarik untuk mendukung pembelajaran awal mereka.</p>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Stimulasi Lingkungan Positif</h1>
+    <p className="text-tertiary">Lingkungan yang penuh mainan edukatif dan warna cerah merangsang perkembangan otak bayi dan mendukung pembelajaran awal mereka.</p>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Menyediakan Waktu Bermain yang Berkualitas</h1>
-                    <p className="text-tertiary">Bermain bersama bayi, baik melalui permainan fisik maupun interaktif, membantu mengembangkan kemampuan sosial dan emosional. Waktu bermain yang berkualitas memperkuat hubungan orang tua-anak dan memungkinkan bayi untuk mengeksplorasi dunia mereka dengan rasa ingin tahu yang sehat.</p>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Waktu Bermain Berkualitas</h1>
+    <p className="text-tertiary">Bermain bersama bayi mengembangkan kemampuan sosial dan emosional serta memperkuat hubungan orang tua-anak.</p>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Respon yang Cepat dan Tepat Terhadap Kebutuhan</h1>
-                    <p className="text-tertiary">Merespon dengan cepat terhadap tangisan atau kebutuhan bayi membantu mereka merasa aman dan dipahami. Ketika bayi tahu bahwa kebutuhan mereka akan dipenuhi, mereka cenderung lebih tenang dan berkembang secara emosional dengan lebih baik.</p>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Respon Cepat Terhadap Kebutuhan</h1>
+    <p className="text-tertiary">Merespon cepat terhadap tangisan bayi membuat mereka merasa aman dan dipahami, mendukung perkembangan emosional yang baik.</p>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Gunakan Tempat Tidur Yang Aman</h1>
-                    <p className="text-tertiary">Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
-                  </div>
-                </SwiperSlide>
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Tempat Tidur Aman</h1>
+    <p className="text-tertiary">Tempat tidur yang aman memberikan rasa nyaman dan mengurangi stres, memperkuat ikatan antara bayi dan orang tua.</p>
+  </div>
+</SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                    <h1 className="font-semibold mb-2">Gunakan Tempat Tidur Yang Aman</h1>
-                    <p className="text-tertiary">Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
-                  </div>
-                </SwiperSlide>
 
 
 
@@ -463,13 +455,16 @@ const Baby = () => {
               </Swiper>
             </div>
             <div className="w-full md:w-1/2 flex items-center">
-              <div>
-                <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Membangun Fondasi <span className="text-baby-light">Kesehatan Mental Untuk Bayi</span></h1>
-                <p data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat kesehatan mental bayi adalah kunci untuk perkembangan emosional yang kuat dan bahagia. Dengan perhatian penuh dan kasih sayang, Anda membantu bayi tumbuh menjadi anak yang percaya diri dan seimbang. Berikut adalah beberapa cara efektif untuk mendukung kesehatan mental bayi Anda.</p>
-              </div>
-            </div>
+  <div>
+    <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
+      Membangun Fondasi <span className="text-baby-light">Kesehatan Mental</span>
+    </h1>
+    <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">
+      Merawat kesehatan mental bayi penting untuk perkembangan emosional. Perhatian dan kasih sayang membantu bayi tumbuh menjadi anak yang percaya diri dan seimbang.
+    </p>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
@@ -485,7 +480,7 @@ const Baby = () => {
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Menciptakan lingkungan yang bersih dan aman adalah kunci untuk melindungi bayi dari berbagai risiko kesehatan. Dengan memperhatikan kebersihan, keamanan, dan kenyamanan, Anda dapat memberikan fondasi yang kuat bagi pertumbuhan dan perkembangan optimal bayi Anda. Temukan langkah-langkah penting untuk menjaga lingkungan yang mendukung kesehatan bayi setiap hari.
+             Jaga kebersihan, keamanan, dan kenyamanan untuk mendukung pertumbuhan bayi. Ikuti langkah-langkah penting setiap hari untuk kesehatan optimal bayi Anda.
             </p>
 
 
@@ -499,48 +494,44 @@ const Baby = () => {
                 className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
               >
                 <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Pastikan Kebersihan Udara di Sekitar Bayi</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Mainan dengan Udara yang bersih sangat penting untuk kesehatan pernapasan bayi. Hindari paparan asap rokok, debu berlebihan, atau polusi udara di dalam rumah. Gunakan pembersih udara jika diperlukan dan pastikan ruangan memiliki ventilasi yang baik.</p>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Hindari asap rokok, debu, dan polusi. Gunakan pembersih udara dan pastikan ventilasi ruangan baik.</p>
               </div>
 
               <div
+  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Tempat Tidur Aman</h5>
+  <p className="text-sm text-baby-light group-hover/item:text-white">Gunakan kasur rata dan hindari bantal atau selimut tebal untuk mencegah SIDS.</p>
+</div>
 
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white"> Gunakan Tempat Tidur yang Aman</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan bayi tidur di tempat yang aman, seperti di kasur yang rata dan tidak terlalu empuk. Hindari penggunaan bantal, selimut tebal, atau mainan di tempat tidur untuk mengurangi risiko sindrom kematian mendadak pada bayi (SIDS).</p>
-              </div>
+<div
+  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover:item:text-white">Kualitas Air Minum</h5>
+  <p className="text-sm text-baby-light group-hover:item:text-white">Pastikan air yang dikonsumsi bayi bersih dan aman, gunakan air matang atau kemasan jika perlu.</p>
+</div>
 
-              <div
+<div
+  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Bahan Kimia</h5>
+  <p className="text-sm text-baby-light group-hover/item:text-white">Jauhkan produk kimia berbahaya dari jangkauan bayi, simpan di tempat aman.</p>
+</div>
 
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Periksa Kualitas Air Minum</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan bayi hanya mengonsumsi air yang bersih dan aman. Jika perlu, gunakan air yang sudah dimasak atau air minum dalam kemasan yang terjamin kualitasnya. Hindari pemberian air dari sumber yang tidak diketahui kebersihannya.</p>
-              </div>
+<div
+  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Produk Perawatan Aman</h5>
+  <p className="text-sm text-baby-light group-hover:item:text-white">Pilih produk bebas bahan kimia berbahaya dan hypoallergenic.</p>
+</div>
 
-              <div
+<div
+  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover:item:text-white">Amankan Sudut Furnitur</h5>
+  <p className="text-sm text-baby-light group-hover:item:text-white">Gunakan pelindung untuk sudut tajam dan tepi furnitur untuk mencegah cedera bayi.</p>
+</div>
 
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white"> Jauhkan Bahan Kimia Berbahaya</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Jauhkan semua produk rumah tangga yang mengandung bahan kimia berbahaya, seperti pembersih, deterjen, dan obat-obatan, dari jangkauan bayi. Simpan di tempat yang terkunci atau jauh dari area bermain bayi.</p>
-              </div>
-
-              <div
-
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Pilih Produk Perawatan Bayi yang Aman</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Gunakan produk perawatan bayi yang aman dan bebas dari bahan kimia berbahaya seperti paraben, pewangi buatan, dan pewarna. Pilih produk dengan label hypoallergenic dan pastikan untuk membaca komposisinya dengan cermat sebelum penggunaan.</p>
-              </div>
-
-              <div
-
-                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-              >
-                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Amankan Sudut Tajam dan Tepi Furnitur</h5>
-                <p className="text-sm text-baby-light group-hover/item:text-white">Sudut tajam dan tepi furnitur dapat menjadi bahaya bagi bayi yang sedang belajar merangkak atau berjalan. Gunakan pelindung sudut dan penutup tepi furnitur untuk mencegah cedera saat bayi bergerak di sekitar rumah. Pastikan juga area bermain bebas dari barang-barang berbahaya yang bisa melukai bayi.</p>
-              </div>
 
             </div>
           </div>
