@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
-import { Teen as Remaja } from '../Components/Models/Teen'
 import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
@@ -16,6 +15,7 @@ import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
+import { Kakek } from "../Components/Models/Kakek";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -54,13 +54,12 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Teen = () => {
+const Elderly = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef(); // Ref for container element
+  const containerRef = useRef(); 
 
-  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
@@ -180,7 +179,7 @@ const Teen = () => {
                   minPolarAngle={Math.PI * 0.3}
                   maxPolarAngle={Math.PI * 0.6}
                 />
-                <Remaja />
+                <Kakek />
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
@@ -512,4 +511,4 @@ const Teen = () => {
   );
 };
 
-export default Teen;
+export default Elderly;

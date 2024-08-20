@@ -71,7 +71,6 @@ const Option3d = ({ onBack }) => {
     }, 500);
   };
 
-
   return (
     <section className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url(/background/golongan.png)] overflow-hidden page-container">
       {showDialog && <Dialog />}
@@ -140,6 +139,7 @@ const Option3d = ({ onBack }) => {
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">
             <ModelCanvas
+              onClick={() => handleModelCanvasClick('/teen')}
               model={<Teen />}
               title="Remaja"
               description="3-12 Bulan"

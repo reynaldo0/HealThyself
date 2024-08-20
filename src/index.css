@@ -211,19 +211,3 @@ button:hover .button-text {
   }
 }
 
-
-/* CSS for button animations */
-.button-animate-prev,
-.button-animate-next {
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.button-animate-prev:hover {
-  transform: translateX(-8px); /* Move left on hover */
-  border-color: #FF682C; /* Change border color on hover */
-}
-
-.button-animate-next:hover {
-  transform: translateX(8px); /* Move right on hover */
-  border-color: #FF682C; /* Change border color on hover */
-}

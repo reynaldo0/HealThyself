@@ -7,7 +7,7 @@ import 'aos/dist/aos.css'
 import Child from './Pages/Child';
 import Teen from './Pages/Teen';
 import Adult from './Pages/Adult';
-import Elderly from './Pages/Teen';
+import Elderly from './Pages/Elderly';
 
 Aos.init({
   // mirror: false,
