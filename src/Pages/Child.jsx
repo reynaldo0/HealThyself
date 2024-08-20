@@ -19,6 +19,7 @@ import { Anak } from "../Components/Models/Anak";
 import accordionchild from "../docs/AccordionChild";
 import { Bar } from "react-chartjs-2";
 import HeroButton from "../Components/HeroButton";
+import ToUp from "../Components/ToUp";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -118,6 +119,8 @@ const Child = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
+      <ToUp color={'bg-child-light'} />
+
       <Navbar buttonColor="bg-child-dark">
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />

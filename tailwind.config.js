@@ -49,13 +49,13 @@ export default {
           dark: '#1B856D'
         },
         adult: {
-          light: '#FFE4DA',
+          light: '#FF895B',
           normal: '#F36932',
           dark: '#DF4B10',
           bg:'#F5581A',
         },
         elderly:{
-          light: '#D7FEF0',
+          light: '#4CE1AD',
           normal: '#16AE79',
           dark: '#0A6847',
           bg:'#0A6847',

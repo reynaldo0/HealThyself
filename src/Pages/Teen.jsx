@@ -18,6 +18,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import Footer from "../Components/Footer";
 import HeroButton from "../Components/HeroButton";
 import ImageCarousel from "../Components/Corousel";
+import ToUp from "../Components/ToUp";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -132,6 +133,8 @@ const Teen = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
+      <ToUp color={'bg-teen-light'} />
+
       <Navbar buttonColor="bg-teen-dark">
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />

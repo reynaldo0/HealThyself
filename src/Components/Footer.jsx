@@ -6,7 +6,7 @@ const Footer = ({ backgroundColor = 'transparent', children }) => {
             <div className="container mx-auto w-full">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 flex flex-col justify-between md:mb-0">
-                        <a href="#" className="flex items-center">
+                        <a href="/" className="flex items-center">
                             <img
                                 src="/logo.png"
                                 className="me-3 h-auto w-[180px]"
@@ -21,11 +21,11 @@ const Footer = ({ backgroundColor = 'transparent', children }) => {
                             <ul className="font-medium text-slate-300">
                                 <li className="mb-4 flex items-center gap-3 text-base">
                                     <ion-icon name="location"></ion-icon>
-                                    <a href="#" className="hover:underline">SMK Negeri 46 Jakarta</a>
+                                    <a href="https://www.smkn46jaktim.sch.id/" className="hover:underline">SMK Negeri 46 Jakarta</a>
                                 </li>
                                 <li className="mb-4 flex items-center gap-3 text-base">
                                     <ion-icon name="mail"></ion-icon>
-                                    <a href="#" className="hover:underline">Healthyself@gmail.com</a>
+                                    <a href="mailto:healthyself@gmail.com" className="hover:underline">Healthyself@gmail.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -40,16 +40,16 @@ const Footer = ({ backgroundColor = 'transparent', children }) => {
                                     <a href="/baby" className="hover:underline">Bayi</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#about" className="hover:underline">Anak-Anak</a>
+                                    <a href="/child" className="hover:underline">Anak-Anak</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#kasus" className="hover:underline">Remaja</a>
+                                    <a href="/teen" className="hover:underline">Remaja</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#pengaruh" className="hover:underline">Dewasa</a>
+                                    <a href="/adult" className="hover:underline">Dewasa</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#data" className="hover:underline">Lansia</a>
+                                    <a href="/elderly" className="hover:underline">Lansia</a>
                                 </li>
                             </ul>
                         </div>

@@ -30,6 +30,7 @@ import Footer from "../Components/Footer";
 import { Kakek } from "../Components/Models/Kakek";
 import ImageCarousel from "../Components/Corousel";
 import HeroButton from "../Components/HeroButton";
+import ToUp from "../Components/ToUp";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -165,6 +166,8 @@ const Elderly = () => {
 
     return (
         <section ref={containerRef} className="pt-24">
+            <ToUp color={'bg-elderly-light'} />
+
             <Navbar buttonColor="bg-elderly-dark">
                 <Navbar.Item to={"#"} title={"Beranda"} />
                 <Navbar.Item to={"#panduan"} title={"Panduan"} />

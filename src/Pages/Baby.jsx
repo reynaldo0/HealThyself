@@ -19,6 +19,7 @@ import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
 import { Bar } from "react-chartjs-2";
 import HeroButton from "../Components/HeroButton";
+import ToUp from "../Components/ToUp";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend, Tooltip);
 
@@ -119,6 +120,8 @@ const Baby = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
+      <ToUp color={'bg-baby-light'} />
+
       <Navbar>
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />

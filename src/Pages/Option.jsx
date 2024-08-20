@@ -129,7 +129,7 @@ const Option3d = ({ onBack }) => {
               onClick={() => handleModelCanvasClick('/child')}
               model={<Anak />}
               title="Anak - Anak"
-              description="3-12 Bulan"
+              description="3-12 Tahun"
               bgColor={'#EA9117'}
               width="289px"
               height="300px"
@@ -142,7 +142,7 @@ const Option3d = ({ onBack }) => {
               onClick={() => handleModelCanvasClick('/teen')}
               model={<Teen />}
               title="Remaja"
-              description="3-12 Bulan"
+              description="13-17 Tahun"
               bgColor={'#EA9117'}
               width="289px"
               height="320px"
@@ -154,7 +154,7 @@ const Option3d = ({ onBack }) => {
             <ModelCanvas
               model={<Dewasa />}
               title="Dewasa"
-              description="3-12 Bulan"
+              description="18-59 Tahun"
               bgColor={'#179C51'}
               width="289px"
               height="270px"
@@ -167,7 +167,7 @@ const Option3d = ({ onBack }) => {
             <ModelCanvas
               model={<Kakek />}
               title="Lansia"
-              description="3-12 Bulan"
+              description="60 tahun keatas"
               bgColor={'#B11414'}
               width="289px"
               height="220px"
