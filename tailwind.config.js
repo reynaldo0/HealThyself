@@ -27,6 +27,15 @@ export default {
           'soft': '#4560A0',
           'ldark': '#3B5186',
           'dark': '#253B70'
+        },
+        'child': {
+          'vlight': '#FFD7D7',
+          'light': '#3465B7',
+          'normal': '#E33B3B',
+          'vsoft': '#6B8AB6',
+          'soft': '#4560A0',
+          'ldark': '#3B5186',
+          'dark': '#B11414'
         }
       },
       fontFamily: {
