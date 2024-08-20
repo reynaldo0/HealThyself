@@ -15,7 +15,7 @@ import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
-import { Dewasa } from "../Components/Models/Dewasa";
+import { Kakek } from "../Components/Models/Kakek";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -54,7 +54,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Adult = () => {
+const Elderly = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
@@ -179,7 +179,7 @@ const Adult = () => {
                   minPolarAngle={Math.PI * 0.3}
                   maxPolarAngle={Math.PI * 0.6}
                 />
-                <Dewasa />
+                <Kakek />
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
@@ -511,4 +511,4 @@ const Adult = () => {
   );
 };
 
-export default Adult;
+export default Elderly;

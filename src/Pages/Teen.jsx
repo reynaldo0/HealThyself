@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
-import Bayi from "../Components/Models/landingPage/Bayi";
+import { Teen as Remaja } from '../Components/Models/Teen'
 import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
@@ -16,7 +16,6 @@ import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
-import ImageCarousel from "../Components/Corousel";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -55,7 +54,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Elderly = () => {
+const Teen = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
@@ -181,7 +180,7 @@ const Elderly = () => {
                   minPolarAngle={Math.PI * 0.3}
                   maxPolarAngle={Math.PI * 0.6}
                 />
-                <Bayi />
+                <Remaja />
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
@@ -513,4 +512,4 @@ const Elderly = () => {
   );
 };
 
-export default Elderly;
+export default Teen;
