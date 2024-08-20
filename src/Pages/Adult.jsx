@@ -364,7 +364,7 @@ const Adult = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-baby-light"></span></h1>
@@ -377,7 +377,7 @@ const Adult = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-DT.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-baby-light">(Td)</span></h1>
@@ -390,7 +390,7 @@ const Adult = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-Pneumokokus.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-baby-light"></span></h1>
@@ -403,7 +403,7 @@ const Adult = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-HEPATITIS-B.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B <span className="text-baby-light"></span></h1>
