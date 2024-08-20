@@ -139,7 +139,7 @@ const Baby = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-4xl text-baby-dark">
-                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
+                  Tantangan Kesehatan Bayi di Indonesia Menangani Masalah Gizi dan Perkembangan
                 </h1>
                 <p className="text-lg text-tertiary">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
