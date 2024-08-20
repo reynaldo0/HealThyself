@@ -265,7 +265,7 @@ const Child = () => {
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="900">
-              <img src="/assets/emak-anak.webp" alt="Mother and Child" className="w-96 h-auto" />
+              <img src="/assets/Anak.png" alt="Mother and Child" className="w-96 h-auto" />
             </div>
           </div>
           {/* Ball components here */}
