@@ -22,7 +22,7 @@ const Team = () => {
         <Swiper
           modules={[Autoplay]}
           loop
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
           spaceBetween={16}
           className="cursor-grab"
           breakpoints={{
@@ -146,7 +146,7 @@ const Team = () => {
                 <a href="https://github.com/AkmaldanKamu" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://id.linkedin.com/in/akmal-saban-246a87316?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
                 <a href="https://www.instagram.com/m.akmal.saban/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">

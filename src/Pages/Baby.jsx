@@ -507,8 +507,8 @@ const Baby = () => {
 <div
   className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
 >
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover:item:text-white">Kualitas Air Minum</h5>
-  <p className="text-sm text-baby-light group-hover:item:text-white">Pastikan air yang dikonsumsi bayi bersih dan aman, gunakan air matang atau kemasan jika perlu.</p>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Kualitas Air Minum</h5>
+  <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan air yang dikonsumsi bayi bersih dan aman, gunakan air matang atau kemasan jika perlu.</p>
 </div>
 
 <div
@@ -522,14 +522,14 @@ const Baby = () => {
   className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
 >
   <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Produk Perawatan Aman</h5>
-  <p className="text-sm text-baby-light group-hover:item:text-white">Pilih produk bebas bahan kimia berbahaya dan hypoallergenic.</p>
+  <p className="text-sm text-baby-light group-hover/item:text-white">Pilih produk bebas bahan kimia berbahaya dan hypoallergenic.</p>
 </div>
 
 <div
   className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
 >
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover:item:text-white">Amankan Sudut Furnitur</h5>
-  <p className="text-sm text-baby-light group-hover:item:text-white">Gunakan pelindung untuk sudut tajam dan tepi furnitur untuk mencegah cedera bayi.</p>
+  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Amankan Sudut Furnitur</h5>
+  <p className="text-sm text-baby-light group-hover/item:text-white">Gunakan pelindung untuk sudut tajam dan tepi furnitur untuk mencegah cedera bayi.</p>
 </div>
 
 
