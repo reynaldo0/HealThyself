@@ -139,7 +139,7 @@ const Adult = () => {
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />
         <Navbar.Item to={'#gizi'} title={'Gizi'} />
-        <Navbar.Item to={'#imunisasi'} title={'Imunisasi'} />
+        <Navbar.Item to={'#imunisasi'} title={'Vaksin'} />
         <Navbar.Item to={'#perawatan'} title={'Perawatan'} />
         <Navbar.Item to={'#lingkungan'} title={'Lingkungan'} />
       </Navbar>
@@ -254,7 +254,7 @@ const Adult = () => {
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-adult-light underline-box after:bg-child-normal/20">Makan Seimbang </span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-white">Makan Seimbang </span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
                 Menyusun rencana kesehatan yang efektif memastikan kesejahteraan fisik dan mental optimal. Temukan strategi untuk gaya hidup sehat, pengelolaan stres, dan peningkatan kualitas hidup.

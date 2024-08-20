@@ -172,7 +172,7 @@ const Elderly = () => {
                 <Navbar.Item to={"#"} title={"Beranda"} />
                 <Navbar.Item to={"#panduan"} title={"Panduan"} />
                 <Navbar.Item to={"#gizi"} title={"Gizi"} />
-                <Navbar.Item to={"#imunisasi"} title={"Imunisasi"} />
+                <Navbar.Item to={"#imunisasi"} title={"Vaksin"} />
                 <Navbar.Item to={"#perawatan"} title={"Perawatan"} />
                 <Navbar.Item to={"#lingkungan"} title={"Lingkungan"} />
             </Navbar>
