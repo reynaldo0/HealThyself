@@ -451,7 +451,7 @@ const Child = () => {
             </div>
             <div className="pt-20 w-full md:w-1/2 flex items-center">
               <div>
-                <h1 className="text-child-dark font-bold text-2xl md:text-4xl mb-4" data-aos="fade-up"
+                <h1 className="text-child-dark font-bold text-4xl mb-4" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">Membangun Dasar Kekuatan Mental <span className="text-child-normal">Pada Jiwa Anak</span></h1>
                 <p data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">Kesehatan mental anak adalah kunci untuk perkembangan emosional yang sehat dan seimbang. Dengan memberikan perhatian, dukungan, dan lingkungan yang positif, Anda membantu anak tumbuh menjadi individu yang percaya diri, resilient, dan bahagia. Berikut adalah beberapa cara efektif untuk mendukung kesehatan mental anak Anda.</p>

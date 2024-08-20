@@ -434,9 +434,9 @@ const Teen = () => {
 
               </Swiper>
             </div>
-            <div className="w-full md:w-1/2 flex items-center mt-20 text-center">
+            <div className="w-full md:w-1/2 flex items-center mt-20">
               <div>
-                <h1 className="text-teen-normal font-bold text-2xl md:text-4xl mb-4" data-aos="fade-up"
+                <h1 className="text-teen-normal font-bold text-4xl mb-4" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-teen-dark">Kesehatan Remaja</span></h1>
                 <p data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">Perawatan kesehatan mental remaja adalah aspek penting dalam mendukung mereka selama masa-masa penuh perubahan ini. Dengan memberikan dukungan yang tepat dan mengajarkan keterampilan hidup yang sehat, Anda dapat membantu remaja tumbuh menjadi individu yang seimbang dan percaya diri.</p>

@@ -462,7 +462,7 @@ const Baby = () => {
 
               </Swiper>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
+            <div className="w-full md:w-1/2 flex items-center mt-20">
               <div>
                 <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">Membangun Fondasi <span className="text-baby-light">Kesehatan Mental Untuk Bayi</span></h1>
