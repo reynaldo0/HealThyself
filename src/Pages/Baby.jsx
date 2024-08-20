@@ -142,7 +142,7 @@ const Baby = () => {
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                 Permasalahan gaya hidup dan kesehatan bayi di Indonesia mencakup stunting pada 30% bayi, rendahnya cakupan ASI eksklusif, dan masih tingginya kasus ISPA yang berkontribusi pada kematian bayi. Kurangnya pola makan sehat, sanitasi yang buruk, dan cakupan imunisasi yang belum optimal menjadi tantangan utama.
+                  Permasalahan gaya hidup dan kesehatan bayi di Indonesia mencakup stunting pada 30% bayi, rendahnya cakupan ASI eksklusif, dan masih tingginya kasus ISPA yang berkontribusi pada kematian bayi. Kurangnya pola makan sehat, sanitasi yang buruk, dan cakupan imunisasi yang belum optimal menjadi tantangan utama.
                 </p>
 
                 <HeroButton />
@@ -202,7 +202,7 @@ const Baby = () => {
 
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Pantau Perkembangan</span> Bayi Ideal
+              <span className="text-baby-dark">Pantau Perkembangan</span> <span className="underline-box after:bg-baby-normal/20">Bayi Ideal</span>
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
@@ -256,7 +256,7 @@ const Baby = () => {
                 data-aos-easing="ease-in-out" data-aos-duration="700"> Gizi Bayi <span className="text-baby-vlight">Tercukupi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
-               Pastikan bayi mendapat nutrisi optimal dengan rencana ASI yang tepat. Temukan tips untuk menjadikan proses menyusui lebih lancar dan nyaman.
+                Pastikan bayi mendapat nutrisi optimal dengan rencana ASI yang tepat. Temukan tips untuk menjadikan proses menyusui lebih lancar dan nyaman.
               </p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
@@ -289,7 +289,7 @@ const Baby = () => {
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-baby-dark">Informasi </span> Gizi Bayi
+              <span className="text-baby-dark">Informasi </span> <span className="underline-box after:bg-baby-normal/20">Gizi Bayi</span>
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
@@ -335,64 +335,64 @@ const Baby = () => {
               >
 
                 <SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B</h1>
-      <p className="text-tertiary text-sm">Jadwal: Dosis pertama setelah lahir, kedua pada 1-2 bulan, dan ketiga pada 6-18 bulan. Melindungi dari infeksi hepatitis B yang dapat merusak hati.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B</h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama setelah lahir, kedua pada 1-2 bulan, dan ketiga pada 6-18 bulan. Melindungi dari infeksi hepatitis B yang dapat merusak hati.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin BCG</h1>
-      <p className="text-tertiary text-sm">Jadwal: Setelah lahir. Melindungi dari tuberkulosis (TB) yang dapat mempengaruhi paru-paru dan organ lain.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin BCG</h1>
+                      <p className="text-tertiary text-sm">Jadwal: Setelah lahir. Melindungi dari tuberkulosis (TB) yang dapat mempengaruhi paru-paru dan organ lain.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Polio</h1>
-      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 18 bulan. Mencegah poliomielitis.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Polio</h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 18 bulan. Mencegah poliomielitis.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin DTP</h1>
-      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 18 bulan. Mencegah difteri, tetanus, dan pertusis.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin DTP</h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 18 bulan. Mencegah difteri, tetanus, dan pertusis.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-    <div className="flex-1">
-      <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
-    </div>
-    <div className="flex-[2]">
-      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hib</h1>
-      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 12-15 bulan. Melindungi dari infeksi bakteri yang dapat menyebabkan penyakit serius.</p>
-    </div>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hib</h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada 2 bulan, kedua pada 4 bulan, ketiga pada 6 bulan, dan keempat pada 12-15 bulan. Melindungi dari infeksi bakteri yang dapat menyebabkan penyakit serius.</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
@@ -412,40 +412,40 @@ const Baby = () => {
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Kasih Sayang Konsisten</h1>
-    <p className="text-tertiary">Kasih sayang melalui pelukan dan kata-kata lembut membantu bayi merasa aman dan dicintai, memperkuat ikatan emosional dan kepercayaan.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Kasih Sayang Konsisten</h1>
+                    <p className="text-tertiary">Kasih sayang melalui pelukan dan kata-kata lembut membantu bayi merasa aman dan dicintai, memperkuat ikatan emosional dan kepercayaan.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Stimulasi Lingkungan Positif</h1>
-    <p className="text-tertiary">Lingkungan yang penuh mainan edukatif dan warna cerah merangsang perkembangan otak bayi dan mendukung pembelajaran awal mereka.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Stimulasi Lingkungan Positif</h1>
+                    <p className="text-tertiary">Lingkungan yang penuh mainan edukatif dan warna cerah merangsang perkembangan otak bayi dan mendukung pembelajaran awal mereka.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Waktu Bermain Berkualitas</h1>
-    <p className="text-tertiary">Bermain bersama bayi mengembangkan kemampuan sosial dan emosional serta memperkuat hubungan orang tua-anak.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Waktu Bermain Berkualitas</h1>
+                    <p className="text-tertiary">Bermain bersama bayi mengembangkan kemampuan sosial dan emosional serta memperkuat hubungan orang tua-anak.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Respon Cepat Terhadap Kebutuhan</h1>
-    <p className="text-tertiary">Merespon cepat terhadap tangisan bayi membuat mereka merasa aman dan dipahami, mendukung perkembangan emosional yang baik.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Respon Cepat Terhadap Kebutuhan</h1>
+                    <p className="text-tertiary">Merespon cepat terhadap tangisan bayi membuat mereka merasa aman dan dipahami, mendukung perkembangan emosional yang baik.</p>
+                  </div>
+                </SwiperSlide>
 
-<SwiperSlide>
-  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-    <h1 className="font-semibold mb-2">Tempat Tidur Aman</h1>
-    <p className="text-tertiary">Tempat tidur yang aman memberikan rasa nyaman dan mengurangi stres, memperkuat ikatan antara bayi dan orang tua.</p>
-  </div>
-</SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Tempat Tidur Aman</h1>
+                    <p className="text-tertiary">Tempat tidur yang aman memberikan rasa nyaman dan mengurangi stres, memperkuat ikatan antara bayi dan orang tua.</p>
+                  </div>
+                </SwiperSlide>
 
 
 
@@ -455,15 +455,15 @@ const Baby = () => {
               </Swiper>
             </div>
             <div className="w-full md:w-1/2 flex items-center mt-20">
-  <div>
-    <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
-      Membangun Fondasi <span className="text-baby-light">Kesehatan Mental</span>
-    </h1>
-    <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">
-      Merawat kesehatan mental bayi penting untuk perkembangan emosional. Perhatian dan kasih sayang membantu bayi tumbuh menjadi anak yang percaya diri dan seimbang.
-    </p>
-  </div>
-</div>
+              <div>
+                <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
+                  Membangun Fondasi <span className="text-baby-light">Kesehatan Mental</span>
+                </h1>
+                <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">
+                  Merawat kesehatan mental bayi penting untuk perkembangan emosional. Perhatian dan kasih sayang membantu bayi tumbuh menjadi anak yang percaya diri dan seimbang.
+                </p>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -476,7 +476,7 @@ const Baby = () => {
           <div className="container">
             <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Lingkungan Sehat <span className="text-baby-light">Fondasi Kesehatan Bayi Anda</span>
+              Lingkungan Sehat <span className="text-baby-light underline-box after:bg-baby-normal/20">Fondasi Kesehatan Bayi Anda</span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
@@ -498,39 +498,39 @@ const Baby = () => {
               </div>
 
               <div
-  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
->
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Tempat Tidur Aman</h5>
-  <p className="text-sm text-baby-light group-hover/item:text-white">Gunakan kasur rata dan hindari bantal atau selimut tebal untuk mencegah SIDS.</p>
-</div>
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Tempat Tidur Aman</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Gunakan kasur rata dan hindari bantal atau selimut tebal untuk mencegah SIDS.</p>
+              </div>
 
-<div
-  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
->
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover:item:text-white">Kualitas Air Minum</h5>
-  <p className="text-sm text-baby-light group-hover:item:text-white">Pastikan air yang dikonsumsi bayi bersih dan aman, gunakan air matang atau kemasan jika perlu.</p>
-</div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Kualitas Air Minum</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan air yang dikonsumsi bayi bersih dan aman, gunakan air matang atau kemasan jika perlu.</p>
+              </div>
 
-<div
-  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
->
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Bahan Kimia</h5>
-  <p className="text-sm text-baby-light group-hover/item:text-white">Jauhkan produk kimia berbahaya dari jangkauan bayi, simpan di tempat aman.</p>
-</div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Bahan Kimia</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Jauhkan produk kimia berbahaya dari jangkauan bayi, simpan di tempat aman.</p>
+              </div>
 
-<div
-  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
->
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Produk Perawatan Aman</h5>
-  <p className="text-sm text-baby-light group-hover:item:text-white">Pilih produk bebas bahan kimia berbahaya dan hypoallergenic.</p>
-</div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Produk Perawatan Aman</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Pilih produk bebas bahan kimia berbahaya dan hypoallergenic.</p>
+              </div>
 
-<div
-  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
->
-  <h5 className="font-semibold mb-2 text-baby-normal group-hover:item:text-white">Amankan Sudut Furnitur</h5>
-  <p className="text-sm text-baby-light group-hover:item:text-white">Gunakan pelindung untuk sudut tajam dan tepi furnitur untuk mencegah cedera bayi.</p>
-</div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Amankan Sudut Furnitur</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Gunakan pelindung untuk sudut tajam dan tepi furnitur untuk mencegah cedera bayi.</p>
+              </div>
 
 
             </div>

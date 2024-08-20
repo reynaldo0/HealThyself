@@ -67,9 +67,8 @@ const Teen = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef(); // Ref for container element
+  const containerRef = useRef();
 
-  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
@@ -189,8 +188,10 @@ const Teen = () => {
                 <p className="font-bold text-xl text-white text-center">Bahagia</p>
               </div>
 
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/baby/kura-kura.png" alt="Happiness"  data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
                 <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
               </div>
 
