@@ -312,9 +312,9 @@ const Adult = () => {
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
               <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Dewasa</h1>
               <p className="text-[#575757]" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi dewasa penting untuk menjaga kesehatan dan melindungi dari penyakit menular yang masih dapat mempengaruhi kehidupan sehari-hari. Vaksin flu tahunan, vaksin Tdap (difteri, tetanus, dan pertusis), serta vaksin herpes zoster dan pneumokokus, direkomendasikan untuk orang dewasa, terutama yang berusia di atas 50 tahun. Menjaga jadwal imunisasi ini membantu mengurangi risiko penyakit serius dan mendukung kesehatan jangka panjang.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
