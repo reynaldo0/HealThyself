@@ -183,12 +183,12 @@ const Teen = () => {
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
-                <img src="/icons/baby/susu.png" alt="Health" />
+                <img src="/icons/baby/REMAJA-1.png" alt="Health" />
                 <p className="font-bold text-xl text-white text-center">Kesehatan</p>
               </div>
 
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
+                <img src="/icons/baby/REMAJA-2.png" alt="Happiness" />
                 <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
               </div>
 
@@ -211,7 +211,7 @@ const Teen = () => {
 
             <h1 className="text-teen-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-teen-dark">Panduan</span> Perkembangan Bayi
+              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
@@ -248,7 +248,7 @@ const Teen = () => {
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana Makanan Seimbang<span className="text-baby-vlight"> untuk Remaja</span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
                 Menyusun pola makan yang seimbang bagi remaja penting untuk mendukung pertumbuhan dan kesehatan jangka panjang. Pastikan diet mereka mencakup nutrisi esensial seperti protein, kalsium, dan zat besi untuk energi dan keseimbangan yang optimal.
@@ -261,7 +261,7 @@ const Teen = () => {
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="900">
-              <img src="/assets/emak-anak.webp" alt="Mother and Child" className="w-96 h-auto" />
+              <img src="/assets/Remaja.png" alt="Mother and Child" className="w-96 h-auto" />
             </div>
           </div>
           {/* Ball components here */}

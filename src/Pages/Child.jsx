@@ -169,12 +169,12 @@ const Child = () => {
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
-                <img src="/icons/baby/susu.png" alt="Health" />
+                <img src="/icons/baby/ANAK-2.png" alt="Health" />
                 <p className="font-bold text-xl text-white text-center">Kesehatan</p>
               </div>
 
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
+                <img src="/icons/baby/ANAK-1.png" alt="Happiness" />
                 <p className="font-bold text-xl text-child-dark text-center">Bahagia</p>
               </div>
 
@@ -261,7 +261,7 @@ const Child = () => {
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="900">
-              <img src="/assets/emak-anak.webp" alt="Mother and Child" className="w-96 h-auto" />
+              <img src="/assets/Anak.png" alt="Mother and Child" className="w-96 h-auto" />
             </div>
           </div>
           {/* Ball components here */}

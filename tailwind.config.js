@@ -47,6 +47,18 @@ export default {
           light: '#18D8AD',
           normal: '#0E9D75',
           dark: '#1B856D'
+        },
+        adult: {
+          light: '#FFE4DA',
+          normal: '#F36932',
+          dark: '#DF4B10',
+          bg:'#F5581A',
+        },
+        elderly:{
+          light: '#D7FEF0',
+          normal: '#16AE79',
+          dark: '#0A6847',
+          bg:'#0A6847',
         }
       },
       fontFamily: {

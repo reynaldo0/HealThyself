@@ -17,6 +17,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import Footer from "../Components/Footer";
 import { Dewasa } from "../Components/Models/Dewasa";
 import ImageCarousel from "../Components/Corousel";
+import HeroButton from "../Components/HeroButton";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -39,7 +40,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
       {items.map((item, index) => (
         <div key={index} className="pt-5">
           <button
-            className="w-full px-4 py-5 text-left bg-baby-soft hover:bg-baby-vsoft text-white rounded-xl focus:outline-none flex items-center justify-between"
+            className="w-full px-4 py-5 text-left bg-adult-normal hover:bg-adult-vsoft text-white rounded-xl focus:outline-none flex items-center justify-between"
             onClick={() => toggleAccordion(index)}
           >
             <span>{item.title}</span>
@@ -52,7 +53,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-baby-ldark text-white/80 text-sm">
+            <div className="p-4 bg-adult-dark text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -131,7 +132,7 @@ const Adult = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      <Navbar>
+      <Navbar buttonColor="bg-adult-dark">
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />
         <Navbar.Item to={'#gizi'} title={'Gizi'} />
@@ -147,7 +148,7 @@ const Adult = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
 
-                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                <h1 className="font-bold text-4xl text-adult-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
                   Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
@@ -156,24 +157,15 @@ const Adult = () => {
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
-                <button
-                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
-                  onClick={() => window.location.href = '#panduan'}
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="900"
-                >
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text translate-x-2">Selengkapnya</span>
-                </button>
+                
+                <HeroButton  to="#panduan" circle="bg-adult-normal" textColor="text-adult-normal" />
 
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
               {/* wave */}
               <img
-                src="/assets/wave.svg"
+                src="/assets/adult/wave.svg"
                 alt="Wave Decoration"
                 className="absolute right-0 top-0 -z-10"
                 draggable="false"
@@ -191,21 +183,21 @@ const Adult = () => {
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
-                <img src="/icons/baby/susu.png" alt="Health" />
+                <img src="/icons/baby/DEWASA-2.png" alt="Health" />
                 <p className="font-bold text-xl text-white text-center">Kesehatan</p>
               </div>
 
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
-                <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
+                <img src="/icons/baby/DEWASA-1.png" alt="Happiness" />
+                <p className="font-bold text-xl text-adult-dark text-center">Bahagia</p>
               </div>
 
               {/* Animated Balls */}
-              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} />
-              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} />
-              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} />
-              <Ball classList="absolute -right-14 top-1/2" />
-              <Ball classList="absolute right-1/3 top-10 -z-10" color="#253B70" size={70} />
+              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} color="#FF8E8E" />
+              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} color="#FF8E8E" />
+              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110 } color="#FF8E8E" />
+              <Ball classList="absolute -right-14 top-1/2"  color="#fff" />
+              <Ball classList="absolute right-1/3 top-10 -z-10" color="#DF4B10" size={70} />
             </div>
           </div>
         </div>
@@ -217,9 +209,9 @@ const Adult = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
-            <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
+            <h1 className="text-adult-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
+              <span className="text-adult-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
@@ -250,13 +242,13 @@ const Adult = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-baby-dark py-12 relative">
+      <section id="gizi" className="bg-adult-dark py-12 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-adult-light">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
                 Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
@@ -269,7 +261,7 @@ const Adult = () => {
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="900">
-              <img src="/assets/emak-anak.webp" alt="Mother and Child" className="w-96 h-auto" />
+              <img src="/assets/Dewasa.png" alt="Mother and Child" className="w-96 h-auto" />
             </div>
           </div>
           {/* Ball components here */}
@@ -288,11 +280,11 @@ const Adult = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1
-              className="text-baby-normal font-bold text-3xl md:text-4xl text-center"
+              className="text-adult-normal font-bold text-3xl md:text-4xl text-center"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-baby-dark">Informasi </span> Gizi Anak
+              <span className="text-adult-dark">Informasi </span> Gizi Anak
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
@@ -312,8 +304,8 @@ const Adult = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
-              <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+              <h1 className="text-5xl font-bold text-adult-dark" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-adult-normal">Efektif Imunisasi</span> Bayi</h1>
               <p className="text-[#575757]" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
             </div>
@@ -336,7 +328,7 @@ const Adult = () => {
                       <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-baby-light"></span></h1>
+                      <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-adult-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
                       Permasalahan: Vaksin influenza tahunan penting untuk mencegah flu musiman. Banyak dewasa yang tidak mendapatkan vaksin tahunan secara konsisten, terutama pada musim flu, yang dapat menyebabkan peningkatan kasus flu dan komplikasi.</p>
                     </div>
@@ -349,7 +341,7 @@ const Adult = () => {
                       <img src="/assets/carousel/baby/Vaksin-DT.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-baby-light">(Td)</span></h1>
+                      <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria <span className="text-adult-light">(Td)</span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Booster setiap 10 tahun.
                       Permasalahan: Keterlambatan dalam menerima booster Td setiap 10 tahun dapat menyebabkan penurunan kekebalan terhadap tetanus dan difteri, berpotensi meningkatkan risiko infeksi.</p>
                     </div>
@@ -362,7 +354,7 @@ const Adult = () => {
                       <img src="/assets/carousel/baby/Vaksin-Pneumokokus.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-baby-light"></span></h1>
+                      <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Pneumokokus <span className="text-adult-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 65 tahun, atau lebih awal jika memiliki kondisi kesehatan tertentu.
                       Permasalahan: Vaksin pneumokokus melindungi dari infeksi paru-paru. Dewasa muda dengan risiko tinggi mungkin melewatkan vaksin ini, yang penting untuk mencegah pneumonia dan infeksi serius lainnya.</p>
                     </div>
@@ -375,7 +367,7 @@ const Adult = () => {
                       <img src="/assets/carousel/baby/Vaksin-HEPATITIS-B.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Hepatitis B <span className="text-baby-light"></span></h1>
+                      <h1 className="text-adult-dark font-bold text-3xl mb-4">Vaksin Hepatitis B <span className="text-adult-light"></span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis lengkap jika belum pernah menerima sebelumnya atau pada risiko tinggi.
                       Permasalahan: Vaksin Hepatitis B melindungi dari infeksi virus hepatitis B. Dewasa yang belum mendapatkan vaksinasi lengkap atau yang berisiko tinggi mungkin terpapar infeksi hepatitis B.</p>
                     </div>
@@ -402,7 +394,7 @@ const Adult = () => {
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
                 {as.map(() => (
                   <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
                       <h1 className="font-semibold mb-2">Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman</h1>
                       <p className="text-tertiary">Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
                     </div>
@@ -412,8 +404,8 @@ const Adult = () => {
             </div>
             <div className="w-full md:w-1/2 flex items-center">
               <div>
-                <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
+                <h1 className="text-adult-dark font-bold text-4xl mb-4" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-adult-light">Jiwa Bayi</span></h1>
                 <p data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
               </div>
@@ -427,9 +419,9 @@ const Adult = () => {
       <section id="lingkungan">
         <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
           <div className="container">
-            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
+            <h1 className="text-4xl font-bold text-adult-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
+              Panduan Lingkungan <span className="text-adult-light">Sehat untuk Bayi</span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
@@ -441,10 +433,10 @@ const Adult = () => {
               {[...Array(6)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                  className="bg-adult-light/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
                 >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                  <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                  <p className="text-sm text-adult-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
                 </div>
               ))}
             </div>
