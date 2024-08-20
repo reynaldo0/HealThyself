@@ -141,7 +141,7 @@ const Child = () => {
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
 
-                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                <h1 className="font-bold text-4xl text-child-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
                   Gaya Hidup Tidak Sehat Pada Anak Ancaman Bagi Generasi Mendatang
                 </h1>
@@ -167,7 +167,7 @@ const Child = () => {
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
               {/* wave */}
               <img
-                src="/assets/wave.svg"
+                src="/assets/child/wave.svg"
                 alt="Wave Decoration"
                 className="absolute right-0 top-0 -z-10"
                 draggable="false"
@@ -191,15 +191,15 @@ const Child = () => {
 
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
                 <img src="/icons/baby/kura-kura.png" alt="Happiness" />
-                <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
+                <p className="font-bold text-xl text-child-dark text-center">Bahagia</p>
               </div>
 
               {/* Animated Balls */}
-              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} />
-              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} />
-              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} />
-              <Ball classList="absolute -right-14 top-1/2" />
-              <Ball classList="absolute right-1/3 top-10 -z-10" color="#253B70" size={70} />
+              <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} color="#FF8E8E" />
+              <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} color="#FF8E8E" />
+              <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} color="#FF8E8E" />
+              <Ball classList="absolute -right-14 top-1/2" color="#FFF" />
+              <Ball classList="absolute right-1/3 top-10 -z-10" color="#B11414" size={70} />
             </div>
           </div>
         </div>
@@ -211,9 +211,9 @@ const Child = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
-            <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
+            <h1 className="text-child-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-baby-dark">Panduan</span> Perkembangan Anak
+              <span className="text-child-dark">Panduan</span> Perkembangan Anak
             </h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
