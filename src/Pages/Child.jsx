@@ -18,6 +18,7 @@ import ImageCarousel from "../Components/Corousel";
 import { Anak } from "../Components/Models/Anak";
 import accordionchild from "../docs/AccordionChild";
 import { Bar } from "react-chartjs-2";
+import HeroButton from "../Components/HeroButton";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -110,7 +111,7 @@ const Child = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      <Navbar type="child">
+      <Navbar buttonColor="bg-child-dark">
         <Navbar.Item to={'#'} title={'Beranda'} />
         <Navbar.Item to={'#panduan'} title={'Panduan'} />
         <Navbar.Item to={'#gizi'} title={'Gizi'} />
@@ -134,25 +135,9 @@ const Child = () => {
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Gaya hidup tidak sehat semakin mengancam kesehatan anak-anak di Indonesia, meningkatkan risiko obesitas, diabetes, dan penyakit jantung sejak dini. Pola makan tinggi gula dan lemak, kurangnya aktivitas fisik, serta rendahnya kesadaran akan pentingnya kesehatan memperparah situasi ini. Untuk melindungi masa depan anak-anak, perubahan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan yang lebih efektif sangat diperlukan.
-
-
-
-
-
-
-
                 </p>
-                <button
-                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
-                  onClick={() => window.location.href = '#panduan'}
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="900"
-                >
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text translate-x-2">Selengkapnya</span>
-                </button>
+
+                <HeroButton  to="#panduan" circle="bg-child-normal" textColor="text-child-normal" />
 
               </div>
             </div>

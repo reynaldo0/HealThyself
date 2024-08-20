@@ -18,6 +18,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
 import { Bar } from "react-chartjs-2";
+import HeroButton from "../Components/HeroButton";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend, Tooltip);
 
@@ -135,17 +136,8 @@ const Baby = () => {
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
-                <button
-                  className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
-                  onClick={() => window.location.href = '#panduan'}
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="900"
-                >
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text translate-x-2">Selengkapnya</span>
-                </button>
+
+                <HeroButton />
 
               </div>
             </div>
