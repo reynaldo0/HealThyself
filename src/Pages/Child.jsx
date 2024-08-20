@@ -394,22 +394,50 @@ const Child = () => {
                 depth: 100,
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
-                {as.map(() => (
+                
                   <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-child-normal">
-                      <h1 className="font-semibold mb-2">Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman</h1>
-                      <p className="text-tertiary">Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                      <h1 className="font-semibold mb-2">Membangun Kepercayaan Diri Melalui Dukungan Positif</h1>
+                      <p className="text-tertiary">Memberikan pujian dan dukungan positif terhadap pencapaian anak, sekecil apa pun, membantu membangun kepercayaan diri mereka. Dorong anak untuk mencoba hal-hal baru dan berikan apresiasi atas usaha mereka, bukan hanya hasilnya.</p>
                     </div>
                   </SwiperSlide>
-                ))}
+
+                  <SwiperSlide>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                      <h1 className="font-semibold mb-2">Mengembangkan Keterampilan Sosial Melalui Interaksi</h1>
+                      <p className="text-tertiary">Interaksi dengan teman sebaya dan anggota keluarga penting untuk perkembangan sosial anak. Dorong anak untuk bermain dengan teman-temannya, berbagi, dan bekerja sama, sehingga mereka belajar memahami dan menghargai perasaan orang lain.</p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                      <h1 className="font-semibold mb-2">Menanamkan Kedisiplinan dengan Cinta</h1>
+                      <p className="text-tertiary">Disiplin yang diterapkan dengan penuh kasih sayang dan konsistensi membantu anak memahami batasan dan aturan dengan cara yang positif. Gunakan pendekatan yang jelas dan tenang, serta berikan alasan di balik aturan untuk mengajarkan tanggung jawab dan pengendalian diri.</p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                      <h1 className="font-semibold mb-2">Mengatasi Stres dengan Aktivitas Relaksasi</h1>
+                      <p className="text-tertiary">Anak-anak juga dapat mengalami stres, baik dari sekolah maupun lingkungan sosial. Ajarkan mereka teknik relaksasi seperti pernapasan dalam, meditasi sederhana, atau kegiatan kreatif seperti menggambar, yang dapat membantu mereka mengelola emosi dengan lebih baik.</p>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                      <h1 className="font-semibold mb-2">Mendorong Ekspresi Emosional yang Sehat</h1>
+                      <p className="text-tertiary">Ajarkan anak untuk mengenali dan mengungkapkan perasaan mereka secara terbuka dan sehat. Berikan mereka ruang untuk berbicara tentang apa yang mereka rasakan dan bantu mereka menemukan cara-cara yang tepat untuk mengatasi emosi negatif.</p>
+                    </div>
+                  </SwiperSlide>
+              
               </Swiper>
             </div>
             <div className="w-full md:w-1/2 flex items-center">
               <div>
                 <h1 className="text-child-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-child-normal">Jiwa Bayi</span></h1>
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Membangun Dasar Kekuatan Mental <span className="text-child-normal">Pada Jiwa Anak</span></h1>
                 <p data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
+                  data-aos-easing="ease-in-out" data-aos-duration="800">Kesehatan mental anak adalah kunci untuk perkembangan emosional yang sehat dan seimbang. Dengan memberikan perhatian, dukungan, dan lingkungan yang positif, Anda membantu anak tumbuh menjadi individu yang percaya diri, resilient, dan bahagia. Berikut adalah beberapa cara efektif untuk mendukung kesehatan mental anak Anda.</p>
               </div>
             </div>
           </div>
