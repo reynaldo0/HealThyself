@@ -182,13 +182,17 @@ const Adult = () => {
                 <Dewasa />
               </Canvas>
               {/* card glassmorphism */}
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
-                <img src="/icons/baby/DEWASA-2.png" alt="Health" />
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/baby/DEWASA-2.png" alt="Health" data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200"  />
                 <p className="font-bold text-xl text-white text-center">Kesehatan</p>
               </div>
 
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/DEWASA-1.png" alt="Happiness" />
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md"data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/baby/DEWASA-1.png" alt="Happiness"  data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
                 <p className="font-bold text-xl text-adult-dark text-center">Bahagia</p>
               </div>
 

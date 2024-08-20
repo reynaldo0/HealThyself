@@ -54,7 +54,7 @@ const Team = () => {
                 <a href="https://github.com/avlfarizi" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faGithub}/>
                 </a>
-                <a href="#" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
+                <a href="https://www.linkedin.com/in/muhammad-salman-al-farisi-14a517324/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
                   <FontAwesomeIcon icon={faLinkedin}/>
                 </a>
                 <a href="https://www.instagram.com/avlfarizi/" className="text-secondary ease-in-out group-hover:text-white text-4xl p-5">
