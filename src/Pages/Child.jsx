@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
-import Bayi from "../Components/Models/landingPage/Bayi";
 import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
@@ -18,6 +17,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
+import { Anak } from "../Components/Models/Anak";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -56,11 +56,11 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Baby = () => {
+const Child = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef(); // Ref for container element
+  const containerRef = useRef();
 
   const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan", "6 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -169,7 +169,7 @@ const Baby = () => {
                   minPolarAngle={Math.PI * 0.3}
                   maxPolarAngle={Math.PI * 0.6}
                 />
-                <Bayi />
+                <Anak />
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
@@ -199,11 +199,11 @@ const Baby = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
             <p className="text-base text-tertiary text-center max-w-[600px]" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out">
               Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
@@ -285,11 +285,11 @@ const Baby = () => {
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
             <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
-          data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out">
               Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
             <ImageCarousel />
@@ -430,29 +430,29 @@ const Baby = () => {
 
       {/* panduan lingkungan start */}
       <section id="lingkungan">
-    <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
-        <div className="container">
+        <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
+          <div className="container">
             <h1 className="text-4xl font-bold text-baby-dark text-center mb-4">
-                Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
+              Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto">
-                Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
+              Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group">
-                {[...Array(6)].map((_, index) => (
-                    <div
-                        key={index}
-                        className="bg-baby-vlight/20 hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white"
-                    >
-                        <h5 className="font-semibold mb-2 text-baby-normal group-hover:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
-                        <p className="text-sm text-baby-light group-hover:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
-                    </div>
-                ))}
+              {[...Array(6)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-baby-vlight/20 hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                  <p className="text-sm text-baby-light group-hover:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                </div>
+              ))}
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
 
       {/* panduan lingkungan end */}
@@ -461,4 +461,4 @@ const Baby = () => {
   );
 };
 
-export default Baby;
+export default Child;
