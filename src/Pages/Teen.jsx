@@ -368,8 +368,9 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HEPATITIS <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hepatitis B diberikan untuk melindungi bayi dari infeksi virus hepatitis B, yang dapat menyebabkan kerusakan hati yang serius seperti sirosis atau kanker hati. Vaksin ini biasanya diberikan segera setelah bayi lahir, pada hari pertama kehidupannya, untuk mencegah penularan dari ibu yang mungkin terinfeksi virus tersebut.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Meningokokus <span className="text-baby-light"></span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dosis kedua pada usia 16 tahun.
+                      Permasalahan: Vaksin meningokokus melindungi dari infeksi meningitis yang berpotensi fatal. Beberapa remaja mungkin melewatkan dosis kedua pada usia 16 tahun, yang penting untuk perlindungan berkelanjutan.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -380,8 +381,10 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN BCG <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin BCG diberikan untuk melindungi bayi dari tuberkulosis (TBC), penyakit yang menyerang paru-paru dan organ lainnya. Vaksin ini diberikan pada usia 1 bulan dan sangat penting di negara-negara di mana TBC masih menjadi masalah kesehatan masyarakat.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria-pertussis <span className="text-baby-light">(Tdap)
+                      </span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis booster pada usia 11-12 tahun.
+                      Permasalahan: Vaksin Tdap melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dalam menerima booster pada usia 11-12 tahun dapat meningkatkan risiko infeksi.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -392,8 +395,9 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN POLIO <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin polio melindungi bayi dari poliomielitis, penyakit virus yang dapat menyebabkan kelumpuhan permanen. Vaksin polio diberikan dalam beberapa dosis pada usia 2, 3, dan 4 bulan untuk memastikan perlindungan penuh terhadap virus polio.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin HPV <span className="text-baby-light">(Human Papillomavirus)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis pertama pada usia 11-12 tahun, dengan dosis kedua 1-2 bulan setelah dosis pertama, dan dosis ketiga 6 bulan setelah dosis pertama.
+                      Permasalahan: Keterlambatan atau ketidaklengkapan dosis vaksin HPV dapat mengurangi efektivitas dalam mencegah kanker di masa depan. Banyak remaja mungkin tidak menyelesaikan seluruh rangkaian dosis.</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -404,35 +408,12 @@ const Teen = () => {
                       <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN DTP <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin DTP melindungi bayi dari tiga penyakit serius: difteri, tetanus, dan pertusis (batuk rejan). Difteri dapat menyebabkan masalah pernapasan, tetanus menyerang sistem saraf dan bisa berakibat fatal, sementara pertusis adalah penyakit pernapasan yang sangat menular. Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.</p>
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Varicella <span className="text-baby-light">(Cacar Air)</span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Jika belum menerima dosis lengkap sebelumnya, dosis pertama pada usia 13-18 tahun, dengan dosis kedua 4-8 minggu kemudian.
+                      Permasalahan: Remaja yang belum mendapatkan vaksin cacar air sebelumnya mungkin melewatkan kesempatan untuk mendapatkan perlindungan penuh, meningkatkan risiko infeksi di usia dewasa muda.</p>
                     </div>
                   </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN HIB <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin Hib melindungi bayi dari infeksi bakteri Haemophilus influenzae tipe B, yang dapat menyebabkan penyakit serius seperti meningitis (radang selaput otak), pneumonia, dan epiglotitis. Vaksin Hib diberikan pada usia 2, 3, dan 4 bulan.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                    <div className="flex-1">
-                      <img src="/assets/carousel/baby/mmr.jpg" alt="Immunization" />
-                    </div>
-                    <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-baby-light">dan Vaksinasi</span></h1>
-                      <p className="text-tertiary text-sm">Vaksin MMR melindungi bayi dari tiga penyakit virus: campak (measles), gondongan (mumps), dan rubella. Ketiganya dapat menyebabkan komplikasi serius, terutama pada bayi dan anak kecil. Vaksin MMR diberikan pada usia 12 bulan.</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                </SwiperSlide>                                                                                                                                                                                                             
 
 
               </Swiper>
