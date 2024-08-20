@@ -12,13 +12,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } from "chart.js";
+import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale, Tooltip } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
+import { Bar } from "react-chartjs-2";
 
-Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
+Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend, Tooltip);
 
 const Accordion = React.memo(({ items, initialOpenIndex }) => {
   const [openIndex, setOpenIndex] = useState(initialOpenIndex);
@@ -56,67 +57,51 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
 });
 
 const Baby = () => {
-  const canvasRef = useRef();
-  const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
   const containerRef = useRef(); // Ref for container element
 
-  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-  useEffect(() => {
-    if (canvasRef.current) {
-      if (chartRef.current) {
-        chartRef.current.destroy();
-      }
+  const chartData = [
+    { tinggi: 53.8, berat: 4.3 },
+    { tinggi: 56.1, berat: 5.3 },
+    { tinggi: 56.2, berat: 5.5 },
+    { tinggi: 59.9, berat: 6 },
+    { tinggi: 62.2, berat: 6.6 },
+    { tinggi: 64, berat: 6.9 },
+    { tinggi: 65.7, berat: 7.3 },
+    { tinggi: 67.3, berat: 7.9 },
+    { tinggi: 68.8, berat: 8.2 },
+    { tinggi: 70, berat: 8.5 },
+    { tinggi: 71.6, berat: 8.8 },
+    { tinggi: 72.8, berat: 9 },
+  ]
 
-      chartRef.current = new Chart(canvasRef.current, {
-        type: "bar",
-        data: {
-          labels: as.map(a => a + ' bulan'),
-          datasets: [
-            {
-              label: "Tinggi",
-              data: [53.8, 56.1, 56.2, 59.9, 62.2, 64, 65.7, 67.3, 68.8, 70, 71.6, 72.8],
-              borderWidth: 1,
-              borderRadius: Number.MAX_VALUE,
-              backgroundColor: 'rgba(66, 90, 148, 0.25)',
-              borderColor: '#004BFF'
-            },
-            {
-              label: "Berat",
-              data: [4.3, 5.3, 5.3, 6, 6.6, 6.9, 7.3, 7.9, 8.2, 8.5, 8.8, 9],
-              borderWidth: 1,
-              borderRadius: Number.MAX_VALUE,
-              backgroundColor: 'rgba(255, 104, 44, 0.25)',
-              borderColor: '#FF682C '
-            },
-          ],
-        },
-        options: {
-          hover: {
-            mode: 'index',
-            intersect: false
-          },
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'bottom'
-            },
-            tooltip: {
-              enabled: true
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    }
-  }, []);
+  const chartOptions = {
+    hover: {
+      mode: 'index',
+      intersect: false
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: true
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          callback: function (value, index, ticks) {
+            return value + ' cm';
+          }
+        }
+      },
+    },
+  }
 
   useEffect(() => {
     const container = document.querySelector('.page-container');
@@ -221,7 +206,21 @@ const Baby = () => {
             </p>
           </div>
 
-          <canvas ref={canvasRef} className="max-w-full w-[750px] mx-auto"></canvas>
+          <Bar data={{
+            labels: chartData.map(data => data.berat + ' kg'),
+            xLabels: 'kg',
+            yLabels: 'cm',
+            datasets: [
+              {
+                label: "Berat",
+                data: chartData.map(data => data.tinggi),
+                borderWidth: 1,
+                borderRadius: Number.MAX_VALUE,
+                backgroundColor: 'rgba(66, 90, 148, 0.25)',
+                borderColor: '#004BFF'
+              }
+            ]
+          }} options={chartOptions} className="w-[750px] mx-auto" />
 
         </div>
       </section>
