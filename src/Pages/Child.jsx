@@ -529,8 +529,16 @@ const Child = () => {
 
 
       {/* panduan lingkungan end */}
-      <Footer backgroundColor="#B11414" />
+      <Footer backgroundColor="#253B70">
+        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'kemkes.go.id'} />
+        <Footer.Source link={'http://halodoc.com/'} title={'halodoc.com'} />
+        <Footer.Source link={'http://nursing.ui.ac.id'} title={'nursing.ui.ac.id'} />
+        <Footer.Source link={'http://nutriclub.co.id'} title={'nutriclub.co.id'} />
+        <Footer.Source link={'http://bunda.co.id'} title={'bunda.co.id'} />
+        <Footer.Source link={'http://emc.id'} title={'emc.id'} />
+      </Footer>
     </section>
+
   );
 };
 

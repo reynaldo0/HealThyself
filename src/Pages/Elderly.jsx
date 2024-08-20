@@ -471,7 +471,14 @@ const Elderly = () => {
 
 
             {/* panduan lingkungan end */}
-            <Footer backgroundColor="#253B70" />
+            <Footer backgroundColor="#253B70">
+        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'kemkes.go.id'} />
+        <Footer.Source link={'http://golansia.com/'} title={'golansia.com'} />
+        <Footer.Source link={'http://who.int'} title={'who.int'} />
+        <Footer.Source link={'http://stikestelogorejo.ac.id'} title={'stikestelogorejo.ac.id'} />
+        <Footer.Source link={'http://nestlehealthscience.co.id'} title={'nestlehealthscience.co.id'} />
+        <Footer.Source link={'http://rsprespira.jogjaprov.go.id'} title={'rsprespira.jogjaprov.go.id'} />
+      </Footer>
         </section>
     );
 };
