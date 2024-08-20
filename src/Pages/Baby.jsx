@@ -247,7 +247,7 @@ const Baby = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-baby-dark py-12 relative">
+      <section id="gizi" className="bg-baby-dark py-12 relative z-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
@@ -454,7 +454,7 @@ const Baby = () => {
 
               </Swiper>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
+            <div className="w-full md:w-1/2 flex items-center mt-20">
   <div>
     <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
       Membangun Fondasi <span className="text-baby-light">Kesehatan Mental</span>

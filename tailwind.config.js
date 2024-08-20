@@ -44,7 +44,7 @@ export default {
           dark: "#B11414",
         },
         teen: {
-          light: '#18D8AD',
+          light: '#1CB08F',
           normal: '#0E9D75',
           dark: '#1B856D'
         },

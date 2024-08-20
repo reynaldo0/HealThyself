@@ -194,9 +194,9 @@ const Elderly = () => {
 
                             {/* Animated Balls */}
                             <Ball classList="absolute -right-8 top-10 animation-delay-1000" size={100} color="#08D28B" />
-                            <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} color="#08D28B"/>
+                            <Ball classList="absolute right-40 top-64 animation-delay-1500" size={70} color="#08D28B" />
                             <Ball classList="absolute right-24 bottom-12 animation-delay-1500" size={110} color="#08D28B" />
-                            <Ball classList="absolute -right-14 top-1/2" color="#fff"/>
+                            <Ball classList="absolute -right-14 top-1/2" color="#fff" />
                             <Ball classList="absolute right-1/3 top-10 -z-10" color="#0A6847" size={70} />
                         </div>
                     </div>
@@ -234,7 +234,7 @@ const Elderly = () => {
                 />
                 <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
                 <img
-                    src="/background/awan-biru.png"
+                    src="/background/awan-toska.png"
                     alt="Blue Clouds"
                     className="absolute w-full bottom-0 z-10"
                 />
@@ -242,7 +242,7 @@ const Elderly = () => {
             {/* video bayi end */}
 
             {/* rencana asi bayi start */}
-            <section id="gizi" className="bg-elderly-dark py-12 relative">
+            <section id="gizi" className="bg-elderly-dark py-12 relative z-20">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-start gap-12">
                         <div className="flex-1">
@@ -277,30 +277,30 @@ const Elderly = () => {
 
             {/* rencana gizi bayi start */}
             <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
-        <div className="container">
-          <div className="flex flex-col justify-center items-center gap-5">
-            <h1
-              className="text-elderly-normal font-bold text-3xl md:text-4xl text-center"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-            >
-              <span className="text-elderly-dark">Informasi </span> Gizi Anak
-            </h1>
-            <p
-              className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-            >
-              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
-            </p>
-            <ImageCarousel slides={slides} />
-          </div>
-        </div>
-      </section>
+                <div className="container">
+                    <div className="flex flex-col justify-center items-center gap-5">
+                        <h1
+                            className="text-elderly-normal font-bold text-3xl md:text-4xl text-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-out"
+                        >
+                            <span className="text-elderly-dark">Informasi </span> Gizi Anak
+                        </h1>
+                        <p
+                            className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-out"
+                        >
+                            Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+                        </p>
+                        <ImageCarousel slides={slides} />
+                    </div>
+                </div>
+            </section>
             {/* rencana gizi bayi end */}
 
             {/* jenis vaksinasi start */}
-            <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi.png')]">
+            <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi-toska.png')]">
                 <div className="container">
                     <div className="flex flex-col md:flex-row gap-10">
                         <div className="flex flex-col flex-1 gap-5">
@@ -405,7 +405,7 @@ const Elderly = () => {
                 </div>
             </section>
 
-            <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
+            <section id="perawatan" className="md:bg-[url('/background/wave-toska.png')] bg-cover md:h-[150vh]">
                 <div className="container">
                     <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
                         <div className="w-full md:w-1/2" data-aos="fade-up"
@@ -429,7 +429,7 @@ const Elderly = () => {
                         </div>
                         <div className="w-full md:w-1/2 flex items-center">
                             <div>
-                                <h1 className="text-elderly-nor font-bold text-4xl mb-4" data-aos="fade-up"
+                                <h1 className="text-elderly-normal font-bold text-4xl mb-4" data-aos="fade-up"
                                     data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-elderly-normal">Jiwa Bayi</span></h1>
                                 <p data-aos="fade-up"
                                     data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
