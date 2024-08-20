@@ -182,13 +182,17 @@ const Teen = () => {
                 <Remaja />
               </Canvas>
               {/* card glassmorphism */}
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
-                <img src="/icons/baby/susu.png" alt="Health" />
-                <p className="font-bold text-xl text-white text-center">Kesehatan</p>
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/headset.png" alt="Health" data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
+                <p className="font-bold text-xl text-white text-center">Bahagia</p>
               </div>
 
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/piala.png" alt="Happiness" data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
                 <p className="font-bold text-xl text-baby-dark text-center">Bahagia</p>
               </div>
 
@@ -383,66 +387,66 @@ const Teen = () => {
       </section>
 
       <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
-  <div className="container">
-    <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
-      <div className="w-full md:w-1/2" data-aos="fade-up"
-        data-aos-easing="ease-in-out" data-aos-duration="700">
-        <Swiper spaceBetween={16} direction={isMobile ? 'horizontal' : 'vertical'} effect={'coverflow'} coverflowEffect={{
-          slideShadows: false,
-          rotate: 0,
-          stretch: -20,
-          depth: 100,
-          modifier: 2.5,
-        }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
-        
-          <SwiperSlide>
-            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-              <h1 className="font-semibold mb-2">Dukung Kesehatan Mental Remaja dengan Komunikasi Terbuka</h1>
-              <p className="text-tertiary">Mengajak remaja berbicara secara terbuka tentang perasaan dan tantangan mereka dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental. Diskusi rutin dan dukungan emosional sangat penting.</p>
-            </div>
-          </SwiperSlide>
+        <div className="container">
+          <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
+            <div className="w-full md:w-1/2" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="700">
+              <Swiper spaceBetween={16} direction={isMobile ? 'horizontal' : 'vertical'} effect={'coverflow'} coverflowEffect={{
+                slideShadows: false,
+                rotate: 0,
+                stretch: -20,
+                depth: 100,
+                modifier: 2.5,
+              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
 
-          <SwiperSlide>
-            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-              <h1 className="font-semibold mb-2">Pentingnya Aktivitas Fisik untuk Remaja</h1>
-              <p className="text-tertiary">Aktivitas fisik yang teratur tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga untuk kesehatan mental. Dorong remaja untuk berpartisipasi dalam olahraga atau kegiatan fisik yang mereka nikmati.</p>
-            </div>
-          </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+                    <h1 className="font-semibold mb-2">Dukung Kesehatan Mental Remaja dengan Komunikasi Terbuka</h1>
+                    <p className="text-tertiary">Mengajak remaja berbicara secara terbuka tentang perasaan dan tantangan mereka dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental. Diskusi rutin dan dukungan emosional sangat penting.</p>
+                  </div>
+                </SwiperSlide>
 
-          <SwiperSlide>
-            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-              <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
-              <p className="text-tertiary">Teknik relaksasi seperti meditasi dan latihan pernapasan dapat membantu remaja mengelola stres dan kecemasan. Ajarkan mereka teknik-teknik ini sebagai bagian dari rutinitas harian mereka.</p>
-            </div>
-          </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+                    <h1 className="font-semibold mb-2">Pentingnya Aktivitas Fisik untuk Remaja</h1>
+                    <p className="text-tertiary">Aktivitas fisik yang teratur tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga untuk kesehatan mental. Dorong remaja untuk berpartisipasi dalam olahraga atau kegiatan fisik yang mereka nikmati.</p>
+                  </div>
+                </SwiperSlide>
 
-          <SwiperSlide>
-            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-              <h1 className="font-semibold mb-2">Dukung Keseimbangan Kegiatan Akademis dan Sosial</h1>
-              <p className="text-tertiary">Membantu remaja menyeimbangkan waktu antara kegiatan akademis dan sosial dapat mengurangi tekanan dan meningkatkan kesejahteraan mereka. Pastikan mereka memiliki waktu untuk bersantai dan bersosialisasi.</p>
-            </div>
-          </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+                    <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
+                    <p className="text-tertiary">Teknik relaksasi seperti meditasi dan latihan pernapasan dapat membantu remaja mengelola stres dan kecemasan. Ajarkan mereka teknik-teknik ini sebagai bagian dari rutinitas harian mereka.</p>
+                  </div>
+                </SwiperSlide>
 
-          <SwiperSlide>
-            <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
-              <h1 className="font-semibold mb-2">Bantu Remaja Mengembangkan Keterampilan Coping</h1>
-              <p className="text-tertiary">Mengajarkan keterampilan coping yang sehat dapat membantu remaja menghadapi tantangan dan stres. Keterampilan ini termasuk memecahkan masalah, mengatur waktu, dan mencari dukungan ketika diperlukan.</p>
-            </div>
-          </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+                    <h1 className="font-semibold mb-2">Dukung Keseimbangan Kegiatan Akademis dan Sosial</h1>
+                    <p className="text-tertiary">Membantu remaja menyeimbangkan waktu antara kegiatan akademis dan sosial dapat mengurangi tekanan dan meningkatkan kesejahteraan mereka. Pastikan mereka memiliki waktu untuk bersantai dan bersosialisasi.</p>
+                  </div>
+                </SwiperSlide>
 
-        </Swiper>
-      </div>
-      <div className="w-full md:w-1/2 flex items-center">
-        <div>
-          <h1 className="text-blue-800 font-bold text-4xl mb-4" data-aos="fade-up"
-            data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-blue-500">Kesehatan Remaja</span></h1>
-          <p data-aos="fade-up"
-            data-aos-easing="ease-in-out" data-aos-duration="800">Perawatan kesehatan mental remaja adalah aspek penting dalam mendukung mereka selama masa-masa penuh perubahan ini. Dengan memberikan dukungan yang tepat dan mengajarkan keterampilan hidup yang sehat, Anda dapat membantu remaja tumbuh menjadi individu yang seimbang dan percaya diri.</p>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-blue-300">
+                    <h1 className="font-semibold mb-2">Bantu Remaja Mengembangkan Keterampilan Coping</h1>
+                    <p className="text-tertiary">Mengajarkan keterampilan coping yang sehat dapat membantu remaja menghadapi tantangan dan stres. Keterampilan ini termasuk memecahkan masalah, mengatur waktu, dan mencari dukungan ketika diperlukan.</p>
+                  </div>
+                </SwiperSlide>
+
+              </Swiper>
+            </div>
+            <div className="w-full md:w-1/2 flex items-center">
+              <div>
+                <h1 className="text-blue-800 font-bold text-4xl mb-4" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-blue-500">Kesehatan Remaja</span></h1>
+                <p data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="800">Perawatan kesehatan mental remaja adalah aspek penting dalam mendukung mereka selama masa-masa penuh perubahan ini. Dengan memberikan dukungan yang tepat dan mengajarkan keterampilan hidup yang sehat, Anda dapat membantu remaja tumbuh menjadi individu yang seimbang dan percaya diri.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       {/* panduan lingkungan start */}
@@ -451,7 +455,7 @@ const Teen = () => {
           <div className="container">
             <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-             Remaja Juga Butuh <span className="text-baby-light">Lingkungan Sehat & Aman </span>
+              Remaja Juga Butuh <span className="text-baby-light">Lingkungan Sehat & Aman </span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
@@ -460,50 +464,50 @@ const Teen = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Ruang Belajar yang Nyaman</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja memiliki area belajar yang bebas dari gangguan dan nyaman. Lingkungan belajar yang tenang dengan pencahayaan yang baik, kursi yang ergonomis, dan perlengkapan yang memadai dapat meningkatkan konsentrasi dan efektivitas belajar mereka.</p>
-                </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Fasilitasi Kegiatan Fisik dan Olahraga</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white"> Ajak remaja untuk berpartisipasi dalam aktivitas fisik secara rutin, seperti olahraga atau permainan luar ruangan. Kegiatan fisik tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental.</p>
-                </div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Ruang Belajar yang Nyaman</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja memiliki area belajar yang bebas dari gangguan dan nyaman. Lingkungan belajar yang tenang dengan pencahayaan yang baik, kursi yang ergonomis, dan perlengkapan yang memadai dapat meningkatkan konsentrasi dan efektivitas belajar mereka.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Dukungan Kesehatan Mental yang Kuat</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Berikan dukungan emosional dan mental dengan menjaga komunikasi terbuka. Buat lingkungan yang aman bagi remaja untuk berbicara tentang perasaan mereka dan pertimbangkan untuk menyediakan akses ke konseling atau dukungan psikologis jika diperlukan.</p>
-                </div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Fasilitasi Kegiatan Fisik dan Olahraga</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white"> Ajak remaja untuk berpartisipasi dalam aktivitas fisik secara rutin, seperti olahraga atau permainan luar ruangan. Kegiatan fisik tidak hanya bermanfaat untuk kesehatan tubuh tetapi juga dapat membantu mengurangi stres dan meningkatkan kesejahteraan mental.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Sediakan Pola Makan Sehat</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja mendapatkan nutrisi yang cukup dengan menyediakan makanan sehat dan bergizi di rumah. Mengatur jadwal makan yang teratur dan menghindari makanan cepat saji dapat membantu menjaga kesehatan fisik dan mental mereka.</p>
-                </div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Dukungan Kesehatan Mental yang Kuat</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Berikan dukungan emosional dan mental dengan menjaga komunikasi terbuka. Buat lingkungan yang aman bagi remaja untuk berbicara tentang perasaan mereka dan pertimbangkan untuk menyediakan akses ke konseling atau dukungan psikologis jika diperlukan.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Atur Waktu Layar dengan Bijak</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Batasi waktu yang dihabiskan remaja di depan layar gadget untuk mencegah gangguan tidur dan masalah kesehatan lainnya. Dorong mereka untuk mengambil istirahat teratur dan menghabiskan waktu di luar ruangan.</p>
-                </div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Sediakan Pola Makan Sehat</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Pastikan remaja mendapatkan nutrisi yang cukup dengan menyediakan makanan sehat dan bergizi di rumah. Mengatur jadwal makan yang teratur dan menghindari makanan cepat saji dapat membantu menjaga kesehatan fisik dan mental mereka.</p>
+              </div>
 
-                <div
-                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Lingkungan Sosial yang Positif</h5>
-                  <p className="text-sm text-baby-light group-hover/item:text-white">Ajak remaja untuk bergaul dengan teman-teman yang mendukung dan positif. Lingkungan sosial yang sehat dapat memperkuat rasa percaya diri dan mengurangi risiko masalah sosial atau emosional.</p>
-                </div>
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Atur Waktu Layar dengan Bijak</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Batasi waktu yang dihabiskan remaja di depan layar gadget untuk mencegah gangguan tidur dan masalah kesehatan lainnya. Dorong mereka untuk mengambil istirahat teratur dan menghabiskan waktu di luar ruangan.</p>
+              </div>
 
-            
+              <div
+                className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Lingkungan Sosial yang Positif</h5>
+                <p className="text-sm text-baby-light group-hover/item:text-white">Ajak remaja untuk bergaul dengan teman-teman yang mendukung dan positif. Lingkungan sosial yang sehat dapat memperkuat rasa percaya diri dan mengurangi risiko masalah sosial atau emosional.</p>
+              </div>
+
+
             </div>
           </div>
         </div>
