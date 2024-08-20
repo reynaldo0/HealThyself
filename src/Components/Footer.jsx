@@ -25,7 +25,7 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                                 </li>
                                 <li className="mb-4 flex items-center gap-3 text-base">
                                     <ion-icon name="mail"></ion-icon>
-                                    <a href="#" className="hover:underline">rebellumin@gmail.com</a>
+                                    <a href="#" className="hover:underline">Healthyself@gmail.com</a>
                                 </li>
                             </ul>
                         </div>

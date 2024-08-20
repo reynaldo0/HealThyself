@@ -246,7 +246,7 @@ const Baby = () => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
-              <h2 className="text-2xl font-bold mb-4 text-white" data-aos="fade-up"
+              <h2 className="text-2xl md:text-6xl font-bold mb-4 text-white" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="800">
