@@ -6,6 +6,8 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import Child from './Pages/Child';
 import Teen from './Pages/Teen';
+import Adult from './Pages/Adult';
+import Elderly from './Pages/Teen';
 
 Aos.init({
   // mirror: false,
@@ -21,6 +23,8 @@ function App() {
         <Route path="/baby" element={<Baby />} />
         <Route path="/child" element={<Child />} />
         <Route path="/teen" element={<Teen />} />
+        <Route path="/adult" element={<Adult />} />
+        <Route path="/elderly" element={<Elderly />} />
       </Routes>
     </Router>
   );

@@ -55,7 +55,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Baby = () => {
+const Adult = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
@@ -513,4 +513,4 @@ const Baby = () => {
   );
 };
 
-export default Baby;
+export default Adult;

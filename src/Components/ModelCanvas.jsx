@@ -68,7 +68,7 @@ const ModelCanvas = ({
           </p>
         </div>
         <a href={href} className="mt-4 px-4 md:right-20 inline-block text-center bg-white/20 w-full border border-white/25 hover:bg-white/30 backdrop-blur-md text-white py-2 rounded">
-          Tombol
+          Pilih
         </a>
       </div>
     </div>
