@@ -144,7 +144,7 @@ const Child = () => {
                   Gaya hidup tidak sehat semakin mengancam kesehatan anak-anak di Indonesia, meningkatkan risiko obesitas, diabetes, dan penyakit jantung sejak dini. Pola makan tinggi gula dan lemak, kurangnya aktivitas fisik, serta rendahnya kesadaran akan pentingnya kesehatan memperparah situasi ini. Untuk melindungi masa depan anak-anak, perubahan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan yang lebih efektif sangat diperlukan.
                 </p>
 
-                <HeroButton  to="#panduan" circle="bg-child-normal" textColor="text-child-normal" />
+                <HeroButton to="#panduan" circle="bg-child-normal" textColor="text-child-normal" />
 
               </div>
             </div>
@@ -168,14 +168,18 @@ const Child = () => {
                 <Anak />
               </Canvas>
               {/* card glassmorphism */}
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
-                <img src="/icons/baby/susu.png" alt="Health" />
-                <p className="font-bold text-xl text-white text-center">Kesehatan</p>
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700" >
+                <img src="/icons/bahagia.png" alt="Health" data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
+                <p className="font-bold text-xl text-white text-center">Bahagia</p>
               </div>
 
-              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md">
-                <img src="/icons/baby/kura-kura.png" alt="Happiness" />
-                <p className="font-bold text-xl text-child-dark text-center">Bahagia</p>
+              <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/30 border backdrop-blur-[50px] border-white rounded-[34px] right-[500px] top-[300px] p-4 shadow-md" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="/icons/terampil.png" alt="Happiness" data-aos="zoom-in"
+                  data-aos-easing="ease-in-out" data-aos-duration="1200" />
+                <p className="font-bold text-xl text-child-dark text-center">Terampil</p>
               </div>
 
               {/* Animated Balls */}
@@ -407,42 +411,42 @@ const Child = () => {
                 depth: 100,
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
-                
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                      <h1 className="font-semibold mb-2">Membangun Kepercayaan Diri Melalui Dukungan Positif</h1>
-                      <p className="text-tertiary">Memberikan pujian dan dukungan positif terhadap pencapaian anak, sekecil apa pun, membantu membangun kepercayaan diri mereka. Dorong anak untuk mencoba hal-hal baru dan berikan apresiasi atas usaha mereka, bukan hanya hasilnya.</p>
-                    </div>
-                  </SwiperSlide>
 
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                      <h1 className="font-semibold mb-2">Mengembangkan Keterampilan Sosial Melalui Interaksi</h1>
-                      <p className="text-tertiary">Interaksi dengan teman sebaya dan anggota keluarga penting untuk perkembangan sosial anak. Dorong anak untuk bermain dengan teman-temannya, berbagi, dan bekerja sama, sehingga mereka belajar memahami dan menghargai perasaan orang lain.</p>
-                    </div>
-                  </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Membangun Kepercayaan Diri Melalui Dukungan Positif</h1>
+                    <p className="text-tertiary">Memberikan pujian dan dukungan positif terhadap pencapaian anak, sekecil apa pun, membantu membangun kepercayaan diri mereka. Dorong anak untuk mencoba hal-hal baru dan berikan apresiasi atas usaha mereka, bukan hanya hasilnya.</p>
+                  </div>
+                </SwiperSlide>
 
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                      <h1 className="font-semibold mb-2">Menanamkan Kedisiplinan dengan Cinta</h1>
-                      <p className="text-tertiary">Disiplin yang diterapkan dengan penuh kasih sayang dan konsistensi membantu anak memahami batasan dan aturan dengan cara yang positif. Gunakan pendekatan yang jelas dan tenang, serta berikan alasan di balik aturan untuk mengajarkan tanggung jawab dan pengendalian diri.</p>
-                    </div>
-                  </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Mengembangkan Keterampilan Sosial Melalui Interaksi</h1>
+                    <p className="text-tertiary">Interaksi dengan teman sebaya dan anggota keluarga penting untuk perkembangan sosial anak. Dorong anak untuk bermain dengan teman-temannya, berbagi, dan bekerja sama, sehingga mereka belajar memahami dan menghargai perasaan orang lain.</p>
+                  </div>
+                </SwiperSlide>
 
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                      <h1 className="font-semibold mb-2">Mengatasi Stres dengan Aktivitas Relaksasi</h1>
-                      <p className="text-tertiary">Anak-anak juga dapat mengalami stres, baik dari sekolah maupun lingkungan sosial. Ajarkan mereka teknik relaksasi seperti pernapasan dalam, meditasi sederhana, atau kegiatan kreatif seperti menggambar, yang dapat membantu mereka mengelola emosi dengan lebih baik.</p>
-                    </div>
-                  </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Menanamkan Kedisiplinan dengan Cinta</h1>
+                    <p className="text-tertiary">Disiplin yang diterapkan dengan penuh kasih sayang dan konsistensi membantu anak memahami batasan dan aturan dengan cara yang positif. Gunakan pendekatan yang jelas dan tenang, serta berikan alasan di balik aturan untuk mengajarkan tanggung jawab dan pengendalian diri.</p>
+                  </div>
+                </SwiperSlide>
 
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
-                      <h1 className="font-semibold mb-2">Mendorong Ekspresi Emosional yang Sehat</h1>
-                      <p className="text-tertiary">Ajarkan anak untuk mengenali dan mengungkapkan perasaan mereka secara terbuka dan sehat. Berikan mereka ruang untuk berbicara tentang apa yang mereka rasakan dan bantu mereka menemukan cara-cara yang tepat untuk mengatasi emosi negatif.</p>
-                    </div>
-                  </SwiperSlide>
-              
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Mengatasi Stres dengan Aktivitas Relaksasi</h1>
+                    <p className="text-tertiary">Anak-anak juga dapat mengalami stres, baik dari sekolah maupun lingkungan sosial. Ajarkan mereka teknik relaksasi seperti pernapasan dalam, meditasi sederhana, atau kegiatan kreatif seperti menggambar, yang dapat membantu mereka mengelola emosi dengan lebih baik.</p>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+                    <h1 className="font-semibold mb-2">Mendorong Ekspresi Emosional yang Sehat</h1>
+                    <p className="text-tertiary">Ajarkan anak untuk mengenali dan mengungkapkan perasaan mereka secara terbuka dan sehat. Berikan mereka ruang untuk berbicara tentang apa yang mereka rasakan dan bantu mereka menemukan cara-cara yang tepat untuk mengatasi emosi negatif.</p>
+                  </div>
+                </SwiperSlide>
+
               </Swiper>
             </div>
             <div className="w-full md:w-1/2 flex items-center">
@@ -473,51 +477,51 @@ const Child = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              
-                <div
-                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Keamanan Utama: Pastikan Ruang Anak Bebas dari Bahaya</h5>
-                  <p className="text-sm text-child-light group-hover/item:text-white">Selalu periksa dan pastikan bahwa ruang bermain anak aman dari risiko cedera. Hindari penggunaan mainan dengan bagian kecil yang dapat tertelan dan pastikan sudut meja atau furniture dilindungi dengan pelindung. Periksa juga kabel listrik dan alat-alat berbahaya yang harus diletakkan di tempat yang tidak terjangkau oleh anak.</p>
-                </div>
 
-                <div
-                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Kebersihan dan Kesehatan: Ciptakan Lingkungan yang Bersih dan Sehat</h5>
-                  <p className="text-sm text-child-light group-hover/item:text-white">Jaga kebersihan area tempat anak bermain dan tidur dengan rutin membersihkan debu dan kotoran. Gunakan produk pembersih yang aman dan tidak beracun untuk menghindari paparan bahan kimia berbahaya. Pastikan ventilasi ruangan baik untuk mencegah timbulnya jamur dan menjaga kualitas udara yang sehat.</p>
-                </div>
+              <div
+                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Keamanan Utama: Pastikan Ruang Anak Bebas dari Bahaya</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Selalu periksa dan pastikan bahwa ruang bermain anak aman dari risiko cedera. Hindari penggunaan mainan dengan bagian kecil yang dapat tertelan dan pastikan sudut meja atau furniture dilindungi dengan pelindung. Periksa juga kabel listrik dan alat-alat berbahaya yang harus diletakkan di tempat yang tidak terjangkau oleh anak.</p>
+              </div>
 
-                <div
-                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Stimulasi Positif: Sediakan Ruang untuk Eksplorasi dan Kreativitas</h5>
-                  <p className="text-sm text-child-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
-                </div>
+              <div
+                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Kebersihan dan Kesehatan: Ciptakan Lingkungan yang Bersih dan Sehat</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Jaga kebersihan area tempat anak bermain dan tidur dengan rutin membersihkan debu dan kotoran. Gunakan produk pembersih yang aman dan tidak beracun untuk menghindari paparan bahan kimia berbahaya. Pastikan ventilasi ruangan baik untuk mencegah timbulnya jamur dan menjaga kualitas udara yang sehat.</p>
+              </div>
 
-                <div
-                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Rutin dan Struktur: Buat Rutinitas Harian yang Teratur</h5>
-                  <p className="text-sm text-child-light group-hover/item:text-white">Menetapkan rutinitas harian yang konsisten membantu anak merasa aman dan mengetahui apa yang diharapkan. Rencanakan waktu tidur yang teratur, waktu makan, dan aktivitas harian dengan struktur yang jelas. Rutinitas ini membantu anak merasa lebih teratur dan mengurangi kecemasan.</p>
-                </div>
+              <div
+                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Stimulasi Positif: Sediakan Ruang untuk Eksplorasi dan Kreativitas</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+              </div>
 
-                <div
-                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white"> Zona Tenang: Sediakan Area Khusus untuk Istirahat dan Relaksasi</h5>
-                  <p className="text-sm text-child-light group-hover/item:text-white">Buatlah zona tenang di rumah di mana anak dapat bersantai dan melakukan aktivitas yang menenangkan, seperti membaca atau menggambar. Area ini harus nyaman dan bebas dari gangguan. Memiliki ruang seperti ini membantu anak belajar mengelola stres dan menyediakan tempat yang tenang untuk beristirahat.</p>
-                </div>
+              <div
+                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Rutin dan Struktur: Buat Rutinitas Harian yang Teratur</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Menetapkan rutinitas harian yang konsisten membantu anak merasa aman dan mengetahui apa yang diharapkan. Rencanakan waktu tidur yang teratur, waktu makan, dan aktivitas harian dengan struktur yang jelas. Rutinitas ini membantu anak merasa lebih teratur dan mengurangi kecemasan.</p>
+              </div>
 
-                <div
-                  className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                >
-                  <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Dukungan Sosial: Fasilitasi Interaksi Positif dengan Teman dan Keluarga</h5>
-                  <p className="text-sm text-child-light group-hover/item:text-white"> Pastikan anak memiliki kesempatan untuk berinteraksi dengan teman sebaya dan anggota keluarga dalam lingkungan yang positif. Aktivitas bersama seperti bermain di luar rumah, berkumpul dengan keluarga, dan berpartisipasi dalam kegiatan sosial dapat membantu anak mengembangkan keterampilan sosial dan emosional. Interaksi yang sehat dan mendukung juga berkontribusi pada rasa percaya diri dan keterhubungan anak dengan orang lain.</p>
-                </div>
+              <div
+                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white"> Zona Tenang: Sediakan Area Khusus untuk Istirahat dan Relaksasi</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white">Buatlah zona tenang di rumah di mana anak dapat bersantai dan melakukan aktivitas yang menenangkan, seperti membaca atau menggambar. Area ini harus nyaman dan bebas dari gangguan. Memiliki ruang seperti ini membantu anak belajar mengelola stres dan menyediakan tempat yang tenang untuk beristirahat.</p>
+              </div>
 
-  
-              
+              <div
+                className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+              >
+                <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Dukungan Sosial: Fasilitasi Interaksi Positif dengan Teman dan Keluarga</h5>
+                <p className="text-sm text-child-light group-hover/item:text-white"> Pastikan anak memiliki kesempatan untuk berinteraksi dengan teman sebaya dan anggota keluarga dalam lingkungan yang positif. Aktivitas bersama seperti bermain di luar rumah, berkumpul dengan keluarga, dan berpartisipasi dalam kegiatan sosial dapat membantu anak mengembangkan keterampilan sosial dan emosional. Interaksi yang sehat dan mendukung juga berkontribusi pada rasa percaya diri dan keterhubungan anak dengan orang lain.</p>
+              </div>
+
+
+
             </div>
           </div>
         </div>
