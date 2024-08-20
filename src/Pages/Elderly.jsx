@@ -19,6 +19,14 @@ import {
     Legend,
     LinearScale,
 } from "chart.js";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
+import accordionlansia from "../docs/AccordionLansia";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
     Pagination,
@@ -83,6 +91,32 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
                         className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? "max-h-screen" : "max-h-0"
                             }`}
                         style={{ maxHeight: openIndex === index ? "1000px" : "0" }} // Adjust maxHeight as needed
+                    >
+                        <div className="p-4 bg-elderly-normal/80 text-white/80 text-sm">
+                            {item.content}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+    return (
+        <div className="rounded-xl">
+            {items.map((item, index) => (
+                <div key={index} className="pt-5">
+                    <button
+                        className="w-full px-4 py-5 text-left bg-elderly-normal/50 hover:bg-elderly-normal/60 text-white rounded-xl focus:outline-none flex items-center justify-between"
+                        onClick={() => toggleAccordion(index)}
+                    >
+                        <span>{item.title}</span>
+                        <FontAwesomeIcon
+                            icon={openIndex === index ? faMinus : faChevronDown}
+                            className={`transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}
+                        />
+                    </button>
+                    <div
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
+                        style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
                     >
                         <div className="p-4 bg-elderly-normal/80 text-white/80 text-sm">
                             {item.content}
@@ -166,13 +200,13 @@ const Elderly = () => {
 
     return (
         <section ref={containerRef} className="pt-24">
-            <ToUp color={'bg-elderly-light'} />
-
             <Navbar buttonColor="bg-elderly-dark">
+                <ToUp color={'bg-elderly-light'} />
+
                 <Navbar.Item to={"#"} title={"Beranda"} />
                 <Navbar.Item to={"#panduan"} title={"Panduan"} />
                 <Navbar.Item to={"#gizi"} title={"Gizi"} />
-                <Navbar.Item to={"#imunisasi"} title={"Vaksin"} />
+                <Navbar.Item to={"#imunisasi"} title={"Imunisasi"} />
                 <Navbar.Item to={"#perawatan"} title={"Perawatan"} />
                 <Navbar.Item to={"#lingkungan"} title={"Lingkungan"} />
             </Navbar>
@@ -194,6 +228,17 @@ const Elderly = () => {
                                 >
                                     Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi
                                     dan Perkembangan.
+                                </h1>
+            {/* hero section start */}
+            <section id="Home" className="md:pt-28 lg:pt-0 relative min-h-[689px] overflow-x-hidden page-container">
+                <div className="container">
+                    <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
+                        <div className="w-full lg:w-1/2">
+                            <div className="flex flex-col gap-4">
+
+                                <h1 className="font-bold text-4xl text-elderly-dark" data-aos="fade-up"
+                                    data-aos-easing="ease-in-out" data-aos-duration="700">
+                                   Lansia Juga Harus Mengambil Langkah
                                 </h1>
 
                                 <p
@@ -255,6 +300,39 @@ const Elderly = () => {
                                 <p className="font-bold text-xl text-white text-center">
                                     Kesehatan
                                 </p>
+                            </div>
+                                <p className="text-lg text-tertiary" data-aos="fade-up"
+                                    data-aos-easing="ease-in-out" data-aos-duration="800">
+                                    Menyusun rencana kesehatan untuk lansia penting untuk menjaga kualitas hidup dan kesejahteraan mereka. Fokuskan pada nutrisi yang seimbang, aktivitas fisik yang sesuai, dan pemeriksaan kesehatan rutin untuk memastikan lansia tetap sehat dan aktif. Temukan strategi dan tips untuk mengelola kesehatan dengan lebih efektif.
+                                </p>
+
+                                <HeroButton to="#panduan" circle="bg-elderly-normal" textColor="text-elderly-normal" />
+
+                            </div>
+                        </div>
+                        <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
+                            {/* wave */}
+                            <img
+                                src="/assets/elderly/wave.svg"
+                                alt="Wave Decoration"
+                                className="absolute right-0 top-0 -z-10"
+                                draggable="false"
+                            />
+                            {/* 3D */}
+                            <Canvas className="bg-transparent w-[300px] h-[400px] md:h-[500px]">
+                                <ambientLight intensity={1.4} />
+                                <OrbitControls
+                                    enableZoom={false}
+                                    enablePan={false}
+                                    minPolarAngle={Math.PI * 0.3}
+                                    maxPolarAngle={Math.PI * 0.6}
+                                />
+                                <Kakek />
+                            </Canvas>
+                            {/* card glassmorphism */}
+                            <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
+                                <img src="/icons/baby/LANSIA-1.png" alt="Health" />
+                                <p className="font-bold text-xl text-white text-center">Kesehatan</p>
                             </div>
 
                             <div
@@ -386,14 +464,14 @@ const Elderly = () => {
                             data-aos="fade-up"
                             data-aos-easing="ease-in-out"
                         >
-                            <span className="text-elderly-dark">Informasi </span> Gizi Anak
+                            <span className="text-elderly-dark">Informasi </span> Gizi Saat Lansia
                         </h1>
                         <p
                             className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
                             data-aos="fade-up"
                             data-aos-easing="ease-in-out"
                         >
-                            Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+                            Nutrisi yang tepat penting untuk kesehatan lansia. Kebutuhan utama meliputi protein, serat, lemak sehat, vitamin, dan mineral untuk kesehatan tulang, sistem kekebalan, dan energi. Memahami kebutuhan gizi membantu memastikan pola makan seimbang yang mendukung kualitas hidup dan mencegah penyakit terkait usia.
                         </p>
                         <ImageCarousel slides={slides} />
                     </div>
@@ -407,9 +485,9 @@ const Elderly = () => {
                     <div className="flex flex-col md:flex-row gap-10">
                         <div className="flex flex-col flex-1 gap-5">
                             <h1 className="text-5xl font-bold text-elderly-dark" data-aos="fade-up"
-                                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-elderly-normal">Efektif Imunisasi</span> Bayi</h1>
+                                data-aos-easing="ease-in-out" data-aos-duration="700"> <span className="text-elderly-normal"></span> Efektifitas Vaksinasi</h1>
                             <p className="text-[#575757]" data-aos="fade-up"
-                                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+                                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi lansia penting untuk melindungi dari penyakit. Vaksin flu tahunan dan pneumonia, serta vaksin Tdap setiap 10 tahun, membantu mencegah infeksi pernapasan dan penyakit serius.</p>
                         </div>
                         <div className="w-full md:w-2/3">
                             <Swiper
@@ -424,20 +502,17 @@ const Elderly = () => {
                                 data-aos-easing="ease-in-out" data-aos-duration="800"
                             >
 
-                                <SwiperSlide>
-                                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                                        <div className="flex-1">
-                                            <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
-                                        </div>
-                                        <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-elderly-normal"></span></h1>
-                                            <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
-                                                Permasalahan: Lansia memiliki risiko tinggi terkena komplikasi flu. Vaksin tahunan penting untuk melindungi dari flu musiman, tetapi cakupannya sering kali tidak optimal.
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+<SwiperSlide>
+    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+        <div className="flex-1">
+            <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
+        </div>
+        <div className="flex-[2]">
+            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Influenza</h1>
+            <p className="text-tertiary text-sm">Jadwal: Tahunan. Melindungi dari flu musiman dan komplikasi terkait.</p>
+        </div>
+    </div>
+</SwiperSlide>
 
                                 <SwiperSlide>
                                     <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
@@ -466,82 +541,54 @@ const Elderly = () => {
                                     </div>
                                 </SwiperSlide>
 
-                                <SwiperSlide>
-                                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                                        <div className="flex-1">
-                                            <img
-                                                src="/assets/carousel/baby/Vaksin-Shingles.jpg"
-                                                alt="Immunization"
-                                            />
-                                        </div>
-                                        <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">
-                                                Vaksin Shingles{" "}
-                                                <span className="text-elderly-normal">
-                                                    (Herpes Zoster)
-                                                </span>
-                                            </h1>
-                                            <p className="text-tertiary text-sm">
-                                                Vaksin polio melindungi bayi dari poliomielitis,
-                                                penyakit virus yang dapat menyebabkan kelumpuhan
-                                                permanen. Vaksin polio diberikan dalam beberapa dosis
-                                                pada usia 2, 3, dan 4 bulan untuk memastikan
-                                                perlindungan penuh terhadap virus polio.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+<SwiperSlide>
+    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+        <div className="flex-1">
+            <img src="/assets/carousel/baby/Vaksin-Shingles.jpg" alt="Immunization" />
+        </div>
+        <div className="flex-[2]">
+            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Shingles</h1>
+            <p className="text-tertiary text-sm">Jadwal: Satu dosis. Melindungi dari herpes zoster (shingles) dan komplikasinya.</p>
+        </div>
+    </div>
+</SwiperSlide>
 
-                                <SwiperSlide>
-                                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                                        <div className="flex-1">
-                                            <img
-                                                src="/assets/carousel/baby/Vaksin-DT.jpg"
-                                                alt="Immunization"
-                                            />
-                                        </div>
-                                        <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">
-                                                Vaksin Tetanus-diphtheria{" "}
-                                                <span className="text-elderly-normal">(Td)</span>
-                                            </h1>
-                                            <p className="text-tertiary text-sm">
-                                                Vaksin DTP melindungi bayi dari tiga penyakit serius:
-                                                difteri, tetanus, dan pertusis (batuk rejan). Difteri
-                                                dapat menyebabkan masalah pernapasan, tetanus menyerang
-                                                sistem saraf dan bisa berakibat fatal, sementara
-                                                pertusis adalah penyakit pernapasan yang sangat menular.
-                                                Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img
+                        src="/assets/carousel/baby/Vaksin-DT.jpg"
+                        alt="Immunization"
+                      />
+                    </div>
+                    <div className="flex-[2]">
+                      <h1 className="text-elderly-dark font-bold text-3xl mb-4">
+                        Vaksin Tetanus-diphtheria{" "}
+                        <span className="text-elderly-normal">(Td)</span>
+                      </h1>
+                      <p className="text-tertiary text-sm">
+                        Vaksin DTP melindungi bayi dari tiga penyakit serius:
+                        difteri, tetanus, dan pertusis (batuk rejan). Difteri
+                        dapat menyebabkan masalah pernapasan, tetanus menyerang
+                        sistem saraf dan bisa berakibat fatal, sementara
+                        pertusis adalah penyakit pernapasan yang sangat menular.
+                        Vaksin ini diberikan pada usia 2, 3, dan 4 bulan.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
-                                <SwiperSlide>
-                                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                                        <div className="flex-1">
-                                            <img
-                                                src="/assets/carousel/baby/hib.jpeg"
-                                                alt="Immunization"
-                                            />
-                                        </div>
-                                        <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">
-                                                VAKSIN HIB{" "}
-                                                <span className="text-elderly-normal">
-                                                    dan Vaksinasi
-                                                </span>
-                                            </h1>
-                                            <p className="text-tertiary text-sm">
-                                                Vaksin Hib melindungi bayi dari infeksi bakteri
-                                                Haemophilus influenzae tipe B, yang dapat menyebabkan
-                                                penyakit serius seperti meningitis (radang selaput
-                                                otak), pneumonia, dan epiglotitis. Vaksin Hib diberikan
-                                                pada usia 2, 3, dan 4 bulan.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+<SwiperSlide>
+    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+        <div className="flex-1">
+            <img src="/assets/carousel/baby/hib.jpeg" alt="Immunization" />
+        </div>
+        <div className="flex-[2]">
+            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Hib</h1>
+            <p className="text-tertiary text-sm">Jadwal: Tidak umum untuk lansia. Melindungi dari infeksi Haemophilus influenzae tipe B.</p>
+        </div>
+    </div>
+</SwiperSlide>
 
                                 <SwiperSlide>
                                     <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
@@ -577,132 +624,132 @@ const Elderly = () => {
                 </div>
             </section>
 
-            <section
-                id="perawatan"
-                className="md:bg-[url('/background/wave-toska.png')] bg-cover md:h-[150vh]"
+      <section
+        id="perawatan"
+        className="md:bg-[url('/background/wave-toska.png')] bg-cover md:h-[150vh]"
+      >
+        <div className="container">
+          <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
+            <div
+              className="w-full md:w-1/2"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="700"
             >
-                <div className="container">
-                    <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
-                        <div
-                            className="w-full md:w-1/2"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="700"
-                        >
-                            <Swiper
-                                spaceBetween={16}
-                                direction={isMobile ? "horizontal" : "vertical"}
-                                effect={"coverflow"}
-                                coverflowEffect={{
-                                    slideShadows: false,
-                                    rotate: 0,
-                                    stretch: -20,
-                                    depth: 100,
-                                    modifier: 2.5,
-                                }}
-                                centeredSlides={false}
-                                slidesPerView={isMobile ? 1 : 3}
-                                modules={[EffectCoverflow, Autoplay]}
-                                autoplay={{ delay: 2000 }}
-                                loop
-                                className="h-[400px]"
-                            >
-                                {as.map(() => (
-                                    <SwiperSlide>
-                                        <div className="bg-white p-4 border-r-8 shadow-md border-elderly-normal">
-                                            <h1 className="font-semibold mb-2">
-                                                Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman
-                                            </h1>
-                                            <p className="text-tertiary">
-                                                Sentuhan fisik, seperti memeluk dan menimang bayi,
-                                                memberikan rasa aman dan kenyamanan. Ini juga membantu
-                                                mengurangi stres pada bayi dan memperkuat ikatan antara
-                                                bayi dan orang tua.
-                                            </p>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
-                        <div className="w-full md:w-1/2 flex items-center">
-                            <div>
-                                <h1
-                                    className="text-elderly-normal font-bold text-4xl mb-4"
-                                    data-aos="fade-up"
-                                    data-aos-easing="ease-in-out"
-                                    data-aos-duration="700"
-                                >
-                                    Panduan Perawatan{" "}
-                                    <span className="text-elderly-normal">Jiwa Bayi</span>
-                                </h1>
-                                <p
-                                    data-aos="fade-up"
-                                    data-aos-easing="ease-in-out"
-                                    data-aos-duration="800"
-                                >
-                                    Merawat jiwa bayi adalah bagian penting dari perkembangan
-                                    mereka yang sering kali terabaikan. Jiwa yang sehat membantu
-                                    bayi tumbuh menjadi anak yang bahagia dan percaya diri.
-                                    Berikut adalah beberapa tips untuk merawat jiwa bayi.
-                                </p>
-                            </div>
-                        </div>
+              <Swiper
+                spaceBetween={16}
+                direction={isMobile ? "horizontal" : "vertical"}
+                effect={"coverflow"}
+                coverflowEffect={{
+                  slideShadows: false,
+                  rotate: 0,
+                  stretch: -20,
+                  depth: 100,
+                  modifier: 2.5,
+                }}
+                centeredSlides={false}
+                slidesPerView={isMobile ? 1 : 3}
+                modules={[EffectCoverflow, Autoplay]}
+                autoplay={{ delay: 2000 }}
+                loop
+                className="h-[400px]"
+              >
+                {as.map(() => (
+                  <SwiperSlide>
+                    <div className="bg-white p-4 border-r-8 shadow-md border-elderly-normal">
+                      <h1 className="font-semibold mb-2">
+                        Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman
+                      </h1>
+                      <p className="text-tertiary">
+                        Sentuhan fisik, seperti memeluk dan menimang bayi,
+                        memberikan rasa aman dan kenyamanan. Ini juga membantu
+                        mengurangi stres pada bayi dan memperkuat ikatan antara
+                        bayi dan orang tua.
+                      </p>
                     </div>
-                </div>
-            </section>
-            {/* panduan perawatan jiwa bayi end */}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className="w-full md:w-1/2 flex items-center">
+              <div>
+                <h1
+                  className="text-elderly-normal font-bold text-4xl mb-4"
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-out"
+                  data-aos-duration="700"
+                >
+                  Panduan Perawatan{" "}
+                  <span className="text-elderly-normal">Jiwa Bayi</span>
+                </h1>
+                <p
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-out"
+                  data-aos-duration="800"
+                >
+                  Merawat jiwa bayi adalah bagian penting dari perkembangan
+                  mereka yang sering kali terabaikan. Jiwa yang sehat membantu
+                  bayi tumbuh menjadi anak yang bahagia dan percaya diri.
+                  Berikut adalah beberapa tips untuk merawat jiwa bayi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* panduan perawatan jiwa bayi end */}
 
-            {/* panduan lingkungan start */}
-            <section id="lingkungan">
-                <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
-                    <div className="container">
-                        <h1
-                            className="text-4xl font-bold text-elderly-dark text-center mb-4"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="700"
-                        >
-                            Panduan Lingkungan{" "}
-                            <span className="text-elderly-normal">Sehat untuk Bayi</span>
-                        </h1>
-                        <p
-                            className="text-center text-tertiary max-w-screen-md mx-auto"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="800"
-                        >
-                            Menjaga lingkungan yang sehat dan aman adalah salah satu cara
-                            terbaik untuk melindungi bayi dari berbagai risiko yang dapat
-                            membahayakan kesehatannya. Berikut adalah beberapa hal yang harus
-                            dihindari untuk menciptakan lingkungan yang aman bagi bayi.
-                        </p>
+      {/* panduan lingkungan start */}
+      <section id="lingkungan">
+        <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
+          <div className="container">
+            <h1
+              className="text-4xl font-bold text-elderly-dark text-center mb-4"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="700"
+            >
+              Panduan Lingkungan{" "}
+              <span className="text-elderly-normal">Sehat untuk Bayi</span>
+            </h1>
+            <p
+              className="text-center text-tertiary max-w-screen-md mx-auto"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="800"
+            >
+              Menjaga lingkungan yang sehat dan aman adalah salah satu cara
+              terbaik untuk melindungi bayi dari berbagai risiko yang dapat
+              membahayakan kesehatannya. Berikut adalah beberapa hal yang harus
+              dihindari untuk menciptakan lingkungan yang aman bagi bayi.
+            </p>
 
-                        <div
-                            className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="800"
-                        >
-                            {[...Array(6)].map((_, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-elderly-light/20 group/item hover:bg-elderly-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
-                                >
-                                    <h5 className="font-semibold mb-2 text-elderly-dark group-hover/item:text-white">
-                                        Hindari Mainan Kecil yang Bisa Tertelan
-                                    </h5>
-                                    <p className="text-sm text-elderly-dark group-hover/item:text-white">
-                                        Mainan dengan ukuran kecil atau bagian-bagian kecil yang
-                                        dapat terlepas dapat tertelan oleh bayi dan menyebabkan
-                                        tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak
-                                        memiliki bagian yang mudah lepas.
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="800"
+            >
+              {[...Array(6)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-elderly-light/20 group/item hover:bg-elderly-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-elderly-dark group-hover/item:text-white">
+                    Hindari Mainan Kecil yang Bisa Tertelan
+                  </h5>
+                  <p className="text-sm text-elderly-dark group-hover/item:text-white">
+                    Mainan dengan ukuran kecil atau bagian-bagian kecil yang
+                    dapat terlepas dapat tertelan oleh bayi dan menyebabkan
+                    tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak
+                    memiliki bagian yang mudah lepas.
+                  </p>
                 </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
             {/* panduan lingkungan end */}
             <Footer backgroundColor="#253B70">
