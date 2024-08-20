@@ -148,7 +148,6 @@ const Option3d = ({ onBack }) => {
               height="320px"
               titleColor="#A3ECFF"
               descriptionColor="#FFF"
-              href="/remaja"
             />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center items-end">

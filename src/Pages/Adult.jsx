@@ -6,7 +6,7 @@ import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
-import accordionItems from "../docs/Accordion";
+import accordionadult from "../docs/AccordionAdult";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -150,12 +150,12 @@ const Adult = () => {
 
                 <h1 className="font-bold text-4xl text-adult-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
+                  Tantangan Kesehatan Dewasa di Indonesia!
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
+                 Di Indonesia, banyak orang dewasa menghadapi masalah kesehatan serius, termasuk diabetes dan hipertensi, yang diperburuk oleh gaya hidup tidak aktif dan pola makan tidak sehat. Akses terbatas ke layanan kesehatan juga menjadi masalah. Mengatasi tantangan ini memerlukan fokus pada pencegahan, pengelolaan penyakit, dan promosi gaya hidup sehat untuk meningkatkan kualitas hidup.
                 </p>
                 
                 <HeroButton  to="#panduan" circle="bg-adult-normal" textColor="text-adult-normal" />
@@ -211,11 +211,10 @@ const Adult = () => {
 
             <h1 className="text-adult-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              <span className="text-adult-dark">Panduan</span> Perkembangan Bayi
-            </h1>
+              <span className="text-adult-dark">Panduan Kesehatan </span> Perkembangan Orang Dewasa</h1>
             <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
+              Jelajahi panduan menyeluruh kami untuk memahami berbagai aspek kesehatan dewasa. Dari manajemen stres dan pencegahan penyakit hingga tips untuk gaya hidup aktif dan sehat, temukan informasi berharga untuk meningkatkan kualitas hidup Anda. Dapatkan wawasan tentang cara menjaga kesehatan tubuh dan pikiran, serta strategi efektif untuk menghadapi tantangan kesehatan di usia dewasa.
             </p>
           </div>
 
@@ -247,16 +246,16 @@ const Adult = () => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
 
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-adult-light">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8" data-aos="fade-up"
-                data-aos-easing="ease-in-out" data-aos-duration="800">
-                Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
-              </p>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
+    data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-adult-light">Kesehatan Dewasa</span></h2>
+<p className="text-lg text-white mb-8" data-aos="fade-up"
+    data-aos-easing="ease-in-out" data-aos-duration="800">
+    Menyusun rencana kesehatan yang efektif membantu memastikan kesejahteraan fisik dan mental dewasa secara optimal. Temukan strategi dan tips untuk menjaga gaya hidup sehat, mengelola stres, dan meningkatkan kualitas hidup Anda.
+</p>
               {/* Accordion Section */}
               <div data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="900">
-                <Accordion items={accordionItems} initialOpenIndex={0} />
+                <Accordion items={accordionadult} initialOpenIndex={0} />
               </div>
             </div>
             <div className="flex-shrink-0" data-aos="fade-up"
@@ -284,14 +283,14 @@ const Adult = () => {
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <span className="text-adult-dark">Informasi </span> Gizi Anak
+              <span className="text-adult-dark">Informasi </span> Gizi Orang Dewasa
             </h1>
             <p
               className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+              Nutrisi yang tepat sangat penting untuk menjaga kesehatan dan kesejahteraan orang dewasa. Ini mencakup kebutuhan gizi utama seperti protein untuk pemeliharaan otot, karbohidrat kompleks untuk energi berkelanjutan, lemak sehat untuk kesehatan jantung dan otak, serta vitamin dan mineral untuk fungsi tubuh yang optimal. Memahami dan memenuhi kebutuhan gizi ini membantu mendukung kesehatan jangka panjang dan gaya hidup aktif.
             </p>
             <ImageCarousel slides={slides} />
           </div>
@@ -392,22 +391,58 @@ const Adult = () => {
                 depth: 100,
                 modifier: 2.5,
               }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay]} autoplay={{ delay: 2000 }} loop className="h-[400px]">
-                {as.map(() => (
-                  <SwiperSlide>
-                    <div className="bg-white p-4 border-r-8 shadow-md border-adult-normal">
-                      <h1 className="font-semibold mb-2">Peluk dan Timang Bayi untuk Menumbuhkan Rasa Aman</h1>
-                      <p className="text-tertiary">Sentuhan fisik, seperti memeluk dan menimang bayi, memberikan rasa aman dan kenyamanan. Ini juga membantu mengurangi stres pada bayi dan memperkuat ikatan antara bayi dan orang tua.</p>
-                    </div>
-                  </SwiperSlide>
-                ))}
+                
+                <SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Kelola Stres dengan Teknik Relaksasi</h1>
+    <p className="text-tertiary">Menggunakan teknik relaksasi seperti meditasi, pernapasan dalam, atau yoga dapat membantu mengurangi tingkat stres dan meningkatkan kesejahteraan mental. Luangkan waktu setiap hari untuk melakukan aktivitas ini dan rasakan manfaatnya bagi kesehatan mental Anda.</p>
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Jaga Keseimbangan Kerja dan Kehidupan Pribadi</h1>
+    <p className="text-tertiary">Menyeimbangkan antara pekerjaan dan kehidupan pribadi penting untuk menjaga kesehatan mental. Tetapkan batas waktu kerja dan luangkan waktu untuk aktivitas yang Anda nikmati di luar pekerjaan untuk mengurangi kelelahan dan stres.</p>
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Bangun Hubungan Sosial yang Positif</h1>
+    <p className="text-tertiary">Memiliki hubungan sosial yang sehat dapat memberikan dukungan emosional dan meningkatkan rasa kebahagiaan. Berinvestasi dalam hubungan dengan keluarga dan teman, serta bergabung dalam komunitas sosial, dapat memperkuat kesejahteraan mental Anda.</p>
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Prioritaskan Waktu untuk Diri Sendiri</h1>
+    <p className="text-tertiary">Melakukan aktivitas yang Anda nikmati dan memberi diri Anda waktu untuk istirahat adalah kunci untuk menjaga kesehatan mental. Jadwalkan waktu untuk hobi, bersantai, atau refleksi diri untuk mendukung keseimbangan emosional.</p>
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="bg-white p-4 border-r-8 shadow-md border-baby-normal">
+    <h1 className="font-semibold mb-2">Praktikkan Keterampilan Mengelola Emosi</h1>
+    <p className="text-tertiary">Mengelola emosi secara efektif adalah bagian penting dari kesehatan mental. Teknik seperti menulis jurnal, berbicara dengan seorang profesional, atau menerapkan teknik pengelolaan emosi dapat membantu Anda menangani perasaan dengan lebih baik.</p>
+  </div>
+</SwiperSlide>
+
+                
               </Swiper>
             </div>
             <div className="w-full md:w-1/2 flex items-center">
               <div>
                 <h1 className="text-adult-dark font-bold text-4xl mb-4" data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-adult-light">Jiwa Bayi</span></h1>
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Menjaga <span className="text-adult-light">Jiwa Saat Dewasa</span></h1>
                 <p data-aos="fade-up"
-                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
+                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat kesehatan jiwa dewasa penting untuk kesejahteraan yang seimbang. Mengelola stres melalui teknik relaksasi, menjaga keseimbangan antara pekerjaan dan kehidupan pribadi, serta membangun hubungan sosial yang positif adalah kunci. Luangkan waktu untuk aktivitas yang menyenangkan, dan jangan ragu untuk mencari dukungan profesional bila diperlukan. Langkah-langkah ini membantu menjaga kesehatan mental dan meningkatkan kualitas hidup.
+
+
+
+
+
+
+                  </p>
               </div>
             </div>
           </div>
@@ -421,24 +456,57 @@ const Adult = () => {
           <div className="container">
             <h1 className="text-4xl font-bold text-adult-dark text-center mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
-              Panduan Lingkungan <span className="text-adult-light">Sehat untuk Bayi</span>
+              Panduan Lingkungan <span className="text-adult-light">Sehat untuk Orang </span>
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
+             Menjaga lingkungan yang sehat dan aman sangat penting untuk mendukung kesejahteraan orang dewasa. Lingkungan yang bersih, teratur, dan bebas dari stres dapat meningkatkan kualitas hidup dan kesehatan secara keseluruhan. Temukan cara untuk menciptakan ruang yang mendukung kesehatan mental dan fisik Anda dengan menghindari faktor-faktor risiko seperti polusi, kekacauan, dan stres berlebihan.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              {[...Array(6)].map((_, index) => (
+              
                 <div
-                  key={index}
-                  className="bg-adult-light/20 group/item hover:bg-adult-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
                 >
-                  <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
-                  <p className="text-sm text-adult-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Ciptakan Ruang Kerja yang Ergonomis</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Menyusun lingkungan kerja dengan prinsip ergonomi dapat mencegah masalah kesehatan seperti nyeri punggung dan gangguan postur. Pastikan kursi dan meja Anda berada pada ketinggian yang nyaman, dan gunakan peralatan yang mendukung postur tubuh yang baik. </p>
                 </div>
-              ))}
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Jaga Kebersihan dan Ventilasi Ruangan</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">MKebersihan ruangan dan ventilasi yang baik adalah kunci untuk menghindari masalah pernapasan dan meningkatkan kenyamanan. Rutin membersihkan debu dan memastikan adanya sirkulasi udara yang baik dapat mengurangi risiko alergi dan meningkatkan kualitas udara di sekitar Anda.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Kurangi Paparan Polusi dan Zat Berbahaya</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Hindari paparan polusi udara dan bahan kimia berbahaya dengan memilih produk yang ramah lingkungan dan mengurangi penggunaan bahan kimia rumah tangga. Jika memungkinkan, gunakan filter udara dan pastikan lingkungan sekitar bebas dari asap rokok dan polusi.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Rencanakan Ruang Relaksasi yang Tenang</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Menciptakan ruang khusus untuk relaksasi membantu mengurangi stres dan meningkatkan kesejahteraan mental. Tempatkan elemen-elemen yang menenangkan seperti tanaman hias, pencahayaan lembut, dan perabot yang nyaman untuk menciptakan suasana yang damai.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Implementasikan Pola Hidup Sehat di Rumah</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Mengadopsi gaya hidup sehat di rumah termasuk menyusun menu makanan seimbang dan menjaga kebiasaan olahraga rutin. Pertimbangkan untuk membuat area khusus untuk aktivitas fisik dan memastikan Anda memiliki akses ke makanan bergizi yang mendukung kesehatan.</p>
+                </div>
+
+                <div
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
+                >
+                  <h5 className="font-semibold mb-2 text-adult-normal group-hover/item:text-white">Prioritaskan Keamanan di Lingkungan Rumah</h5>
+                  <p className="text-sm text-adult-light group-hover/item:text-white">Pastikan lingkungan rumah Anda aman dengan mengatasi potensi bahaya seperti permukaan licin, kabel yang berserakan, dan peralatan listrik yang rusak. Pemasangan alat pemadam kebakaran dan detektor asap juga penting untuk menjaga keselamatan di rumah.</p>
+                </div>
             </div>
           </div>
         </div>
