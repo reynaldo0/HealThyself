@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ children }) => {
+const Navbar = ({ children, buttonColor = 'bg-baby-dark' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -53,7 +53,7 @@ const Navbar = ({ children }) => {
               <li className="relative">
                 <button
                   onClick={handleDropdownToggle}
-                  className="block rounded bg-baby-normal px-5 py-2 text-white transition-colors hover:bg-primary-200"
+                  className={`block rounded ${buttonColor} px-5 py-2 text-white transition-colors hover:bg-primary-200"`}
                 >
                   Golongan
                 </button>
@@ -61,19 +61,19 @@ const Navbar = ({ children }) => {
                   <div className="static md:absolute w-full right-0 mt-2 bg-white border p-2 border-gray-200 rounded-lg shadow-lg md:w-max">
                     <ul className="py-1 text-sm text-gray-700">
                       <li>
-                        <Link to="/baby" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Bayi</Link>
+                        <Link to="/baby" className="block px-4 py-2 hover:bg-slate-400/20 hover:text-slate-500 rounded-md">Bayi</Link>
                       </li>
                       <li>
-                        <Link to="/child" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Anak-Anak</Link>
+                        <Link to="/child" className="block px-4 py-2 hover:bg-slate-400/20 hover:text-slate-500 rounded-md">Anak-Anak</Link>
                       </li>
                       <li>
-                        <Link to="/teen" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Remaja</Link>
+                        <Link to="/teen" className="block px-4 py-2 hover:bg-slate-400/20 hover:text-slate-500 rounded-md">Remaja</Link>
                       </li>
                       <li>
-                        <Link to="/adult" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Dewasa</Link>
+                        <Link to="/adult" className="block px-4 py-2 hover:bg-slate-400/20 hover:text-slate-500 rounded-md">Dewasa</Link>
                       </li>
                       <li>
-                        <Link to="/elderly" className="block px-4 py-2 hover:bg-baby-normal/20 hover:text-baby-dark rounded-md">Lansia</Link>
+                        <Link to="/elderly" className="block px-4 py-2 hover:bg-slate-400/20 hover:text-slate-500 rounded-md">Lansia</Link>
                       </li>
                     </ul>
                   </div>

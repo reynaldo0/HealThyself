@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = ({ backgroundColor = 'transparent' }) => {
+const Footer = ({ backgroundColor = 'transparent', children }) => {
     return (
         <footer style={{ backgroundColor }} className="p-4 py-6 lg:py-8">
             <div className="container mx-auto w-full">
@@ -59,24 +59,7 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
                                 Sumber Data
                             </h2>
                             <ul className="font-medium text-slate-300">
-                                <li className="mb-4">
-                                    <a href="https://Detik.com" className="lowercase hover:underline">Detik.com</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="https://Kompasiana.com" className="lowercase hover:underline">Kompasiana</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="https://Channel9.id" className="lowercase hover:underline">Channel9.id</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="https://Goodstats.id" className="lowercase hover:underline">Goodstats.id</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="https://pusiknas.polri.go.id/" className="lowercase hover:underline">pusiknas.polri</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="https://www.haibunda.com/" className="lowercase hover:underline">haibunda.com</a>
-                                </li>
+                                {children}
                             </ul>
                         </div>
 
@@ -99,6 +82,14 @@ const Footer = ({ backgroundColor = 'transparent' }) => {
             </div>
         </footer>
     );
+}
+
+Footer.Source = ({ link, title }) => {
+    return (
+        <li className="mb-4">
+            <a href={link} className="lowercase hover:underline">{title}</a>
+        </li>
+    )
 }
 
 export default Footer;
