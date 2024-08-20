@@ -18,6 +18,7 @@ import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/module
 import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
+import { Link } from "react-router-dom";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -46,7 +47,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-baby-ldark text-white">
+            <div className="p-4 bg-baby-ldark text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -62,7 +63,7 @@ const Baby = () => {
   const isMobile = window.innerWidth <= 768;
   const containerRef = useRef(); // Ref for container element
 
-  const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan", "6 bulan"];
+  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
@@ -74,19 +75,19 @@ const Baby = () => {
       chartRef.current = new Chart(canvasRef.current, {
         type: "bar",
         data: {
-          labels: labels,
+          labels: as.map(a => a + ' bulan'),
           datasets: [
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: "Tinggi",
+              data: [53.8, 56.1, 56.2, 59.9, 62.2, 64, 65.7, 67.3, 68.8, 70, 71.6, 72.8],
               borderWidth: 1,
               borderRadius: Number.MAX_VALUE,
               backgroundColor: 'rgba(66, 90, 148, 0.25)',
               borderColor: '#004BFF'
             },
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: "Berat",
+              data: [4.3, 5.3, 5.3, 6, 6.6, 6.9, 7.3, 7.9, 8.2, 8.5, 8.8, 9],
               borderWidth: 1,
               borderRadius: Number.MAX_VALUE,
               backgroundColor: 'rgba(255, 104, 44, 0.25)',
@@ -105,6 +106,9 @@ const Baby = () => {
               display: true,
               position: 'bottom'
             },
+            tooltip: {
+              enabled: true
+            }
           },
           scales: {
             y: {
@@ -138,21 +142,23 @@ const Baby = () => {
           <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
+                <h1 className="font-bold text-2xl md:text-4xl text-baby-dark">
                 <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
                   Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
+                <p className="text-sm md:text-base text-tertiary">
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
-                <button
+                <a  href={'#panduan'}
                   className="bg-baby-normal text-white p-4 rounded-lg w-fit"
                   onClick={() => handleNavigation('/explore')} data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="900"
                 >
                   Mulai Eksplorasi
-                </button>
+                </a>
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">
@@ -201,39 +207,20 @@ const Baby = () => {
       <section id="panduan" className="min-h-[70vh] py-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
+            <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
+          data-aos-easing="ease-in-out">
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="700">
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
-            <p className="text-base text-tertiary text-center max-w-[600px]" data-aos="fade-up"
-              data-aos-easing="ease-in-out" data-aos-duration="800">
+            <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+          data-aos-easing="ease-in-out">
               Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
 
-          <canvas ref={canvasRef} className="max-w-[80%] w-[600px] mx-auto"></canvas>
-
-          <div className="flex items-center">
-            <div className="relative md:mx-auto pt-10">
-              <div className="absolute hidden md:block -left-14 transform z-10">
-                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
-              </div>
-              <div className="absolute hidden md:block -right-14 transform z-10">
-                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
-              </div>
-
-              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false} spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{ delay: 2000 }} navigation={{
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-              }}>
-                {[...Array(12)].map((_, index) => (
-                  <SwiperSlide key={index}>
-                    <SwiperButton number={index + 1} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
+          <canvas ref={canvasRef} className="max-w-full w-[750px] mx-auto"></canvas>
+        
         </div>
       </section>
       {/* grafik perkembangan bayi end */}
@@ -259,6 +246,8 @@ const Baby = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+              <p className="text-sm md:text-base text-white mb-8">
               <h2 className="text-2xl font-bold mb-4 text-white" data-aos="fade-up"
                 data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
               <p className="text-lg text-white mb-8" data-aos="fade-up"
@@ -457,6 +446,16 @@ const Baby = () => {
               Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
             </p>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group">
+                {[...Array(6)].map((_, index) => (
+                    <div
+                        key={index}
+                        className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white"
+                    >
+                        <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                        <p className="text-sm text-baby-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                    </div>
+                ))}
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
               {[...Array(6)].map((_, index) => (
