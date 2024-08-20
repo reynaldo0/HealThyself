@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Canvas } from "react-three-fiber";
+import Bayi from "../Components/Models/landingPage/Bayi";
 import { OrbitControls } from "@react-three/drei";
 import Ball from "../Components/Ball";
 import CustomVideo from "../Components/CustomVideo";
@@ -16,7 +17,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
-import { Anak } from "../Components/Models/Anak";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -55,7 +55,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Child = () => {
+const Adult = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
@@ -143,12 +143,12 @@ const Child = () => {
 
                 <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="700">
-                  Gaya Hidup Tidak Sehat Pada Anak Ancaman Bagi Generasi Mendatang
+                  Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
 
                 <p className="text-lg text-tertiary" data-aos="fade-up"
                   data-aos-easing="ease-in-out" data-aos-duration="800">
-                  Di Indonesia, gaya hidup tidak sehat menjadi salah satu faktor utama yang menghambat pertumbuhan dan perkembangan anak-anak. Kurangnya aktivitas fisik, konsumsi makanan tinggi gula dan lemak, serta rendahnya kesadaran akan pentingnya pola hidup sehat, telah menyebabkan peningkatan obesitas dan risiko penyakit kronis pada usia dini. Perbaikan pola makan, peningkatan aktivitas fisik, dan edukasi kesehatan sangat penting untuk memastikan generasi mendatang tumbuh menjadi individu yang sehat dan produktif.
+                  Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
                   className="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
@@ -181,7 +181,7 @@ const Child = () => {
                   minPolarAngle={Math.PI * 0.3}
                   maxPolarAngle={Math.PI * 0.6}
                 />
-                <Anak />
+                <Bayi />
               </Canvas>
               {/* card glassmorphism */}
               <div className="hidden md:block absolute w-[150px] h-[190px] bg-white/40 backdrop-blur-[50px] border border-white rounded-[34px] right-40 top-10 p-4">
@@ -278,25 +278,70 @@ const Child = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
               data-aos-easing="ease-in-out">
               <span className="text-baby-dark">Informasi </span> Gizi Bayi
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px] mb-4" data-aos="fade-up"
               data-aos-easing="ease-in-out">
               Gizi yang tepat sangat penting untuk pertumbuhan dan perkembangan bayi. Informasi gizi bayi mencakup kebutuhan nutrisi esensial, termasuk protein, lemak, vitamin, dan mineral yang mendukung kesehatan optimal. Memahami kebutuhan gizi bayi membantu memastikan mereka mendapatkan nutrisi yang diperlukan untuk tumbuh sehat dan kuat.
             </p>
-            <ImageCarousel />
+            {/* <ImageCarousel /> */}
+            <div className="relative">
+              <div className="absolute hidden md:block -left-14 top-1/2 -translate-y-1/2 transform z-10">
+                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
+              </div>
+              <div className="absolute hidden md:block -right-14 transform z-10 top-1/2 -translate-y-1/2">
+                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
+              </div>
+
+              <Swiper className="max-w-screen-sm w-screen h-[300px]" effect={'coverflow'} spaceBetween={16} coverflowEffect={{
+                slideShadows: false,
+                rotate: 0,
+                stretch: -20,
+                depth: 100,
+                modifier: 2.5,
+              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay, Navigation]} autoplay={{ delay: 2000 }} loop navigation={{
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev'
+              }}>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" className="w-full h-auto" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                    <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </div>
       </section>
       {/* rencana gizi bayi end */}
 
       {/* jenis vaksinasi start */}
-      <section id="imunisasi" className="pt-20 bg-[url('/background/bg-imunisasi.png')] min-h-screen">
+      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi.png')]">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
@@ -468,4 +513,4 @@ const Child = () => {
   );
 };
 
-export default Child;
+export default Adult;
