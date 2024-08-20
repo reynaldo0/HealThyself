@@ -14,7 +14,6 @@ import 'swiper/css/effect-coverflow';
 import { BarController, BarElement, CategoryScale, Chart, Legend, LinearScale } from "chart.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
-import SwiperButton from "../Components/SwiperButton";
 import Footer from "../Components/Footer";
 import ImageCarousel from "../Components/Corousel";
 import { Anak } from "../Components/Models/Anak";
@@ -46,7 +45,7 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}
             style={{ maxHeight: openIndex === index ? '1000px' : '0' }} // Adjust maxHeight as needed
           >
-            <div className="p-4 bg-baby-ldark text-white">
+            <div className="p-4 bg-baby-ldark text-white/80 text-sm">
               {item.content}
             </div>
           </div>
@@ -56,13 +55,13 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
   );
 });
 
-const Child = () => {
+const Baby = () => {
   const canvasRef = useRef();
   const chartRef = useRef();
   const isMobile = window.innerWidth <= 768;
-  const containerRef = useRef();
+  const containerRef = useRef(); // Ref for container element
 
-  const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan", "6 bulan"];
+  // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
@@ -74,19 +73,19 @@ const Child = () => {
       chartRef.current = new Chart(canvasRef.current, {
         type: "bar",
         data: {
-          labels: labels,
+          labels: as.map(a => a + ' bulan'),
           datasets: [
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: "Tinggi",
+              data: [53.8, 56.1, 56.2, 59.9, 62.2, 64, 65.7, 67.3, 68.8, 70, 71.6, 72.8],
               borderWidth: 1,
               borderRadius: Number.MAX_VALUE,
               backgroundColor: 'rgba(66, 90, 148, 0.25)',
               borderColor: '#004BFF'
             },
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: "Berat",
+              data: [4.3, 5.3, 5.3, 6, 6.6, 6.9, 7.3, 7.9, 8.2, 8.5, 8.8, 9],
               borderWidth: 1,
               borderRadius: Number.MAX_VALUE,
               backgroundColor: 'rgba(255, 104, 44, 0.25)',
@@ -105,6 +104,9 @@ const Child = () => {
               display: true,
               position: 'bottom'
             },
+            tooltip: {
+              enabled: true
+            }
           },
           scales: {
             y: {
@@ -138,17 +140,24 @@ const Child = () => {
           <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-4xl text-baby-dark">
+
+                <h1 className="font-bold text-4xl text-baby-dark" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">
                   Tantangan Kesehatan Bayi di Indonesia: Menangani Masalah Gizi dan Perkembangan.
                 </h1>
-                <p className="text-xl text-tertiary">
+
+                <p className="text-lg text-tertiary" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="800">
                   Di Indonesia, sekitar 30% bayi mengalami stunting akibat pola makan yang tidak memadai, dan infeksi saluran pernapasan akut (ISPA) menyumbang hingga 20% dari kematian bayi. Hanya 60% bayi mendapatkan ASI eksklusif selama 6 bulan, dan cakupan imunisasi dasar lengkap masih di bawah 80%. Tantangan ini menekankan perlunya perbaikan dalam pola makan, sanitasi, dan layanan kesehatan untuk meningkatkan gaya hidup dan kesehatan bayi.
                 </p>
                 <button
-                  className="bg-baby-normal text-white p-4 rounded-lg w-fit"
-                  onClick={() => handleNavigation('/explore')}
+                  class="learn-more relative inline-block h-auto w-48 cursor-pointer border-none bg-transparent align-middle font-radioCasnada text-inherit outline-none"
+                  onclick="window.location.href = '#panduan'"
                 >
-                  Mulai Eksplorasi
+                  <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text translate-x-2">Selengkapnya</span>
                 </button>
               </div>
             </div>
@@ -198,39 +207,19 @@ const Child = () => {
       <section id="panduan" className="min-h-[70vh] py-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
+
             <h1 className="text-baby-normal font-bold text-4xl text-center" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
+              data-aos-easing="ease-in-out" data-aos-duration="700">
               <span className="text-baby-dark">Panduan</span> Perkembangan Bayi
             </h1>
-            <p className="text-base text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+            <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
               data-aos-easing="ease-in-out">
               Jelajahi panduan komprehensif kami untuk memahami berbagai tahap perkembangan bayi. Dari perkembangan fisik hingga keterampilan motorik dan bahasa, temukan informasi berharga untuk mendukung pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan tentang apa yang diharapkan pada setiap tahap usia dan cara terbaik untuk mendukung perkembangan optimal bayi Anda.
             </p>
           </div>
 
-          <canvas ref={canvasRef} className="max-w-[80%] w-[600px] mx-auto"></canvas>
+          <canvas ref={canvasRef} className="max-w-full w-[750px] mx-auto"></canvas>
 
-          <div className="flex items-center">
-            <div className="relative md:mx-auto pt-10">
-              <div className="absolute hidden md:block -left-14 transform z-10">
-                <button className="custom-prev bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 justify-center items-center rounded-full">&lt;</button>
-              </div>
-              <div className="absolute hidden md:block -right-14 transform z-10">
-                <button className="custom-next bg-none border border-baby-dark text-baby-dark transition hover:bg-baby-dark hover:text-white size-10 flex justify-center items-center rounded-full">&gt;</button>
-              </div>
-
-              <Swiper slidesPerView={isMobile ? 2 : 4} effect="coverflow" centeredSlides={false} spaceBetween={16} className="relative max-w-screen-md w-[90vw]" modules={[Navigation, Autoplay]} loop autoplay={{ delay: 2000 }} navigation={{
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-              }}>
-                {[...Array(12)].map((_, index) => (
-                  <SwiperSlide key={index}>
-                    <SwiperButton number={index + 1} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
         </div>
       </section>
       {/* grafik perkembangan bayi end */}
@@ -240,13 +229,13 @@ const Child = () => {
         <img
           src="/background/awan-putih.png"
           alt="White Clouds"
-          className="absolute w-full top-0 -z-10"
+          className="absolute w-full top-0 z-10"
         />
         <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
         <img
           src="/background/awan-biru.png"
           alt="Blue Clouds"
-          className="absolute w-full bottom-0 -z-10"
+          className="absolute w-full bottom-0 z-10"
         />
       </section>
       {/* video bayi end */}
@@ -256,16 +245,21 @@ const Child = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-4 text-white">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
-              <p className="text-lg text-white mb-8">
+
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Rencana <span className="text-baby-vlight">Asi Bayi</span></h2>
+              <p className="text-lg text-white mb-8" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800">
                 Menyusun rencana ASI yang efektif membantu memastikan bayi mendapatkan nutrisi optimal dan pengalaman menyusui yang nyaman. Temukan strategi dan tips untuk membuat proses menyusui lebih lancar dan menyenangkan.
-
-
               </p>
               {/* Accordion Section */}
-              <Accordion items={accordionItems} initialOpenIndex={0} />
+              <div data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="900">
+                <Accordion items={accordionItems} initialOpenIndex={0} />
+              </div>
             </div>
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="900">
               <img src="/assets/emak-anak.webp" alt="Mother and Child" className="w-96 h-auto" />
             </div>
           </div>
@@ -281,7 +275,7 @@ const Child = () => {
       {/* rencana asi bayi end */}
 
       {/* rencana gizi bayi start */}
-      <section id="gizi-2" className="min-h-[70vh] items-center justify-center pt-36">
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
             <h1 className="text-baby-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
@@ -303,8 +297,10 @@ const Child = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col flex-1 gap-5">
-              <h1 className="text-5xl font-bold text-baby-dark">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
-              <p className="text-[#575757]">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+              <h1 className="text-5xl font-bold text-baby-dark" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-baby-normal">Efektif Imunisasi</span> Bayi</h1>
+              <p className="text-[#575757]" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
             </div>
             <div className="w-full md:w-2/3">
               <Swiper
@@ -315,6 +311,8 @@ const Child = () => {
                 autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
                 modules={[Pagination, Autoplay]}
                 className="mb-20 w-full h-full min-h-[300px]"
+                data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800"
               >
 
                 <SwiperSlide>
@@ -399,7 +397,8 @@ const Child = () => {
       <section id="perawatan" className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]">
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="700">
               <Swiper spaceBetween={16} direction={isMobile ? 'horizontal' : 'vertical'} effect={'coverflow'} coverflowEffect={{
                 slideShadows: false,
                 rotate: 0,
@@ -419,8 +418,10 @@ const Child = () => {
             </div>
             <div className="w-full md:w-1/2 flex items-center">
               <div>
-                <h1 className="text-baby-dark font-bold text-4xl mb-4">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
-                <p>Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
+                <h1 className="text-baby-dark font-bold text-4xl mb-4" data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="700">Panduan Perawatan <span className="text-baby-light">Jiwa Bayi</span></h1>
+                <p data-aos="fade-up"
+                  data-aos-easing="ease-in-out" data-aos-duration="800">Merawat jiwa bayi adalah bagian penting dari perkembangan mereka yang sering kali terabaikan. Jiwa yang sehat membantu bayi tumbuh menjadi anak yang bahagia dan percaya diri. Berikut adalah beberapa tips untuk merawat jiwa bayi.</p>
               </div>
             </div>
           </div>
@@ -432,21 +433,24 @@ const Child = () => {
       <section id="lingkungan">
         <div className="w-full bg-white rounded-t-[150px] md:-mt-28 py-20">
           <div className="container">
-            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4">
+            <h1 className="text-4xl font-bold text-baby-dark text-center mb-4" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="700">
               Panduan Lingkungan <span className="text-baby-light">Sehat untuk Bayi</span>
             </h1>
-            <p className="text-center text-tertiary max-w-screen-md mx-auto">
+            <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="800">
               Menjaga lingkungan yang sehat dan aman adalah salah satu cara terbaik untuk melindungi bayi dari berbagai risiko yang dapat membahayakan kesehatannya. Berikut adalah beberapa hal yang harus dihindari untuk menciptakan lingkungan yang aman bagi bayi.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
+              data-aos-easing="ease-in-out" data-aos-duration="800">
               {[...Array(6)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-baby-vlight/20 hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white"
+                  className="bg-baby-vlight/20 group/item hover:bg-baby-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
                 >
-                  <h5 className="font-semibold mb-2 text-baby-normal group-hover:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
-                  <p className="text-sm text-baby-light group-hover:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                  <h5 className="font-semibold mb-2 text-baby-normal group-hover/item:text-white">Hindari Mainan Kecil yang Bisa Tertelan</h5>
+                  <p className="text-sm text-baby-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
                 </div>
               ))}
             </div>
@@ -461,4 +465,4 @@ const Child = () => {
   );
 };
 
-export default Child;
+export default Baby;
