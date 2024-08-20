@@ -95,7 +95,7 @@ const Baby = () => {
       y: {
         beginAtZero: true,
         ticks: {
-          callback: function (value, index, ticks) {
+          callback: function (value) {
             return value + ' cm';
           }
         }
@@ -220,7 +220,7 @@ const Baby = () => {
                 borderColor: '#004BFF'
               }
             ]
-          }} options={chartOptions} className="w-[750px] mx-auto" />
+          }} options={chartOptions} className="max-w-full w-[750px] mx-auto" />
 
         </div>
       </section>
@@ -303,32 +303,32 @@ const Baby = () => {
                 stretch: -20,
                 depth: 100,
                 modifier: 2.5,
-              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Autoplay, Navigation]} autoplay={{ delay: 2000 }} loop navigation={{
+              }} centeredSlides={false} slidesPerView={isMobile ? 1 : 3} modules={[EffectCoverflow, Navigation]} autoplay={{ delay: 2000 }} loop navigation={{
                 nextEl: '.custom-next',
                 prevEl: '.custom-prev'
               }}>
                 <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                  <div className="bg-white shadow-lg border w-[300px] mx-auto h-28">
                     <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" className="w-full h-auto" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                  <div className="bg-white shadow-lg border w-[300px] mx-auto h-28">
                     <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                  <div className="bg-white shadow-lg border w-[300px] mx-auto h-28">
                     <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                  <div className="bg-white shadow-lg border w-[300px] mx-auto h-28">
                     <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="bg-white shadow-lg border w-[300px] h-28">
+                  <div className="bg-white shadow-lg border w-[300px] mx-auto h-28">
                     <img src="/assets/carousel/baby/piramis.jpg" alt="pyramid" />
                   </div>
                 </SwiperSlide>
