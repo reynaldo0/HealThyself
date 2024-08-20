@@ -244,7 +244,7 @@ const Child = () => {
       {/* video bayi end */}
 
       {/* rencana asi bayi start */}
-      <section id="gizi" className="bg-baby-dark py-12 relative">
+      <section id="gizi" className="bg-[#B11414] py-12 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1">

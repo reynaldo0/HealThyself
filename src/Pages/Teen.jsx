@@ -365,7 +365,7 @@ const Teen = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/hepatis.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-Meningokokus.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Meningokokus <span className="text-baby-light"></span></h1>
@@ -378,10 +378,10 @@ const Teen = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/bcg.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-Tetanus-diphtheria-pertussis.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
-                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria-pertussis <span className="text-baby-light">(Tdap)
+                      <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Tetanus-diphtheria-pertussis <span className="text-baby-light">(DTap)
                       </span></h1>
                       <p className="text-tertiary text-sm">Jadwal: Dosis booster pada usia 11-12 tahun.
                       Permasalahan: Vaksin Tdap melindungi dari difteri, tetanus, dan pertusis. Keterlambatan dalam menerima booster pada usia 11-12 tahun dapat meningkatkan risiko infeksi.</p>
@@ -392,7 +392,7 @@ const Teen = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/polio.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-HPV.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin HPV <span className="text-baby-light">(Human Papillomavirus)</span></h1>
@@ -405,7 +405,7 @@ const Teen = () => {
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
                     <div className="flex-1">
-                      <img src="/assets/carousel/baby/dtp.jpg" alt="Immunization" />
+                      <img src="/assets/carousel/baby/Vaksin-Varicella-CACAR.jpg" alt="Immunization" />
                     </div>
                     <div className="flex-[2]">
                       <h1 className="text-baby-dark font-bold text-3xl mb-4">Vaksin Varicella <span className="text-baby-light">(Cacar Air)</span></h1>
