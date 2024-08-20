@@ -74,15 +74,13 @@ const Accordion = React.memo(({ items, initialOpenIndex }) => {
             <span>{item.title}</span>
             <FontAwesomeIcon
               icon={openIndex === index ? faMinus : faChevronDown}
-              className={`transition-transform duration-200 ${
-                openIndex === index ? "rotate-180" : ""
-              }`}
+              className={`transition-transform duration-200 ${openIndex === index ? "rotate-180" : ""
+                }`}
             />
           </button>
           <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              openIndex === index ? "max-h-screen" : "max-h-0"
-            }`}
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? "max-h-screen" : "max-h-0"
+              }`}
             style={{ maxHeight: openIndex === index ? "1000px" : "0" }} // Adjust maxHeight as needed
           >
             <div className="p-4 bg-elderly-normal/80 text-white/80 text-sm">
@@ -302,56 +300,22 @@ const Elderly = () => {
       </section>
       {/* hero section end */}
 
-      {/* grafik perkembangan bayi start */}
-      <section id="panduan" className="min-h-[70vh] py-28">
-        <div className="container">
-          <div className="flex flex-col justify-center items-center gap-5">
-            <h1
-              className="text-elderly-normal font-bold text-4xl text-center"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-              data-aos-duration="700"
-            >
-              <span className="text-elderly-dark">Panduan</span> Perkembangan
-              Bayi
-            </h1>
-            <p
-              className="text-sm text-tertiary text-center max-w-[600px]"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-            >
-              Jelajahi panduan komprehensif kami untuk memahami berbagai tahap
-              perkembangan bayi. Dari perkembangan fisik hingga keterampilan
-              motorik dan bahasa, temukan informasi berharga untuk mendukung
-              pertumbuhan bayi Anda di setiap langkahnya. Dapatkan wawasan
-              tentang apa yang diharapkan pada setiap tahap usia dan cara
-              terbaik untuk mendukung perkembangan optimal bayi Anda.
-            </p>
-          </div>
 
-          <canvas
-            ref={canvasRef}
-            className="max-w-full w-[750px] mx-auto"
-          ></canvas>
-        </div>
+      {/* video bayi start */}
+      <section id="video" className="relative">
+        <img
+          src="/background/awan-putih.png"
+          alt="White Clouds"
+          className="absolute w-full top-0 z-10"
+        />
+        <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
+        <img
+          src="/background/awan-toska.png"
+          alt="Blue Clouds"
+          className="absolute w-full bottom-0 z-10"
+        />
       </section>
-      {/* grafik perkembangan bayi end */}
-
-            {/* video bayi start */}
-            <section id="video" className="relative">
-                <img
-                    src="/background/awan-putih.png"
-                    alt="White Clouds"
-                    className="absolute w-full top-0 z-10"
-                />
-                <CustomVideo src={"/assets/carousel/baby/tahap.mp4"} />
-                <img
-                    src="/background/awan-toska.png"
-                    alt="Blue Clouds"
-                    className="absolute w-full bottom-0 z-10"
-                />
-            </section>
-            {/* video bayi end */}
+      {/* video bayi end */}
 
       {/* rencana asi bayi start */}
       <section id="gizi" className="bg-elderly-dark py-12 relative z-20">
@@ -410,67 +374,67 @@ const Elderly = () => {
       </section>
       {/* rencana asi bayi end */}
 
-            {/* rencana gizi bayi start */}
-            <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
-                <div className="container">
-                    <div className="flex flex-col justify-center items-center gap-5">
-                        <h1
-                            className="text-elderly-normal font-bold text-3xl md:text-4xl text-center"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                        >
-                            <span className="text-elderly-dark">Informasi </span> Gizi Anak
-                        </h1>
-                        <p
-                            className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                        >
-                            Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
-                        </p>
-                        <ImageCarousel slides={slides} />
+      {/* rencana gizi bayi start */}
+      <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
+        <div className="container">
+          <div className="flex flex-col justify-center items-center gap-5">
+            <h1
+              className="text-elderly-normal font-bold text-3xl md:text-4xl text-center"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              <span className="text-elderly-dark">Informasi </span> Gizi Anak
+            </h1>
+            <p
+              className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
+            </p>
+            <ImageCarousel slides={slides} />
+          </div>
+        </div>
+      </section>
+      {/* rencana gizi bayi end */}
+
+      {/* jenis vaksinasi start */}
+      <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi-toska.png')]">
+        <div className="container">
+          <div className="flex flex-col md:flex-row gap-10">
+            <div className="flex flex-col flex-1 gap-5">
+              <h1 className="text-5xl font-bold text-elderly-dark" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-elderly-normal">Efektif Imunisasi</span> Bayi</h1>
+              <p className="text-[#575757]" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
+            </div>
+            <div className="w-full md:w-2/3">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                pagination={{ clickable: true }}
+                loop
+                autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
+                modules={[Pagination, Autoplay]}
+                className="mb-20 w-full h-full min-h-[300px]"
+                data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800"
+              >
+
+                <SwiperSlide>
+                  <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
+                    <div className="flex-1">
+                      <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
                     </div>
-                </div>
-            </section>
-            {/* rencana gizi bayi end */}
+                    <div className="flex-[2]">
+                      <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-elderly-normal"></span></h1>
+                      <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
+                        Permasalahan: Lansia memiliki risiko tinggi terkena komplikasi flu. Vaksin tahunan penting untuk melindungi dari flu musiman, tetapi cakupannya sering kali tidak optimal.
 
-            {/* jenis vaksinasi start */}
-            <section id="imunisasi" className="py-20 bg-[url('/background/bg-imunisasi-toska.png')]">
-                <div className="container">
-                    <div className="flex flex-col md:flex-row gap-10">
-                        <div className="flex flex-col flex-1 gap-5">
-                            <h1 className="text-5xl font-bold text-elderly-dark" data-aos="fade-up"
-                                data-aos-easing="ease-in-out" data-aos-duration="700">Usia <span className="text-elderly-normal">Efektif Imunisasi</span> Bayi</h1>
-                            <p className="text-[#575757]" data-aos="fade-up"
-                                data-aos-easing="ease-in-out" data-aos-duration="800">Imunisasi bayi dimulai segera setelah lahir dan berlanjut pada usia tertentu untuk melindungi dari penyakit serius. Vaksin Hepatitis B dan BCG diberikan pada usia 0-1 bulan, vaksin Polio, DTP, dan Hib pada usia 2-4 bulan, serta vaksin MMR pada usia 12 bulan. Jadwal ini memastikan bayi terlindungi secara optimal dari berbagai infeksi.</p>
-                        </div>
-                        <div className="w-full md:w-2/3">
-                            <Swiper
-                                slidesPerView={1}
-                                spaceBetween={30}
-                                pagination={{ clickable: true }}
-                                loop
-                                autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
-                                modules={[Pagination, Autoplay]}
-                                className="mb-20 w-full h-full min-h-[300px]"
-                                data-aos="fade-up"
-                                data-aos-easing="ease-in-out" data-aos-duration="800"
-                            >
-
-                                <SwiperSlide>
-                                    <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">
-                                        <div className="flex-1">
-                                            <img src="/assets/carousel/baby/Vaksin-Influenza.jpg" alt="Immunization" />
-                                        </div>
-                                        <div className="flex-[2]">
-                                            <h1 className="text-elderly-dark font-bold text-3xl mb-4">Vaksin Influenza <span className="text-elderly-normal"></span></h1>
-                                            <p className="text-tertiary text-sm">Jadwal: Dosis tahunan.
-                                                Permasalahan: Lansia memiliki risiko tinggi terkena komplikasi flu. Vaksin tahunan penting untuk melindungi dari flu musiman, tetapi cakupannya sering kali tidak optimal.
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
 
                 <SwiperSlide>
                   <div className="w-full h-full bg-white rounded-lg p-8 md:p-5 flex flex-col items-center md:flex-row overflow-hidden gap-5 md:gap-10">

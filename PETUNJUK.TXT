@@ -1,0 +1,14 @@
+pastikan memiliki nodeJS dan NPM untuk menjalankan website ini
+
+- buka terminal
+- jalankan script "npm install"
+- tunggu
+- jika sudah selesai, jalankan "npm run dev"
+
+ALTERNATIF
+
+- jika mengalami error pada saat menjalankan web 
+dengan localhost, bisa langsung kunjungi 
+
+https://healthyself.vercel.app atau
+https://healthyself-dev.vercel.app 
