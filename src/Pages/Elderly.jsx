@@ -30,28 +30,27 @@ import Footer from "../Components/Footer";
 import { Kakek } from "../Components/Models/Kakek";
 import ImageCarousel from "../Components/Corousel";
 import HeroButton from "../Components/HeroButton";
-import ToUp from "../Components/ToUp";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
 const slides = [
     {
-        src: "/assets/carousel/elderly/1.jpg",
+        src: "/assets/carousel/baby/piramis.jpg",
         title: "First Slide",
         description: "Description for the first slide.",
     },
     {
-        src: "/assets/carousel/elderly/2.jpg",
+        src: "/assets/carousel/baby/piramis.jpg",
         title: "Second Slide",
         description: "Description for the second slide.",
     },
     {
-        src: "/assets/carousel/elderly/3.jpg",
+        src: "/assets/carousel/baby/piramis.jpg",
         title: "Third Slide",
         description: "Description for the third slide.",
     },
     {
-        src: "/assets/carousel/elderly/4.jpg",
+        src: "/assets/carousel/baby/piramis.jpg",
         title: "Fourth Slide",
         description: "Description for the fourth slide.",
     },
@@ -166,13 +165,11 @@ const Elderly = () => {
 
     return (
         <section ref={containerRef} className="pt-24">
-            <ToUp color={'bg-elderly-light'} />
-
-            <Navbar buttonColor="bg-elderly-dark">
+            <Navbar buttonColor="bg-elderly-dark">z
                 <Navbar.Item to={"#"} title={"Beranda"} />
                 <Navbar.Item to={"#panduan"} title={"Panduan"} />
                 <Navbar.Item to={"#gizi"} title={"Gizi"} />
-                <Navbar.Item to={"#imunisasi"} title={"Vaksin"} />
+                <Navbar.Item to={"#imunisasi"} title={"Imunisasi"} />
                 <Navbar.Item to={"#perawatan"} title={"Perawatan"} />
                 <Navbar.Item to={"#lingkungan"} title={"Lingkungan"} />
             </Navbar>
