@@ -22,6 +22,13 @@ import HeroButton from "../Components/HeroButton";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
+const slides = [
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'First Slide', description: 'Description for the first slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Second Slide', description: 'Description for the second slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Third Slide', description: 'Description for the third slide.' },
+  { src: '/assets/carousel/baby/piramis.jpg', title: 'Fourth Slide', description: 'Description for the fourth slide.' },
+];
+
 const Accordion = React.memo(({ items, initialOpenIndex }) => {
   const [openIndex, setOpenIndex] = useState(initialOpenIndex);
 
@@ -272,15 +279,21 @@ const Child = () => {
       <section id="gizi-2" className="min-h-[70vh] items-center justify-center py-36">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-child-normal font-bold text-3xl md:text-4xl text-center" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
-              <span className="text-child-dark">Informasi </span> Gizi Anak
+            <h1
+              className="text-baby-normal font-bold text-3xl md:text-4xl text-center"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              <span className="text-baby-dark">Informasi </span> Gizi Anak
             </h1>
-            <p className="md:text-base text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
-              data-aos-easing="ease-in-out">
+            <p
+              className="md:text-base text-sm text-tertiary text-center max-w-[600px]"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
               Nutrisi yang tepat sangat penting untuk mendukung pertumbuhan dan perkembangan anak. Informasi gizi anak mencakup kebutuhan nutrisi utama, termasuk protein, karbohidrat, lemak sehat, vitamin, dan mineral yang mendukung kesehatan dan energi mereka. Memahami kebutuhan gizi anak membantu memastikan mereka mendapatkan makanan yang seimbang untuk mendukung perkembangan fisik dan mental yang optimal.
             </p>
-            <ImageCarousel />
+            <ImageCarousel slides={slides} />
           </div>
         </div>
       </section>
