@@ -472,7 +472,7 @@ const Child = () => {
             </h1>
             <p className="text-center text-tertiary max-w-screen-md mx-auto" data-aos="fade-up"
               data-aos-easing="ease-in-out" data-aos-duration="800">
-              Menciptakan lingkungan yang bersih, aman, dan mendukung kesehatan bayi Anda adalah langkah krusial untuk perkembangan mereka. Dengan menghindari potensi bahaya dan menerapkan praktik terbaik, Anda dapat memastikan bayi tumbuh dalam kondisi yang optimal. Temukan panduan praktis untuk menciptakan lingkungan yang aman dan mendukung kesehatan bayi Anda setiap hari.
+             Menciptakan lingkungan yang bersih, aman, dan mendukung kesehatan anak-anak Anda adalah langkah krusial untuk perkembangan mereka. Dengan menghindari potensi bahaya dan menerapkan praktik terbaik, Anda dapat memastikan anak-anak tumbuh dalam kondisi yang optimal. Temukan panduan praktis untuk menciptakan lingkungan yang aman dan mendukung kesehatan anak-anak Anda setiap hari.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-10 mt-10 group" data-aos="fade-up"
@@ -496,7 +496,7 @@ const Child = () => {
                 className="bg-child-light/20 group/item hover:bg-child-dark px-10 py-5 min-h-[180px] transition flex-col flex items-center justify-center text-center group-hover:opacity-100 group-hover:text-white hover:scale-105"
               >
                 <h5 className="font-semibold mb-2 text-child-normal group-hover/item:text-white">Stimulasi Positif: Sediakan Ruang untuk Eksplorasi dan Kreativitas</h5>
-                <p className="text-sm text-child-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat tertelan oleh bayi dan menyebabkan tersedak. Pastikan mainan sesuai dengan usia bayi dan tidak memiliki bagian yang mudah lepas.</p>
+                <p className="text-sm text-child-light group-hover/item:text-white">Mainan dengan ukuran kecil atau bagian-bagian kecil yang dapat terlepas dapat menjadi risiko bagi anak-anak yang lebih besar. Pastikan mainan sesuai dengan usia anak dan tidak memiliki bagian yang mudah lepas. Pilihlah mainan yang aman dan sesuai untuk menghindari potensi bahaya dan mendukung pertumbuhan yang sehat.</p>
               </div>
 
               <div

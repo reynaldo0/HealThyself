@@ -393,7 +393,7 @@ const Elderly = () => {
                                         </div>
                                         <div className="flex-[2]">
                                             <h1 className="text-elderly-dark font-bold text-3xl mb-4">VAKSIN MMR <span className="text-elderly-normal">dan Vaksinasi</span></h1>
-                                            <p className="text-tertiary text-sm">Vaksin MMR melindungi bayi dari tiga penyakit virus: campak (measles), gondongan (mumps), dan rubella. Ketiganya dapat menyebabkan komplikasi serius, terutama pada bayi dan anak kecil. Vaksin MMR diberikan pada usia 12 bulan.</p>
+                                            <p className="text-tertiary text-sm">Vaksin MMR melindungi lansia dari risiko komplikasi yang disebabkan oleh infeksi campak (measles), gondongan (mumps), dan rubella. Meskipun lebih umum diberikan kepada anak-anak, vaksin ini juga penting untuk orang dewasa dan lansia yang belum divaksin atau memiliki risiko tinggi terhadap infeksi ini. Penerimaan vaksin MMR dapat membantu melindungi kesehatan jangka panjang dan mencegah komplikasi serius.</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
