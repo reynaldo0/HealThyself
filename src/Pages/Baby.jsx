@@ -541,11 +541,12 @@ const Baby = () => {
 
       {/* panduan lingkungan end */}
       <Footer backgroundColor="#253B70">
-        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'ayosehat.kemkes.go.id'} />
-        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'ayosehat.kemkes.go.id'} />
-        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'ayosehat.kemkes.go.id'} />
-        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'ayosehat.kemkes.go.id'} />
-        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'ayosehat.kemkes.go.id'} />
+        <Footer.Source link={'http://ayosehat.kemkes.go.id/'} title={'kemkes.go.id'} />
+        <Footer.Source link={'http://alodokter.com/'} title={'alodokter.com'} />
+        <Footer.Source link={'http://who.int'} title={'who.int'} />
+        <Footer.Source link={'http://nutriclub.co.id'} title={'nutriclub.co.id'} />
+        <Footer.Source link={'http://unicef.org'} title={'unicef.org'} />
+        <Footer.Source link={'http://klikdokter.com'} title={'klikdokter.com'} />
       </Footer>
     </section>
   );
