@@ -19,6 +19,7 @@ import Footer from "../Components/Footer";
 import HeroButton from "../Components/HeroButton";
 import ImageCarousel from "../Components/Corousel";
 import ToUp from "../Components/ToUp";
+import { Bar } from "react-chartjs-2";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -72,59 +73,37 @@ const Teen = () => {
 
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-  useEffect(() => {
-    if (canvasRef.current) {
-      if (chartRef.current) {
-        chartRef.current.destroy();
-      }
+  const chartData = [
+    { tinggi: 155, berat: 46 },
+    { tinggi: 165, berat: 55 },
+    { tinggi: 175, berat: 80 },
+  ]
 
-      chartRef.current = new Chart(canvasRef.current, {
-        type: "bar",
-        data: {
-          labels: as.map(a => a + ' bulan'),
-          datasets: [
-            {
-              label: "Tinggi",
-              data: [53.8, 56.1, 56.2, 59.9, 62.2, 64, 65.7, 67.3, 68.8, 70, 71.6, 72.8],
-              borderWidth: 1,
-              borderRadius: Number.MAX_VALUE,
-              backgroundColor: 'rgba(66, 90, 148, 0.25)',
-              borderColor: '#004BFF'
-            },
-            {
-              label: "Berat",
-              data: [4.3, 5.3, 5.3, 6, 6.6, 6.9, 7.3, 7.9, 8.2, 8.5, 8.8, 9],
-              borderWidth: 1,
-              borderRadius: Number.MAX_VALUE,
-              backgroundColor: 'rgba(255, 104, 44, 0.25)',
-              borderColor: '#FF682C '
-            },
-          ],
-        },
-        options: {
-          hover: {
-            mode: 'index',
-            intersect: false
-          },
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'bottom'
-            },
-            tooltip: {
-              enabled: true
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    }
-  }, []);
+  const chartOptions = {
+    hover: {
+      mode: 'index',
+      intersect: false
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: true
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          callback: function (value) {
+            return value + ' cm';
+          }
+        }
+      },
+    },
+  }
 
   useEffect(() => {
     const container = document.querySelector('.page-container');
@@ -211,7 +190,7 @@ const Teen = () => {
       {/* hero section end */}
 
       {/* grafik perkembangan bayi start */}
-      {/* <section id="panduan" className="min-h-[70vh] py-28">
+      <section id="panduan" className="min-h-[70vh] py-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
@@ -225,10 +204,24 @@ const Teen = () => {
             </p>
           </div>
 
-          <canvas ref={canvasRef} className="max-w-full w-[750px] mx-auto"></canvas>
+          <Bar data={{
+            labels: chartData.map(data => data.berat + ' kg'),
+            xLabels: 'kg',
+            yLabels: 'cm',
+            datasets: [
+              {
+                label: "Berat",
+                data: chartData.map(data => data.tinggi),
+                borderWidth: 1,
+                borderRadius: Number.MAX_VALUE,
+                backgroundColor: 'rgb(27, 133, 109, 0.25)',
+                borderColor: '#1B856D'
+              }
+            ]
+          }} options={chartOptions} className="max-w-full w-[750px] mx-auto" />
 
         </div>
-      </section> */}
+      </section>
       {/* grafik perkembangan bayi end */}
 
       {/* video bayi start */}

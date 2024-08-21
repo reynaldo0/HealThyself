@@ -101,62 +101,37 @@ const Elderly = () => {
 
     const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-    useEffect(() => {
-        if (canvasRef.current) {
-            if (chartRef.current) {
-                chartRef.current.destroy();
+    const chartData = [
+        { tinggi: 155, berat: 46 },
+        { tinggi: 165, berat: 55 },
+        { tinggi: 175, berat: 80 },
+      ]
+    
+      const chartOptions = {
+        hover: {
+          mode: 'index',
+          intersect: false
+        },
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: true
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function (value) {
+                return value + ' cm';
+              }
             }
-
-            chartRef.current = new Chart(canvasRef.current, {
-                type: "bar",
-                data: {
-                    labels: as.map((a) => a + " bulan"),
-                    datasets: [
-                        {
-                            label: "Tinggi",
-                            data: [
-                                53.8, 56.1, 56.2, 59.9, 62.2, 64, 65.7, 67.3, 68.8, 70, 71.6,
-                                72.8,
-                            ],
-                            borderWidth: 1,
-                            borderRadius: Number.MAX_VALUE,
-                            backgroundColor: "rgba(66, 90, 148, 0.25)",
-                            borderColor: "#004BFF",
-                        },
-                        {
-                            label: "Berat",
-                            data: [4.3, 5.3, 5.3, 6, 6.6, 6.9, 7.3, 7.9, 8.2, 8.5, 8.8, 9],
-                            borderWidth: 1,
-                            borderRadius: Number.MAX_VALUE,
-                            backgroundColor: "rgba(255, 104, 44, 0.25)",
-                            borderColor: "#FF682C ",
-                        },
-                    ],
-                },
-                options: {
-                    hover: {
-                        mode: "index",
-                        intersect: false,
-                    },
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: "bottom",
-                        },
-                        tooltip: {
-                            enabled: true,
-                        },
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            });
-        }
-    }, []);
+          },
+        },
+      }
 
     useEffect(() => {
         const container = document.querySelector(".page-container");

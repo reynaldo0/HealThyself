@@ -72,18 +72,11 @@ const Child = () => {
   // const labels = ["1 bulan", "2 bulan", "3 bulan", "4 bulan", "5 bulan","6 bulan", "7 bulan"];
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   const chartData = [
-    { tinggi: 53.8, berat: 4.3 },
-    { tinggi: 56.1, berat: 5.3 },
-    { tinggi: 56.2, berat: 5.5 },
-    { tinggi: 59.9, berat: 6 },
-    { tinggi: 62.2, berat: 6.6 },
-    { tinggi: 64, berat: 6.9 },
-    { tinggi: 65.7, berat: 7.3 },
-    { tinggi: 67.3, berat: 7.9 },
-    { tinggi: 68.8, berat: 8.2 },
-    { tinggi: 70, berat: 8.5 },
-    { tinggi: 71.6, berat: 8.8 },
-    { tinggi: 72.8, berat: 9 },
+    { tinggi: 85, berat: 12 },
+    { tinggi: 105, berat: 18 },
+    { tinggi: 125, berat: 24 },
+    { tinggi: 135, berat: 30 },
+    { tinggi: 145, berat: 38 },
   ]
 
   const chartOptions = {
@@ -198,7 +191,7 @@ const Child = () => {
       {/* hero section end */}
 
       {/* grafik perkembangan bayi start */}
-      {/* <section id="panduan" className="min-h-[70vh] py-28">
+      <section id="panduan" className="min-h-[70vh] py-28">
         <div className="container">
           <div className="flex flex-col justify-center items-center gap-5">
 
@@ -229,7 +222,7 @@ const Child = () => {
           }} options={chartOptions} className="max-w-full w-[750px] mx-auto" />
 
         </div>
-      </section> */}
+      </section>
       {/* grafik perkembangan bayi end */}
 
       {/* video bayi start */}
