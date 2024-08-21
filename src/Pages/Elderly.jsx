@@ -30,6 +30,7 @@ import { Kakek } from "../Components/Models/Kakek";
 import ImageCarousel from "../Components/Corousel";
 import HeroButton from "../Components/HeroButton";
 import accordionlansia from "../docs/AccordionLansia";
+import { Bar } from "react-chartjs-2";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -102,36 +103,35 @@ const Elderly = () => {
     const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
     const chartData = [
-        { tinggi: 155, berat: 46 },
-        { tinggi: 165, berat: 55 },
-        { tinggi: 175, berat: 80 },
-      ]
-    
-      const chartOptions = {
+        { tinggi: 150, berat: 46 },
+        { tinggi: 155, berat: 50 },
+    ]
+
+    const chartOptions = {
         hover: {
-          mode: 'index',
-          intersect: false
+            mode: 'index',
+            intersect: false
         },
         responsive: true,
         plugins: {
-          legend: {
-            display: false,
-          },
-          tooltip: {
-            enabled: true
-          }
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                enabled: true
+            }
         },
         scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              callback: function (value) {
-                return value + ' cm';
-              }
-            }
-          },
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    callback: function (value) {
+                        return value + ' cm';
+                    }
+                }
+            },
         },
-      }
+    }
 
     useEffect(() => {
         const container = document.querySelector(".page-container");
@@ -266,6 +266,39 @@ const Elderly = () => {
                 </div>
             </section>
             {/* hero section end */}
+
+            <section id="panduan" className="min-h-[70vh] py-28">
+                <div className="container">
+                    <div className="flex flex-col justify-center items-center gap-5">
+
+                        <h1 className="text-elderly-normal font-bold text-4xl text-center" data-aos="fade-up"
+                            data-aos-easing="ease-in-out" data-aos-duration="700">
+                            <span className="text-elderly-dark">Pantau</span> Orang Tua Kita
+                        </h1>
+                        <p className="text-sm text-tertiary text-center max-w-[600px]" data-aos="fade-up"
+                            data-aos-easing="ease-in-out">
+                            Jelajahi panduan lengkap untuk memantau kesehatan lansia. Fokus pada pengelolaan penyakit kronis, pencegahan risiko, dan perawatan rutin untuk mendukung kualitas hidup mereka. Temukan cara efektif untuk menjaga kesehatan fisik dan mental lansia agar tetap aktif dan sejahtera.
+                        </p>
+                    </div>
+
+                    <Bar data={{
+                        labels: chartData.map(data => data.berat + ' kg'),
+                        xLabels: 'kg',
+                        yLabels: 'cm',
+                        datasets: [
+                            {
+                                label: "Berat",
+                                data: chartData.map(data => data.tinggi),
+                                borderWidth: 1,
+                                borderRadius: Number.MAX_VALUE,
+                                backgroundColor: 'rgb(22, 174, 121, 0.25)',
+                                borderColor: '#16AE79   '
+                            }
+                        ]
+                    }} options={chartOptions} className="max-w-full w-[750px] mx-auto" />
+
+                </div>
+            </section>
 
 
             {/* video bayi start */}

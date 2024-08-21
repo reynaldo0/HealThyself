@@ -74,9 +74,9 @@ const Adult = () => {
   const as = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   const chartData = [
-    { tinggi: 155, berat: 46 },
-    { tinggi: 165, berat: 55 },
-    { tinggi: 175, berat: 80 },
+    { tinggi: 160, berat: 55 },
+    { tinggi: 170, berat: 60 },
+    { tinggi: 175, berat: 65 },
   ]
 
   const chartOptions = {
@@ -214,8 +214,8 @@ const Adult = () => {
                 data: chartData.map(data => data.tinggi),
                 borderWidth: 1,
                 borderRadius: Number.MAX_VALUE,
-                backgroundColor: 'rgb(27, 133, 109, 0.25)',
-                borderColor: '#1B856D'
+                backgroundColor: 'rgb(243, 105, 50, 0.25)',
+                borderColor: '#F36932'
               }
             ]
           }} options={chartOptions} className="max-w-full w-[750px] mx-auto" />
