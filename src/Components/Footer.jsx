@@ -30,7 +30,7 @@ const Footer = ({ backgroundColor = 'transparent', children }) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-28">
+                    <div className="grid grid-cols-2 gap-8 sm:gap-8 md:gap-10 lg:gap-28">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                                 Akses Konten
