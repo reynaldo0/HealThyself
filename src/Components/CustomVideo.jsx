@@ -1,3 +1,5 @@
+import { faPlay } from '@fortawesome/free-solid-svg-icons/faPlay';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef, useState } from 'react';
 
 const CustomVideo = ({ src }) => {
@@ -28,8 +30,8 @@ const CustomVideo = ({ src }) => {
                 className="absolute inset-0 flex items-center justify-center text-white text-4xl pointer-events-none"
             >
                 {!isPlaying && (
-                    <span className='text-4xl bg-white/15 rounded-full flex justify-center items-center p-4 pointer-events-auto'>
-                        <span className='ml-1'>&#9658;</span>
+                    <span className='text-xl md:text-2xl bg-white/20 border  rounded-full flex justify-center items-center size-16 md:size-20 pointer-events-auto'>
+                        <FontAwesomeIcon icon={faPlay} />
                     </span>
                 )}
             </button>
