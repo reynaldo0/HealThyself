@@ -813,23 +813,20 @@ const Baby = () => {
 
       <section id="gizi" className="bg-baby-dark py-12 relative z-20">
         <div className="relative">
-        <img
-          src="/konsultasi/bayi.png"
-          alt="Blue Clouds"
-          className="absolute w-full -bottom-52 z-10"
-        />
+          <img
+            src="/konsultasi/wave.png"
+            alt="Blue Clouds"
+            className="absolute w-full -bottom-52 z-10"
+          />
         </div>
         <div className="container mx-auto px-4 md:pr-24 pt-80">
           <div className="flex flex-col md:flex-row items-start gap-16">
             <div
               className="relative hidden md:block"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-              data-aos-duration="900"
-              style={{ left: "-70px"}}
+              style={{ left: "-70px" }}
             >
               <img
-                src="/konsultasi/bayigrup.png"
+                src="/konsultasi/baby.png"
                 alt="Mother and Child"
                 className="w-[450px]"
               />
@@ -861,6 +858,9 @@ const Baby = () => {
                     <input
                       className="w-full px-4 py-5 border bg-[#E7EEFF] border-gray-300 rounded-md"
                       type="text"
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-out"
+                      data-aos-duration="900"
                       id="name"
                       name="name"
                       placeholder="Nama Lengkap"
@@ -872,6 +872,9 @@ const Baby = () => {
                       <input
                         className="w-full px-4 py-5 border bg-[#E7EEFF] border-gray-300 rounded-md"
                         type="text"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-out"
+                        data-aos-duration="1000"
                         id="phone"
                         name="phone"
                         placeholder="Nomor Ponsel"
@@ -882,6 +885,9 @@ const Baby = () => {
                       <input
                         className="w-full px-4 py-5 border bg-[#E7EEFF] border-gray-300 rounded-md"
                         type="email"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-out"
+                        data-aos-duration="1100"
                         id="email"
                         name="email"
                         placeholder="Email"
@@ -893,13 +899,21 @@ const Baby = () => {
                     <textarea
                       className="w-full px-4 py-2 border bg-[#E7EEFF] border-gray-300 rounded-md"
                       id="message"
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-out"
+                      data-aos-duration="1200"
                       name="message"
                       placeholder="Masukkan Pesan Keluhan Anda"
                       rows="4"
                     ></textarea>
                   </div>
 
-                  <div className="pt-10">
+                  <div
+                    className="pt-10"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-out"
+                    data-aos-duration="900"
+                  >
                     <button
                       type="submit"
                       className="w-full bg-[#67A1FF] text-lg text-white py-5 rounded-xl hover:bg-[#67A1FF]/80 transition duration-300"
