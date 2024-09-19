@@ -598,7 +598,7 @@ const Baby = () => {
 
       <section
         id="perawatan"
-        className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh]"
+        className="md:bg-[url('/background/wave.png')] bg-cover md:h-[150vh] max-w-screen-4xl"
       >
         <div className="container">
           <div className="flex flex-col-reverse md:flex-row h-[100vh] items-center justify-center gap-10">
@@ -809,27 +809,29 @@ const Baby = () => {
             </div>
           </div>
         </div>
-        <img
-          src="/background/awan-biru.png"
-          alt="Blue Clouds"
-          className="relative w-full bottom-0 z-10"
-        />
       </section>
 
       <section id="gizi" className="bg-baby-dark py-12 relative z-20">
-        <div className="container mx-auto px-4 md:pr-24">
+        <div className="relative">
+        <img
+          src="/konsultasi/bayi.png"
+          alt="Blue Clouds"
+          className="absolute w-full -bottom-52 z-10"
+        />
+        </div>
+        <div className="container mx-auto px-4 md:pr-24 pt-80">
           <div className="flex flex-col md:flex-row items-start gap-16">
             <div
-              className="relative bg-[#334E8F] rounded-full hidden md:block"
+              className="relative hidden md:block"
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
               data-aos-duration="900"
-              style={{ left: "-70px", borderRadius: "1871px" }}
+              style={{ left: "-70px"}}
             >
               <img
-                src="/assets/konsul.png"
+                src="/konsultasi/bayigrup.png"
                 alt="Mother and Child"
-                className="w-[450px] h-auto"
+                className="w-[450px]"
               />
             </div>
             <div className="flex-1 ml-auto">
@@ -900,9 +902,9 @@ const Baby = () => {
                   <div className="pt-10">
                     <button
                       type="submit"
-                      className="w-full bg-[#67A1FF] text-white py-5 rounded-md hover:bg-[#67A1FF]/80 transition duration-300"
+                      className="w-full bg-[#67A1FF] text-lg text-white py-5 rounded-xl hover:bg-[#67A1FF]/80 transition duration-300"
                     >
-                      Kirim
+                      Kirim Pesan
                     </button>
                   </div>
                 </form>
@@ -911,10 +913,13 @@ const Baby = () => {
           </div>
 
           {/* Ball components here */}
-          <div className="absolute top-5 hidden md:block md:left-96">
+          <div className="absolute top-5 hidden md:block md:top-80 md:left-60 -z-10">
+            <Ball classList="animation-delay-1000" size={90} color="#ffff" />
+          </div>
+          <div className="absolute top-5 hidden md:block md:top-[350px] md:left-96 -z-10">
             <Ball classList="animation-delay-1000" size={60} color="#ffff" />
           </div>
-          <div className="absolute hidden md:block md:bottom-10 md:right-3">
+          <div className="absolute hidden md:block md:bottom-10 md:right-0">
             <Ball classList="animation-delay-1000" size={70} color="#ffff" />
           </div>
         </div>
