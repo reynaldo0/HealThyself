@@ -804,14 +804,14 @@ const Elderly = () => {
       </section>
 
       <section id="gizi" className="bg-elderly-dark py-12 relative z-20">
-        <div className="relative">
+        <div className="relative hidden md:block">
           <img
             src="/konsultasi/wave.png"
             alt="Blue Clouds"
             className="absolute w-full -bottom-52 z-10"
           />
         </div>
-        <div className="container mx-auto px-4 md:pr-24 pt-80">
+        <div className="container mx-auto px-4 md:pr-24 md:pt-80">
           <div className="flex flex-col md:flex-row items-start gap-16">
             <div className="relative hidden md:block" style={{ left: "-70px" }}>
               <img
