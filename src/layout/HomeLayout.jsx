@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from '../Pages/Home';
 import Option from '../Pages/Option';
 import { useStateContext } from '../context/stateContext';
@@ -13,10 +13,13 @@ const HomeLayout = () => {
     setTimeout(() => {
       setOpen(false);
       setTransition('fade-in');
-    }, 500); 
+    }, 500);
   };
 
-  
+  useEffect(() => {
+    console.log(open);
+
+  }, [open]);
 
   return (
     <>
