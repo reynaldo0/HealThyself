@@ -46,21 +46,21 @@ const Option3d = ({ onBack }) => {
   }, []);
 
   const cloud1Style = {
-    transform: `translateX(${cloudOffset * 0.8}px)`,
+    transform: `translateX(${cloudOffset * (isMobile ? 0.5 : 0.8)}px)`,
     position: 'absolute',
-    top: '0',
-    right: '-28px',
+    top: isMobile ? '0' : '-58px',
+    right: isMobile ? '-28px' : '-128px',
     zIndex: 1,
-    transition: 'transform 0.5s ease-out'
+    transition: 'transform 0.5s ease-out',
   };
 
   const cloud2Style = {
-    transform: `translateX(${cloudOffset * 1.2}px)`,
+    transform: `translateX(${cloudOffset * (isMobile ? 0.8 : 1.2)}px)`,
     position: 'absolute',
-    top: '0',
-    left: '-28px',
+    top: isMobile ? '0' : '-58px',
+    left: isMobile ? '-28px' : '-208px',
     zIndex: 1,
-    transition: 'transform 1s ease-out'
+    transition: 'transform 1s ease-out',
   };
 
   const handleModelCanvasClick = (href) => {
