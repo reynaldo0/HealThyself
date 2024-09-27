@@ -208,7 +208,10 @@ const Baby = () => {
                   tantangan utama.
                 </p>
 
-                <HeroButton />
+                <HeroButton
+                to="#panduan"
+                circle="bg-baby-normal"
+                textColor="text-baby-normal" />
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center items-end md:items-center min-h-[500px]">

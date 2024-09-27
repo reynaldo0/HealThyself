@@ -185,6 +185,7 @@ const Teen = () => {
                   dan dukungan psikologis.
                 </p>
                 <HeroButton
+                  to="#panduan"
                   circle="bg-teen-normal"
                   textColor="text-teen-normal"
                 />
