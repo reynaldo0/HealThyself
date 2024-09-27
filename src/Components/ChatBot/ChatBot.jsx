@@ -17,14 +17,14 @@ import React from "react";
 export default function ChatBot({ buttonProps }) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "bot", content: "Halo! Apakah ada yang bisa kami bantu?" },
+    { sender: "bot", content: "Halo! HealBot disini, Apakah ada yang bisa kami bantu?" },
     {
       sender: "user",
       content:
-        "Halo! Saya ingin menanyakan beberapa pertanyaan mengenai kenakalan remaja",
+        "Halo! Saya ingin menanyakan beberapa pertanyaan mengenai kesehatan Fisik",
     },
-    { sender: "bot", content: "How can I assist you today?" },
-    { sender: "user", content: "I have a question about your services." },
+    { sender: "bot", content: "Baik, jelaskan terkait dengan kesehatan anda" },
+    { sender: "user", content: "..." },
   ]);
   const [input, setInput] = useState("");
   const scrollAreaRef = useRef(null);
@@ -117,7 +117,7 @@ export default function ChatBot({ buttonProps }) {
             >
               <Input
                 className="flex-grow"
-                placeholder="Type a message..."
+                placeholder="Tuliskan Pesan..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
@@ -131,7 +131,7 @@ export default function ChatBot({ buttonProps }) {
             </form>
           </div>
           <div className="p-2 border-t text-center text-xs text-gray-500">
-            Powered by RebelBot
+          Didukung oleh HealBot
           </div>
         </DialogContent>
       </Dialog>

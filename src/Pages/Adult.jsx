@@ -32,6 +32,7 @@ import ImageCarousel from "../Components/Corousel";
 import HeroButton from "../Components/HeroButton";
 import ToUp from "../Components/ToUp";
 import { Bar } from "react-chartjs-2";
+import ChatBot from "../Components/ChatBot/ChatBot";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -144,7 +145,6 @@ const Adult = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      <ToUp color={"bg-adult-light"} />
 
       <Navbar buttonColor="bg-adult-dark">
         <Navbar.Item to={"#"} title={"Beranda"} />
@@ -154,6 +154,13 @@ const Adult = () => {
         <Navbar.Item to={"#perawatan"} title={"Perawatan"} />
         <Navbar.Item to={"#lingkungan"} title={"Lingkungan"} />
       </Navbar>
+
+      <ChatBot
+        buttonProps={{
+          className: "bg-adult-light hover:bg-adult-light/90",
+          children: "Chat",
+        }}
+      />
 
       {/* hero section start */}
       <section

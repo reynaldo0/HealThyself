@@ -31,6 +31,7 @@ import ImageCarousel from "../Components/Corousel";
 import HeroButton from "../Components/HeroButton";
 import accordionlansia from "../docs/AccordionLansia";
 import { Bar } from "react-chartjs-2";
+import ChatBot from "../Components/ChatBot/ChatBot";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -150,6 +151,13 @@ const Elderly = () => {
         <Navbar.Item to={"#perawatan"} title={"Perawatan"} />
         <Navbar.Item to={"#lingkungan"} title={"Lingkungan"} />
       </Navbar>
+
+      <ChatBot
+        buttonProps={{
+          className: "bg-elderly-light hover:bg-elderly-light/90",
+          children: "Chat",
+        }}
+      />
 
       {/* hero section start */}
       <section

@@ -171,7 +171,7 @@ const Baby = () => {
 
       <ChatBot
         buttonProps={{
-          className: "bg-green-500 hover:bg-green-600",
+          className: "bg-baby-light hover:bg-baby-light/90",
           children: "Chat",
         }}
       />

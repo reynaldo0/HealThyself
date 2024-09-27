@@ -32,6 +32,7 @@ import accordionchild from "../docs/AccordionChild";
 import { Bar } from "react-chartjs-2";
 import HeroButton from "../Components/HeroButton";
 import ToUp from "../Components/ToUp";
+import ChatBot from "../Components/ChatBot/ChatBot";
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Legend);
 
@@ -144,7 +145,7 @@ const Child = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      <ToUp color={"bg-child-light"} />
+      
 
       <Navbar buttonColor="bg-child-dark">
         <Navbar.Item to={"#"} title={"Beranda"} />
@@ -155,7 +156,14 @@ const Child = () => {
         <Navbar.Item to={"#lingkungan"} title={"Lingkungan"} />
       </Navbar>
 
+      <ChatBot
+        buttonProps={{
+          className: "bg-child-light hover:bg-child-light/90",
+          children: "Chat",
+        }}
+      />
       {/* hero section start */}
+      
       <section
         id="Home"
         className="md:pt-28 lg:pt-0 relative min-h-[689px] overflow-x-hidden page-container"
