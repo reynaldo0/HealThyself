@@ -23,8 +23,7 @@ export default function ChatBot({ buttonProps }) {
       content:
         "Halo! Saya ingin menanyakan beberapa pertanyaan mengenai kesehatan Fisik",
     },
-    { sender: "bot", content: "Baik, jelaskan terkait dengan kesehatan anda" },
-    { sender: "user", content: "..." },
+    { sender: "bot", content: "......." }
   ]);
   const [input, setInput] = useState("");
   const scrollAreaRef = useRef(null);
@@ -79,10 +78,10 @@ export default function ChatBot({ buttonProps }) {
             <div className="flex items-center">
               <Avatar className="h-10 w-10 mr-3">
                 <AvatarImage src="/placeholder.svg" />
-                <AvatarFallback>HB</AvatarFallback>
+                <AvatarFallback className='font-bold text-2xl'>HB</AvatarFallback>
               </Avatar>
               <div>
-                <DialogTitle>HealBot</DialogTitle>
+                <DialogTitle><span className="text-primary">Heal</span><span className="text-secondary">Bot</span></DialogTitle>
                 <p className="text-sm text-gray-500">Online</p>
               </div>
             </div>
@@ -98,7 +97,7 @@ export default function ChatBot({ buttonProps }) {
                 <div
                   className={`max-w-[80%] p-3 rounded-lg ${
                     message.sender === "user"
-                      ? "bg-purple-500 text-white"
+                      ? "bg-secondary text-white"
                       : "bg-gray-100"
                   }`}
                 >
@@ -124,14 +123,14 @@ export default function ChatBot({ buttonProps }) {
               <Button
                 type="submit"
                 size="icon"
-                className="bg-blue-500 hover:bg-blue-600"
+                className="bg-transparent hover:bg-transparent scale-150 text-secondary"
               >
                 <Send className="h-4 w-4" />
               </Button>
             </form>
           </div>
           <div className="p-2 border-t text-center text-xs text-gray-500">
-          Didukung oleh HealBot
+          Didukung oleh <span className="text-primary">Heal</span><span className="text-secondary">Bot</span>
           </div>
         </DialogContent>
       </Dialog>
