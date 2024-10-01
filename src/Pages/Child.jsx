@@ -145,8 +145,6 @@ const Child = () => {
 
   return (
     <section ref={containerRef} className="pt-24">
-      
-
       <Navbar buttonColor="bg-child-dark">
         <Navbar.Item to={"#"} title={"Beranda"} />
         <Navbar.Item to={"#panduan"} title={"Panduan"} />
@@ -163,7 +161,7 @@ const Child = () => {
         }}
       />
       {/* hero section start */}
-      
+
       <section
         id="Home"
         className="md:pt-28 lg:pt-0 relative min-h-[689px] overflow-x-hidden page-container"
@@ -850,7 +848,7 @@ const Child = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-duration="700"
               >
-                Lorem Ipsum Dolor Sit Amet Labore
+                Gaya Hidup Sehat Bersama Kami!
               </h2>
               <p
                 className="text-lg text-white mb-8"
@@ -858,9 +856,9 @@ const Child = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-duration="800"
               >
-                Pastikan bayi mendapat nutrisi optimal dengan rencana ASI yang
-                tepat. Temukan tips untuk menjadikan proses menyusui lebih
-                lancar dan nyaman.
+                Kami memiliki layanan untuk berkonsultasi dengan kami, tim
+                HealThyself akan selalu memberikan saran dan bimbingan kepadamu!
+                Masukkan nama, email serta keluhan kamu!
               </p>
 
               {/* Form section */}

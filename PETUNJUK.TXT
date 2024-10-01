@@ -1,14 +1,19 @@
-pastikan memiliki nodeJS dan NPM untuk menjalankan website ini
+1. Pendahuluan
 
-- buka terminal
-- jalankan script "npm install"
-- tunggu
-- jika sudah selesai, jalankan "npm run dev"
+Dokumen ini berisi langkah-langkah untuk membuka dan menjalankan proyek React.js yang telah kami kembangkan. Proyek ini menggunakan framework React bersama dengan beberapa library tambahan yang telah diintegrasikan untuk meningkatkan fungsionalitas dan tampilan.
 
-ALTERNATIF
+2. Persyaratan membuka project
+a. pastikan anda ada di folder web kami yaitu HealThyself
+   - klik kanan pada folder > Open Terminal > tuliskan "code .\HealThyself\"
+b. pastikan anda memiliki node js
 
-- jika mengalami error pada saat menjalankan web 
-dengan localhost, bisa langsung kunjungi 
+3. Langkah-langkah
+a. masuk ke direktori HealThyself
+b. ketikan "npm install" pada line terminal
+b. jalankan "npm run dev" pada line terminal dan buka local host dengan port : http://localhost:5173/
 
-https://healthyself.vercel.app atau
-https://healthyself-dev.vercel.app 
+jika anda kendala mohon hubungi
+088289031150 / salman
+
+Terimakasih!!
+:)

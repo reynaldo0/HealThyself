@@ -1,8 +1,19 @@
-# React + Vite
+1. Pendahuluan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dokumen ini berisi langkah-langkah untuk membuka dan menjalankan proyek React.js yang telah kami kembangkan. Proyek ini menggunakan framework React bersama dengan beberapa library tambahan yang telah diintegrasikan untuk meningkatkan fungsionalitas dan tampilan.
 
-Currently, two official plugins are available:
+2. Persyaratan membuka project
+a. pastikan anda ada di folder web kami yaitu HealThyself
+   - klik kanan pada folder > Open Terminal > tuliskan "code .\HealThyself\"
+b. pastikan anda memiliki node js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Langkah-langkah
+a. masuk ke direktori HealThyself
+b. ketikan "npm install" pada line terminal
+b. jalankan "npm run dev" pada line terminal dan buka local host dengan port : http://localhost:5173/
+
+jika anda kendala mohon hubungi
+088289031150 / salman
+
+Terimakasih!!
+:)
