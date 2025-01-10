@@ -62,17 +62,17 @@ const Home = ({ onStart }) => {
             Your browser does not support the video tag.
           </video>
 
-          <div className="px-4 mx-auto max-w-screen-xl text-center py-40 md:py-24 lg:py-40">
+          <div className="px-4 mx-auto max-w-screen-xl text-center py-40 lg:py-60">
             <h1 className="mb-4 text-3xl text-primary font-extrabold tracking-tight font-poppins leading-none md:text-5xl lg:text-6xl">
               Gaya Hidup Sehat <span className="text-secondary">Sulit Dicapai?</span>
             </h1>
-            <p className="mb-8 text-sm font-normal text-gray-300 lg:text-base sm:px-16 lg:px-48 pt-2">
-              "Menjaga gaya hidup sehat bisa menjadi tantangan karena rutinitas sibuk, perubahan kebutuhan kesehatan seiring usia, dan kebiasaan yang sulit diubah. Kami menyediakan panduan praktis dan tips untuk setiap tahap kehidupan dari bayi hingga lansia untuk membantu Anda mengatasi hambatan dan mencapai kesejahteraan yang optimal."
+            <p className="mb-8 text-sm font-normal text-gray-300 lg:text-lg sm:px-16 lg:px-56 pt-2">
+              Menjaga gaya hidup sehat bisa menjadi tantangan karena rutinitas sibuk, perubahan kebutuhan kesehatan seiring usia, dan kebiasaan yang sulit diubah. Kami menyediakan panduan praktis dan tips untuk setiap tahap kehidupan dari bayi hingga lansia untuk membantu Anda mengatasi hambatan dan mencapai kesejahteraan yang optimal.
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
               <button
                 onClick={handleClick}
-                className="inline-flex justify-center items-center py-3 px-10 text-base font-medium text-center text-white bg-secondary hover:bg-secondary/90 font-medium rounded-lg text-sm px-8 py-2 text-center"
+                className="inline-flex justify-center items-center text-white bg-secondary hover:bg-secondary/90 font-medium rounded-lg text-sm px-10 py-3 text-center"
               >
                 Mulai
                 <svg
