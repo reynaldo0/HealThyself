@@ -1,3 +1,6 @@
+import flowbitePlugin from "flowbite/plugin";
+import animationDelayPlugin from "tailwindcss-animation-delay";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -77,5 +80,5 @@ export default {
       },
     },
   },
-  plugins: [require("flowbite/plugin"), require("tailwindcss-animation-delay")],
+  plugins: [flowbitePlugin, animationDelayPlugin]
 };
