@@ -847,7 +847,7 @@ const Baby = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-duration="700"
               >
-                Gaya Hidup Sehat Bersama Kami!
+                Gaya Hidup Sehat Bersama Kami!!
               </h2>
               <p
                 className="text-lg text-white mb-8"
