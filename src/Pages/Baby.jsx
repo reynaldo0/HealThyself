@@ -180,7 +180,7 @@ const Baby = () => {
       <section
         id="Home"
         className="md:pt-28 lg:pt-0 relative min-h-[689px] overflow-x-hidden page-container"
-      >
+      >  
         <div className="container">
           <div className="flex min-h-[70vh] flex-wrap-reverse items-center">
             <div className="w-full lg:w-1/2">
