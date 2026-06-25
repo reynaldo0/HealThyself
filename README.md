@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="/logofull.png" alt="HealThyself Logo" width="200"/>
+  <img src="public/logofull.png" alt="HealThyself Logo" width="200"/>
 </p>
 
 <h1 align="center">🌿 HealThyself</h1>
